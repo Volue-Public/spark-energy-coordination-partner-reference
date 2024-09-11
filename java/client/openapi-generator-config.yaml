@@ -1,0 +1,18 @@
+inputSpec: https://api.sandbox.voluespark.com/energy-coordination/v1/swagger/Partner/swagger.json
+generatorName: java
+validateSpec: false
+enablePostProcessFile: true
+outputDir: .
+additionalProperties:
+  useJakartaEe: true
+  library: webclient
+  artifactDescripion: An API client for interfacing with the Spark Energy Coordination API.
+  invokerPackage: com.voluespark.energycoordination.client.api
+  modelPackage: com.voluespark.energycoordination.client.model
+  apiPackage: com.voluespark.energycoordination.client.api
+  groupId: com.voluespark.energycoordination
+  artifactId: client
+  artifactUrl: https://github.com/Volue/spark-energy-coordination-partner-reference
+  hideGenerationTimestamp: true
+  licenseName: MIT
+  licenseUrl: https://mit-license.org

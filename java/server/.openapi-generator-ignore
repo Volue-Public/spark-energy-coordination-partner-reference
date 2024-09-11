@@ -1,0 +1,8 @@
+# This file
+.openapi-generator-ignore
+# Implementations of API controller
+src/main/java/**/api/NotifyApiController.java
+# Filter for calculating hash of body
+src/main/java/**/filters/BodySignatureFilter.java
+# Added test
+src/test/main/**/NotifyApiControllerTest.java

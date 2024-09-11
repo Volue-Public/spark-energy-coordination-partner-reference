@@ -1,0 +1,10 @@
+inputSpec: https://api.sandbox.voluespark.com/energy-coordination/v1/swagger/Partner/swagger.json
+generatorName: typescript-node
+validateSpec: false
+enablePostProcessFile: true
+outputDir: .
+additionalProperties:
+  npmName: spark-ec-client
+  supportsES6: true
+  licenseName: MIT
+  licenseUrl: https://mit-license.org

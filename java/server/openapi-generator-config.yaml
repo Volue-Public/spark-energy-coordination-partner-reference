@@ -1,0 +1,19 @@
+inputSpec: ../../_common/webhook-server-openapi.yaml
+generatorName: spring
+enablePostProcessFile: true
+outputDir: .
+additionalProperties:
+  interfaceOnly: false
+  useSpringBoot3: true
+  artifactDescription: A reference implementation of a partner API for receiving notifications from the Spark Energy Coordination API.
+  basePackage: com.voluespark.energycoordination.partnerapi
+  invokerPackage: com.voluespark.energycoordination.partnerapi.api
+  configPackage: com.voluespark.energycoordination.partnerapi.configuration
+  modelPackage: com.voluespark.energycoordination.partnerapi.model
+  apiPackage: com.voluespark.energycoordination.partnerapi.api
+  groupId: com.voluespark.energycoordination
+  artifactId: partnerapi
+  artifactUrl: https://github.com/Volue/spark-energy-coordination-partner-reference
+  hideGenerationTimestamp: true
+  licenseName: MIT
+  licenseUrl: https://mit-license.org

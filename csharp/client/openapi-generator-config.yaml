@@ -1,0 +1,10 @@
+inputSpec: https://api.sandbox.voluespark.com/energy-coordination/v1/swagger/Partner/swagger.json
+generatorName: csharp
+validateSpec: false
+enablePostProcessFile: true
+outputDir: .
+additionalProperties:
+  useDateTimeOffset: true
+  packageName: EnergyCoordinationClient
+  packageGuid: "{278CCF37-C285-4A18-AEEA-2E77BB3A4107}"
+  licenseId: MIT

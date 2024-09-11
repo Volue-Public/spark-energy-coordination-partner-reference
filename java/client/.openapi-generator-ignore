@@ -1,0 +1,11 @@
+# This file
+.openapi-generator-ignore
+# Logback file to ignore debug messages
+src/main/resources/logback.xml
+# Ignore useless docs
+docs/*
+# Don't generate tests, they are commented out anyways
+src/test/**/api/*
+src/test/**/model/*
+# Don't generate original openapi.yaml file
+api/openapi.yaml

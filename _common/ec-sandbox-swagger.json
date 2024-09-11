@@ -1,0 +1,3033 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Energy Coordination API - Partner Endpoints",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "/energy-coordination/v1"
+    }
+  ],
+  "paths": {
+    "/events": {
+      "get": {
+        "tags": [
+          "Events"
+        ],
+        "summary": "Get All Events",
+        "description": "Get all events, ordered by the most recent events first. Maximum pageSize is 1000.",
+        "operationId": "GetAllEvents",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetEventsResponse"
+                },
+                "example": {"events":[{"id":"c31399c6-d14c-4545-bf1e-c8a6c9ac8562","createdAt":"2024-11-28T09:02:18.5861892+00:00","payload":{"targets":[{"locationId":"29e8efff-cd41-4ae0-a046-efb2a8143fdc","meterPointId":"707057500095854823","resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2024-11-28T09:02:18.5861067+00:00"}]}],"payloadType":"LocationLPC"}},{"id":"573d0849-4668-4ee7-bb9a-c0c4c9777014","createdAt":"2024-11-28T09:02:18.5859958+00:00","payload":{"targets":[{"locationId":"44484161-671c-477c-a66c-e0ba87576a4d","resourceId":"7219a972-4036-4f8d-ab0f-63e72147ed1f","meterPointId":"707057500025662246","resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2024-11-28T09:02:18.5858009+00:00"}]}],"payloadType":"ResourceLPC"}},{"id":"9dfe3193-0ef5-49ee-a673-43101ee02bd7","createdAt":"2024-11-28T09:02:18.5849275+00:00","payload":{"lastUpdated":"2024-11-27T09:02:18.5849677+00:00","addedUsers":["2971919f-08cb-42bd-af3d-ca7e25bc2f5d"],"removedUsers":["2da02bd1-240f-4b60-88c1-69b041be18f2"],"payloadType":"UserEligibility"}},{"id":"affa8957-7b14-4793-9f69-0c7574b21e41","createdAt":"2024-11-28T09:02:18.586224+00:00","payload":{"targets":[{"resourceId":"8620210c-76d0-4e5f-83ba-9ac560d76e2f","locationId":"693b3f4d-9b6e-4d63-b7a0-eb30e9019a0c"},{"resourceId":"b1e15f82-fe51-4be1-90a2-b394d2c57da0","locationId":"975822d6-173d-4f4d-9465-ea7f3633582c"},{"resourceId":"760f08ad-1bbe-4741-bf0e-c2acbe0579c9","locationId":"929fa624-bbb3-43e5-ae0f-7310e9f98629"},{"resourceId":"6deadec3-4881-4587-b8e9-2b28472f4f18","locationId":"ccf8691d-4405-4d93-b783-a5d057053967"},{"resourceId":"1d5d69b7-da2a-4905-a2e1-ed65ebca2cf0","locationId":"e1aa01ad-238a-49d2-8ae1-11346d06f120"}],"priceCurveDelta":{"points":[{"price":456.423632198068000,"timestamp":"2024-11-29T00:00:00+00:00"},{"price":36.3518329462207000,"timestamp":"2024-11-29T01:00:00+00:00"},{"price":951.561621451124000,"timestamp":"2024-11-29T02:00:00+00:00"},{"price":710.505202117552000,"timestamp":"2024-11-29T03:00:00+00:00"},{"price":634.721527329979000,"timestamp":"2024-11-29T04:00:00+00:00"},{"price":325.58195860077000,"timestamp":"2024-11-29T05:00:00+00:00"},{"price":808.441232977989000,"timestamp":"2024-11-29T06:00:00+00:00"},{"price":959.325567889855000,"timestamp":"2024-11-29T07:00:00+00:00"},{"price":233.382757129267000,"timestamp":"2024-11-29T08:00:00+00:00"},{"price":206.291302812795000,"timestamp":"2024-11-29T09:00:00+00:00"},{"price":790.670592001193000,"timestamp":"2024-11-29T10:00:00+00:00"},{"price":335.441868340533000,"timestamp":"2024-11-29T11:00:00+00:00"},{"price":647.146342697528000,"timestamp":"2024-11-29T12:00:00+00:00"},{"price":809.534108889861000,"timestamp":"2024-11-29T13:00:00+00:00"},{"price":866.061185931496000,"timestamp":"2024-11-29T14:00:00+00:00"},{"price":590.099991319088000,"timestamp":"2024-11-29T15:00:00+00:00"},{"price":205.223907781396000,"timestamp":"2024-11-29T16:00:00+00:00"},{"price":306.530340036323000,"timestamp":"2024-11-29T17:00:00+00:00"},{"price":778.146047231651000,"timestamp":"2024-11-29T18:00:00+00:00"},{"price":61.7769511808688000,"timestamp":"2024-11-29T19:00:00+00:00"},{"price":981.607841756993000,"timestamp":"2024-11-29T20:00:00+00:00"},{"price":63.3527076246941000,"timestamp":"2024-11-29T21:00:00+00:00"},{"price":678.607698247061000,"timestamp":"2024-11-29T22:00:00+00:00"},{"price":719.817182936136000,"timestamp":"2024-11-29T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}],"pagination":{"totalRecords":4,"pageSize":4,"currentPage":1,"totalPages":1,"nextPage":null,"previousPage":null}}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/events/{eventId}": {
+      "get": {
+        "tags": [
+          "Events"
+        ],
+        "summary": "Get Event By Id",
+        "operationId": "GetEventById",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetEventResponse"
+                },
+                "example": {"id":"e9ed7b9b-12ce-4500-956d-d614267255f7","createdAt":"2024-11-28T09:02:18.6205674+00:00","payload":{"targets":[{"resourceId":"b0d8774c-6431-47e2-bd65-55cb0997b3ac","locationId":"3ad9cf1e-f6a9-46f6-ad6f-29cdd5a22260"},{"resourceId":"d4c8d7c4-c5a1-40c0-8d56-56d1573efdb8","locationId":"605c3efb-d7e5-4658-a6df-9d88186f3c18"},{"resourceId":"0dc3b53e-580c-48ae-9645-a4ed9ed21fcd","locationId":"09dfc522-82b7-4977-b945-7b0b23c0fb00"},{"resourceId":"a5d88739-a4da-4093-9033-9f383857c9b8","locationId":"dab10d66-cb2c-4232-9abd-617b18e28f62"},{"resourceId":"b90d660e-e932-4961-8fea-2152f973b5c0","locationId":"a66c60ac-9a17-4dba-acbd-84b42a8ef83e"}],"priceCurveDelta":{"points":[{"price":594.333166697501000,"timestamp":"2024-11-29T00:00:00+00:00"},{"price":177.754125394139000,"timestamp":"2024-11-29T01:00:00+00:00"},{"price":85.1990620056781000,"timestamp":"2024-11-29T02:00:00+00:00"},{"price":390.028136661306000,"timestamp":"2024-11-29T03:00:00+00:00"},{"price":197.729628274534000,"timestamp":"2024-11-29T04:00:00+00:00"},{"price":927.320636255266000,"timestamp":"2024-11-29T05:00:00+00:00"},{"price":696.907966555823000,"timestamp":"2024-11-29T06:00:00+00:00"},{"price":677.803437755989000,"timestamp":"2024-11-29T07:00:00+00:00"},{"price":94.8735668800185000,"timestamp":"2024-11-29T08:00:00+00:00"},{"price":885.9842185118000,"timestamp":"2024-11-29T09:00:00+00:00"},{"price":836.970566661816000,"timestamp":"2024-11-29T10:00:00+00:00"},{"price":448.400632532075000,"timestamp":"2024-11-29T11:00:00+00:00"},{"price":911.194835631483000,"timestamp":"2024-11-29T12:00:00+00:00"},{"price":828.346549110685000,"timestamp":"2024-11-29T13:00:00+00:00"},{"price":942.650959308327000,"timestamp":"2024-11-29T14:00:00+00:00"},{"price":508.489370380387000,"timestamp":"2024-11-29T15:00:00+00:00"},{"price":338.678467761273000,"timestamp":"2024-11-29T16:00:00+00:00"},{"price":995.100543677751000,"timestamp":"2024-11-29T17:00:00+00:00"},{"price":86.6072090652973000,"timestamp":"2024-11-29T18:00:00+00:00"},{"price":495.049703203956000,"timestamp":"2024-11-29T19:00:00+00:00"},{"price":15.5431441224312000,"timestamp":"2024-11-29T20:00:00+00:00"},{"price":504.468627414323000,"timestamp":"2024-11-29T21:00:00+00:00"},{"price":20.6172236959153000,"timestamp":"2024-11-29T22:00:00+00:00"},{"price":928.15402595324000,"timestamp":"2024-11-29T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Create a report",
+        "operationId": "PostReport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostReportRequest"
+              },
+              "example": {"eventId":"0fcda1c0-f6e6-4c07-8400-eb14c6b24d29","payloads":[{"resourceId":"370dd42b-0505-4ef1-bed8-ab91ee3df265","locationId":null,"meterPointId":null,"points":[{"timestamp":"2024-11-28T09:02:18.6610093+00:00","kiloWattHours":3.14}],"resolution":"01:00:00","curvePoints":null,"payloadType":"EnergyUsage"}]}
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetReportResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resources/{resourceId}": {
+      "get": {
+        "tags": [
+          "Resources"
+        ],
+        "summary": "Get Resource by Id",
+        "operationId": "GetResourceById",
+        "parameters": [
+          {
+            "name": "resourceId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetResourceResponse"
+                },
+                "example": {"resourceId":"370dd42b-0505-4ef1-bed8-ab91ee3df265","resourceType":"HotWaterTank","userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801","locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","meterPointId":null}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Resources"
+        ],
+        "summary": "Delete Resource",
+        "description": "Returns 204 No Content if the resource was deleted successfully.\nReturns 404 Not Found if the resource to delete does not exist.",
+        "operationId": "DeleteResourceById",
+        "parameters": [
+          {
+            "name": "resourceId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/simulation/events/priceCurve": {
+      "post": {
+        "tags": [
+          "Simulation | Events"
+        ],
+        "summary": "Simulate Price Curve Event",
+        "description": "Creates a `PriceCurveEvent` in the system using the given parameters.\nThe event will be sent to all webhooks that subscribe to the given type of event.\n\n- If the `targets` parameter is not specified, simulated resources and locations will be targeted instead if any exist.\n\n- If the `priceArea` parameter is not specified, a random price area will be selected.\n\n- If the `priceCurveDelta` parameter is not specified, a random price curve delta will be created.",
+        "operationId": "PostPriceCurveSimulation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulatePriceCurveEventRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimulateEventResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/simulation/events/userEligibility": {
+      "post": {
+        "tags": [
+          "Simulation | Events"
+        ],
+        "summary": "Simulate User Eligibility Event",
+        "description": "Creates a `UserEligibilityEvent` in the system using the given parameters.\nThe event will be sent to all webhooks that subscribe to the given type of event.\n\nThis event does not affect the eligibility of any users. It is only used to simulate the event.\n\nFor actual events, you can call the /users/eligible endpoint to check\nwhich users are eligible.",
+        "operationId": "PostUserEligibilitySimulation",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimulateEventResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/simulation/partner": {
+      "post": {
+        "tags": [
+          "Simulation | Partner data"
+        ],
+        "summary": "Simulate DER-Partner Data",
+        "description": "Creates simulated data with users, vehicles, locations and resources.",
+        "operationId": "PostTenantDataSimulation",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Simulation | Partner data"
+        ],
+        "summary": "Cleanup Simulation Data",
+        "description": "Deletes all simulation data from the system. This includes users, vehicles, locations and resources.",
+        "operationId": "DeleteTenantDataSimulation",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Get Users",
+        "description": "Get all users. Maximum pageSize is 1000.",
+        "operationId": "GetUsers",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create a User",
+        "operationId": "PostUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostUserRequest"
+              },
+              "example": {"userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801"}
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserResponse"
+                },
+                "example": {"userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Get User by Id",
+        "operationId": "GetUserById",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserResponse"
+                },
+                "example": {"userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801"}
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Delete User",
+        "description": "Returns 204 No Content if the user was deleted successfully.\nReturns 404 Not Found if the user to delete does not exist.",
+        "operationId": "DeleteUserById",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/users/batch": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create Multiple Users",
+        "operationId": "PostUsers",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostUsersBatchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostUsersBatchResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/locations": {
+      "get": {
+        "tags": [
+          "User Locations"
+        ],
+        "summary": "Get A User's Locations",
+        "operationId": "GetLocationsByUserId",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetLocationResponse"
+                  }
+                },
+                "example": [{"locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","locationType":"Residential","coordinates":null,"meterPointId":"ea641fd5-9c92-484c-a132-54cad9076d01","meterPointIds":["ea641fd5-9c92-484c-a132-54cad9076d01"],"userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801"}]
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User Locations"
+        ],
+        "summary": "Create User Location",
+        "operationId": "PostLocation",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostLocationRequest"
+              },
+              "example": {"locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":["ea641fd5-9c92-484c-a132-54cad9076d01"]}
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLocationResponse"
+                },
+                "example": {"locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801"}
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/locations/{locationId}": {
+      "get": {
+        "tags": [
+          "User Locations"
+        ],
+        "summary": "Get User Location By Location Id",
+        "operationId": "GetLocationByLocationId",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLocationResponse"
+                },
+                "example": {"locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801"}
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "User Locations"
+        ],
+        "summary": "Update User Location",
+        "operationId": "UpdateLocation",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutLocationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLocationResponse"
+                },
+                "example": {"locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "User Locations"
+        ],
+        "summary": "Patch User Location",
+        "operationId": "PatchLocation",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchLocationRequest"
+              },
+              "example": {"locationType":null,"coordinates":{"latitude":78.22094240482632,"longitude":15.619465054484257},"meterPointIds":null}
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLocationResponse"
+                },
+                "example": {"locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User Locations"
+        ],
+        "summary": "Delete User Location",
+        "description": "Returns 204 No Content if the location was deleted successfully.\nReturns 404 Not Found if the location to delete does not exist.",
+        "operationId": "DeleteLocation",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/users/locations/batch": {
+      "post": {
+        "tags": [
+          "User Locations"
+        ],
+        "summary": "Create Multiple User Locations",
+        "description": "Create multiple locations for several users at once.\n\"The request body should be an array of objects, each containing a user id and a create location request.",
+        "operationId": "PostLocations",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostLocationsBatchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostLocationsBatchResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/vehicles": {
+      "post": {
+        "tags": [
+          "User Resources"
+        ],
+        "summary": "Create Vehicle Resource",
+        "operationId": "PostVehicle",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostVehicleResourceRequest"
+              },
+              "example": {"resourceId":"1edf9d15-0dd5-42da-bdfc-0ed05f55e8ca","resourceType":"Vehicle"}
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetResourceResponse"
+                },
+                "example": {"resourceId":"370dd42b-0505-4ef1-bed8-ab91ee3df265","resourceType":"HotWaterTank","userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801","locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","meterPointId":null}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/resources": {
+      "get": {
+        "tags": [
+          "User Resources"
+        ],
+        "summary": "Get a User's Resources",
+        "description": "Get all resources registered to a user. Returns both location bound resources and vehicles.",
+        "operationId": "GetResourcesForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserResourcesResponse"
+                },
+                "example": {"resources":[{"resourceId":"370dd42b-0505-4ef1-bed8-ab91ee3df265","resourceType":"HotWaterTank","userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801","locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","meterPointId":null},{"resourceId":"1edf9d15-0dd5-42da-bdfc-0ed05f55e8ca","resourceType":"Vehicle","userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801","locationId":null,"meterPointId":null}]}
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/users/{userId}/locations/{locationId}/resources": {
+      "get": {
+        "tags": [
+          "User Resources | Location-bound"
+        ],
+        "summary": "Get Location Bound Resources",
+        "description": "Get all resources registered at a location.",
+        "operationId": "GetLocationBoundResources",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetLocationBoundResourceResponse"
+                  }
+                },
+                "example": [{"resourceId":"370dd42b-0505-4ef1-bed8-ab91ee3df265","resourceType":"HotWaterTank","locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801","meterPointId":null},{"resourceId":"bca1b8f6-3668-4428-a5d9-9d5a84d67ddc","resourceType":"Charger","locationId":"84808df8-8e9a-4140-a3bf-dad0c1c57ad9","userId":"b7dc1dcd-f405-4ffc-b54a-9a5948752801","meterPointId":null}]
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User Resources | Location-bound"
+        ],
+        "summary": "Create Location Bound Resource",
+        "description": "Create a resource at a location.",
+        "operationId": "PostLocationBoundResource",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostLocationBoundResourceRequest"
+              },
+              "example": {"meterPointId":"ea641fd5-9c92-484c-a132-54cad9076d01","resourceId":"370dd42b-0505-4ef1-bed8-ab91ee3df265","resourceType":"HotWaterTank"}
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLocationBoundResourceResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/enrollment": {
+      "get": {
+        "tags": [
+          "User Spark Program"
+        ],
+        "summary": "Get User Enrollment",
+        "description": "Get a user's enrollment status.\nAlso returns when the user was enrolled.",
+        "operationId": "GetUserEnrollmentByUserId",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserEnrollmentResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User Spark Program"
+        ],
+        "summary": "Enroll User",
+        "description": "Enroll a user into the SPARK Program",
+        "operationId": "PostUserEnrollment",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserEnrollmentResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User Spark Program"
+        ],
+        "summary": "Delete User Enrollment",
+        "description": "Remove a user from the SPARK Program",
+        "operationId": "DeleteUserEnrollment",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/eligibility": {
+      "get": {
+        "tags": [
+          "User Spark Program"
+        ],
+        "summary": "Get User Eligibility",
+        "description": "Check if a user is eligible for the SPARK Program",
+        "operationId": "GetUserEligibilityByUserId",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserEligibilityResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/users/eligible": {
+      "get": {
+        "tags": [
+          "User Spark Program"
+        ],
+        "summary": "Get Eligible Users",
+        "description": "Get all users who are eligible for the SPARK Program. Maximum pageSize is 1000.",
+        "operationId": "GetEligibleUsers",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetEligibleUsersResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/compensation": {
+      "get": {
+        "tags": [
+          "User Spark Program"
+        ],
+        "summary": "Will fetch the total compensation per location the user has for the current month",
+        "operationId": "FetchUserCompensation",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserCompensationForCurrentMonthResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/meters/{mpid}/eligible": {
+      "get": {
+        "tags": [
+          "User Spark Program"
+        ],
+        "summary": "Check if MeterPoint id eligible for Spark",
+        "description": "Indicates whether or not the given MeterPoint is currently eligible for the Spark program",
+        "operationId": "GetMpidEligibility",
+        "parameters": [
+          {
+            "name": "mpid",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMpidEligibilityResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webhooks": {
+      "get": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Get All Webhooks",
+        "operationId": "GetWebhooks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWebhooksResponse"
+                },
+                "example": {"webhooks":[{"webhookId":"733ef239-ec94-4bdf-b3b6-b467aafa5559","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-28T09:02:18.7040985+00:00","createdDate":"2024-11-28T09:02:18.7040718+00:00","lastAnalyzedTimestamp":"2024-11-28T09:02:18.7041168+00:00"}]}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Create a Webhook",
+        "operationId": "PostWebhook",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostWebhookRequest"
+              },
+              "example": {"name":"Example Webhook","webhookSecret":"CMJ0PqrOtGIat7j","webhookUrl":"https://example.com/api","notificationTypes":["PriceCurveCreated","UserEligibilityUpdated","LocationLPCRequested","ResourceLPCRequested"]}
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWebhookResponse"
+                },
+                "example": {"webhookId":"733ef239-ec94-4bdf-b3b6-b467aafa5559","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-28T09:02:18.7117439+00:00","createdDate":"2024-11-28T09:02:18.711743+00:00","lastAnalyzedTimestamp":"2024-11-28T09:02:18.7117439+00:00"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webhooks/{webhookId}": {
+      "get": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Get a Webhook by Id",
+        "operationId": "GetWebhookById",
+        "parameters": [
+          {
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWebhookResponse"
+                },
+                "example": {"webhookId":"733ef239-ec94-4bdf-b3b6-b467aafa5559","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-28T09:02:18.7124437+00:00","createdDate":"2024-11-28T09:02:18.7124429+00:00","lastAnalyzedTimestamp":"2024-11-28T09:02:18.7124439+00:00"}
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Update a Webhook",
+        "operationId": "UpdateWebhookById",
+        "parameters": [
+          {
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutWebhookRequest"
+              },
+              "example": {"webhookSecret":"New secret","webhookUrl":"https://new-example.com/api/v2/","notificationTypes":["PriceCurveCreated"],"enabled":true,"name":"New name"}
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWebhookResponse"
+                },
+                "example": {"webhookId":"733ef239-ec94-4bdf-b3b6-b467aafa5559","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-28T09:02:18.7144643+00:00","createdDate":"2024-11-28T09:02:18.7144636+00:00","lastAnalyzedTimestamp":"2024-11-28T09:02:18.7144645+00:00"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Delete a webhook",
+        "description": "Returns 204 No Content if the webhook was deleted successfully.\nReturns 404 Not Found if the webhook to delete does not exist.",
+        "operationId": "DeleteWebhookById",
+        "parameters": [
+          {
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Update individual fields of a Webhook",
+        "operationId": "PatchWebhookById",
+        "parameters": [
+          {
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchWebhookRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWebhookResponse"
+                },
+                "example": {"webhookId":"733ef239-ec94-4bdf-b3b6-b467aafa5559","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-28T09:02:18.7152041+00:00","createdDate":"2024-11-28T09:02:18.7152037+00:00","lastAnalyzedTimestamp":"2024-11-28T09:02:18.7152042+00:00"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/webhooks/{webhookId}/enabled": {
+      "put": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Enable or Disable a Webhook",
+        "operationId": "UpdateWebhookEnabledById",
+        "parameters": [
+          {
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enabled",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/webhooks/logs": {
+      "get": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Get all webhook notification logs",
+        "operationId": "GetWebhookNotificationLogs",
+        "parameters": [
+          {
+            "name": "webhookId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "$ref": "#/components/schemas/WebhookId"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWebhookNotificationLogsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webhooks/logs/{notificationId}": {
+      "get": {
+        "tags": [
+          "Webhooks"
+        ],
+        "summary": "Get a webhook notification log by notification id",
+        "operationId": "GetWebhookNotificationLogById",
+        "parameters": [
+          {
+            "name": "notificationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWebhookNotificationLogByIdResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiPagination": {
+        "type": "object",
+        "properties": {
+          "totalRecords": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "nextPage": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "readOnly": true
+          },
+          "previousPage": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Coordinate": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Currency": {
+        "enum": [
+          "NOK",
+          "EUR",
+          "SEK",
+          "DKK"
+        ],
+        "type": "string"
+      },
+      "EnergyCurvePoint": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "kiloWattHours": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EnergyUnit": {
+        "enum": [
+          "kWh",
+          "MWh"
+        ],
+        "type": "string"
+      },
+      "EnergyUsageReportPayload": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/SparkReportPayload"
+          }
+        ],
+        "properties": {
+          "resourceId": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterPointId": {
+            "type": "string",
+            "nullable": true
+          },
+          "points": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EnergyCurvePoint"
+            }
+          },
+          "resolution": {
+            "type": "string",
+            "format": "time-span",
+            "example": "02:00:00"
+          },
+          "curvePoints": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EnergyCurvePoint"
+            },
+            "nullable": true,
+            "deprecated": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventId": {
+        "type": "string"
+      },
+      "EventNotification": {
+        "type": "object",
+        "properties": {
+          "notificationId": {
+            "$ref": "#/components/schemas/NotificationId"
+          },
+          "eventId": {
+            "type": "string"
+          },
+          "eventCreatedAtUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notificationSentUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notificationType": {
+            "$ref": "#/components/schemas/NotificationType"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/SparkEventPayload"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetEligibleUsersResponse": {
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/ApiPagination"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetUserResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetEventResponse": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PriceCurvePayload"
+              },
+              {
+                "$ref": "#/components/schemas/UserEligibilityPayload"
+              }
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetEventsResponse": {
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/ApiPagination"
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetEventResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetLocationBoundResourceResponse": {
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "type": "string"
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/ResourceType"
+          },
+          "locationId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "meterPointId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetLocationResponse": {
+        "type": "object",
+        "properties": {
+          "locationId": {
+            "type": "string"
+          },
+          "locationType": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "coordinates": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "meterPointId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true,
+            "deprecated": true
+          },
+          "meterPointIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetMpidEligibilityResponse": {
+        "type": "object",
+        "properties": {
+          "meterPointId": {
+            "type": "string"
+          },
+          "isEligible": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetReportResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "eventId": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetResourceResponse": {
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "type": "string"
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/ResourceType"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterPointId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetUserCompensationForCurrentMonthResponse": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "$ref": "#/components/schemas/UserId"
+          },
+          "period": {
+            "$ref": "#/components/schemas/Period"
+          },
+          "locationCompensations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocationCompensation"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetUserEligibilityResponse": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "isEligible": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetUserEnrollmentResponse": {
+        "type": "object",
+        "properties": {
+          "isEnrolled": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "userId": {
+            "type": "string"
+          },
+          "enrollmentId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "enrollmentDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetUserResourcesResponse": {
+        "type": "object",
+        "properties": {
+          "resources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetResourceResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetUserResponse": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetUsersResponse": {
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/ApiPagination"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetUserResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetWebhookNotificationLogByIdResponse": {
+        "type": "object",
+        "properties": {
+          "webhookNotificationLog": {
+            "$ref": "#/components/schemas/WebhookNotificationLog"
+          },
+          "notificationContent": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetWebhookNotificationLogsResponse": {
+        "type": "object",
+        "properties": {
+          "webhookNotificationLogs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WebhookNotificationLog"
+            }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/ApiPagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetWebhookResponse": {
+        "type": "object",
+        "properties": {
+          "webhookId": {
+            "type": "string"
+          },
+          "webhookUrl": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "notificationTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationType"
+            }
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "status": {
+            "$ref": "#/components/schemas/WebhookStatus"
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastAnalyzedTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetWebhooksResponse": {
+        "type": "object",
+        "properties": {
+          "webhooks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetWebhookResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "HttpValidationProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "additionalProperties": { }
+      },
+      "LocationCompensation": {
+        "type": "object",
+        "properties": {
+          "locationId": {
+            "$ref": "#/components/schemas/LocationId"
+          },
+          "meterPointIds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeterPointId"
+            }
+          },
+          "activeAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "blockedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "$ref": "#/components/schemas/Currency"
+          },
+          "problems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Problem"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "LocationId": {
+        "type": "string"
+      },
+      "LocationType": {
+        "enum": [
+          "Unknown",
+          "Residential",
+          "Commercial",
+          "Other"
+        ],
+        "type": "string"
+      },
+      "MeterPointId": {
+        "type": "string"
+      },
+      "NotificationId": {
+        "type": "string"
+      },
+      "NotificationType": {
+        "enum": [
+          "Unknown",
+          "PriceCurveCreated",
+          "UserEligibilityUpdated",
+          "LocationLPCRequested",
+          "ResourceLPCRequested"
+        ],
+        "type": "string"
+      },
+      "PatchLocationRequest": {
+        "type": "object",
+        "properties": {
+          "locationType": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "coordinates": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "meterPointIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PatchWebhookRequest": {
+        "type": "object",
+        "properties": {
+          "webhookSecret": {
+            "type": "string",
+            "nullable": true
+          },
+          "webhookUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "notificationTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationType"
+            },
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Period": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "format": "date"
+          },
+          "to": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostLocationBoundResourceRequest": {
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "type": "string"
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/ResourceType"
+          },
+          "meterPointId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostLocationRequest": {
+        "type": "object",
+        "properties": {
+          "locationId": {
+            "type": "string"
+          },
+          "locationType": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "coordinates": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "meterPointId": {
+            "type": "string",
+            "nullable": true,
+            "deprecated": true
+          },
+          "meterPointIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostLocationWithUserRequest": {
+        "type": "object",
+        "properties": {
+          "locationId": {
+            "type": "string"
+          },
+          "locationType": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "coordinates": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "meterPointId": {
+            "type": "string",
+            "nullable": true,
+            "deprecated": true
+          },
+          "meterPointIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "userId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostLocationsBatchRequest": {
+        "type": "object",
+        "properties": {
+          "locations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostLocationWithUserRequest"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostLocationsBatchResponse": {
+        "type": "object",
+        "properties": {
+          "locations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetLocationResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostReportRequest": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string"
+          },
+          "payloads": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/EnergyUsageReportPayload"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostUserRequest": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostUsersBatchRequest": {
+        "type": "object",
+        "properties": {
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostUserRequest"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostUsersBatchResponse": {
+        "type": "object",
+        "properties": {
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetUserResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostVehicleResourceRequest": {
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "type": "string"
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/ResourceType"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostWebhookRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "webhookSecret": {
+            "type": "string",
+            "nullable": true
+          },
+          "webhookUrl": {
+            "type": "string"
+          },
+          "notificationTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationType"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriceArea": {
+        "enum": [
+          "Unknown",
+          "NO1",
+          "NO2",
+          "NO3",
+          "NO4",
+          "NO5",
+          "FI",
+          "DK1",
+          "DK2",
+          "SE1",
+          "SE2",
+          "SE3",
+          "SE4"
+        ],
+        "type": "string"
+      },
+      "PriceCurve": {
+        "type": "object",
+        "properties": {
+          "points": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PriceCurvePoint"
+            }
+          },
+          "energyUnit": {
+            "$ref": "#/components/schemas/EnergyUnit"
+          },
+          "currency": {
+            "$ref": "#/components/schemas/Currency"
+          },
+          "resolution": {
+            "type": "string",
+            "format": "time-span",
+            "example": "02:00:00"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriceCurvePayload": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/SparkEventPayload"
+          }
+        ],
+        "properties": {
+          "targets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PriceCurveTarget"
+            }
+          },
+          "priceCurveDelta": {
+            "$ref": "#/components/schemas/PriceCurve"
+          },
+          "priceArea": {
+            "$ref": "#/components/schemas/PriceArea"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriceCurvePoint": {
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriceCurveTarget": {
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "locationId": {
+            "$ref": "#/components/schemas/LocationId"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Problem": {
+        "type": "object",
+        "properties": {
+          "problemType": {
+            "$ref": "#/components/schemas/ProblemType"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemType": {
+        "enum": [
+          "MissingMpidOnLocation",
+          "CompensationMpidDoesNotMatchLocation"
+        ],
+        "type": "string"
+      },
+      "PutLocationRequest": {
+        "type": "object",
+        "properties": {
+          "locationId": {
+            "type": "string"
+          },
+          "locationType": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "coordinates": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "meterPointId": {
+            "type": "string",
+            "nullable": true,
+            "deprecated": true
+          },
+          "meterPointIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PutWebhookRequest": {
+        "type": "object",
+        "properties": {
+          "webhookSecret": {
+            "type": "string",
+            "nullable": true
+          },
+          "webhookUrl": {
+            "type": "string"
+          },
+          "notificationTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationType"
+            }
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResourceId": {
+        "type": "string"
+      },
+      "ResourceType": {
+        "enum": [
+          "Generic",
+          "Vehicle",
+          "Charger",
+          "HotWaterTank",
+          "HVAC",
+          "SolarInverter"
+        ],
+        "type": "string"
+      },
+      "SimulateEventResponse": {
+        "type": "object",
+        "properties": {
+          "simulatedEvent": {
+            "$ref": "#/components/schemas/GetEventResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulatePriceCurveEventRequest": {
+        "type": "object",
+        "properties": {
+          "targets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PriceCurveTarget"
+            },
+            "nullable": true
+          },
+          "priceCurveDelta": {
+            "$ref": "#/components/schemas/PriceCurve"
+          },
+          "priceArea": {
+            "$ref": "#/components/schemas/PriceArea"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SparkEventPayload": {
+        "type": "object",
+        "properties": {
+          "payloadType": {
+            "$ref": "#/components/schemas/SparkEventPayloadType"
+          }
+        },
+        "additionalProperties": false,
+        "discriminator": {
+          "propertyName": "payloadType",
+          "mapping": {
+            "PriceCurve": "#/components/schemas/PriceCurvePayload",
+            "UserEligibility": "#/components/schemas/UserEligibilityPayload"
+          }
+        }
+      },
+      "SparkEventPayloadType": {
+        "enum": [
+          "Unknown",
+          "UserEligibility",
+          "PriceCurve",
+          "LocationLPC",
+          "ResourceLPC"
+        ],
+        "type": "string"
+      },
+      "SparkReportPayload": {
+        "type": "object",
+        "properties": {
+          "payloadType": {
+            "$ref": "#/components/schemas/SparkReportPayloadType"
+          }
+        },
+        "additionalProperties": false,
+        "discriminator": {
+          "propertyName": "payloadType",
+          "mapping": {
+            "EnergyUsage": "#/components/schemas/EnergyUsageReportPayload"
+          }
+        }
+      },
+      "SparkReportPayloadType": {
+        "enum": [
+          "EnergyUsage",
+          "LocationEnergyUsage",
+          "ResourceLPCAcknowledgement",
+          "LocationLPCAcknowledgement"
+        ],
+        "type": "string"
+      },
+      "TenantId": {
+        "type": "string"
+      },
+      "UserEligibilityPayload": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/SparkEventPayload"
+          }
+        ],
+        "properties": {
+          "lastUpdated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "addedUsers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "removedUsers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserId": {
+        "type": "string"
+      },
+      "WebhookId": {
+        "type": "string"
+      },
+      "WebhookNotificationLog": {
+        "type": "object",
+        "properties": {
+          "webhookId": {
+            "$ref": "#/components/schemas/WebhookId"
+          },
+          "tenantId": {
+            "$ref": "#/components/schemas/TenantId"
+          },
+          "partnerEventId": {
+            "$ref": "#/components/schemas/EventId"
+          },
+          "notificationId": {
+            "$ref": "#/components/schemas/NotificationId"
+          },
+          "notificationType": {
+            "$ref": "#/components/schemas/NotificationType"
+          },
+          "notificationSent": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sparkSignature": {
+            "type": "string",
+            "nullable": true
+          },
+          "webhookUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "requestTimeout": {
+            "type": "boolean"
+          },
+          "responseStatusCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "requestDurationMs": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WebhookStatus": {
+        "enum": [
+          "New",
+          "Healthy",
+          "Unhealthy",
+          "TimeOut"
+        ],
+        "type": "string"
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter the JWT-token. Bearer will be prepended.",
+        "scheme": "Bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

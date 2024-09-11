@@ -1,0 +1,37 @@
+openapi: 3.0.3
+info:
+  title: Partner webhook API
+  description: A minimal OpenAPI spec with one POST endpoint to receive notifications from Spark energy-coordination.
+  version: 1.0.0
+
+paths:
+  /notify:
+    post:
+      tags:
+        - Notification
+      summary: Receive an event notification
+      description: This endpoint accepts an event notification with a signed payload.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EventNotification"
+      parameters:
+        - in: header
+          name: x-payload-signature
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Event notification received successfully
+        "400":
+          description: Invalid request
+        "500":
+          description: Internal server error
+
+components:
+  schemas:
+    EventNotification:
+      $ref: "https://api.sandbox.voluespark.com/energy-coordination/v1/swagger/Partner/swagger.json#/components/schemas/EventNotification"

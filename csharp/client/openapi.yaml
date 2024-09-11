@@ -1,0 +1,45 @@
+openapi: 3.0.1
+info:
+  title: Energy Coordination API - Partner Endpoints
+  version: v1
+servers:
+  - url: /energy-coordination/v1
+paths:
+  /animal:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Animal'
+components:
+  schemas:
+    Animal:
+      type: object
+      properties:
+        payloadType:
+          $ref: '#/components/schemas/AnimalType'
+      additionalProperties: false
+      discriminator:
+        propertyName: payloadType
+    AnimalType:
+      type: string
+      enum:
+        - Dog
+        - Cat
+    Cat:
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/Animal'
+      properties:
+        meow:
+          type: string
+    Dog:
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/Animal'
+      properties:
+        bark:
+          type: string

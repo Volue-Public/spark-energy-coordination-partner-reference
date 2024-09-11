@@ -1,0 +1,234 @@
+{
+  "openapi" : "3.0.3",
+  "info" : {
+    "description" : "A minimal OpenAPI spec with one POST endpoint to receive notifications from Spark energy-coordination.",
+    "title" : "Partner webhook API",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "/"
+  } ],
+  "paths" : {
+    "/notify" : {
+      "post" : {
+        "description" : "This endpoint accepts an event notification with a signed payload.",
+        "parameters" : [ {
+          "explode" : false,
+          "in" : "header",
+          "name" : "x-payload-signature",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          },
+          "style" : "simple"
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/EventNotification"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Event notification received successfully"
+          },
+          "400" : {
+            "description" : "Invalid request"
+          },
+          "500" : {
+            "description" : "Internal server error"
+          }
+        },
+        "summary" : "Receive an event notification",
+        "tags" : [ "Notification" ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "EventNotification" : {
+        "additionalProperties" : false,
+        "example" : {
+          "eventId" : "eventId",
+          "notificationSentUtc" : "2000-01-23T04:56:07.000+00:00",
+          "eventCreatedAtUtc" : "2000-01-23T04:56:07.000+00:00",
+          "payload" : {
+            "payloadType" : "Unknown"
+          },
+          "notificationId" : "notificationId",
+          "notificationType" : "Unknown"
+        },
+        "properties" : {
+          "notificationId" : {
+            "type" : "string"
+          },
+          "eventId" : {
+            "type" : "string"
+          },
+          "eventCreatedAtUtc" : {
+            "format" : "date-time",
+            "type" : "string"
+          },
+          "notificationSentUtc" : {
+            "format" : "date-time",
+            "type" : "string"
+          },
+          "notificationType" : {
+            "$ref" : "#/components/schemas/NotificationType"
+          },
+          "payload" : {
+            "$ref" : "#/components/schemas/SparkEventPayload"
+          }
+        },
+        "type" : "object"
+      },
+      "NotificationId" : {
+        "type" : "string"
+      },
+      "NotificationType" : {
+        "enum" : [ "Unknown", "PriceCurveCreated", "UserEligibilityUpdated", "LocationLPCRequested", "ResourceLPCRequested" ],
+        "type" : "string"
+      },
+      "SparkEventPayload" : {
+        "additionalProperties" : false,
+        "discriminator" : {
+          "mapping" : {
+            "PriceCurve" : "#/components/schemas/PriceCurvePayload",
+            "UserEligibility" : "#/components/schemas/UserEligibilityPayload"
+          },
+          "propertyName" : "payloadType"
+        },
+        "example" : {
+          "payloadType" : "Unknown"
+        },
+        "properties" : {
+          "payloadType" : {
+            "$ref" : "#/components/schemas/SparkEventPayloadType"
+          }
+        },
+        "type" : "object"
+      },
+      "SparkEventPayloadType" : {
+        "enum" : [ "Unknown", "UserEligibility", "PriceCurve", "LocationLPC", "ResourceLPC" ],
+        "type" : "string"
+      },
+      "PriceCurvePayload" : {
+        "additionalProperties" : false,
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/SparkEventPayload"
+        } ],
+        "properties" : {
+          "targets" : {
+            "items" : {
+              "$ref" : "#/components/schemas/PriceCurveTarget"
+            },
+            "type" : "array"
+          },
+          "priceCurveDelta" : {
+            "$ref" : "#/components/schemas/PriceCurve"
+          },
+          "priceArea" : {
+            "$ref" : "#/components/schemas/PriceArea"
+          }
+        },
+        "type" : "object"
+      },
+      "PriceCurveTarget" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "resourceId" : {
+            "type" : "string"
+          },
+          "locationId" : {
+            "type" : "string"
+          }
+        },
+        "type" : "object"
+      },
+      "ResourceId" : {
+        "type" : "string"
+      },
+      "LocationId" : {
+        "type" : "string"
+      },
+      "PriceCurve" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "points" : {
+            "items" : {
+              "$ref" : "#/components/schemas/PriceCurvePoint"
+            },
+            "type" : "array"
+          },
+          "energyUnit" : {
+            "$ref" : "#/components/schemas/EnergyUnit"
+          },
+          "currency" : {
+            "$ref" : "#/components/schemas/Currency"
+          },
+          "resolution" : {
+            "example" : "02:00:00",
+            "format" : "time-span",
+            "type" : "string"
+          }
+        },
+        "type" : "object"
+      },
+      "PriceCurvePoint" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "price" : {
+            "format" : "double",
+            "type" : "number"
+          },
+          "timestamp" : {
+            "format" : "date-time",
+            "type" : "string"
+          }
+        },
+        "type" : "object"
+      },
+      "EnergyUnit" : {
+        "enum" : [ "kWh", "MWh" ],
+        "type" : "string"
+      },
+      "Currency" : {
+        "enum" : [ "NOK", "EUR", "SEK", "DKK" ],
+        "type" : "string"
+      },
+      "PriceArea" : {
+        "enum" : [ "Unknown", "NO1", "NO2", "NO3", "NO4", "NO5", "FI", "DK1", "DK2", "SE1", "SE2", "SE3", "SE4" ],
+        "type" : "string"
+      },
+      "UserEligibilityPayload" : {
+        "additionalProperties" : false,
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/SparkEventPayload"
+        } ],
+        "properties" : {
+          "lastUpdated" : {
+            "format" : "date-time",
+            "type" : "string"
+          },
+          "addedUsers" : {
+            "items" : {
+              "type" : "string"
+            },
+            "type" : "array"
+          },
+          "removedUsers" : {
+            "items" : {
+              "type" : "string"
+            },
+            "type" : "array"
+          }
+        },
+        "type" : "object"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+inputSpec: ../../_common/webhook-server-openapi.yaml
+generatorName: aspnetcore
+skipValidateSpec: true
+enablePostProcessFile: true
+outputDir: .
+additionalProperties:
+  packageName: Partner.Api
+  useNewtonsoft: false
+  enumValueSuffix: ""
+  operationResultTask: true
+  useDateTimeOffset: true
+  classModifier: abstract
+  useSwashbuckle: true
+  userSecretsGuid: b4ee8761-30cf-4956-a617-d72f785791c3
+  packageGuid: "{26C0D163-E879-4020-A6C0-86CB98CB6153}"
+  licenseName: MIT
+  licenseUrl: https://mit-license.org

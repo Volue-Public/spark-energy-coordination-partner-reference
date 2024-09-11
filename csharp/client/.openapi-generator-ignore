@@ -1,0 +1,9 @@
+# This file
+.openapi-generator-ignore
+# Don't generate docs
+docs/*
+# Don't generate tests, they are commented out anyways
+src/*.Test/Api/*
+src/*.Test/Model/*
+# Don't generate original openapi.yaml file
+api/openapi.yaml

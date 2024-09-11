@@ -1,0 +1,10 @@
+# This file
+.openapi-generator-ignore
+# Implementations of controllers should live here
+src/*/Implementations/*
+# Filter for calculating hash of body
+src/*/Filters/BodySignatureFilter.cs
+# Added filter for calculating hash to ConfigureServices on startup
+src/*/Startup.cs
+# Added test project to solution file
+*.sln
