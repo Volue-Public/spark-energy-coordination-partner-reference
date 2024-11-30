@@ -46,7 +46,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetEventsResponse"
                 },
-                "example": {"events":[{"id":"b36c2adb-108c-4636-88da-d00762ebd62a","createdAt":"2024-11-29T09:02:02.7314235+00:00","payload":{"targets":[{"locationId":"b967f259-44ba-4376-9a01-ee8234660d1f","meterPointId":"707057500019194351","resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2024-11-29T09:02:02.731408+00:00"}]}],"payloadType":"LocationLPC"}},{"id":"8d9b7e75-90de-4110-9014-64b04237e313","createdAt":"2024-11-29T09:02:02.7314055+00:00","payload":{"targets":[{"locationId":"698713fc-cf71-409b-b434-e9f74d5140f8","resourceId":"e9968005-b222-4713-ad30-2482218372d9","meterPointId":"707057500015785942","resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2024-11-29T09:02:02.7313819+00:00"}]}],"payloadType":"ResourceLPC"}},{"id":"da0acc17-651a-4862-962b-205d82ad0a8a","createdAt":"2024-11-29T09:02:02.7313714+00:00","payload":{"lastUpdated":"2024-11-28T09:02:02.7313728+00:00","addedUsers":["26d1dc42-95c8-4a98-9e51-7cdb173354e3"],"removedUsers":["cf071a26-4438-4f35-b9b6-384f99ffc1ec"],"payloadType":"UserEligibility"}},{"id":"df63e8c2-d2f1-443f-b083-0201b78390fe","createdAt":"2024-11-29T09:02:02.7314381+00:00","payload":{"targets":[{"resourceId":"b2d93775-1246-4be8-9d9d-89e42a64fa51","locationId":"1f778da9-6064-434f-bb06-434f23d846db"},{"resourceId":"a95f8481-b9bb-473a-b2e7-1ec79307d3d4","locationId":"aeb3eb8a-176c-4d86-9283-2fe801a6a0d1"},{"resourceId":"c8a46c18-ff14-4e7f-a409-def17c3e2ab0","locationId":"5463f275-b4b1-46d0-bd10-f48b66b71106"},{"resourceId":"2e32ba5b-221b-4492-82d7-5a5033000967","locationId":"3918ff81-1c94-43db-8d53-5695aa17722e"},{"resourceId":"2a17def6-a9aa-4fca-9afa-1021a482fce7","locationId":"4517699f-45aa-4258-86ce-b016e2692087"}],"priceCurveDelta":{"points":[{"price":530.561403651934000,"timestamp":"2024-11-30T00:00:00+00:00"},{"price":552.335084579388000,"timestamp":"2024-11-30T01:00:00+00:00"},{"price":400.439169888847000,"timestamp":"2024-11-30T02:00:00+00:00"},{"price":360.154802895236000,"timestamp":"2024-11-30T03:00:00+00:00"},{"price":900.073125028113000,"timestamp":"2024-11-30T04:00:00+00:00"},{"price":343.265710750621000,"timestamp":"2024-11-30T05:00:00+00:00"},{"price":400.045585631206000,"timestamp":"2024-11-30T06:00:00+00:00"},{"price":332.981218825617000,"timestamp":"2024-11-30T07:00:00+00:00"},{"price":79.5614994130004000,"timestamp":"2024-11-30T08:00:00+00:00"},{"price":192.456821800048000,"timestamp":"2024-11-30T09:00:00+00:00"},{"price":274.259966700175000,"timestamp":"2024-11-30T10:00:00+00:00"},{"price":834.882122763391000,"timestamp":"2024-11-30T11:00:00+00:00"},{"price":227.614184103236000,"timestamp":"2024-11-30T12:00:00+00:00"},{"price":22.7455327139803000,"timestamp":"2024-11-30T13:00:00+00:00"},{"price":642.226054038357000,"timestamp":"2024-11-30T14:00:00+00:00"},{"price":519.345789889636000,"timestamp":"2024-11-30T15:00:00+00:00"},{"price":869.546869913048000,"timestamp":"2024-11-30T16:00:00+00:00"},{"price":606.211077001229000,"timestamp":"2024-11-30T17:00:00+00:00"},{"price":236.920668127997000,"timestamp":"2024-11-30T18:00:00+00:00"},{"price":270.494150507361000,"timestamp":"2024-11-30T19:00:00+00:00"},{"price":204.833983386515000,"timestamp":"2024-11-30T20:00:00+00:00"},{"price":238.004602593973000,"timestamp":"2024-11-30T21:00:00+00:00"},{"price":395.029508456934000,"timestamp":"2024-11-30T22:00:00+00:00"},{"price":983.901837420296000,"timestamp":"2024-11-30T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}],"pagination":{"totalRecords":4,"pageSize":4,"currentPage":1,"totalPages":1,"nextPage":null,"previousPage":null}}
+                "example": {"events":[{"id":"d3bea26d-f123-4732-bd32-151c498e3d31","createdAt":"2024-11-30T09:01:56.2444197+00:00","payload":{"targets":[{"locationId":"a181a96a-061b-4057-95e1-a6a904b96cf4","meterPointId":"707057500061674743","resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2024-11-30T09:01:56.2443557+00:00"}]}],"payloadType":"LocationLPC"}},{"id":"3017273a-1c8b-496c-a1c7-3e20fb37b92a","createdAt":"2024-11-30T09:01:56.2442128+00:00","payload":{"targets":[{"locationId":"c3f3fa8d-b9c5-4eaf-93aa-d98a9cfad60b","resourceId":"c358dcec-a144-46f8-b7e1-5a2c9c841b9c","meterPointId":"707057500085813399","resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2024-11-30T09:01:56.2440005+00:00"}]}],"payloadType":"ResourceLPC"}},{"id":"2e8942d7-56df-44e3-97ba-d9eecb9a7ec9","createdAt":"2024-11-30T09:01:56.2436351+00:00","payload":{"lastUpdated":"2024-11-29T09:01:56.243661+00:00","addedUsers":["3495cf65-2956-4811-ba3c-2849df091db2"],"removedUsers":["d7cfb5eb-183d-4268-a943-1cdaf68b9570"],"payloadType":"UserEligibility"}},{"id":"61c72e20-fed2-4c25-8c5e-204c37e32ed1","createdAt":"2024-11-30T09:01:56.2444369+00:00","payload":{"targets":[{"resourceId":"52e6e91c-a783-47b8-80cf-2805f5541779","locationId":"d7ffe12b-bfcb-415c-9cd1-b4ec076cd8b3"},{"resourceId":"31baf839-155d-4ea6-89f7-b09dad4089d0","locationId":"523c0e64-f075-457a-9d6d-b705005af840"},{"resourceId":"3f23353a-7144-4da7-a33a-1aecd0e92eb9","locationId":"8d6b9418-d307-4493-8bdc-d992d21692a2"},{"resourceId":"83d6176c-e4c6-4ed7-9b27-ba0c4fe49bf5","locationId":"b117d138-3fdf-4ba2-8057-c1503736f934"},{"resourceId":"5bb5cfab-eadb-473f-bc38-871dab684f8b","locationId":"831add5d-b852-4c47-8cd9-febf8dcf37c9"}],"priceCurveDelta":{"points":[{"price":304.204182889356000,"timestamp":"2024-12-01T00:00:00+00:00"},{"price":884.611496639292000,"timestamp":"2024-12-01T01:00:00+00:00"},{"price":421.53680613892000,"timestamp":"2024-12-01T02:00:00+00:00"},{"price":118.347338781267000,"timestamp":"2024-12-01T03:00:00+00:00"},{"price":929.046628034463000,"timestamp":"2024-12-01T04:00:00+00:00"},{"price":652.404147681204000,"timestamp":"2024-12-01T05:00:00+00:00"},{"price":338.945669334607000,"timestamp":"2024-12-01T06:00:00+00:00"},{"price":212.46600913081000,"timestamp":"2024-12-01T07:00:00+00:00"},{"price":925.210397818486000,"timestamp":"2024-12-01T08:00:00+00:00"},{"price":783.563882137666000,"timestamp":"2024-12-01T09:00:00+00:00"},{"price":326.386545484049000,"timestamp":"2024-12-01T10:00:00+00:00"},{"price":718.480381246153000,"timestamp":"2024-12-01T11:00:00+00:00"},{"price":342.272910829342000,"timestamp":"2024-12-01T12:00:00+00:00"},{"price":446.117296637059000,"timestamp":"2024-12-01T13:00:00+00:00"},{"price":242.024575539616000,"timestamp":"2024-12-01T14:00:00+00:00"},{"price":688.181086587293000,"timestamp":"2024-12-01T15:00:00+00:00"},{"price":671.770899828482000,"timestamp":"2024-12-01T16:00:00+00:00"},{"price":535.244584314686000,"timestamp":"2024-12-01T17:00:00+00:00"},{"price":688.687556727196000,"timestamp":"2024-12-01T18:00:00+00:00"},{"price":926.435451257907000,"timestamp":"2024-12-01T19:00:00+00:00"},{"price":143.37131619748000,"timestamp":"2024-12-01T20:00:00+00:00"},{"price":769.312480987881000,"timestamp":"2024-12-01T21:00:00+00:00"},{"price":487.227824765617000,"timestamp":"2024-12-01T22:00:00+00:00"},{"price":588.516596629068000,"timestamp":"2024-12-01T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}],"pagination":{"totalRecords":4,"pageSize":4,"currentPage":1,"totalPages":1,"nextPage":null,"previousPage":null}}
               }
             }
           },
@@ -89,7 +89,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetEventResponse"
                 },
-                "example": {"id":"c1d75b28-78a9-47d0-8146-82a2eb52e0ab","createdAt":"2024-11-29T09:02:02.7319153+00:00","payload":{"targets":[{"resourceId":"2f1c8ce4-a7dd-4585-8a2f-0e2990540de0","locationId":"019275f6-0352-4ce5-869d-2d53176f31ad"},{"resourceId":"c66217ef-5412-4c1e-bb98-e0d82e118adb","locationId":"c540e253-455d-41b8-b277-72e290d23119"},{"resourceId":"c3b50c32-4224-47b2-8512-133f69f05c64","locationId":"ceefa9ef-9a6c-447a-b28d-9292a0dd4fbf"},{"resourceId":"617fcba3-0964-4779-a323-33d6d81c32f4","locationId":"cab08e7f-8fdb-4916-8c9b-c99a5916df49"},{"resourceId":"0c11b055-8e32-4534-ad5e-d07739a41fc2","locationId":"38fc24ed-e19e-4b6c-86d1-cefa3afcd48c"}],"priceCurveDelta":{"points":[{"price":340.316971321776000,"timestamp":"2024-11-30T00:00:00+00:00"},{"price":265.642872276353000,"timestamp":"2024-11-30T01:00:00+00:00"},{"price":771.54923947902000,"timestamp":"2024-11-30T02:00:00+00:00"},{"price":762.798960629588000,"timestamp":"2024-11-30T03:00:00+00:00"},{"price":980.635363596288000,"timestamp":"2024-11-30T04:00:00+00:00"},{"price":946.637907631994000,"timestamp":"2024-11-30T05:00:00+00:00"},{"price":981.86462102947000,"timestamp":"2024-11-30T06:00:00+00:00"},{"price":272.83982870851000,"timestamp":"2024-11-30T07:00:00+00:00"},{"price":247.352657438123000,"timestamp":"2024-11-30T08:00:00+00:00"},{"price":87.8687673496521000,"timestamp":"2024-11-30T09:00:00+00:00"},{"price":848.979841451504000,"timestamp":"2024-11-30T10:00:00+00:00"},{"price":891.308149532082000,"timestamp":"2024-11-30T11:00:00+00:00"},{"price":287.991505772364000,"timestamp":"2024-11-30T12:00:00+00:00"},{"price":551.612356047492000,"timestamp":"2024-11-30T13:00:00+00:00"},{"price":893.82283276651000,"timestamp":"2024-11-30T14:00:00+00:00"},{"price":593.322495328662000,"timestamp":"2024-11-30T15:00:00+00:00"},{"price":335.038767319247000,"timestamp":"2024-11-30T16:00:00+00:00"},{"price":32.5829800874071000,"timestamp":"2024-11-30T17:00:00+00:00"},{"price":375.998035996887000,"timestamp":"2024-11-30T18:00:00+00:00"},{"price":813.109478078213000,"timestamp":"2024-11-30T19:00:00+00:00"},{"price":704.62263580584000,"timestamp":"2024-11-30T20:00:00+00:00"},{"price":305.976531188517000,"timestamp":"2024-11-30T21:00:00+00:00"},{"price":165.465738674821000,"timestamp":"2024-11-30T22:00:00+00:00"},{"price":276.768833527828000,"timestamp":"2024-11-30T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}
+                "example": {"id":"4c15348f-5afc-4a54-acb0-f28f466031f0","createdAt":"2024-11-30T09:01:56.2984627+00:00","payload":{"targets":[{"resourceId":"6439af8d-b9db-467c-a808-3ee6147ce107","locationId":"fe782fb4-dc19-40ea-b307-b4009ea7a67d"},{"resourceId":"32fc49e1-73e7-40f1-af80-fa99be4c9201","locationId":"8658f8df-0546-4213-9aef-7475956be2da"},{"resourceId":"bfd35eb5-0ddc-4db8-a3d4-95d9bec31fc6","locationId":"cfb31c43-6f41-4ab6-aa68-71c0ebe561a1"},{"resourceId":"5d0e38bd-a648-44f9-bba3-df108f646e53","locationId":"08cc1c87-2ca0-44c6-a856-fd8453230c6f"},{"resourceId":"755a9030-abea-419e-a13b-5f0a3022ab35","locationId":"e2dced79-a681-4598-b719-7db3ada186cd"}],"priceCurveDelta":{"points":[{"price":211.644477769097000,"timestamp":"2024-12-01T00:00:00+00:00"},{"price":138.025075070901000,"timestamp":"2024-12-01T01:00:00+00:00"},{"price":4.88209021286812000,"timestamp":"2024-12-01T02:00:00+00:00"},{"price":185.849855530489000,"timestamp":"2024-12-01T03:00:00+00:00"},{"price":251.389863342263000,"timestamp":"2024-12-01T04:00:00+00:00"},{"price":836.857100298639000,"timestamp":"2024-12-01T05:00:00+00:00"},{"price":483.280699444881000,"timestamp":"2024-12-01T06:00:00+00:00"},{"price":968.243985101828000,"timestamp":"2024-12-01T07:00:00+00:00"},{"price":949.187909406538000,"timestamp":"2024-12-01T08:00:00+00:00"},{"price":160.317713066267000,"timestamp":"2024-12-01T09:00:00+00:00"},{"price":782.956323133986000,"timestamp":"2024-12-01T10:00:00+00:00"},{"price":905.191438882289000,"timestamp":"2024-12-01T11:00:00+00:00"},{"price":947.556642746385000,"timestamp":"2024-12-01T12:00:00+00:00"},{"price":572.979382299847000,"timestamp":"2024-12-01T13:00:00+00:00"},{"price":289.438960589964000,"timestamp":"2024-12-01T14:00:00+00:00"},{"price":885.157115104728000,"timestamp":"2024-12-01T15:00:00+00:00"},{"price":665.259376075985000,"timestamp":"2024-12-01T16:00:00+00:00"},{"price":80.341744318673000,"timestamp":"2024-12-01T17:00:00+00:00"},{"price":461.429182119958000,"timestamp":"2024-12-01T18:00:00+00:00"},{"price":201.168387488333000,"timestamp":"2024-12-01T19:00:00+00:00"},{"price":51.9592408355282000,"timestamp":"2024-12-01T20:00:00+00:00"},{"price":310.698401867459000,"timestamp":"2024-12-01T21:00:00+00:00"},{"price":869.670408555023000,"timestamp":"2024-12-01T22:00:00+00:00"},{"price":601.351739792097000,"timestamp":"2024-12-01T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}
               }
             }
           },
@@ -122,7 +122,7 @@
               "schema": {
                 "$ref": "#/components/schemas/PostReportRequest"
               },
-              "example": {"eventId":"b2e53b10-4fb1-4ee4-8f1b-d359ccde9cc9","payloads":[{"resourceId":"deab5f1c-0490-4b87-b621-0eb6ac20dfce","locationId":null,"meterPointId":null,"points":[{"timestamp":"2024-11-29T07:50:25.5539882+00:00","kiloWattHours":3.14}],"resolution":"01:00:00","curvePoints":null,"payloadType":"EnergyUsage"}]}
+              "example": {"eventId":"9d346afd-f5af-41e3-b9b3-cfa5a38315fa","payloads":[{"resourceId":"6b9faeea-07a0-41e6-a3e4-d2d8916e757a","locationId":null,"meterPointId":null,"points":[{"timestamp":"2024-11-30T09:01:56.3109752+00:00","kiloWattHours":3.14}],"resolution":"01:00:00","curvePoints":null,"payloadType":"EnergyUsage"}]}
             }
           },
           "required": true
@@ -177,7 +177,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetResourceResponse"
                 },
-                "example": {"resourceId":"deab5f1c-0490-4b87-b621-0eb6ac20dfce","resourceType":"HotWaterTank","userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab","locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","meterPointId":null}
+                "example": {"resourceId":"6b9faeea-07a0-41e6-a3e4-d2d8916e757a","resourceType":"HotWaterTank","userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc","locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","meterPointId":null}
               }
             }
           },
@@ -416,7 +416,7 @@
               "schema": {
                 "$ref": "#/components/schemas/PostUserRequest"
               },
-              "example": {"userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab"}
+              "example": {"userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc"}
             }
           },
           "required": true
@@ -429,7 +429,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetUserResponse"
                 },
-                "example": {"userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab"}
+                "example": {"userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc"}
               }
             }
           },
@@ -472,7 +472,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetUserResponse"
                 },
-                "example": {"userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab"}
+                "example": {"userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc"}
               }
             }
           },
@@ -599,7 +599,7 @@
                     "$ref": "#/components/schemas/GetLocationResponse"
                   }
                 },
-                "example": [{"locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","locationType":"Residential","coordinates":null,"meterPointId":"77f2fb1e-44b3-41a8-a2e9-aa769db20bd6","meterPointIds":["77f2fb1e-44b3-41a8-a2e9-aa769db20bd6"],"userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab"}]
+                "example": [{"locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","locationType":"Residential","coordinates":null,"meterPointId":"28ebf86b-ad63-421a-b30f-1881d198f799","meterPointIds":["28ebf86b-ad63-421a-b30f-1881d198f799"],"userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc"}]
               }
             }
           },
@@ -638,7 +638,7 @@
               "schema": {
                 "$ref": "#/components/schemas/PostLocationRequest"
               },
-              "example": {"locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":["77f2fb1e-44b3-41a8-a2e9-aa769db20bd6"]}
+              "example": {"locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":["28ebf86b-ad63-421a-b30f-1881d198f799"]}
             }
           },
           "required": true
@@ -651,7 +651,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetLocationResponse"
                 },
-                "example": {"locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab"}
+                "example": {"locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc"}
               }
             }
           },
@@ -709,7 +709,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetLocationResponse"
                 },
-                "example": {"locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab"}
+                "example": {"locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc"}
               }
             }
           },
@@ -772,7 +772,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetLocationResponse"
                 },
-                "example": {"locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab"}
+                "example": {"locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc"}
               }
             }
           },
@@ -836,7 +836,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetLocationResponse"
                 },
-                "example": {"locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab"}
+                "example": {"locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc"}
               }
             }
           },
@@ -971,7 +971,7 @@
               "schema": {
                 "$ref": "#/components/schemas/PostVehicleResourceRequest"
               },
-              "example": {"resourceId":"db79f301-04e6-4061-84e7-d2f8820fd485","resourceType":"Vehicle"}
+              "example": {"resourceId":"164f5a8f-a9d2-4cee-a44d-a73cb84bd056","resourceType":"Vehicle"}
             }
           },
           "required": true
@@ -984,7 +984,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetResourceResponse"
                 },
-                "example": {"resourceId":"deab5f1c-0490-4b87-b621-0eb6ac20dfce","resourceType":"HotWaterTank","userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab","locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","meterPointId":null}
+                "example": {"resourceId":"6b9faeea-07a0-41e6-a3e4-d2d8916e757a","resourceType":"HotWaterTank","userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc","locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","meterPointId":null}
               }
             }
           },
@@ -1028,7 +1028,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetUserResourcesResponse"
                 },
-                "example": {"resources":[{"resourceId":"deab5f1c-0490-4b87-b621-0eb6ac20dfce","resourceType":"HotWaterTank","userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab","locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","meterPointId":null},{"resourceId":"db79f301-04e6-4061-84e7-d2f8820fd485","resourceType":"Vehicle","userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab","locationId":null,"meterPointId":null}]}
+                "example": {"resources":[{"resourceId":"6b9faeea-07a0-41e6-a3e4-d2d8916e757a","resourceType":"HotWaterTank","userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc","locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","meterPointId":null},{"resourceId":"164f5a8f-a9d2-4cee-a44d-a73cb84bd056","resourceType":"Vehicle","userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc","locationId":null,"meterPointId":null}]}
               }
             }
           },
@@ -1077,7 +1077,7 @@
                     "$ref": "#/components/schemas/GetLocationBoundResourceResponse"
                   }
                 },
-                "example": [{"resourceId":"deab5f1c-0490-4b87-b621-0eb6ac20dfce","resourceType":"HotWaterTank","locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab","meterPointId":null},{"resourceId":"097544aa-9760-43ea-906c-f7130ecbb79a","resourceType":"Charger","locationId":"b52f3545-5371-47e6-bffa-d1d27c77f5a9","userId":"12a7590b-a7b1-4ff1-9839-ca4539da85ab","meterPointId":null}]
+                "example": [{"resourceId":"6b9faeea-07a0-41e6-a3e4-d2d8916e757a","resourceType":"HotWaterTank","locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc","meterPointId":null},{"resourceId":"b2af0bf1-9b57-4303-b480-4f14a6d26a2d","resourceType":"Charger","locationId":"1fdfb4fa-61c3-4497-9e01-c9e30928a295","userId":"2c0dce44-675a-467d-a1fa-23f9fefcdabc","meterPointId":null}]
               }
             }
           },
@@ -1119,7 +1119,7 @@
               "schema": {
                 "$ref": "#/components/schemas/PostLocationBoundResourceRequest"
               },
-              "example": {"meterPointId":"77f2fb1e-44b3-41a8-a2e9-aa769db20bd6","resourceId":"deab5f1c-0490-4b87-b621-0eb6ac20dfce","resourceType":"HotWaterTank"}
+              "example": {"meterPointId":"28ebf86b-ad63-421a-b30f-1881d198f799","resourceId":"6b9faeea-07a0-41e6-a3e4-d2d8916e757a","resourceType":"HotWaterTank"}
             }
           },
           "required": true
@@ -1466,7 +1466,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhooksResponse"
                 },
-                "example": {"webhooks":[{"webhookId":"6cd24e19-6105-4b46-9f4c-c33ff6bc4078","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-29T09:02:02.7469354+00:00","createdDate":"2024-11-29T09:02:02.7469344+00:00","lastAnalyzedTimestamp":"2024-11-29T09:02:02.7469356+00:00"}]}
+                "example": {"webhooks":[{"webhookId":"8ead2261-ae87-4d91-b844-4040cb687615","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-30T09:01:56.3492083+00:00","createdDate":"2024-11-30T09:01:56.3491906+00:00","lastAnalyzedTimestamp":"2024-11-30T09:01:56.3492201+00:00"}]}
               }
             }
           }
@@ -1497,7 +1497,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhookResponse"
                 },
-                "example": {"webhookId":"6cd24e19-6105-4b46-9f4c-c33ff6bc4078","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-29T09:02:02.7475647+00:00","createdDate":"2024-11-29T09:02:02.747564+00:00","lastAnalyzedTimestamp":"2024-11-29T09:02:02.7475648+00:00"}
+                "example": {"webhookId":"8ead2261-ae87-4d91-b844-4040cb687615","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-30T09:01:56.3552979+00:00","createdDate":"2024-11-30T09:01:56.3552972+00:00","lastAnalyzedTimestamp":"2024-11-30T09:01:56.355298+00:00"}
               }
             }
           },
@@ -1540,7 +1540,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhookResponse"
                 },
-                "example": {"webhookId":"6cd24e19-6105-4b46-9f4c-c33ff6bc4078","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-29T09:02:02.7479001+00:00","createdDate":"2024-11-29T09:02:02.7478995+00:00","lastAnalyzedTimestamp":"2024-11-29T09:02:02.7479002+00:00"}
+                "example": {"webhookId":"8ead2261-ae87-4d91-b844-4040cb687615","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-30T09:01:56.3559516+00:00","createdDate":"2024-11-30T09:01:56.3559512+00:00","lastAnalyzedTimestamp":"2024-11-30T09:01:56.3559517+00:00"}
               }
             }
           },
@@ -1595,7 +1595,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhookResponse"
                 },
-                "example": {"webhookId":"6cd24e19-6105-4b46-9f4c-c33ff6bc4078","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-29T09:02:02.7485477+00:00","createdDate":"2024-11-29T09:02:02.7485472+00:00","lastAnalyzedTimestamp":"2024-11-29T09:02:02.7485478+00:00"}
+                "example": {"webhookId":"8ead2261-ae87-4d91-b844-4040cb687615","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-30T09:01:56.3574245+00:00","createdDate":"2024-11-30T09:01:56.3574241+00:00","lastAnalyzedTimestamp":"2024-11-30T09:01:56.3574246+00:00"}
               }
             }
           },
@@ -1693,7 +1693,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhookResponse"
                 },
-                "example": {"webhookId":"6cd24e19-6105-4b46-9f4c-c33ff6bc4078","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-29T09:02:02.7492746+00:00","createdDate":"2024-11-29T09:02:02.7492741+00:00","lastAnalyzedTimestamp":"2024-11-29T09:02:02.7492747+00:00"}
+                "example": {"webhookId":"8ead2261-ae87-4d91-b844-4040cb687615","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2024-11-30T09:01:56.3580118+00:00","createdDate":"2024-11-30T09:01:56.3580115+00:00","lastAnalyzedTimestamp":"2024-11-30T09:01:56.3580119+00:00"}
               }
             }
           },
