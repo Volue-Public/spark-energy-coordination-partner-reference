@@ -178,6 +178,8 @@ public class UserResourcesLocationBoundApi {
    *
    * <p><b>400</b> - Bad Request
    *
+   * <p><b>404</b> - Not Found
+   *
    * @param userId The userId parameter
    * @param locationId The locationId parameter
    * @param postLocationBoundResourceRequest The postLocationBoundResourceRequest parameter
@@ -263,6 +265,8 @@ public class UserResourcesLocationBoundApi {
    *
    * <p><b>400</b> - Bad Request
    *
+   * <p><b>404</b> - Not Found
+   *
    * @param userId The userId parameter
    * @param locationId The locationId parameter
    * @param postLocationBoundResourceRequest The postLocationBoundResourceRequest parameter
@@ -287,6 +291,8 @@ public class UserResourcesLocationBoundApi {
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
+   *
+   * <p><b>404</b> - Not Found
    *
    * @param userId The userId parameter
    * @param locationId The locationId parameter
@@ -313,6 +319,8 @@ public class UserResourcesLocationBoundApi {
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
+   *
+   * <p><b>404</b> - Not Found
    *
    * @param userId The userId parameter
    * @param locationId The locationId parameter
