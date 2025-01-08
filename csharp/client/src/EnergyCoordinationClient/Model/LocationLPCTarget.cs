@@ -18,7 +18,6 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.RegularExpressions;
-using JsonSubTypes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
@@ -27,38 +26,55 @@ using OpenAPIDateConverter = EnergyCoordinationClient.Client.OpenAPIDateConverte
 namespace EnergyCoordinationClient.Model
 {
     /// <summary>
-    /// SparkReportPayload
+    /// LocationLPCTarget
     /// </summary>
-    [DataContract(Name = "SparkReportPayload")]
-    [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
-    [JsonSubtypes.KnownSubType(typeof(EnergyUsageReportPayload), "EnergyUsage")]
-    [JsonSubtypes.KnownSubType(typeof(LocationEnergyUsageReportPayload), "LocationEnergyUsage")]
-    [JsonSubtypes.KnownSubType(
-        typeof(LocationLPCAcknowledgmentReportPayload),
-        "LocationLPCAcknowledgement"
-    )]
-    [JsonSubtypes.KnownSubType(
-        typeof(ResourceLPCAcknowledgmentReportPayload),
-        "ResourceLPCAcknowledgement"
-    )]
-    public partial class SparkReportPayload : IValidatableObject
+    [DataContract(Name = "LocationLPCTarget")]
+    public partial class LocationLPCTarget : IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets PayloadType
+        /// Initializes a new instance of the <see cref="LocationLPCTarget" /> class.
         /// </summary>
-        [DataMember(Name = "payloadType", EmitDefaultValue = false)]
-        public SparkReportPayloadType? PayloadType { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SparkReportPayload" /> class.
-        /// </summary>
-        /// <param name="payloadType">payloadType.</param>
-        public SparkReportPayload(
-            SparkReportPayloadType? payloadType = default(SparkReportPayloadType?)
+        /// <param name="locationId">locationId.</param>
+        /// <param name="meterPointId">meterPointId.</param>
+        /// <param name="resolution">resolution.</param>
+        /// <param name="points">points.</param>
+        public LocationLPCTarget(
+            string locationId = default(string),
+            string meterPointId = default(string),
+            string resolution = default(string),
+            List<LPCDataPoint> points = default(List<LPCDataPoint>)
         )
         {
-            this.PayloadType = payloadType;
+            this.LocationId = locationId;
+            this.MeterPointId = meterPointId;
+            this.Resolution = resolution;
+            this.Points = points;
         }
+
+        /// <summary>
+        /// Gets or Sets LocationId
+        /// </summary>
+        [DataMember(Name = "locationId", EmitDefaultValue = false)]
+        public string LocationId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MeterPointId
+        /// </summary>
+        [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
+        public string MeterPointId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Resolution
+        /// </summary>
+        /// <example>02:00:00</example>
+        [DataMember(Name = "resolution", EmitDefaultValue = false)]
+        public string Resolution { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Points
+        /// </summary>
+        [DataMember(Name = "points", EmitDefaultValue = false)]
+        public List<LPCDataPoint> Points { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,8 +83,11 @@ namespace EnergyCoordinationClient.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SparkReportPayload {\n");
-            sb.Append("  PayloadType: ").Append(PayloadType).Append("\n");
+            sb.Append("class LocationLPCTarget {\n");
+            sb.Append("  LocationId: ").Append(LocationId).Append("\n");
+            sb.Append("  MeterPointId: ").Append(MeterPointId).Append("\n");
+            sb.Append("  Resolution: ").Append(Resolution).Append("\n");
+            sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,16 +112,6 @@ namespace EnergyCoordinationClient.Model
         IEnumerable<ValidationResult> IValidatableObject.Validate(
             ValidationContext validationContext
         )
-        {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
         {
             yield break;
         }

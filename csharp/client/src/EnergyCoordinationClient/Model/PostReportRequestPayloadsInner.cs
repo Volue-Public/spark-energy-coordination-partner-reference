@@ -48,6 +48,48 @@ namespace EnergyCoordinationClient.Model
                 ?? throw new ArgumentException("Invalid instance found. Must not be null.");
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostReportRequestPayloadsInner" /> class
+        /// with the <see cref="LocationEnergyUsageReportPayload" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of LocationEnergyUsageReportPayload.</param>
+        public PostReportRequestPayloadsInner(LocationEnergyUsageReportPayload actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType = "oneOf";
+            this.ActualInstance =
+                actualInstance
+                ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostReportRequestPayloadsInner" /> class
+        /// with the <see cref="ResourceLPCAcknowledgmentReportPayload" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of ResourceLPCAcknowledgmentReportPayload.</param>
+        public PostReportRequestPayloadsInner(ResourceLPCAcknowledgmentReportPayload actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType = "oneOf";
+            this.ActualInstance =
+                actualInstance
+                ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostReportRequestPayloadsInner" /> class
+        /// with the <see cref="LocationLPCAcknowledgmentReportPayload" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of LocationLPCAcknowledgmentReportPayload.</param>
+        public PostReportRequestPayloadsInner(LocationLPCAcknowledgmentReportPayload actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType = "oneOf";
+            this.ActualInstance =
+                actualInstance
+                ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
         private Object _actualInstance;
 
         /// <summary>
@@ -65,10 +107,31 @@ namespace EnergyCoordinationClient.Model
                 {
                     this._actualInstance = value;
                 }
+                else if (
+                    value.GetType() == typeof(LocationEnergyUsageReportPayload)
+                    || value is LocationEnergyUsageReportPayload
+                )
+                {
+                    this._actualInstance = value;
+                }
+                else if (
+                    value.GetType() == typeof(LocationLPCAcknowledgmentReportPayload)
+                    || value is LocationLPCAcknowledgmentReportPayload
+                )
+                {
+                    this._actualInstance = value;
+                }
+                else if (
+                    value.GetType() == typeof(ResourceLPCAcknowledgmentReportPayload)
+                    || value is ResourceLPCAcknowledgmentReportPayload
+                )
+                {
+                    this._actualInstance = value;
+                }
                 else
                 {
                     throw new ArgumentException(
-                        "Invalid instance found. Must be the following types: EnergyUsageReportPayload"
+                        "Invalid instance found. Must be the following types: EnergyUsageReportPayload, LocationEnergyUsageReportPayload, LocationLPCAcknowledgmentReportPayload, ResourceLPCAcknowledgmentReportPayload"
                     );
                 }
             }
@@ -82,6 +145,36 @@ namespace EnergyCoordinationClient.Model
         public EnergyUsageReportPayload GetEnergyUsageReportPayload()
         {
             return (EnergyUsageReportPayload)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `LocationEnergyUsageReportPayload`. If the actual instance is not `LocationEnergyUsageReportPayload`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of LocationEnergyUsageReportPayload</returns>
+        public LocationEnergyUsageReportPayload GetLocationEnergyUsageReportPayload()
+        {
+            return (LocationEnergyUsageReportPayload)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ResourceLPCAcknowledgmentReportPayload`. If the actual instance is not `ResourceLPCAcknowledgmentReportPayload`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ResourceLPCAcknowledgmentReportPayload</returns>
+        public ResourceLPCAcknowledgmentReportPayload GetResourceLPCAcknowledgmentReportPayload()
+        {
+            return (ResourceLPCAcknowledgmentReportPayload)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `LocationLPCAcknowledgmentReportPayload`. If the actual instance is not `LocationLPCAcknowledgmentReportPayload`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of LocationLPCAcknowledgmentReportPayload</returns>
+        public LocationLPCAcknowledgmentReportPayload GetLocationLPCAcknowledgmentReportPayload()
+        {
+            return (LocationLPCAcknowledgmentReportPayload)this.ActualInstance;
         }
 
         /// <summary>
@@ -155,6 +248,125 @@ namespace EnergyCoordinationClient.Model
                 System.Diagnostics.Debug.WriteLine(
                     string.Format(
                         "Failed to deserialize `{0}` into EnergyUsageReportPayload: {1}",
+                        jsonString,
+                        exception.ToString()
+                    )
+                );
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (
+                    typeof(LocationEnergyUsageReportPayload).GetProperty("AdditionalProperties")
+                    == null
+                )
+                {
+                    newPostReportRequestPayloadsInner = new PostReportRequestPayloadsInner(
+                        JsonConvert.DeserializeObject<LocationEnergyUsageReportPayload>(
+                            jsonString,
+                            PostReportRequestPayloadsInner.SerializerSettings
+                        )
+                    );
+                }
+                else
+                {
+                    newPostReportRequestPayloadsInner = new PostReportRequestPayloadsInner(
+                        JsonConvert.DeserializeObject<LocationEnergyUsageReportPayload>(
+                            jsonString,
+                            PostReportRequestPayloadsInner.AdditionalPropertiesSerializerSettings
+                        )
+                    );
+                }
+                matchedTypes.Add("LocationEnergyUsageReportPayload");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(
+                    string.Format(
+                        "Failed to deserialize `{0}` into LocationEnergyUsageReportPayload: {1}",
+                        jsonString,
+                        exception.ToString()
+                    )
+                );
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (
+                    typeof(LocationLPCAcknowledgmentReportPayload).GetProperty(
+                        "AdditionalProperties"
+                    ) == null
+                )
+                {
+                    newPostReportRequestPayloadsInner = new PostReportRequestPayloadsInner(
+                        JsonConvert.DeserializeObject<LocationLPCAcknowledgmentReportPayload>(
+                            jsonString,
+                            PostReportRequestPayloadsInner.SerializerSettings
+                        )
+                    );
+                }
+                else
+                {
+                    newPostReportRequestPayloadsInner = new PostReportRequestPayloadsInner(
+                        JsonConvert.DeserializeObject<LocationLPCAcknowledgmentReportPayload>(
+                            jsonString,
+                            PostReportRequestPayloadsInner.AdditionalPropertiesSerializerSettings
+                        )
+                    );
+                }
+                matchedTypes.Add("LocationLPCAcknowledgmentReportPayload");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(
+                    string.Format(
+                        "Failed to deserialize `{0}` into LocationLPCAcknowledgmentReportPayload: {1}",
+                        jsonString,
+                        exception.ToString()
+                    )
+                );
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (
+                    typeof(ResourceLPCAcknowledgmentReportPayload).GetProperty(
+                        "AdditionalProperties"
+                    ) == null
+                )
+                {
+                    newPostReportRequestPayloadsInner = new PostReportRequestPayloadsInner(
+                        JsonConvert.DeserializeObject<ResourceLPCAcknowledgmentReportPayload>(
+                            jsonString,
+                            PostReportRequestPayloadsInner.SerializerSettings
+                        )
+                    );
+                }
+                else
+                {
+                    newPostReportRequestPayloadsInner = new PostReportRequestPayloadsInner(
+                        JsonConvert.DeserializeObject<ResourceLPCAcknowledgmentReportPayload>(
+                            jsonString,
+                            PostReportRequestPayloadsInner.AdditionalPropertiesSerializerSettings
+                        )
+                    );
+                }
+                matchedTypes.Add("ResourceLPCAcknowledgmentReportPayload");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(
+                    string.Format(
+                        "Failed to deserialize `{0}` into ResourceLPCAcknowledgmentReportPayload: {1}",
                         jsonString,
                         exception.ToString()
                     )

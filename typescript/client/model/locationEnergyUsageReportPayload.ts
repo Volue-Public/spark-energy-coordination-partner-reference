@@ -12,21 +12,14 @@
 
 import { RequestFile } from './models';
 import { EnergyCurvePoint } from './energyCurvePoint';
-import { EnergyUsageReportPayload } from './energyUsageReportPayload';
-import { LocationEnergyUsageReportPayload } from './locationEnergyUsageReportPayload';
-import { LocationLPCAcknowledgmentReportPayload } from './locationLPCAcknowledgmentReportPayload';
-import { LocationLPCResponse } from './locationLPCResponse';
-import { ResourceLPCAcknowledgmentReportPayload } from './resourceLPCAcknowledgmentReportPayload';
+import { SparkReportPayload } from './sparkReportPayload';
 import { SparkReportPayloadType } from './sparkReportPayloadType';
 
-export class PostReportRequestPayloadsInner {
+export class LocationEnergyUsageReportPayload extends SparkReportPayload {
     'locationId'?: string;
     'meterPointId'?: string;
     'points'?: Array<EnergyCurvePoint>;
     'resolution'?: string;
-    'payloadType'?: SparkReportPayloadType;
-    'acknowledgedTargets'?: Array<LocationLPCResponse>;
-    'declinedTargets'?: Array<LocationLPCResponse>;
 
     static discriminator: string | undefined = undefined;
 
@@ -50,27 +43,12 @@ export class PostReportRequestPayloadsInner {
             "name": "resolution",
             "baseName": "resolution",
             "type": "string"
-        },
-        {
-            "name": "payloadType",
-            "baseName": "payloadType",
-            "type": "SparkReportPayloadType"
-        },
-        {
-            "name": "acknowledgedTargets",
-            "baseName": "acknowledgedTargets",
-            "type": "Array<LocationLPCResponse>"
-        },
-        {
-            "name": "declinedTargets",
-            "baseName": "declinedTargets",
-            "type": "Array<LocationLPCResponse>"
         }    ];
 
     static getAttributeTypeMap() {
-        return PostReportRequestPayloadsInner.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(LocationEnergyUsageReportPayload.attributeTypeMap);
     }
 }
 
-export namespace PostReportRequestPayloadsInner {
+export namespace LocationEnergyUsageReportPayload {
 }

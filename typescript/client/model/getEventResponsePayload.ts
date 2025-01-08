@@ -11,10 +11,12 @@
  */
 
 import { RequestFile } from './models';
+import { LocationLPCPayload } from './locationLPCPayload';
 import { PriceArea } from './priceArea';
 import { PriceCurve } from './priceCurve';
 import { PriceCurvePayload } from './priceCurvePayload';
-import { PriceCurveTarget } from './priceCurveTarget';
+import { ResourceLPCPayload } from './resourceLPCPayload';
+import { ResourceLPCTarget } from './resourceLPCTarget';
 import { SparkEventPayloadType } from './sparkEventPayloadType';
 import { UserEligibilityPayload } from './userEligibilityPayload';
 
@@ -23,6 +25,7 @@ export class GetEventResponsePayload {
     'addedUsers'?: Array<string>;
     'removedUsers'?: Array<string>;
     'payloadType'?: SparkEventPayloadType;
+    'targets'?: Array<ResourceLPCTarget>;
 
     static discriminator: string | undefined = undefined;
 
@@ -46,6 +49,11 @@ export class GetEventResponsePayload {
             "name": "payloadType",
             "baseName": "payloadType",
             "type": "SparkEventPayloadType"
+        },
+        {
+            "name": "targets",
+            "baseName": "targets",
+            "type": "Array<ResourceLPCTarget>"
         }    ];
 
     static getAttributeTypeMap() {

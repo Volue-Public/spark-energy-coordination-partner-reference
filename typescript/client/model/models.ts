@@ -27,7 +27,13 @@ export * from './getWebhookNotificationLogsResponse';
 export * from './getWebhookResponse';
 export * from './getWebhooksResponse';
 export * from './httpValidationProblemDetails';
+export * from './lPCDataPoint';
 export * from './locationCompensation';
+export * from './locationEnergyUsageReportPayload';
+export * from './locationLPCAcknowledgmentReportPayload';
+export * from './locationLPCPayload';
+export * from './locationLPCResponse';
+export * from './locationLPCTarget';
 export * from './locationType';
 export * from './notificationType';
 export * from './patchLocationRequest';
@@ -54,6 +60,10 @@ export * from './problem';
 export * from './problemType';
 export * from './putLocationRequest';
 export * from './putWebhookRequest';
+export * from './resourceLPCAcknowledgmentReportPayload';
+export * from './resourceLPCPayload';
+export * from './resourceLPCResponse';
+export * from './resourceLPCTarget';
 export * from './resourceType';
 export * from './simulateEventResponse';
 export * from './simulatePriceCurveEventRequest';
@@ -105,7 +115,13 @@ import { GetWebhookNotificationLogsResponse } from './getWebhookNotificationLogs
 import { GetWebhookResponse } from './getWebhookResponse';
 import { GetWebhooksResponse } from './getWebhooksResponse';
 import { HttpValidationProblemDetails } from './httpValidationProblemDetails';
+import { LPCDataPoint } from './lPCDataPoint';
 import { LocationCompensation } from './locationCompensation';
+import { LocationEnergyUsageReportPayload } from './locationEnergyUsageReportPayload';
+import { LocationLPCAcknowledgmentReportPayload } from './locationLPCAcknowledgmentReportPayload';
+import { LocationLPCPayload } from './locationLPCPayload';
+import { LocationLPCResponse } from './locationLPCResponse';
+import { LocationLPCTarget } from './locationLPCTarget';
 import { LocationType } from './locationType';
 import { NotificationType } from './notificationType';
 import { PatchLocationRequest } from './patchLocationRequest';
@@ -132,6 +148,10 @@ import { Problem } from './problem';
 import { ProblemType } from './problemType';
 import { PutLocationRequest } from './putLocationRequest';
 import { PutWebhookRequest } from './putWebhookRequest';
+import { ResourceLPCAcknowledgmentReportPayload } from './resourceLPCAcknowledgmentReportPayload';
+import { ResourceLPCPayload } from './resourceLPCPayload';
+import { ResourceLPCResponse } from './resourceLPCResponse';
+import { ResourceLPCTarget } from './resourceLPCTarget';
 import { ResourceType } from './resourceType';
 import { SimulateEventResponse } from './simulateEventResponse';
 import { SimulatePriceCurveEventRequest } from './simulatePriceCurveEventRequest';
@@ -194,7 +214,13 @@ let typeMap: {[index: string]: any} = {
     "GetWebhookResponse": GetWebhookResponse,
     "GetWebhooksResponse": GetWebhooksResponse,
     "HttpValidationProblemDetails": HttpValidationProblemDetails,
+    "LPCDataPoint": LPCDataPoint,
     "LocationCompensation": LocationCompensation,
+    "LocationEnergyUsageReportPayload": LocationEnergyUsageReportPayload,
+    "LocationLPCAcknowledgmentReportPayload": LocationLPCAcknowledgmentReportPayload,
+    "LocationLPCPayload": LocationLPCPayload,
+    "LocationLPCResponse": LocationLPCResponse,
+    "LocationLPCTarget": LocationLPCTarget,
     "PatchLocationRequest": PatchLocationRequest,
     "PatchWebhookRequest": PatchWebhookRequest,
     "Period": Period,
@@ -217,6 +243,10 @@ let typeMap: {[index: string]: any} = {
     "Problem": Problem,
     "PutLocationRequest": PutLocationRequest,
     "PutWebhookRequest": PutWebhookRequest,
+    "ResourceLPCAcknowledgmentReportPayload": ResourceLPCAcknowledgmentReportPayload,
+    "ResourceLPCPayload": ResourceLPCPayload,
+    "ResourceLPCResponse": ResourceLPCResponse,
+    "ResourceLPCTarget": ResourceLPCTarget,
     "SimulateEventResponse": SimulateEventResponse,
     "SimulatePriceCurveEventRequest": SimulatePriceCurveEventRequest,
     "SparkEventPayload": SparkEventPayload,

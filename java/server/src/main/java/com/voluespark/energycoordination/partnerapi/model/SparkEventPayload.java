@@ -24,7 +24,9 @@ import java.util.Objects;
     property = "payloadType",
     visible = true)
 @JsonSubTypes({
+  @JsonSubTypes.Type(value = LocationLPCPayload.class, name = "LocationLPC"),
   @JsonSubTypes.Type(value = PriceCurvePayload.class, name = "PriceCurve"),
+  @JsonSubTypes.Type(value = ResourceLPCPayload.class, name = "ResourceLPC"),
   @JsonSubTypes.Type(value = UserEligibilityPayload.class, name = "UserEligibility")
 })
 @Generated(

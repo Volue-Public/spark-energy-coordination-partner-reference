@@ -16,12 +16,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-/** SparkEventPayload */
-@JsonPropertyOrder({SparkEventPayload.JSON_PROPERTY_PAYLOAD_TYPE})
+/** ResourceLPCPayload */
+@JsonPropertyOrder({ResourceLPCPayload.JSON_PROPERTY_TARGETS})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
     comments = "Generator version: 7.9.0-SNAPSHOT")
@@ -36,40 +37,48 @@ import java.util.Objects;
     include = JsonTypeInfo.As.PROPERTY,
     property = "payloadType",
     visible = true)
-@JsonSubTypes({
-  @JsonSubTypes.Type(value = LocationLPCPayload.class, name = "LocationLPC"),
-  @JsonSubTypes.Type(value = PriceCurvePayload.class, name = "PriceCurve"),
-  @JsonSubTypes.Type(value = ResourceLPCPayload.class, name = "ResourceLPC"),
-  @JsonSubTypes.Type(value = UserEligibilityPayload.class, name = "UserEligibility"),
-})
-public class SparkEventPayload {
-  public static final String JSON_PROPERTY_PAYLOAD_TYPE = "payloadType";
-  protected SparkEventPayloadType payloadType;
+public class ResourceLPCPayload extends SparkEventPayload {
+  public static final String JSON_PROPERTY_TARGETS = "targets";
+  private List<ResourceLPCTarget> targets = new ArrayList<>();
 
-  public SparkEventPayload() {}
+  public ResourceLPCPayload() {}
 
-  public SparkEventPayload payloadType(SparkEventPayloadType payloadType) {
+  public ResourceLPCPayload targets(List<ResourceLPCTarget> targets) {
 
-    this.payloadType = payloadType;
+    this.targets = targets;
+    return this;
+  }
+
+  public ResourceLPCPayload addTargetsItem(ResourceLPCTarget targetsItem) {
+    if (this.targets == null) {
+      this.targets = new ArrayList<>();
+    }
+    this.targets.add(targetsItem);
     return this;
   }
 
   /**
-   * Get payloadType
+   * Get targets
    *
-   * @return payloadType
+   * @return targets
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAYLOAD_TYPE)
+  @JsonProperty(JSON_PROPERTY_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public SparkEventPayloadType getPayloadType() {
-    return payloadType;
+  public List<ResourceLPCTarget> getTargets() {
+    return targets;
   }
 
-  @JsonProperty(JSON_PROPERTY_PAYLOAD_TYPE)
+  @JsonProperty(JSON_PROPERTY_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPayloadType(SparkEventPayloadType payloadType) {
-    this.payloadType = payloadType;
+  public void setTargets(List<ResourceLPCTarget> targets) {
+    this.targets = targets;
+  }
+
+  @Override
+  public ResourceLPCPayload payloadType(SparkEventPayloadType payloadType) {
+    this.setPayloadType(payloadType);
+    return this;
   }
 
   @Override
@@ -80,20 +89,21 @@ public class SparkEventPayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SparkEventPayload sparkEventPayload = (SparkEventPayload) o;
-    return Objects.equals(this.payloadType, sparkEventPayload.payloadType);
+    ResourceLPCPayload resourceLPCPayload = (ResourceLPCPayload) o;
+    return Objects.equals(this.targets, resourceLPCPayload.targets) && super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(payloadType);
+    return Objects.hash(targets, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SparkEventPayload {\n");
-    sb.append("    payloadType: ").append(toIndentedString(payloadType)).append("\n");
+    sb.append("class ResourceLPCPayload {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    targets: ").append(toIndentedString(targets)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -62,6 +62,34 @@ namespace EnergyCoordinationClient.Model
                 ?? throw new ArgumentException("Invalid instance found. Must not be null.");
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetEventResponsePayload" /> class
+        /// with the <see cref="LocationLPCPayload" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of LocationLPCPayload.</param>
+        public GetEventResponsePayload(LocationLPCPayload actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType = "oneOf";
+            this.ActualInstance =
+                actualInstance
+                ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetEventResponsePayload" /> class
+        /// with the <see cref="ResourceLPCPayload" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of ResourceLPCPayload.</param>
+        public GetEventResponsePayload(ResourceLPCPayload actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType = "oneOf";
+            this.ActualInstance =
+                actualInstance
+                ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
         private Object _actualInstance;
 
         /// <summary>
@@ -72,7 +100,18 @@ namespace EnergyCoordinationClient.Model
             get { return _actualInstance; }
             set
             {
-                if (value.GetType() == typeof(PriceCurvePayload) || value is PriceCurvePayload)
+                if (value.GetType() == typeof(LocationLPCPayload) || value is LocationLPCPayload)
+                {
+                    this._actualInstance = value;
+                }
+                else if (value.GetType() == typeof(PriceCurvePayload) || value is PriceCurvePayload)
+                {
+                    this._actualInstance = value;
+                }
+                else if (
+                    value.GetType() == typeof(ResourceLPCPayload)
+                    || value is ResourceLPCPayload
+                )
                 {
                     this._actualInstance = value;
                 }
@@ -86,7 +125,7 @@ namespace EnergyCoordinationClient.Model
                 else
                 {
                     throw new ArgumentException(
-                        "Invalid instance found. Must be the following types: PriceCurvePayload, UserEligibilityPayload"
+                        "Invalid instance found. Must be the following types: LocationLPCPayload, PriceCurvePayload, ResourceLPCPayload, UserEligibilityPayload"
                     );
                 }
             }
@@ -110,6 +149,26 @@ namespace EnergyCoordinationClient.Model
         public UserEligibilityPayload GetUserEligibilityPayload()
         {
             return (UserEligibilityPayload)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `LocationLPCPayload`. If the actual instance is not `LocationLPCPayload`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of LocationLPCPayload</returns>
+        public LocationLPCPayload GetLocationLPCPayload()
+        {
+            return (LocationLPCPayload)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ResourceLPCPayload`. If the actual instance is not `ResourceLPCPayload`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ResourceLPCPayload</returns>
+        public ResourceLPCPayload GetResourceLPCPayload()
+        {
+            return (ResourceLPCPayload)this.ActualInstance;
         }
 
         /// <summary>
@@ -156,6 +215,42 @@ namespace EnergyCoordinationClient.Model
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(LocationLPCPayload).GetProperty("AdditionalProperties") == null)
+                {
+                    newGetEventResponsePayload = new GetEventResponsePayload(
+                        JsonConvert.DeserializeObject<LocationLPCPayload>(
+                            jsonString,
+                            GetEventResponsePayload.SerializerSettings
+                        )
+                    );
+                }
+                else
+                {
+                    newGetEventResponsePayload = new GetEventResponsePayload(
+                        JsonConvert.DeserializeObject<LocationLPCPayload>(
+                            jsonString,
+                            GetEventResponsePayload.AdditionalPropertiesSerializerSettings
+                        )
+                    );
+                }
+                matchedTypes.Add("LocationLPCPayload");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(
+                    string.Format(
+                        "Failed to deserialize `{0}` into LocationLPCPayload: {1}",
+                        jsonString,
+                        exception.ToString()
+                    )
+                );
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
                 if (typeof(PriceCurvePayload).GetProperty("AdditionalProperties") == null)
                 {
                     newGetEventResponsePayload = new GetEventResponsePayload(
@@ -183,6 +278,42 @@ namespace EnergyCoordinationClient.Model
                 System.Diagnostics.Debug.WriteLine(
                     string.Format(
                         "Failed to deserialize `{0}` into PriceCurvePayload: {1}",
+                        jsonString,
+                        exception.ToString()
+                    )
+                );
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(ResourceLPCPayload).GetProperty("AdditionalProperties") == null)
+                {
+                    newGetEventResponsePayload = new GetEventResponsePayload(
+                        JsonConvert.DeserializeObject<ResourceLPCPayload>(
+                            jsonString,
+                            GetEventResponsePayload.SerializerSettings
+                        )
+                    );
+                }
+                else
+                {
+                    newGetEventResponsePayload = new GetEventResponsePayload(
+                        JsonConvert.DeserializeObject<ResourceLPCPayload>(
+                            jsonString,
+                            GetEventResponsePayload.AdditionalPropertiesSerializerSettings
+                        )
+                    );
+                }
+                matchedTypes.Add("ResourceLPCPayload");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(
+                    string.Format(
+                        "Failed to deserialize `{0}` into ResourceLPCPayload: {1}",
                         jsonString,
                         exception.ToString()
                     )

@@ -18,7 +18,6 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.RegularExpressions;
-using JsonSubTypes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
@@ -27,38 +26,36 @@ using OpenAPIDateConverter = EnergyCoordinationClient.Client.OpenAPIDateConverte
 namespace EnergyCoordinationClient.Model
 {
     /// <summary>
-    /// SparkReportPayload
+    /// LPCDataPoint
     /// </summary>
-    [DataContract(Name = "SparkReportPayload")]
-    [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
-    [JsonSubtypes.KnownSubType(typeof(EnergyUsageReportPayload), "EnergyUsage")]
-    [JsonSubtypes.KnownSubType(typeof(LocationEnergyUsageReportPayload), "LocationEnergyUsage")]
-    [JsonSubtypes.KnownSubType(
-        typeof(LocationLPCAcknowledgmentReportPayload),
-        "LocationLPCAcknowledgement"
-    )]
-    [JsonSubtypes.KnownSubType(
-        typeof(ResourceLPCAcknowledgmentReportPayload),
-        "ResourceLPCAcknowledgement"
-    )]
-    public partial class SparkReportPayload : IValidatableObject
+    [DataContract(Name = "LPCDataPoint")]
+    public partial class LPCDataPoint : IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets PayloadType
+        /// Initializes a new instance of the <see cref="LPCDataPoint" /> class.
         /// </summary>
-        [DataMember(Name = "payloadType", EmitDefaultValue = false)]
-        public SparkReportPayloadType? PayloadType { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SparkReportPayload" /> class.
-        /// </summary>
-        /// <param name="payloadType">payloadType.</param>
-        public SparkReportPayload(
-            SparkReportPayloadType? payloadType = default(SparkReportPayloadType?)
+        /// <param name="maxPowerInKiloWatts">maxPowerInKiloWatts.</param>
+        /// <param name="timestamp">timestamp.</param>
+        public LPCDataPoint(
+            double maxPowerInKiloWatts = default(double),
+            DateTimeOffset timestamp = default(DateTimeOffset)
         )
         {
-            this.PayloadType = payloadType;
+            this.MaxPowerInKiloWatts = maxPowerInKiloWatts;
+            this.Timestamp = timestamp;
         }
+
+        /// <summary>
+        /// Gets or Sets MaxPowerInKiloWatts
+        /// </summary>
+        [DataMember(Name = "maxPowerInKiloWatts", EmitDefaultValue = false)]
+        public double MaxPowerInKiloWatts { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Timestamp
+        /// </summary>
+        [DataMember(Name = "timestamp", EmitDefaultValue = false)]
+        public DateTimeOffset Timestamp { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,8 +64,9 @@ namespace EnergyCoordinationClient.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SparkReportPayload {\n");
-            sb.Append("  PayloadType: ").Append(PayloadType).Append("\n");
+            sb.Append("class LPCDataPoint {\n");
+            sb.Append("  MaxPowerInKiloWatts: ").Append(MaxPowerInKiloWatts).Append("\n");
+            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,16 +91,6 @@ namespace EnergyCoordinationClient.Model
         IEnumerable<ValidationResult> IValidatableObject.Validate(
             ValidationContext validationContext
         )
-        {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -16,9 +16,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.Json;
-using JsonSubTypes;
 using Partner.Api.Converters;
-using Swashbuckle.AspNetCore.Annotations;
 
 namespace Partner.Api.Models
 {
@@ -26,22 +24,13 @@ namespace Partner.Api.Models
     ///
     /// </summary>
     [DataContract]
-    [SwaggerDiscriminator("PayloadType")]
-    [JsonSubtypes.KnownSubType(typeof(LocationLPCPayload), "LocationLPC")]
-    [SwaggerSubType(typeof(LocationLPCPayload), DiscriminatorValue = "LocationLPC")]
-    [JsonSubtypes.KnownSubType(typeof(PriceCurvePayload), "PriceCurve")]
-    [SwaggerSubType(typeof(PriceCurvePayload), DiscriminatorValue = "PriceCurve")]
-    [JsonSubtypes.KnownSubType(typeof(ResourceLPCPayload), "ResourceLPC")]
-    [SwaggerSubType(typeof(ResourceLPCPayload), DiscriminatorValue = "ResourceLPC")]
-    [JsonSubtypes.KnownSubType(typeof(UserEligibilityPayload), "UserEligibility")]
-    [SwaggerSubType(typeof(UserEligibilityPayload), DiscriminatorValue = "UserEligibility")]
-    public partial class SparkEventPayload : IEquatable<SparkEventPayload>
+    public partial class LocationLPCPayload : SparkEventPayload, IEquatable<LocationLPCPayload>
     {
         /// <summary>
-        /// Gets or Sets PayloadType
+        /// Gets or Sets Targets
         /// </summary>
-        [DataMember(Name = "payloadType", EmitDefaultValue = true)]
-        public SparkEventPayloadType PayloadType { get; set; }
+        [DataMember(Name = "targets", EmitDefaultValue = false)]
+        public List<LocationLPCTarget> Targets { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -50,8 +39,8 @@ namespace Partner.Api.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SparkEventPayload {\n");
-            sb.Append("  PayloadType: ").Append(PayloadType).Append("\n");
+            sb.Append("class LocationLPCPayload {\n");
+            sb.Append("  Targets: ").Append(Targets).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -60,7 +49,7 @@ namespace Partner.Api.Models
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public new string ToJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
 
@@ -78,22 +67,25 @@ namespace Partner.Api.Models
                 return false;
             if (ReferenceEquals(this, obj))
                 return true;
-            return obj.GetType() == GetType() && Equals((SparkEventPayload)obj);
+            return obj.GetType() == GetType() && Equals((LocationLPCPayload)obj);
         }
 
         /// <summary>
-        /// Returns true if SparkEventPayload instances are equal
+        /// Returns true if LocationLPCPayload instances are equal
         /// </summary>
-        /// <param name="other">Instance of SparkEventPayload to be compared</param>
+        /// <param name="other">Instance of LocationLPCPayload to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SparkEventPayload other)
+        public bool Equals(LocationLPCPayload other)
         {
             if (other is null)
                 return false;
             if (ReferenceEquals(this, other))
                 return true;
 
-            return (PayloadType == other.PayloadType || PayloadType.Equals(other.PayloadType));
+            return (
+                Targets == other.Targets
+                || Targets != null && other.Targets != null && Targets.SequenceEqual(other.Targets)
+            );
         }
 
         /// <summary>
@@ -106,8 +98,8 @@ namespace Partner.Api.Models
             {
                 var hashCode = 41;
                 // Suitable nullity checks etc, of course :)
-
-                hashCode = hashCode * 59 + PayloadType.GetHashCode();
+                if (Targets != null)
+                    hashCode = hashCode * 59 + Targets.GetHashCode();
                 return hashCode;
             }
         }
@@ -115,12 +107,12 @@ namespace Partner.Api.Models
         #region Operators
 #pragma warning disable 1591
 
-        public static bool operator ==(SparkEventPayload left, SparkEventPayload right)
+        public static bool operator ==(LocationLPCPayload left, LocationLPCPayload right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(SparkEventPayload left, SparkEventPayload right)
+        public static bool operator !=(LocationLPCPayload left, LocationLPCPayload right)
         {
             return !Equals(left, right);
         }

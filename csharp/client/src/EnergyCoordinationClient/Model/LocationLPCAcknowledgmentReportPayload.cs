@@ -27,38 +27,42 @@ using OpenAPIDateConverter = EnergyCoordinationClient.Client.OpenAPIDateConverte
 namespace EnergyCoordinationClient.Model
 {
     /// <summary>
-    /// SparkReportPayload
+    /// LocationLPCAcknowledgmentReportPayload
     /// </summary>
-    [DataContract(Name = "SparkReportPayload")]
+    [DataContract(Name = "LocationLPCAcknowledgmentReportPayload")]
     [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
-    [JsonSubtypes.KnownSubType(typeof(EnergyUsageReportPayload), "EnergyUsage")]
-    [JsonSubtypes.KnownSubType(typeof(LocationEnergyUsageReportPayload), "LocationEnergyUsage")]
-    [JsonSubtypes.KnownSubType(
-        typeof(LocationLPCAcknowledgmentReportPayload),
-        "LocationLPCAcknowledgement"
-    )]
-    [JsonSubtypes.KnownSubType(
-        typeof(ResourceLPCAcknowledgmentReportPayload),
-        "ResourceLPCAcknowledgement"
-    )]
-    public partial class SparkReportPayload : IValidatableObject
+    public partial class LocationLPCAcknowledgmentReportPayload
+        : SparkReportPayload,
+            IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets PayloadType
+        /// Initializes a new instance of the <see cref="LocationLPCAcknowledgmentReportPayload" /> class.
         /// </summary>
-        [DataMember(Name = "payloadType", EmitDefaultValue = false)]
-        public SparkReportPayloadType? PayloadType { get; set; }
+        /// <param name="acknowledgedTargets">acknowledgedTargets.</param>
+        /// <param name="declinedTargets">declinedTargets.</param>
+        /// <param name="payloadType">payloadType (default to SparkReportPayloadType.LocationLPCAcknowledgement).</param>
+        public LocationLPCAcknowledgmentReportPayload(
+            List<LocationLPCResponse> acknowledgedTargets = default(List<LocationLPCResponse>),
+            List<LocationLPCResponse> declinedTargets = default(List<LocationLPCResponse>),
+            SparkReportPayloadType? payloadType = SparkReportPayloadType.LocationLPCAcknowledgement
+        )
+            : base(payloadType)
+        {
+            this.AcknowledgedTargets = acknowledgedTargets;
+            this.DeclinedTargets = declinedTargets;
+        }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SparkReportPayload" /> class.
+        /// Gets or Sets AcknowledgedTargets
         /// </summary>
-        /// <param name="payloadType">payloadType.</param>
-        public SparkReportPayload(
-            SparkReportPayloadType? payloadType = default(SparkReportPayloadType?)
-        )
-        {
-            this.PayloadType = payloadType;
-        }
+        [DataMember(Name = "acknowledgedTargets", EmitDefaultValue = false)]
+        public List<LocationLPCResponse> AcknowledgedTargets { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DeclinedTargets
+        /// </summary>
+        [DataMember(Name = "declinedTargets", EmitDefaultValue = false)]
+        public List<LocationLPCResponse> DeclinedTargets { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,8 +71,10 @@ namespace EnergyCoordinationClient.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SparkReportPayload {\n");
-            sb.Append("  PayloadType: ").Append(PayloadType).Append("\n");
+            sb.Append("class LocationLPCAcknowledgmentReportPayload {\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  AcknowledgedTargets: ").Append(AcknowledgedTargets).Append("\n");
+            sb.Append("  DeclinedTargets: ").Append(DeclinedTargets).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,7 +83,7 @@ namespace EnergyCoordinationClient.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(
                 this,
@@ -104,6 +110,10 @@ namespace EnergyCoordinationClient.Model
         /// <returns>Validation Result</returns>
         protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
         {
+            foreach (var x in base.BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

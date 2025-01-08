@@ -38,6 +38,13 @@ import java.util.Objects;
     visible = true)
 @JsonSubTypes({
   @JsonSubTypes.Type(value = EnergyUsageReportPayload.class, name = "EnergyUsage"),
+  @JsonSubTypes.Type(value = LocationEnergyUsageReportPayload.class, name = "LocationEnergyUsage"),
+  @JsonSubTypes.Type(
+      value = LocationLPCAcknowledgmentReportPayload.class,
+      name = "LocationLPCAcknowledgement"),
+  @JsonSubTypes.Type(
+      value = ResourceLPCAcknowledgmentReportPayload.class,
+      name = "ResourceLPCAcknowledgement"),
 })
 public class SparkReportPayload {
   public static final String JSON_PROPERTY_PAYLOAD_TYPE = "payloadType";

@@ -28,7 +28,8 @@ import java.util.Objects;
   GetEventResponsePayload.JSON_PROPERTY_LAST_UPDATED,
   GetEventResponsePayload.JSON_PROPERTY_ADDED_USERS,
   GetEventResponsePayload.JSON_PROPERTY_REMOVED_USERS,
-  GetEventResponsePayload.JSON_PROPERTY_PAYLOAD_TYPE
+  GetEventResponsePayload.JSON_PROPERTY_PAYLOAD_TYPE,
+  GetEventResponsePayload.JSON_PROPERTY_TARGETS
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
@@ -45,9 +46,13 @@ import java.util.Objects;
     property = "payloadType",
     visible = true)
 @JsonSubTypes({
+  @JsonSubTypes.Type(value = LocationLPCPayload.class, name = "LocationLPC"),
   @JsonSubTypes.Type(value = PriceCurvePayload.class, name = "PriceCurve"),
+  @JsonSubTypes.Type(value = ResourceLPCPayload.class, name = "ResourceLPC"),
   @JsonSubTypes.Type(value = UserEligibilityPayload.class, name = "UserEligibility"),
+  @JsonSubTypes.Type(value = LocationLPCPayload.class, name = "LocationLPCPayload"),
   @JsonSubTypes.Type(value = PriceCurvePayload.class, name = "PriceCurvePayload"),
+  @JsonSubTypes.Type(value = ResourceLPCPayload.class, name = "ResourceLPCPayload"),
   @JsonSubTypes.Type(value = UserEligibilityPayload.class, name = "UserEligibilityPayload"),
 })
 public class GetEventResponsePayload {
@@ -62,6 +67,9 @@ public class GetEventResponsePayload {
 
   public static final String JSON_PROPERTY_PAYLOAD_TYPE = "payloadType";
   private SparkEventPayloadType payloadType;
+
+  public static final String JSON_PROPERTY_TARGETS = "targets";
+  private List<ResourceLPCTarget> targets = new ArrayList<>();
 
   public GetEventResponsePayload() {}
 
@@ -177,6 +185,38 @@ public class GetEventResponsePayload {
     this.payloadType = payloadType;
   }
 
+  public GetEventResponsePayload targets(List<ResourceLPCTarget> targets) {
+
+    this.targets = targets;
+    return this;
+  }
+
+  public GetEventResponsePayload addTargetsItem(ResourceLPCTarget targetsItem) {
+    if (this.targets == null) {
+      this.targets = new ArrayList<>();
+    }
+    this.targets.add(targetsItem);
+    return this;
+  }
+
+  /**
+   * Get targets
+   *
+   * @return targets
+   */
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TARGETS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public List<ResourceLPCTarget> getTargets() {
+    return targets;
+  }
+
+  @JsonProperty(JSON_PROPERTY_TARGETS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTargets(List<ResourceLPCTarget> targets) {
+    this.targets = targets;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -189,12 +229,13 @@ public class GetEventResponsePayload {
     return Objects.equals(this.lastUpdated, getEventResponsePayload.lastUpdated)
         && Objects.equals(this.addedUsers, getEventResponsePayload.addedUsers)
         && Objects.equals(this.removedUsers, getEventResponsePayload.removedUsers)
-        && Objects.equals(this.payloadType, getEventResponsePayload.payloadType);
+        && Objects.equals(this.payloadType, getEventResponsePayload.payloadType)
+        && Objects.equals(this.targets, getEventResponsePayload.targets);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(lastUpdated, addedUsers, removedUsers, payloadType);
+    return Objects.hash(lastUpdated, addedUsers, removedUsers, payloadType, targets);
   }
 
   @Override
@@ -205,6 +246,7 @@ public class GetEventResponsePayload {
     sb.append("    addedUsers: ").append(toIndentedString(addedUsers)).append("\n");
     sb.append("    removedUsers: ").append(toIndentedString(removedUsers)).append("\n");
     sb.append("    payloadType: ").append(toIndentedString(payloadType)).append("\n");
+    sb.append("    targets: ").append(toIndentedString(targets)).append("\n");
     sb.append("}");
     return sb.toString();
   }

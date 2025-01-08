@@ -98,7 +98,9 @@
         "discriminator" : {
           "mapping" : {
             "PriceCurve" : "#/components/schemas/PriceCurvePayload",
-            "UserEligibility" : "#/components/schemas/UserEligibilityPayload"
+            "UserEligibility" : "#/components/schemas/UserEligibilityPayload",
+            "LocationLPC" : "#/components/schemas/LocationLPCPayload",
+            "ResourceLPC" : "#/components/schemas/ResourceLPCPayload"
           },
           "propertyName" : "payloadType"
         },
@@ -223,6 +225,102 @@
           "removedUsers" : {
             "items" : {
               "type" : "string"
+            },
+            "type" : "array"
+          }
+        },
+        "type" : "object"
+      },
+      "LocationLPCPayload" : {
+        "additionalProperties" : false,
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/SparkEventPayload"
+        } ],
+        "properties" : {
+          "targets" : {
+            "items" : {
+              "$ref" : "#/components/schemas/LocationLPCTarget"
+            },
+            "type" : "array"
+          }
+        },
+        "type" : "object"
+      },
+      "LocationLPCTarget" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "locationId" : {
+            "type" : "string"
+          },
+          "meterPointId" : {
+            "type" : "string"
+          },
+          "resolution" : {
+            "example" : "02:00:00",
+            "format" : "time-span",
+            "type" : "string"
+          },
+          "points" : {
+            "items" : {
+              "$ref" : "#/components/schemas/LPCDataPoint"
+            },
+            "type" : "array"
+          }
+        },
+        "type" : "object"
+      },
+      "MeterPointId" : {
+        "type" : "string"
+      },
+      "LPCDataPoint" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "maxPowerInKiloWatts" : {
+            "format" : "double",
+            "type" : "number"
+          },
+          "timestamp" : {
+            "format" : "date-time",
+            "type" : "string"
+          }
+        },
+        "type" : "object"
+      },
+      "ResourceLPCPayload" : {
+        "additionalProperties" : false,
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/SparkEventPayload"
+        } ],
+        "properties" : {
+          "targets" : {
+            "items" : {
+              "$ref" : "#/components/schemas/ResourceLPCTarget"
+            },
+            "type" : "array"
+          }
+        },
+        "type" : "object"
+      },
+      "ResourceLPCTarget" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "locationId" : {
+            "type" : "string"
+          },
+          "resourceId" : {
+            "type" : "string"
+          },
+          "meterPointId" : {
+            "type" : "string"
+          },
+          "resolution" : {
+            "example" : "02:00:00",
+            "format" : "time-span",
+            "type" : "string"
+          },
+          "points" : {
+            "items" : {
+              "$ref" : "#/components/schemas/LPCDataPoint"
             },
             "type" : "array"
           }

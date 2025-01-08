@@ -16,9 +16,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.Json;
-using JsonSubTypes;
 using Partner.Api.Converters;
-using Swashbuckle.AspNetCore.Annotations;
 
 namespace Partner.Api.Models
 {
@@ -26,22 +24,19 @@ namespace Partner.Api.Models
     ///
     /// </summary>
     [DataContract]
-    [SwaggerDiscriminator("PayloadType")]
-    [JsonSubtypes.KnownSubType(typeof(LocationLPCPayload), "LocationLPC")]
-    [SwaggerSubType(typeof(LocationLPCPayload), DiscriminatorValue = "LocationLPC")]
-    [JsonSubtypes.KnownSubType(typeof(PriceCurvePayload), "PriceCurve")]
-    [SwaggerSubType(typeof(PriceCurvePayload), DiscriminatorValue = "PriceCurve")]
-    [JsonSubtypes.KnownSubType(typeof(ResourceLPCPayload), "ResourceLPC")]
-    [SwaggerSubType(typeof(ResourceLPCPayload), DiscriminatorValue = "ResourceLPC")]
-    [JsonSubtypes.KnownSubType(typeof(UserEligibilityPayload), "UserEligibility")]
-    [SwaggerSubType(typeof(UserEligibilityPayload), DiscriminatorValue = "UserEligibility")]
-    public partial class SparkEventPayload : IEquatable<SparkEventPayload>
+    public partial class LPCDataPoint : IEquatable<LPCDataPoint>
     {
         /// <summary>
-        /// Gets or Sets PayloadType
+        /// Gets or Sets MaxPowerInKiloWatts
         /// </summary>
-        [DataMember(Name = "payloadType", EmitDefaultValue = true)]
-        public SparkEventPayloadType PayloadType { get; set; }
+        [DataMember(Name = "maxPowerInKiloWatts", EmitDefaultValue = true)]
+        public double MaxPowerInKiloWatts { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Timestamp
+        /// </summary>
+        [DataMember(Name = "timestamp", EmitDefaultValue = true)]
+        public DateTimeOffset Timestamp { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -50,8 +45,9 @@ namespace Partner.Api.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SparkEventPayload {\n");
-            sb.Append("  PayloadType: ").Append(PayloadType).Append("\n");
+            sb.Append("class LPCDataPoint {\n");
+            sb.Append("  MaxPowerInKiloWatts: ").Append(MaxPowerInKiloWatts).Append("\n");
+            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -78,22 +74,25 @@ namespace Partner.Api.Models
                 return false;
             if (ReferenceEquals(this, obj))
                 return true;
-            return obj.GetType() == GetType() && Equals((SparkEventPayload)obj);
+            return obj.GetType() == GetType() && Equals((LPCDataPoint)obj);
         }
 
         /// <summary>
-        /// Returns true if SparkEventPayload instances are equal
+        /// Returns true if LPCDataPoint instances are equal
         /// </summary>
-        /// <param name="other">Instance of SparkEventPayload to be compared</param>
+        /// <param name="other">Instance of LPCDataPoint to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SparkEventPayload other)
+        public bool Equals(LPCDataPoint other)
         {
             if (other is null)
                 return false;
             if (ReferenceEquals(this, other))
                 return true;
 
-            return (PayloadType == other.PayloadType || PayloadType.Equals(other.PayloadType));
+            return (
+                    MaxPowerInKiloWatts == other.MaxPowerInKiloWatts
+                    || MaxPowerInKiloWatts.Equals(other.MaxPowerInKiloWatts)
+                ) && (Timestamp == other.Timestamp || Timestamp.Equals(other.Timestamp));
         }
 
         /// <summary>
@@ -107,7 +106,9 @@ namespace Partner.Api.Models
                 var hashCode = 41;
                 // Suitable nullity checks etc, of course :)
 
-                hashCode = hashCode * 59 + PayloadType.GetHashCode();
+                hashCode = hashCode * 59 + MaxPowerInKiloWatts.GetHashCode();
+
+                hashCode = hashCode * 59 + Timestamp.GetHashCode();
                 return hashCode;
             }
         }
@@ -115,12 +116,12 @@ namespace Partner.Api.Models
         #region Operators
 #pragma warning disable 1591
 
-        public static bool operator ==(SparkEventPayload left, SparkEventPayload right)
+        public static bool operator ==(LPCDataPoint left, LPCDataPoint right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(SparkEventPayload left, SparkEventPayload right)
+        public static bool operator !=(LPCDataPoint left, LPCDataPoint right)
         {
             return !Equals(left, right);
         }
