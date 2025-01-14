@@ -16,7 +16,9 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { SimulateEventResponse } from '../model/simulateEventResponse';
+import { SimulateLocationLPCEventRequest } from '../model/simulateLocationLPCEventRequest';
 import { SimulatePriceCurveEventRequest } from '../model/simulatePriceCurveEventRequest';
+import { SimulateResourceLPCEventRequest } from '../model/simulateResourceLPCEventRequest';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -94,12 +96,156 @@ export class SimulationEventsApi {
     }
 
     /**
+     * Creates a `LocationLPCRequestedEvent` in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `locations` parameter is not specified, random locations will be targeted if any exist.  - If the `points` parameter is not specified, a random points array with maximum power will be generated.
+     * @summary Simulate LPC Location Event
+     * @param simulateLocationLPCEventRequest 
+     */
+    public async postLPCLocationSimulation (simulateLocationLPCEventRequest: SimulateLocationLPCEventRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SimulateEventResponse;  }> {
+        const localVarPath = this.basePath + '/simulation/events/lpc/locations';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'simulateLocationLPCEventRequest' is not null or undefined
+        if (simulateLocationLPCEventRequest === null || simulateLocationLPCEventRequest === undefined) {
+            throw new Error('Required parameter simulateLocationLPCEventRequest was null or undefined when calling postLPCLocationSimulation.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(simulateLocationLPCEventRequest, "SimulateLocationLPCEventRequest")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.Bearer.accessToken) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.Bearer.applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: SimulateEventResponse;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "SimulateEventResponse");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * Creates a `ResourceLPCRequestedEvent` in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `resources` parameter is not specified, random resources at locations will be targeted if any exist.  - If the `points` parameter is not specified, a random points array with maximum power will be generated.
+     * @summary Simulate LPC Resource Event
+     * @param simulateResourceLPCEventRequest 
+     */
+    public async postLPCResourceSimulation (simulateResourceLPCEventRequest: SimulateResourceLPCEventRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SimulateEventResponse;  }> {
+        const localVarPath = this.basePath + '/simulation/events/lpc/resources';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'simulateResourceLPCEventRequest' is not null or undefined
+        if (simulateResourceLPCEventRequest === null || simulateResourceLPCEventRequest === undefined) {
+            throw new Error('Required parameter simulateResourceLPCEventRequest was null or undefined when calling postLPCResourceSimulation.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(simulateResourceLPCEventRequest, "SimulateResourceLPCEventRequest")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.Bearer.accessToken) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications.Bearer.applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: SimulateEventResponse;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "SimulateEventResponse");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
      * Creates a `PriceCurveEvent` in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `targets` parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the `priceArea` parameter is not specified, a random price area will be selected.  - If the `priceCurveDelta` parameter is not specified, a random price curve delta will be created.
      * @summary Simulate Price Curve Event
      * @param simulatePriceCurveEventRequest 
      */
     public async postPriceCurveSimulation (simulatePriceCurveEventRequest: SimulatePriceCurveEventRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SimulateEventResponse;  }> {
-        const localVarPath = this.basePath + '/simulation/events/priceCurve';
+        const localVarPath = this.basePath + '/simulation/events/pricecurve';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];
@@ -170,7 +316,7 @@ export class SimulationEventsApi {
      * @summary Simulate User Eligibility Event
      */
     public async postUserEligibilitySimulation (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SimulateEventResponse;  }> {
-        const localVarPath = this.basePath + '/simulation/events/userEligibility';
+        const localVarPath = this.basePath + '/simulation/events/usereligibility';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];

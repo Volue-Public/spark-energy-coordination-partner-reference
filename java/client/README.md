@@ -125,8 +125,10 @@ Class | Method | HTTP request | Description
 *ReportsApi* | [**postReport**](docs/ReportsApi.md#postReport) | **POST** /reports | Create a report
 *ResourcesApi* | [**deleteResourceById**](docs/ResourcesApi.md#deleteResourceById) | **DELETE** /resources/{resourceId} | Delete Resource
 *ResourcesApi* | [**getResourceById**](docs/ResourcesApi.md#getResourceById) | **GET** /resources/{resourceId} | Get Resource by Id
-*SimulationEventsApi* | [**postPriceCurveSimulation**](docs/SimulationEventsApi.md#postPriceCurveSimulation) | **POST** /simulation/events/priceCurve | Simulate Price Curve Event
-*SimulationEventsApi* | [**postUserEligibilitySimulation**](docs/SimulationEventsApi.md#postUserEligibilitySimulation) | **POST** /simulation/events/userEligibility | Simulate User Eligibility Event
+*SimulationEventsApi* | [**postLPCLocationSimulation**](docs/SimulationEventsApi.md#postLPCLocationSimulation) | **POST** /simulation/events/lpc/locations | Simulate LPC Location Event
+*SimulationEventsApi* | [**postLPCResourceSimulation**](docs/SimulationEventsApi.md#postLPCResourceSimulation) | **POST** /simulation/events/lpc/resources | Simulate LPC Resource Event
+*SimulationEventsApi* | [**postPriceCurveSimulation**](docs/SimulationEventsApi.md#postPriceCurveSimulation) | **POST** /simulation/events/pricecurve | Simulate Price Curve Event
+*SimulationEventsApi* | [**postUserEligibilitySimulation**](docs/SimulationEventsApi.md#postUserEligibilitySimulation) | **POST** /simulation/events/usereligibility | Simulate User Eligibility Event
 *SimulationPartnerDataApi* | [**deleteTenantDataSimulation**](docs/SimulationPartnerDataApi.md#deleteTenantDataSimulation) | **DELETE** /simulation/partner | Cleanup Simulation Data
 *SimulationPartnerDataApi* | [**postTenantDataSimulation**](docs/SimulationPartnerDataApi.md#postTenantDataSimulation) | **POST** /simulation/partner | Simulate DER-Partner Data
 *UserApi* | [**deleteUserById**](docs/UserApi.md#deleteUserById) | **DELETE** /users/{userId} | Delete User
@@ -193,12 +195,16 @@ Class | Method | HTTP request | Description
  - [GetWebhooksResponse](docs/GetWebhooksResponse.md)
  - [HttpValidationProblemDetails](docs/HttpValidationProblemDetails.md)
  - [LPCDataPoint](docs/LPCDataPoint.md)
+ - [LPCLocation](docs/LPCLocation.md)
+ - [LPCLocationTarget](docs/LPCLocationTarget.md)
+ - [LPCResource](docs/LPCResource.md)
+ - [LPCResourceTarget](docs/LPCResourceTarget.md)
  - [LocationCompensation](docs/LocationCompensation.md)
  - [LocationEnergyUsageReportPayload](docs/LocationEnergyUsageReportPayload.md)
  - [LocationLPCAcknowledgmentReportPayload](docs/LocationLPCAcknowledgmentReportPayload.md)
  - [LocationLPCPayload](docs/LocationLPCPayload.md)
- - [LocationLPCResponse](docs/LocationLPCResponse.md)
  - [LocationLPCTarget](docs/LocationLPCTarget.md)
+ - [LocationTarget](docs/LocationTarget.md)
  - [LocationType](docs/LocationType.md)
  - [NotificationType](docs/NotificationType.md)
  - [PatchLocationRequest](docs/PatchLocationRequest.md)
@@ -227,11 +233,13 @@ Class | Method | HTTP request | Description
  - [PutWebhookRequest](docs/PutWebhookRequest.md)
  - [ResourceLPCAcknowledgmentReportPayload](docs/ResourceLPCAcknowledgmentReportPayload.md)
  - [ResourceLPCPayload](docs/ResourceLPCPayload.md)
- - [ResourceLPCResponse](docs/ResourceLPCResponse.md)
  - [ResourceLPCTarget](docs/ResourceLPCTarget.md)
+ - [ResourceTarget](docs/ResourceTarget.md)
  - [ResourceType](docs/ResourceType.md)
  - [SimulateEventResponse](docs/SimulateEventResponse.md)
+ - [SimulateLocationLPCEventRequest](docs/SimulateLocationLPCEventRequest.md)
  - [SimulatePriceCurveEventRequest](docs/SimulatePriceCurveEventRequest.md)
+ - [SimulateResourceLPCEventRequest](docs/SimulateResourceLPCEventRequest.md)
  - [SparkEventPayload](docs/SparkEventPayload.md)
  - [SparkEventPayloadType](docs/SparkEventPayloadType.md)
  - [SparkReportPayload](docs/SparkReportPayload.md)

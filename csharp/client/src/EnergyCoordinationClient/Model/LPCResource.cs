@@ -26,32 +26,26 @@ using OpenAPIDateConverter = EnergyCoordinationClient.Client.OpenAPIDateConverte
 namespace EnergyCoordinationClient.Model
 {
     /// <summary>
-    /// ResourceLPCTarget
+    /// LPCResource
     /// </summary>
-    [DataContract(Name = "ResourceLPCTarget")]
-    public partial class ResourceLPCTarget : IValidatableObject
+    [DataContract(Name = "LPCResource")]
+    public partial class LPCResource : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResourceLPCTarget" /> class.
+        /// Initializes a new instance of the <see cref="LPCResource" /> class.
         /// </summary>
         /// <param name="meterPointId">meterPointId.</param>
         /// <param name="locationId">locationId.</param>
         /// <param name="resourceId">resourceId.</param>
-        /// <param name="resolution">resolution.</param>
-        /// <param name="points">points.</param>
-        public ResourceLPCTarget(
+        public LPCResource(
             string meterPointId = default(string),
             string locationId = default(string),
-            string resourceId = default(string),
-            string resolution = default(string),
-            List<LPCDataPoint> points = default(List<LPCDataPoint>)
+            string resourceId = default(string)
         )
         {
             this.MeterPointId = meterPointId;
             this.LocationId = locationId;
             this.ResourceId = resourceId;
-            this.Resolution = resolution;
-            this.Points = points;
         }
 
         /// <summary>
@@ -73,31 +67,16 @@ namespace EnergyCoordinationClient.Model
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Resolution
-        /// </summary>
-        /// <example>02:00:00</example>
-        [DataMember(Name = "resolution", EmitDefaultValue = false)]
-        public string Resolution { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Points
-        /// </summary>
-        [DataMember(Name = "points", EmitDefaultValue = false)]
-        public List<LPCDataPoint> Points { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class ResourceLPCTarget {\n");
+            sb.Append("class LPCResource {\n");
             sb.Append("  MeterPointId: ").Append(MeterPointId).Append("\n");
             sb.Append("  LocationId: ").Append(LocationId).Append("\n");
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
-            sb.Append("  Resolution: ").Append(Resolution).Append("\n");
-            sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

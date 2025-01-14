@@ -26,6 +26,66 @@ namespace EnergyCoordinationClient.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Simulate LPC Location Event
+        /// </summary>
+        /// <remarks>
+        /// Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </remarks>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateLocationLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SimulateEventResponse</returns>
+        SimulateEventResponse PostLPCLocationSimulation(
+            SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
+            int operationIndex = 0
+        );
+
+        /// <summary>
+        /// Simulate LPC Location Event
+        /// </summary>
+        /// <remarks>
+        /// Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </remarks>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateLocationLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SimulateEventResponse</returns>
+        ApiResponse<SimulateEventResponse> PostLPCLocationSimulationWithHttpInfo(
+            SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
+            int operationIndex = 0
+        );
+
+        /// <summary>
+        /// Simulate LPC Resource Event
+        /// </summary>
+        /// <remarks>
+        /// Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </remarks>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateResourceLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SimulateEventResponse</returns>
+        SimulateEventResponse PostLPCResourceSimulation(
+            SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
+            int operationIndex = 0
+        );
+
+        /// <summary>
+        /// Simulate LPC Resource Event
+        /// </summary>
+        /// <remarks>
+        /// Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </remarks>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateResourceLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SimulateEventResponse</returns>
+        ApiResponse<SimulateEventResponse> PostLPCResourceSimulationWithHttpInfo(
+            SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
+            int operationIndex = 0
+        );
+
+        /// <summary>
         /// Simulate Price Curve Event
         /// </summary>
         /// <remarks>
@@ -87,6 +147,82 @@ namespace EnergyCoordinationClient.Api
     public interface ISimulationEventsApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Simulate LPC Location Event
+        /// </summary>
+        /// <remarks>
+        /// Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </remarks>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateLocationLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SimulateEventResponse</returns>
+        System.Threading.Tasks.Task<SimulateEventResponse> PostLPCLocationSimulationAsync(
+            SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
+            int operationIndex = 0,
+            System.Threading.CancellationToken cancellationToken =
+                default(global::System.Threading.CancellationToken)
+        );
+
+        /// <summary>
+        /// Simulate LPC Location Event
+        /// </summary>
+        /// <remarks>
+        /// Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </remarks>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateLocationLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SimulateEventResponse)</returns>
+        System.Threading.Tasks.Task<
+            ApiResponse<SimulateEventResponse>
+        > PostLPCLocationSimulationWithHttpInfoAsync(
+            SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
+            int operationIndex = 0,
+            System.Threading.CancellationToken cancellationToken =
+                default(global::System.Threading.CancellationToken)
+        );
+
+        /// <summary>
+        /// Simulate LPC Resource Event
+        /// </summary>
+        /// <remarks>
+        /// Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </remarks>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateResourceLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SimulateEventResponse</returns>
+        System.Threading.Tasks.Task<SimulateEventResponse> PostLPCResourceSimulationAsync(
+            SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
+            int operationIndex = 0,
+            System.Threading.CancellationToken cancellationToken =
+                default(global::System.Threading.CancellationToken)
+        );
+
+        /// <summary>
+        /// Simulate LPC Resource Event
+        /// </summary>
+        /// <remarks>
+        /// Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </remarks>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateResourceLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SimulateEventResponse)</returns>
+        System.Threading.Tasks.Task<
+            ApiResponse<SimulateEventResponse>
+        > PostLPCResourceSimulationWithHttpInfoAsync(
+            SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
+            int operationIndex = 0,
+            System.Threading.CancellationToken cancellationToken =
+                default(global::System.Threading.CancellationToken)
+        );
+
         /// <summary>
         /// Simulate Price Curve Event
         /// </summary>
@@ -305,6 +441,436 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
+        /// Simulate LPC Location Event Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </summary>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateLocationLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SimulateEventResponse</returns>
+        public SimulateEventResponse PostLPCLocationSimulation(
+            SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
+            int operationIndex = 0
+        )
+        {
+            EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> localVarResponse =
+                PostLPCLocationSimulationWithHttpInfo(simulateLocationLPCEventRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simulate LPC Location Event Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </summary>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateLocationLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SimulateEventResponse</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> PostLPCLocationSimulationWithHttpInfo(
+            SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
+            int operationIndex = 0
+        )
+        {
+            // verify the required parameter 'simulateLocationLPCEventRequest' is set
+            if (simulateLocationLPCEventRequest == null)
+            {
+                throw new EnergyCoordinationClient.Client.ApiException(
+                    400,
+                    "Missing required parameter 'simulateLocationLPCEventRequest' when calling SimulationEventsApi->PostLPCLocationSimulation"
+                );
+            }
+
+            EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
+                new EnergyCoordinationClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] { "application/json" };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] { "application/json" };
+
+            var localVarContentType =
+                EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = EnergyCoordinationClient.Client.ClientUtils.SelectHeaderAccept(
+                _accepts
+            );
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = simulateLocationLPCEventRequest;
+
+            localVarRequestOptions.Operation = "SimulationEventsApi.PostLPCLocationSimulation";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Bearer) required
+            // bearer authentication required
+            if (
+                !string.IsNullOrEmpty(this.Configuration.AccessToken)
+                && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization")
+            )
+            {
+                localVarRequestOptions.HeaderParameters.Add(
+                    "Authorization",
+                    "Bearer " + this.Configuration.AccessToken
+                );
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<SimulateEventResponse>(
+                "/simulation/events/lpc/locations",
+                localVarRequestOptions,
+                this.Configuration
+            );
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory(
+                    "PostLPCLocationSimulation",
+                    localVarResponse
+                );
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Simulate LPC Location Event Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </summary>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateLocationLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SimulateEventResponse</returns>
+        public async System.Threading.Tasks.Task<SimulateEventResponse> PostLPCLocationSimulationAsync(
+            SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
+            int operationIndex = 0,
+            System.Threading.CancellationToken cancellationToken =
+                default(global::System.Threading.CancellationToken)
+        )
+        {
+            EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> localVarResponse =
+                await PostLPCLocationSimulationWithHttpInfoAsync(
+                        simulateLocationLPCEventRequest,
+                        operationIndex,
+                        cancellationToken
+                    )
+                    .ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simulate LPC Location Event Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </summary>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateLocationLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SimulateEventResponse)</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse>> PostLPCLocationSimulationWithHttpInfoAsync(
+            SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
+            int operationIndex = 0,
+            System.Threading.CancellationToken cancellationToken =
+                default(global::System.Threading.CancellationToken)
+        )
+        {
+            // verify the required parameter 'simulateLocationLPCEventRequest' is set
+            if (simulateLocationLPCEventRequest == null)
+            {
+                throw new EnergyCoordinationClient.Client.ApiException(
+                    400,
+                    "Missing required parameter 'simulateLocationLPCEventRequest' when calling SimulationEventsApi->PostLPCLocationSimulation"
+                );
+            }
+
+            EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
+                new EnergyCoordinationClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] { "application/json" };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] { "application/json" };
+
+            var localVarContentType =
+                EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = EnergyCoordinationClient.Client.ClientUtils.SelectHeaderAccept(
+                _accepts
+            );
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = simulateLocationLPCEventRequest;
+
+            localVarRequestOptions.Operation = "SimulationEventsApi.PostLPCLocationSimulation";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Bearer) required
+            // bearer authentication required
+            if (
+                !string.IsNullOrEmpty(this.Configuration.AccessToken)
+                && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization")
+            )
+            {
+                localVarRequestOptions.HeaderParameters.Add(
+                    "Authorization",
+                    "Bearer " + this.Configuration.AccessToken
+                );
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this
+                .AsynchronousClient.PostAsync<SimulateEventResponse>(
+                    "/simulation/events/lpc/locations",
+                    localVarRequestOptions,
+                    this.Configuration,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory(
+                    "PostLPCLocationSimulation",
+                    localVarResponse
+                );
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </summary>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateResourceLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SimulateEventResponse</returns>
+        public SimulateEventResponse PostLPCResourceSimulation(
+            SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
+            int operationIndex = 0
+        )
+        {
+            EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> localVarResponse =
+                PostLPCResourceSimulationWithHttpInfo(simulateResourceLPCEventRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </summary>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateResourceLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SimulateEventResponse</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> PostLPCResourceSimulationWithHttpInfo(
+            SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
+            int operationIndex = 0
+        )
+        {
+            // verify the required parameter 'simulateResourceLPCEventRequest' is set
+            if (simulateResourceLPCEventRequest == null)
+            {
+                throw new EnergyCoordinationClient.Client.ApiException(
+                    400,
+                    "Missing required parameter 'simulateResourceLPCEventRequest' when calling SimulationEventsApi->PostLPCResourceSimulation"
+                );
+            }
+
+            EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
+                new EnergyCoordinationClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] { "application/json" };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] { "application/json" };
+
+            var localVarContentType =
+                EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = EnergyCoordinationClient.Client.ClientUtils.SelectHeaderAccept(
+                _accepts
+            );
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = simulateResourceLPCEventRequest;
+
+            localVarRequestOptions.Operation = "SimulationEventsApi.PostLPCResourceSimulation";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Bearer) required
+            // bearer authentication required
+            if (
+                !string.IsNullOrEmpty(this.Configuration.AccessToken)
+                && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization")
+            )
+            {
+                localVarRequestOptions.HeaderParameters.Add(
+                    "Authorization",
+                    "Bearer " + this.Configuration.AccessToken
+                );
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<SimulateEventResponse>(
+                "/simulation/events/lpc/resources",
+                localVarRequestOptions,
+                this.Configuration
+            );
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory(
+                    "PostLPCResourceSimulation",
+                    localVarResponse
+                );
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </summary>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateResourceLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SimulateEventResponse</returns>
+        public async System.Threading.Tasks.Task<SimulateEventResponse> PostLPCResourceSimulationAsync(
+            SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
+            int operationIndex = 0,
+            System.Threading.CancellationToken cancellationToken =
+                default(global::System.Threading.CancellationToken)
+        )
+        {
+            EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> localVarResponse =
+                await PostLPCResourceSimulationWithHttpInfoAsync(
+                        simulateResourceLPCEventRequest,
+                        operationIndex,
+                        cancellationToken
+                    )
+                    .ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// </summary>
+        /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="simulateResourceLPCEventRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SimulateEventResponse)</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse>> PostLPCResourceSimulationWithHttpInfoAsync(
+            SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
+            int operationIndex = 0,
+            System.Threading.CancellationToken cancellationToken =
+                default(global::System.Threading.CancellationToken)
+        )
+        {
+            // verify the required parameter 'simulateResourceLPCEventRequest' is set
+            if (simulateResourceLPCEventRequest == null)
+            {
+                throw new EnergyCoordinationClient.Client.ApiException(
+                    400,
+                    "Missing required parameter 'simulateResourceLPCEventRequest' when calling SimulationEventsApi->PostLPCResourceSimulation"
+                );
+            }
+
+            EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
+                new EnergyCoordinationClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] { "application/json" };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] { "application/json" };
+
+            var localVarContentType =
+                EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = EnergyCoordinationClient.Client.ClientUtils.SelectHeaderAccept(
+                _accepts
+            );
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = simulateResourceLPCEventRequest;
+
+            localVarRequestOptions.Operation = "SimulationEventsApi.PostLPCResourceSimulation";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Bearer) required
+            // bearer authentication required
+            if (
+                !string.IsNullOrEmpty(this.Configuration.AccessToken)
+                && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization")
+            )
+            {
+                localVarRequestOptions.HeaderParameters.Add(
+                    "Authorization",
+                    "Bearer " + this.Configuration.AccessToken
+                );
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this
+                .AsynchronousClient.PostAsync<SimulateEventResponse>(
+                    "/simulation/events/lpc/resources",
+                    localVarRequestOptions,
+                    this.Configuration,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory(
+                    "PostLPCResourceSimulation",
+                    localVarResponse
+                );
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Simulate Price Curve Event Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
@@ -385,7 +951,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<SimulateEventResponse>(
-                "/simulation/events/priceCurve",
+                "/simulation/events/pricecurve",
                 localVarRequestOptions,
                 this.Configuration
             );
@@ -497,7 +1063,7 @@ namespace EnergyCoordinationClient.Api
             // make the HTTP request
             var localVarResponse = await this
                 .AsynchronousClient.PostAsync<SimulateEventResponse>(
-                    "/simulation/events/priceCurve",
+                    "/simulation/events/pricecurve",
                     localVarRequestOptions,
                     this.Configuration,
                     cancellationToken
@@ -583,7 +1149,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<SimulateEventResponse>(
-                "/simulation/events/userEligibility",
+                "/simulation/events/usereligibility",
                 localVarRequestOptions,
                 this.Configuration
             );
@@ -679,7 +1245,7 @@ namespace EnergyCoordinationClient.Api
             // make the HTTP request
             var localVarResponse = await this
                 .AsynchronousClient.PostAsync<SimulateEventResponse>(
-                    "/simulation/events/userEligibility",
+                    "/simulation/events/usereligibility",
                     localVarRequestOptions,
                     this.Configuration,
                     cancellationToken

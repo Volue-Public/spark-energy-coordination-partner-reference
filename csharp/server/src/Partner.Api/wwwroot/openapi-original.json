@@ -304,13 +304,13 @@
       "ResourceLPCTarget" : {
         "additionalProperties" : false,
         "properties" : {
+          "meterPointId" : {
+            "type" : "string"
+          },
           "locationId" : {
             "type" : "string"
           },
           "resourceId" : {
-            "type" : "string"
-          },
-          "meterPointId" : {
             "type" : "string"
           },
           "resolution" : {

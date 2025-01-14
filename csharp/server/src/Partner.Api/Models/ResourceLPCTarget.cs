@@ -27,6 +27,12 @@ namespace Partner.Api.Models
     public partial class ResourceLPCTarget : IEquatable<ResourceLPCTarget>
     {
         /// <summary>
+        /// Gets or Sets MeterPointId
+        /// </summary>
+        [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
+        public string MeterPointId { get; set; }
+
+        /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
         [DataMember(Name = "locationId", EmitDefaultValue = false)]
@@ -37,12 +43,6 @@ namespace Partner.Api.Models
         /// </summary>
         [DataMember(Name = "resourceId", EmitDefaultValue = false)]
         public string ResourceId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets MeterPointId
-        /// </summary>
-        [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
-        public string MeterPointId { get; set; }
 
         /// <summary>
         /// Gets or Sets Resolution
@@ -65,9 +65,9 @@ namespace Partner.Api.Models
         {
             var sb = new StringBuilder();
             sb.Append("class ResourceLPCTarget {\n");
+            sb.Append("  MeterPointId: ").Append(MeterPointId).Append("\n");
             sb.Append("  LocationId: ").Append(LocationId).Append("\n");
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
-            sb.Append("  MeterPointId: ").Append(MeterPointId).Append("\n");
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("}\n");
@@ -112,16 +112,16 @@ namespace Partner.Api.Models
                 return true;
 
             return (
+                    MeterPointId == other.MeterPointId
+                    || MeterPointId != null && MeterPointId.Equals(other.MeterPointId)
+                )
+                && (
                     LocationId == other.LocationId
                     || LocationId != null && LocationId.Equals(other.LocationId)
                 )
                 && (
                     ResourceId == other.ResourceId
                     || ResourceId != null && ResourceId.Equals(other.ResourceId)
-                )
-                && (
-                    MeterPointId == other.MeterPointId
-                    || MeterPointId != null && MeterPointId.Equals(other.MeterPointId)
                 )
                 && (
                     Resolution == other.Resolution
@@ -143,12 +143,12 @@ namespace Partner.Api.Models
             {
                 var hashCode = 41;
                 // Suitable nullity checks etc, of course :)
+                if (MeterPointId != null)
+                    hashCode = hashCode * 59 + MeterPointId.GetHashCode();
                 if (LocationId != null)
                     hashCode = hashCode * 59 + LocationId.GetHashCode();
                 if (ResourceId != null)
                     hashCode = hashCode * 59 + ResourceId.GetHashCode();
-                if (MeterPointId != null)
-                    hashCode = hashCode * 59 + MeterPointId.GetHashCode();
                 if (Resolution != null)
                     hashCode = hashCode * 59 + Resolution.GetHashCode();
                 if (Points != null)

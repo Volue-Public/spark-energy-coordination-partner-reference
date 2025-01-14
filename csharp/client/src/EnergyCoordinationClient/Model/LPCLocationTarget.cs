@@ -26,63 +26,35 @@ using OpenAPIDateConverter = EnergyCoordinationClient.Client.OpenAPIDateConverte
 namespace EnergyCoordinationClient.Model
 {
     /// <summary>
-    /// ResourceLPCTarget
+    /// LPCLocationTarget
     /// </summary>
-    [DataContract(Name = "ResourceLPCTarget")]
-    public partial class ResourceLPCTarget : IValidatableObject
+    [DataContract(Name = "LPCLocationTarget")]
+    public partial class LPCLocationTarget : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResourceLPCTarget" /> class.
+        /// Initializes a new instance of the <see cref="LPCLocationTarget" /> class.
         /// </summary>
-        /// <param name="meterPointId">meterPointId.</param>
-        /// <param name="locationId">locationId.</param>
-        /// <param name="resourceId">resourceId.</param>
-        /// <param name="resolution">resolution.</param>
+        /// <param name="location">location.</param>
         /// <param name="points">points.</param>
-        public ResourceLPCTarget(
-            string meterPointId = default(string),
-            string locationId = default(string),
-            string resourceId = default(string),
-            string resolution = default(string),
+        public LPCLocationTarget(
+            LocationTarget location = default(LocationTarget),
             List<LPCDataPoint> points = default(List<LPCDataPoint>)
         )
         {
-            this.MeterPointId = meterPointId;
-            this.LocationId = locationId;
-            this.ResourceId = resourceId;
-            this.Resolution = resolution;
+            this.Location = location;
             this.Points = points;
         }
 
         /// <summary>
-        /// Gets or Sets MeterPointId
+        /// Gets or Sets Location
         /// </summary>
-        [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
-        public string MeterPointId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LocationId
-        /// </summary>
-        [DataMember(Name = "locationId", EmitDefaultValue = false)]
-        public string LocationId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ResourceId
-        /// </summary>
-        [DataMember(Name = "resourceId", EmitDefaultValue = false)]
-        public string ResourceId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Resolution
-        /// </summary>
-        /// <example>02:00:00</example>
-        [DataMember(Name = "resolution", EmitDefaultValue = false)]
-        public string Resolution { get; set; }
+        [DataMember(Name = "location", EmitDefaultValue = false)]
+        public LocationTarget Location { get; set; }
 
         /// <summary>
         /// Gets or Sets Points
         /// </summary>
-        [DataMember(Name = "points", EmitDefaultValue = false)]
+        [DataMember(Name = "points", EmitDefaultValue = true)]
         public List<LPCDataPoint> Points { get; set; }
 
         /// <summary>
@@ -92,11 +64,8 @@ namespace EnergyCoordinationClient.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class ResourceLPCTarget {\n");
-            sb.Append("  MeterPointId: ").Append(MeterPointId).Append("\n");
-            sb.Append("  LocationId: ").Append(LocationId).Append("\n");
-            sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
-            sb.Append("  Resolution: ").Append(Resolution).Append("\n");
+            sb.Append("class LPCLocationTarget {\n");
+            sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

@@ -13,9 +13,9 @@
 import { RequestFile } from './models';
 import { EnergyCurvePoint } from './energyCurvePoint';
 import { EnergyUsageReportPayload } from './energyUsageReportPayload';
+import { LPCLocation } from './lPCLocation';
 import { LocationEnergyUsageReportPayload } from './locationEnergyUsageReportPayload';
 import { LocationLPCAcknowledgmentReportPayload } from './locationLPCAcknowledgmentReportPayload';
-import { LocationLPCResponse } from './locationLPCResponse';
 import { ResourceLPCAcknowledgmentReportPayload } from './resourceLPCAcknowledgmentReportPayload';
 import { SparkReportPayloadType } from './sparkReportPayloadType';
 
@@ -25,8 +25,8 @@ export class PostReportRequestPayloadsInner {
     'points'?: Array<EnergyCurvePoint>;
     'resolution'?: string;
     'payloadType'?: SparkReportPayloadType;
-    'acknowledgedTargets'?: Array<LocationLPCResponse>;
-    'declinedTargets'?: Array<LocationLPCResponse>;
+    'acknowledgedTargets'?: Array<LPCLocation>;
+    'declinedTargets'?: Array<LPCLocation>;
 
     static discriminator: string | undefined = undefined;
 
@@ -59,12 +59,12 @@ export class PostReportRequestPayloadsInner {
         {
             "name": "acknowledgedTargets",
             "baseName": "acknowledgedTargets",
-            "type": "Array<LocationLPCResponse>"
+            "type": "Array<LPCLocation>"
         },
         {
             "name": "declinedTargets",
             "baseName": "declinedTargets",
-            "type": "Array<LocationLPCResponse>"
+            "type": "Array<LPCLocation>"
         }    ];
 
     static getAttributeTypeMap() {

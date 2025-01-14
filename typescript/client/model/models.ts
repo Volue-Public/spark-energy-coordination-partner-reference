@@ -28,12 +28,16 @@ export * from './getWebhookResponse';
 export * from './getWebhooksResponse';
 export * from './httpValidationProblemDetails';
 export * from './lPCDataPoint';
+export * from './lPCLocation';
+export * from './lPCLocationTarget';
+export * from './lPCResource';
+export * from './lPCResourceTarget';
 export * from './locationCompensation';
 export * from './locationEnergyUsageReportPayload';
 export * from './locationLPCAcknowledgmentReportPayload';
 export * from './locationLPCPayload';
-export * from './locationLPCResponse';
 export * from './locationLPCTarget';
+export * from './locationTarget';
 export * from './locationType';
 export * from './notificationType';
 export * from './patchLocationRequest';
@@ -62,11 +66,13 @@ export * from './putLocationRequest';
 export * from './putWebhookRequest';
 export * from './resourceLPCAcknowledgmentReportPayload';
 export * from './resourceLPCPayload';
-export * from './resourceLPCResponse';
 export * from './resourceLPCTarget';
+export * from './resourceTarget';
 export * from './resourceType';
 export * from './simulateEventResponse';
+export * from './simulateLocationLPCEventRequest';
 export * from './simulatePriceCurveEventRequest';
+export * from './simulateResourceLPCEventRequest';
 export * from './sparkEventPayload';
 export * from './sparkEventPayloadType';
 export * from './sparkReportPayload';
@@ -116,12 +122,16 @@ import { GetWebhookResponse } from './getWebhookResponse';
 import { GetWebhooksResponse } from './getWebhooksResponse';
 import { HttpValidationProblemDetails } from './httpValidationProblemDetails';
 import { LPCDataPoint } from './lPCDataPoint';
+import { LPCLocation } from './lPCLocation';
+import { LPCLocationTarget } from './lPCLocationTarget';
+import { LPCResource } from './lPCResource';
+import { LPCResourceTarget } from './lPCResourceTarget';
 import { LocationCompensation } from './locationCompensation';
 import { LocationEnergyUsageReportPayload } from './locationEnergyUsageReportPayload';
 import { LocationLPCAcknowledgmentReportPayload } from './locationLPCAcknowledgmentReportPayload';
 import { LocationLPCPayload } from './locationLPCPayload';
-import { LocationLPCResponse } from './locationLPCResponse';
 import { LocationLPCTarget } from './locationLPCTarget';
+import { LocationTarget } from './locationTarget';
 import { LocationType } from './locationType';
 import { NotificationType } from './notificationType';
 import { PatchLocationRequest } from './patchLocationRequest';
@@ -150,11 +160,13 @@ import { PutLocationRequest } from './putLocationRequest';
 import { PutWebhookRequest } from './putWebhookRequest';
 import { ResourceLPCAcknowledgmentReportPayload } from './resourceLPCAcknowledgmentReportPayload';
 import { ResourceLPCPayload } from './resourceLPCPayload';
-import { ResourceLPCResponse } from './resourceLPCResponse';
 import { ResourceLPCTarget } from './resourceLPCTarget';
+import { ResourceTarget } from './resourceTarget';
 import { ResourceType } from './resourceType';
 import { SimulateEventResponse } from './simulateEventResponse';
+import { SimulateLocationLPCEventRequest } from './simulateLocationLPCEventRequest';
 import { SimulatePriceCurveEventRequest } from './simulatePriceCurveEventRequest';
+import { SimulateResourceLPCEventRequest } from './simulateResourceLPCEventRequest';
 import { SparkEventPayload } from './sparkEventPayload';
 import { SparkEventPayloadType } from './sparkEventPayloadType';
 import { SparkReportPayload } from './sparkReportPayload';
@@ -215,12 +227,16 @@ let typeMap: {[index: string]: any} = {
     "GetWebhooksResponse": GetWebhooksResponse,
     "HttpValidationProblemDetails": HttpValidationProblemDetails,
     "LPCDataPoint": LPCDataPoint,
+    "LPCLocation": LPCLocation,
+    "LPCLocationTarget": LPCLocationTarget,
+    "LPCResource": LPCResource,
+    "LPCResourceTarget": LPCResourceTarget,
     "LocationCompensation": LocationCompensation,
     "LocationEnergyUsageReportPayload": LocationEnergyUsageReportPayload,
     "LocationLPCAcknowledgmentReportPayload": LocationLPCAcknowledgmentReportPayload,
     "LocationLPCPayload": LocationLPCPayload,
-    "LocationLPCResponse": LocationLPCResponse,
     "LocationLPCTarget": LocationLPCTarget,
+    "LocationTarget": LocationTarget,
     "PatchLocationRequest": PatchLocationRequest,
     "PatchWebhookRequest": PatchWebhookRequest,
     "Period": Period,
@@ -245,10 +261,12 @@ let typeMap: {[index: string]: any} = {
     "PutWebhookRequest": PutWebhookRequest,
     "ResourceLPCAcknowledgmentReportPayload": ResourceLPCAcknowledgmentReportPayload,
     "ResourceLPCPayload": ResourceLPCPayload,
-    "ResourceLPCResponse": ResourceLPCResponse,
     "ResourceLPCTarget": ResourceLPCTarget,
+    "ResourceTarget": ResourceTarget,
     "SimulateEventResponse": SimulateEventResponse,
+    "SimulateLocationLPCEventRequest": SimulateLocationLPCEventRequest,
     "SimulatePriceCurveEventRequest": SimulatePriceCurveEventRequest,
+    "SimulateResourceLPCEventRequest": SimulateResourceLPCEventRequest,
     "SparkEventPayload": SparkEventPayload,
     "SparkReportPayload": SparkReportPayload,
     "UserEligibilityPayload": UserEligibilityPayload,

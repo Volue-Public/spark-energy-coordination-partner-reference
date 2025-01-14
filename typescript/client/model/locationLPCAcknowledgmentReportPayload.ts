@@ -11,13 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { LocationLPCResponse } from './locationLPCResponse';
+import { LPCLocation } from './lPCLocation';
 import { SparkReportPayload } from './sparkReportPayload';
 import { SparkReportPayloadType } from './sparkReportPayloadType';
 
 export class LocationLPCAcknowledgmentReportPayload extends SparkReportPayload {
-    'acknowledgedTargets'?: Array<LocationLPCResponse>;
-    'declinedTargets'?: Array<LocationLPCResponse>;
+    'acknowledgedTargets'?: Array<LPCLocation>;
+    'declinedTargets'?: Array<LPCLocation>;
 
     static discriminator: string | undefined = undefined;
 
@@ -25,12 +25,12 @@ export class LocationLPCAcknowledgmentReportPayload extends SparkReportPayload {
         {
             "name": "acknowledgedTargets",
             "baseName": "acknowledgedTargets",
-            "type": "Array<LocationLPCResponse>"
+            "type": "Array<LPCLocation>"
         },
         {
             "name": "declinedTargets",
             "baseName": "declinedTargets",
-            "type": "Array<LocationLPCResponse>"
+            "type": "Array<LPCLocation>"
         }    ];
 
     static getAttributeTypeMap() {

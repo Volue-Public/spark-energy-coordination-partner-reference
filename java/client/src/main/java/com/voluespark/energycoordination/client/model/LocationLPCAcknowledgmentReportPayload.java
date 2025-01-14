@@ -42,22 +42,22 @@ import java.util.Objects;
     visible = true)
 public class LocationLPCAcknowledgmentReportPayload extends SparkReportPayload {
   public static final String JSON_PROPERTY_ACKNOWLEDGED_TARGETS = "acknowledgedTargets";
-  private List<LocationLPCResponse> acknowledgedTargets = new ArrayList<>();
+  private List<LPCLocation> acknowledgedTargets = new ArrayList<>();
 
   public static final String JSON_PROPERTY_DECLINED_TARGETS = "declinedTargets";
-  private List<LocationLPCResponse> declinedTargets = new ArrayList<>();
+  private List<LPCLocation> declinedTargets = new ArrayList<>();
 
   public LocationLPCAcknowledgmentReportPayload() {}
 
   public LocationLPCAcknowledgmentReportPayload acknowledgedTargets(
-      List<LocationLPCResponse> acknowledgedTargets) {
+      List<LPCLocation> acknowledgedTargets) {
 
     this.acknowledgedTargets = acknowledgedTargets;
     return this;
   }
 
   public LocationLPCAcknowledgmentReportPayload addAcknowledgedTargetsItem(
-      LocationLPCResponse acknowledgedTargetsItem) {
+      LPCLocation acknowledgedTargetsItem) {
     if (this.acknowledgedTargets == null) {
       this.acknowledgedTargets = new ArrayList<>();
     }
@@ -73,25 +73,24 @@ public class LocationLPCAcknowledgmentReportPayload extends SparkReportPayload {
   @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACKNOWLEDGED_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public List<LocationLPCResponse> getAcknowledgedTargets() {
+  public List<LPCLocation> getAcknowledgedTargets() {
     return acknowledgedTargets;
   }
 
   @JsonProperty(JSON_PROPERTY_ACKNOWLEDGED_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAcknowledgedTargets(List<LocationLPCResponse> acknowledgedTargets) {
+  public void setAcknowledgedTargets(List<LPCLocation> acknowledgedTargets) {
     this.acknowledgedTargets = acknowledgedTargets;
   }
 
-  public LocationLPCAcknowledgmentReportPayload declinedTargets(
-      List<LocationLPCResponse> declinedTargets) {
+  public LocationLPCAcknowledgmentReportPayload declinedTargets(List<LPCLocation> declinedTargets) {
 
     this.declinedTargets = declinedTargets;
     return this;
   }
 
   public LocationLPCAcknowledgmentReportPayload addDeclinedTargetsItem(
-      LocationLPCResponse declinedTargetsItem) {
+      LPCLocation declinedTargetsItem) {
     if (this.declinedTargets == null) {
       this.declinedTargets = new ArrayList<>();
     }
@@ -107,13 +106,13 @@ public class LocationLPCAcknowledgmentReportPayload extends SparkReportPayload {
   @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DECLINED_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public List<LocationLPCResponse> getDeclinedTargets() {
+  public List<LPCLocation> getDeclinedTargets() {
     return declinedTargets;
   }
 
   @JsonProperty(JSON_PROPERTY_DECLINED_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeclinedTargets(List<LocationLPCResponse> declinedTargets) {
+  public void setDeclinedTargets(List<LPCLocation> declinedTargets) {
     this.declinedTargets = declinedTargets;
   }
 

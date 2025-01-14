@@ -16,15 +16,35 @@ import java.util.Objects;
     comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ResourceLPCTarget {
 
+  private String meterPointId;
+
   private String locationId;
 
   private String resourceId;
 
-  private String meterPointId;
-
   private String resolution;
 
   @Valid private List<@Valid LPCDataPoint> points = new ArrayList<>();
+
+  public ResourceLPCTarget meterPointId(String meterPointId) {
+    this.meterPointId = meterPointId;
+    return this;
+  }
+
+  /**
+   * Get meterPointId
+   *
+   * @return meterPointId
+   */
+  @Schema(name = "meterPointId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("meterPointId")
+  public String getMeterPointId() {
+    return meterPointId;
+  }
+
+  public void setMeterPointId(String meterPointId) {
+    this.meterPointId = meterPointId;
+  }
 
   public ResourceLPCTarget locationId(String locationId) {
     this.locationId = locationId;
@@ -64,26 +84,6 @@ public class ResourceLPCTarget {
 
   public void setResourceId(String resourceId) {
     this.resourceId = resourceId;
-  }
-
-  public ResourceLPCTarget meterPointId(String meterPointId) {
-    this.meterPointId = meterPointId;
-    return this;
-  }
-
-  /**
-   * Get meterPointId
-   *
-   * @return meterPointId
-   */
-  @Schema(name = "meterPointId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("meterPointId")
-  public String getMeterPointId() {
-    return meterPointId;
-  }
-
-  public void setMeterPointId(String meterPointId) {
-    this.meterPointId = meterPointId;
   }
 
   public ResourceLPCTarget resolution(String resolution) {
@@ -147,25 +147,25 @@ public class ResourceLPCTarget {
       return false;
     }
     ResourceLPCTarget resourceLPCTarget = (ResourceLPCTarget) o;
-    return Objects.equals(this.locationId, resourceLPCTarget.locationId)
+    return Objects.equals(this.meterPointId, resourceLPCTarget.meterPointId)
+        && Objects.equals(this.locationId, resourceLPCTarget.locationId)
         && Objects.equals(this.resourceId, resourceLPCTarget.resourceId)
-        && Objects.equals(this.meterPointId, resourceLPCTarget.meterPointId)
         && Objects.equals(this.resolution, resourceLPCTarget.resolution)
         && Objects.equals(this.points, resourceLPCTarget.points);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(locationId, resourceId, meterPointId, resolution, points);
+    return Objects.hash(meterPointId, locationId, resourceId, resolution, points);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceLPCTarget {\n");
+    sb.append("    meterPointId: ").append(toIndentedString(meterPointId)).append("\n");
     sb.append("    locationId: ").append(toIndentedString(locationId)).append("\n");
     sb.append("    resourceId: ").append(toIndentedString(resourceId)).append("\n");
-    sb.append("    meterPointId: ").append(toIndentedString(meterPointId)).append("\n");
     sb.append("    resolution: ").append(toIndentedString(resolution)).append("\n");
     sb.append("    points: ").append(toIndentedString(points)).append("\n");
     sb.append("}");

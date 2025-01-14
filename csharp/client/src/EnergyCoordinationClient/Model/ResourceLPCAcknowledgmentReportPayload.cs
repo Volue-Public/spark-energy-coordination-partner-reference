@@ -42,8 +42,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="declinedTargets">declinedTargets.</param>
         /// <param name="payloadType">payloadType (default to SparkReportPayloadType.ResourceLPCAcknowledgement).</param>
         public ResourceLPCAcknowledgmentReportPayload(
-            List<ResourceLPCResponse> acknowledgedTargets = default(List<ResourceLPCResponse>),
-            List<ResourceLPCResponse> declinedTargets = default(List<ResourceLPCResponse>),
+            List<LPCResource> acknowledgedTargets = default(List<LPCResource>),
+            List<LPCResource> declinedTargets = default(List<LPCResource>),
             SparkReportPayloadType? payloadType = SparkReportPayloadType.ResourceLPCAcknowledgement
         )
             : base(payloadType)
@@ -56,13 +56,13 @@ namespace EnergyCoordinationClient.Model
         /// Gets or Sets AcknowledgedTargets
         /// </summary>
         [DataMember(Name = "acknowledgedTargets", EmitDefaultValue = false)]
-        public List<ResourceLPCResponse> AcknowledgedTargets { get; set; }
+        public List<LPCResource> AcknowledgedTargets { get; set; }
 
         /// <summary>
         /// Gets or Sets DeclinedTargets
         /// </summary>
         [DataMember(Name = "declinedTargets", EmitDefaultValue = false)]
-        public List<ResourceLPCResponse> DeclinedTargets { get; set; }
+        public List<LPCResource> DeclinedTargets { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

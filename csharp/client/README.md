@@ -123,8 +123,10 @@ Class | Method | HTTP request | Description
 *ReportsApi* | [**PostReport**](docs/ReportsApi.md#postreport) | **POST** /reports | Create a report
 *ResourcesApi* | [**DeleteResourceById**](docs/ResourcesApi.md#deleteresourcebyid) | **DELETE** /resources/{resourceId} | Delete Resource
 *ResourcesApi* | [**GetResourceById**](docs/ResourcesApi.md#getresourcebyid) | **GET** /resources/{resourceId} | Get Resource by Id
-*SimulationEventsApi* | [**PostPriceCurveSimulation**](docs/SimulationEventsApi.md#postpricecurvesimulation) | **POST** /simulation/events/priceCurve | Simulate Price Curve Event
-*SimulationEventsApi* | [**PostUserEligibilitySimulation**](docs/SimulationEventsApi.md#postusereligibilitysimulation) | **POST** /simulation/events/userEligibility | Simulate User Eligibility Event
+*SimulationEventsApi* | [**PostLPCLocationSimulation**](docs/SimulationEventsApi.md#postlpclocationsimulation) | **POST** /simulation/events/lpc/locations | Simulate LPC Location Event
+*SimulationEventsApi* | [**PostLPCResourceSimulation**](docs/SimulationEventsApi.md#postlpcresourcesimulation) | **POST** /simulation/events/lpc/resources | Simulate LPC Resource Event
+*SimulationEventsApi* | [**PostPriceCurveSimulation**](docs/SimulationEventsApi.md#postpricecurvesimulation) | **POST** /simulation/events/pricecurve | Simulate Price Curve Event
+*SimulationEventsApi* | [**PostUserEligibilitySimulation**](docs/SimulationEventsApi.md#postusereligibilitysimulation) | **POST** /simulation/events/usereligibility | Simulate User Eligibility Event
 *SimulationPartnerDataApi* | [**DeleteTenantDataSimulation**](docs/SimulationPartnerDataApi.md#deletetenantdatasimulation) | **DELETE** /simulation/partner | Cleanup Simulation Data
 *SimulationPartnerDataApi* | [**PostTenantDataSimulation**](docs/SimulationPartnerDataApi.md#posttenantdatasimulation) | **POST** /simulation/partner | Simulate DER-Partner Data
 *UserApi* | [**DeleteUserById**](docs/UserApi.md#deleteuserbyid) | **DELETE** /users/{userId} | Delete User
@@ -192,12 +194,16 @@ Class | Method | HTTP request | Description
  - [Model.GetWebhooksResponse](docs/GetWebhooksResponse.md)
  - [Model.HttpValidationProblemDetails](docs/HttpValidationProblemDetails.md)
  - [Model.LPCDataPoint](docs/LPCDataPoint.md)
+ - [Model.LPCLocation](docs/LPCLocation.md)
+ - [Model.LPCLocationTarget](docs/LPCLocationTarget.md)
+ - [Model.LPCResource](docs/LPCResource.md)
+ - [Model.LPCResourceTarget](docs/LPCResourceTarget.md)
  - [Model.LocationCompensation](docs/LocationCompensation.md)
  - [Model.LocationEnergyUsageReportPayload](docs/LocationEnergyUsageReportPayload.md)
  - [Model.LocationLPCAcknowledgmentReportPayload](docs/LocationLPCAcknowledgmentReportPayload.md)
  - [Model.LocationLPCPayload](docs/LocationLPCPayload.md)
- - [Model.LocationLPCResponse](docs/LocationLPCResponse.md)
  - [Model.LocationLPCTarget](docs/LocationLPCTarget.md)
+ - [Model.LocationTarget](docs/LocationTarget.md)
  - [Model.LocationType](docs/LocationType.md)
  - [Model.NotificationType](docs/NotificationType.md)
  - [Model.PatchLocationRequest](docs/PatchLocationRequest.md)
@@ -226,11 +232,13 @@ Class | Method | HTTP request | Description
  - [Model.PutWebhookRequest](docs/PutWebhookRequest.md)
  - [Model.ResourceLPCAcknowledgmentReportPayload](docs/ResourceLPCAcknowledgmentReportPayload.md)
  - [Model.ResourceLPCPayload](docs/ResourceLPCPayload.md)
- - [Model.ResourceLPCResponse](docs/ResourceLPCResponse.md)
  - [Model.ResourceLPCTarget](docs/ResourceLPCTarget.md)
+ - [Model.ResourceTarget](docs/ResourceTarget.md)
  - [Model.ResourceType](docs/ResourceType.md)
  - [Model.SimulateEventResponse](docs/SimulateEventResponse.md)
+ - [Model.SimulateLocationLPCEventRequest](docs/SimulateLocationLPCEventRequest.md)
  - [Model.SimulatePriceCurveEventRequest](docs/SimulatePriceCurveEventRequest.md)
+ - [Model.SimulateResourceLPCEventRequest](docs/SimulateResourceLPCEventRequest.md)
  - [Model.SparkEventPayload](docs/SparkEventPayload.md)
  - [Model.SparkEventPayloadType](docs/SparkEventPayloadType.md)
  - [Model.SparkReportPayload](docs/SparkReportPayload.md)

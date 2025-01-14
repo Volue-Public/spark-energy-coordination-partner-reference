@@ -11,14 +11,11 @@
  */
 
 import { RequestFile } from './models';
-import { LPCDataPoint } from './lPCDataPoint';
 
-export class ResourceLPCTarget {
+export class LPCResource {
     'meterPointId'?: string;
     'locationId'?: string;
     'resourceId'?: string;
-    'resolution'?: string;
-    'points'?: Array<LPCDataPoint>;
 
     static discriminator: string | undefined = undefined;
 
@@ -37,20 +34,10 @@ export class ResourceLPCTarget {
             "name": "resourceId",
             "baseName": "resourceId",
             "type": "string"
-        },
-        {
-            "name": "resolution",
-            "baseName": "resolution",
-            "type": "string"
-        },
-        {
-            "name": "points",
-            "baseName": "points",
-            "type": "Array<LPCDataPoint>"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceLPCTarget.attributeTypeMap;
+        return LPCResource.attributeTypeMap;
     }
 }
 
