@@ -55,5 +55,11 @@ namespace Partner.Api.Models
         /// </summary>
         [EnumMember(Value = "ResourceLPCRequested")]
         ResourceLPCRequested = 5,
+
+        /// <summary>
+        /// Enum LPCReservationCreated for LPCReservationCreated
+        /// </summary>
+        [EnumMember(Value = "LPCReservationCreated")]
+        LPCReservationCreated = 6,
     }
 }

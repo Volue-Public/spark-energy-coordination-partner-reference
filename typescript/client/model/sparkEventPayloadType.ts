@@ -17,5 +17,6 @@ export enum SparkEventPayloadType {
     UserEligibility = <any> 'UserEligibility',
     PriceCurve = <any> 'PriceCurve',
     LocationLpc = <any> 'LocationLPC',
-    ResourceLpc = <any> 'ResourceLPC'
+    ResourceLpc = <any> 'ResourceLPC',
+    LpcReservation = <any> 'LPCReservation'
 }

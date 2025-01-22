@@ -40,6 +40,9 @@ import java.util.Objects;
   @JsonSubTypes.Type(value = EnergyUsageReportPayload.class, name = "EnergyUsage"),
   @JsonSubTypes.Type(value = LocationEnergyUsageReportPayload.class, name = "LocationEnergyUsage"),
   @JsonSubTypes.Type(
+      value = LocationEnergyUsagePlanReportPayload.class,
+      name = "LocationEnergyUsagePlan"),
+  @JsonSubTypes.Type(
       value = LocationLPCAcknowledgmentReportPayload.class,
       name = "LocationLPCAcknowledgement"),
   @JsonSubTypes.Type(

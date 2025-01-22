@@ -60,5 +60,11 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         [EnumMember(Value = "ResourceLPC")]
         ResourceLPC,
+
+        /// <summary>
+        /// Enum LPCReservation for value: LPCReservation
+        /// </summary>
+        [EnumMember(Value = "LPCReservation")]
+        LPCReservation,
     }
 }

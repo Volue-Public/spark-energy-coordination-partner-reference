@@ -44,15 +44,21 @@ namespace EnergyCoordinationClient.Model
         LocationEnergyUsage = 2,
 
         /// <summary>
+        /// Enum LocationEnergyUsagePlan for value: LocationEnergyUsagePlan
+        /// </summary>
+        [EnumMember(Value = "LocationEnergyUsagePlan")]
+        LocationEnergyUsagePlan = 3,
+
+        /// <summary>
         /// Enum ResourceLPCAcknowledgement for value: ResourceLPCAcknowledgement
         /// </summary>
         [EnumMember(Value = "ResourceLPCAcknowledgement")]
-        ResourceLPCAcknowledgement = 3,
+        ResourceLPCAcknowledgement = 4,
 
         /// <summary>
         /// Enum LocationLPCAcknowledgement for value: LocationLPCAcknowledgement
         /// </summary>
         [EnumMember(Value = "LocationLPCAcknowledgement")]
-        LocationLPCAcknowledgement = 4,
+        LocationLPCAcknowledgement = 5,
     }
 }

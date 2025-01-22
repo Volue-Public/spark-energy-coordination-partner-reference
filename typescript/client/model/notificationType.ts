@@ -17,5 +17,6 @@ export enum NotificationType {
     PriceCurveCreated = <any> 'PriceCurveCreated',
     UserEligibilityUpdated = <any> 'UserEligibilityUpdated',
     LocationLpcRequested = <any> 'LocationLPCRequested',
-    ResourceLpcRequested = <any> 'ResourceLPCRequested'
+    ResourceLpcRequested = <any> 'ResourceLPCRequested',
+    LpcReservationCreated = <any> 'LPCReservationCreated'
 }

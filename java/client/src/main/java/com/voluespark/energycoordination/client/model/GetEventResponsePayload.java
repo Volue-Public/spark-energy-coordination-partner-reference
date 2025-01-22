@@ -46,10 +46,12 @@ import java.util.Objects;
     property = "payloadType",
     visible = true)
 @JsonSubTypes({
+  @JsonSubTypes.Type(value = LPCReservationPayload.class, name = "LPCReservation"),
   @JsonSubTypes.Type(value = LocationLPCPayload.class, name = "LocationLPC"),
   @JsonSubTypes.Type(value = PriceCurvePayload.class, name = "PriceCurve"),
   @JsonSubTypes.Type(value = ResourceLPCPayload.class, name = "ResourceLPC"),
   @JsonSubTypes.Type(value = UserEligibilityPayload.class, name = "UserEligibility"),
+  @JsonSubTypes.Type(value = LPCReservationPayload.class, name = "LPCReservationPayload"),
   @JsonSubTypes.Type(value = LocationLPCPayload.class, name = "LocationLPCPayload"),
   @JsonSubTypes.Type(value = PriceCurvePayload.class, name = "PriceCurvePayload"),
   @JsonSubTypes.Type(value = ResourceLPCPayload.class, name = "ResourceLPCPayload"),
@@ -69,7 +71,7 @@ public class GetEventResponsePayload {
   private SparkEventPayloadType payloadType;
 
   public static final String JSON_PROPERTY_TARGETS = "targets";
-  private List<ResourceLPCTarget> targets = new ArrayList<>();
+  private List<LocationLPCTarget> targets = new ArrayList<>();
 
   public GetEventResponsePayload() {}
 
@@ -185,13 +187,13 @@ public class GetEventResponsePayload {
     this.payloadType = payloadType;
   }
 
-  public GetEventResponsePayload targets(List<ResourceLPCTarget> targets) {
+  public GetEventResponsePayload targets(List<LocationLPCTarget> targets) {
 
     this.targets = targets;
     return this;
   }
 
-  public GetEventResponsePayload addTargetsItem(ResourceLPCTarget targetsItem) {
+  public GetEventResponsePayload addTargetsItem(LocationLPCTarget targetsItem) {
     if (this.targets == null) {
       this.targets = new ArrayList<>();
     }
@@ -207,13 +209,13 @@ public class GetEventResponsePayload {
   @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public List<ResourceLPCTarget> getTargets() {
+  public List<LocationLPCTarget> getTargets() {
     return targets;
   }
 
   @JsonProperty(JSON_PROPERTY_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargets(List<ResourceLPCTarget> targets) {
+  public void setTargets(List<LocationLPCTarget> targets) {
     this.targets = targets;
   }
 

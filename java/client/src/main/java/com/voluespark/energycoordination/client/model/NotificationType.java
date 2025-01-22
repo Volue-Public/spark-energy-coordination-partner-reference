@@ -26,7 +26,9 @@ public enum NotificationType {
 
   LOCATION_LPC_REQUESTED("LocationLPCRequested"),
 
-  RESOURCE_LPC_REQUESTED("ResourceLPCRequested");
+  RESOURCE_LPC_REQUESTED("ResourceLPCRequested"),
+
+  LPC_RESERVATION_CREATED("LPCReservationCreated");
 
   private String value;
 

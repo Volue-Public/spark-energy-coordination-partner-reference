@@ -12,22 +12,13 @@
 
 import { RequestFile } from './models';
 import { EnergyCurvePoint } from './energyCurvePoint';
-import { EnergyUsageReportPayload } from './energyUsageReportPayload';
-import { LPCLocation } from './lPCLocation';
-import { LocationEnergyUsagePlanReportPayload } from './locationEnergyUsagePlanReportPayload';
-import { LocationEnergyUsageReportPayload } from './locationEnergyUsageReportPayload';
-import { LocationLPCAcknowledgmentReportPayload } from './locationLPCAcknowledgmentReportPayload';
-import { ResourceLPCAcknowledgmentReportPayload } from './resourceLPCAcknowledgmentReportPayload';
+import { SparkReportPayload } from './sparkReportPayload';
 import { SparkReportPayloadType } from './sparkReportPayloadType';
 
-export class PostReportRequestPayloadsInner {
+export class LocationEnergyUsagePlanReportPayload extends SparkReportPayload {
     'locationId'?: string;
     'meterPointId'?: string;
-    'points'?: Array<EnergyCurvePoint>;
     'resolution'?: string;
-    'payloadType'?: SparkReportPayloadType;
-    'acknowledgedTargets'?: Array<LPCLocation>;
-    'declinedTargets'?: Array<LPCLocation>;
     'schedule'?: Array<EnergyCurvePoint>;
     'flexibility'?: Array<EnergyCurvePoint>;
 
@@ -45,29 +36,9 @@ export class PostReportRequestPayloadsInner {
             "type": "string"
         },
         {
-            "name": "points",
-            "baseName": "points",
-            "type": "Array<EnergyCurvePoint>"
-        },
-        {
             "name": "resolution",
             "baseName": "resolution",
             "type": "string"
-        },
-        {
-            "name": "payloadType",
-            "baseName": "payloadType",
-            "type": "SparkReportPayloadType"
-        },
-        {
-            "name": "acknowledgedTargets",
-            "baseName": "acknowledgedTargets",
-            "type": "Array<LPCLocation>"
-        },
-        {
-            "name": "declinedTargets",
-            "baseName": "declinedTargets",
-            "type": "Array<LPCLocation>"
         },
         {
             "name": "schedule",
@@ -81,9 +52,9 @@ export class PostReportRequestPayloadsInner {
         }    ];
 
     static getAttributeTypeMap() {
-        return PostReportRequestPayloadsInner.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(LocationEnergyUsagePlanReportPayload.attributeTypeMap);
     }
 }
 
-export namespace PostReportRequestPayloadsInner {
+export namespace LocationEnergyUsagePlanReportPayload {
 }

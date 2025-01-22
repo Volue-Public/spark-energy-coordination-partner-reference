@@ -15,6 +15,7 @@ import { RequestFile } from './models';
 export enum SparkReportPayloadType {
     EnergyUsage = <any> 'EnergyUsage',
     LocationEnergyUsage = <any> 'LocationEnergyUsage',
+    LocationEnergyUsagePlan = <any> 'LocationEnergyUsagePlan',
     ResourceLpcAcknowledgement = <any> 'ResourceLPCAcknowledgement',
     LocationLpcAcknowledgement = <any> 'LocationLPCAcknowledgement'
 }

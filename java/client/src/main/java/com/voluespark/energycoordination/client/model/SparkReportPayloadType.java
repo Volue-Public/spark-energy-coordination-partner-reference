@@ -22,6 +22,8 @@ public enum SparkReportPayloadType {
 
   LOCATION_ENERGY_USAGE("LocationEnergyUsage"),
 
+  LOCATION_ENERGY_USAGE_PLAN("LocationEnergyUsagePlan"),
+
   RESOURCE_LPC_ACKNOWLEDGEMENT("ResourceLPCAcknowledgement"),
 
   LOCATION_LPC_ACKNOWLEDGEMENT("LocationLPCAcknowledgement");

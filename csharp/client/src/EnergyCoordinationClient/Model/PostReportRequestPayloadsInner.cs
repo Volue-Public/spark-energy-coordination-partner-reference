@@ -90,6 +90,20 @@ namespace EnergyCoordinationClient.Model
                 ?? throw new ArgumentException("Invalid instance found. Must not be null.");
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostReportRequestPayloadsInner" /> class
+        /// with the <see cref="LocationEnergyUsagePlanReportPayload" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of LocationEnergyUsagePlanReportPayload.</param>
+        public PostReportRequestPayloadsInner(LocationEnergyUsagePlanReportPayload actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType = "oneOf";
+            this.ActualInstance =
+                actualInstance
+                ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
         private Object _actualInstance;
 
         /// <summary>
@@ -103,6 +117,13 @@ namespace EnergyCoordinationClient.Model
                 if (
                     value.GetType() == typeof(EnergyUsageReportPayload)
                     || value is EnergyUsageReportPayload
+                )
+                {
+                    this._actualInstance = value;
+                }
+                else if (
+                    value.GetType() == typeof(LocationEnergyUsagePlanReportPayload)
+                    || value is LocationEnergyUsagePlanReportPayload
                 )
                 {
                     this._actualInstance = value;
@@ -131,7 +152,7 @@ namespace EnergyCoordinationClient.Model
                 else
                 {
                     throw new ArgumentException(
-                        "Invalid instance found. Must be the following types: EnergyUsageReportPayload, LocationEnergyUsageReportPayload, LocationLPCAcknowledgmentReportPayload, ResourceLPCAcknowledgmentReportPayload"
+                        "Invalid instance found. Must be the following types: EnergyUsageReportPayload, LocationEnergyUsagePlanReportPayload, LocationEnergyUsageReportPayload, LocationLPCAcknowledgmentReportPayload, ResourceLPCAcknowledgmentReportPayload"
                     );
                 }
             }
@@ -175,6 +196,16 @@ namespace EnergyCoordinationClient.Model
         public LocationLPCAcknowledgmentReportPayload GetLocationLPCAcknowledgmentReportPayload()
         {
             return (LocationLPCAcknowledgmentReportPayload)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `LocationEnergyUsagePlanReportPayload`. If the actual instance is not `LocationEnergyUsagePlanReportPayload`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of LocationEnergyUsagePlanReportPayload</returns>
+        public LocationEnergyUsagePlanReportPayload GetLocationEnergyUsagePlanReportPayload()
+        {
+            return (LocationEnergyUsagePlanReportPayload)this.ActualInstance;
         }
 
         /// <summary>
@@ -248,6 +279,45 @@ namespace EnergyCoordinationClient.Model
                 System.Diagnostics.Debug.WriteLine(
                     string.Format(
                         "Failed to deserialize `{0}` into EnergyUsageReportPayload: {1}",
+                        jsonString,
+                        exception.ToString()
+                    )
+                );
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (
+                    typeof(LocationEnergyUsagePlanReportPayload).GetProperty("AdditionalProperties")
+                    == null
+                )
+                {
+                    newPostReportRequestPayloadsInner = new PostReportRequestPayloadsInner(
+                        JsonConvert.DeserializeObject<LocationEnergyUsagePlanReportPayload>(
+                            jsonString,
+                            PostReportRequestPayloadsInner.SerializerSettings
+                        )
+                    );
+                }
+                else
+                {
+                    newPostReportRequestPayloadsInner = new PostReportRequestPayloadsInner(
+                        JsonConvert.DeserializeObject<LocationEnergyUsagePlanReportPayload>(
+                            jsonString,
+                            PostReportRequestPayloadsInner.AdditionalPropertiesSerializerSettings
+                        )
+                    );
+                }
+                matchedTypes.Add("LocationEnergyUsagePlanReportPayload");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(
+                    string.Format(
+                        "Failed to deserialize `{0}` into LocationEnergyUsagePlanReportPayload: {1}",
                         jsonString,
                         exception.ToString()
                     )

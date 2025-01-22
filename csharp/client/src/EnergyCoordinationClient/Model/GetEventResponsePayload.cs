@@ -90,6 +90,20 @@ namespace EnergyCoordinationClient.Model
                 ?? throw new ArgumentException("Invalid instance found. Must not be null.");
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetEventResponsePayload" /> class
+        /// with the <see cref="LPCReservationPayload" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of LPCReservationPayload.</param>
+        public GetEventResponsePayload(LPCReservationPayload actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType = "oneOf";
+            this.ActualInstance =
+                actualInstance
+                ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
         private Object _actualInstance;
 
         /// <summary>
@@ -100,7 +114,17 @@ namespace EnergyCoordinationClient.Model
             get { return _actualInstance; }
             set
             {
-                if (value.GetType() == typeof(LocationLPCPayload) || value is LocationLPCPayload)
+                if (
+                    value.GetType() == typeof(LPCReservationPayload)
+                    || value is LPCReservationPayload
+                )
+                {
+                    this._actualInstance = value;
+                }
+                else if (
+                    value.GetType() == typeof(LocationLPCPayload)
+                    || value is LocationLPCPayload
+                )
                 {
                     this._actualInstance = value;
                 }
@@ -125,7 +149,7 @@ namespace EnergyCoordinationClient.Model
                 else
                 {
                     throw new ArgumentException(
-                        "Invalid instance found. Must be the following types: LocationLPCPayload, PriceCurvePayload, ResourceLPCPayload, UserEligibilityPayload"
+                        "Invalid instance found. Must be the following types: LPCReservationPayload, LocationLPCPayload, PriceCurvePayload, ResourceLPCPayload, UserEligibilityPayload"
                     );
                 }
             }
@@ -172,6 +196,16 @@ namespace EnergyCoordinationClient.Model
         }
 
         /// <summary>
+        /// Get the actual instance of `LPCReservationPayload`. If the actual instance is not `LPCReservationPayload`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of LPCReservationPayload</returns>
+        public LPCReservationPayload GetLPCReservationPayload()
+        {
+            return (LPCReservationPayload)this.ActualInstance;
+        }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -211,6 +245,42 @@ namespace EnergyCoordinationClient.Model
             }
             int match = 0;
             List<string> matchedTypes = new List<string>();
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(LPCReservationPayload).GetProperty("AdditionalProperties") == null)
+                {
+                    newGetEventResponsePayload = new GetEventResponsePayload(
+                        JsonConvert.DeserializeObject<LPCReservationPayload>(
+                            jsonString,
+                            GetEventResponsePayload.SerializerSettings
+                        )
+                    );
+                }
+                else
+                {
+                    newGetEventResponsePayload = new GetEventResponsePayload(
+                        JsonConvert.DeserializeObject<LPCReservationPayload>(
+                            jsonString,
+                            GetEventResponsePayload.AdditionalPropertiesSerializerSettings
+                        )
+                    );
+                }
+                matchedTypes.Add("LPCReservationPayload");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(
+                    string.Format(
+                        "Failed to deserialize `{0}` into LPCReservationPayload: {1}",
+                        jsonString,
+                        exception.ToString()
+                    )
+                );
+            }
 
             try
             {

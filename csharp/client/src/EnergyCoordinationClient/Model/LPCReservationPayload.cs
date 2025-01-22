@@ -27,42 +27,31 @@ using OpenAPIDateConverter = EnergyCoordinationClient.Client.OpenAPIDateConverte
 namespace EnergyCoordinationClient.Model
 {
     /// <summary>
-    /// SparkReportPayload
+    /// LPCReservationPayload
     /// </summary>
-    [DataContract(Name = "SparkReportPayload")]
+    [DataContract(Name = "LPCReservationPayload")]
     [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
-    [JsonSubtypes.KnownSubType(typeof(EnergyUsageReportPayload), "EnergyUsage")]
-    [JsonSubtypes.KnownSubType(typeof(LocationEnergyUsageReportPayload), "LocationEnergyUsage")]
-    [JsonSubtypes.KnownSubType(
-        typeof(LocationEnergyUsagePlanReportPayload),
-        "LocationEnergyUsagePlan"
-    )]
-    [JsonSubtypes.KnownSubType(
-        typeof(LocationLPCAcknowledgmentReportPayload),
-        "LocationLPCAcknowledgement"
-    )]
-    [JsonSubtypes.KnownSubType(
-        typeof(ResourceLPCAcknowledgmentReportPayload),
-        "ResourceLPCAcknowledgement"
-    )]
-    public partial class SparkReportPayload : IValidatableObject
+    public partial class LPCReservationPayload : SparkEventPayload, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets PayloadType
+        /// Initializes a new instance of the <see cref="LPCReservationPayload" /> class.
         /// </summary>
-        [DataMember(Name = "payloadType", EmitDefaultValue = false)]
-        public SparkReportPayloadType? PayloadType { get; set; }
+        /// <param name="targets">targets.</param>
+        /// <param name="payloadType">payloadType (default to SparkEventPayloadType.LPCReservation).</param>
+        public LPCReservationPayload(
+            List<LocationLPCTarget> targets = default(List<LocationLPCTarget>),
+            SparkEventPayloadType? payloadType = SparkEventPayloadType.LPCReservation
+        )
+            : base(payloadType)
+        {
+            this.Targets = targets;
+        }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SparkReportPayload" /> class.
+        /// Gets or Sets Targets
         /// </summary>
-        /// <param name="payloadType">payloadType.</param>
-        public SparkReportPayload(
-            SparkReportPayloadType? payloadType = default(SparkReportPayloadType?)
-        )
-        {
-            this.PayloadType = payloadType;
-        }
+        [DataMember(Name = "targets", EmitDefaultValue = false)]
+        public List<LocationLPCTarget> Targets { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,8 +60,9 @@ namespace EnergyCoordinationClient.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SparkReportPayload {\n");
-            sb.Append("  PayloadType: ").Append(PayloadType).Append("\n");
+            sb.Append("class LPCReservationPayload {\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  Targets: ").Append(Targets).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -81,7 +71,7 @@ namespace EnergyCoordinationClient.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(
                 this,
@@ -108,6 +98,10 @@ namespace EnergyCoordinationClient.Model
         /// <returns>Validation Result</returns>
         protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
         {
+            foreach (var x in base.BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

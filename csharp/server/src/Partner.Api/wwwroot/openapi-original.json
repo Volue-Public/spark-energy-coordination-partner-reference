@@ -90,7 +90,7 @@
         "type" : "string"
       },
       "NotificationType" : {
-        "enum" : [ "Unknown", "PriceCurveCreated", "UserEligibilityUpdated", "LocationLPCRequested", "ResourceLPCRequested" ],
+        "enum" : [ "Unknown", "PriceCurveCreated", "UserEligibilityUpdated", "LocationLPCRequested", "ResourceLPCRequested", "LPCReservationCreated" ],
         "type" : "string"
       },
       "SparkEventPayload" : {
@@ -100,7 +100,8 @@
             "PriceCurve" : "#/components/schemas/PriceCurvePayload",
             "UserEligibility" : "#/components/schemas/UserEligibilityPayload",
             "LocationLPC" : "#/components/schemas/LocationLPCPayload",
-            "ResourceLPC" : "#/components/schemas/ResourceLPCPayload"
+            "ResourceLPC" : "#/components/schemas/ResourceLPCPayload",
+            "LPCReservation" : "#/components/schemas/LPCReservationPayload"
           },
           "propertyName" : "payloadType"
         },
@@ -115,7 +116,7 @@
         "type" : "object"
       },
       "SparkEventPayloadType" : {
-        "enum" : [ "Unknown", "UserEligibility", "PriceCurve", "LocationLPC", "ResourceLPC" ],
+        "enum" : [ "Unknown", "UserEligibility", "PriceCurve", "LocationLPC", "ResourceLPC", "LPCReservation" ],
         "type" : "string"
       },
       "PriceCurvePayload" : {
@@ -321,6 +322,21 @@
           "points" : {
             "items" : {
               "$ref" : "#/components/schemas/LPCDataPoint"
+            },
+            "type" : "array"
+          }
+        },
+        "type" : "object"
+      },
+      "LPCReservationPayload" : {
+        "additionalProperties" : false,
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/SparkEventPayload"
+        } ],
+        "properties" : {
+          "targets" : {
+            "items" : {
+              "$ref" : "#/components/schemas/LocationLPCTarget"
             },
             "type" : "array"
           }

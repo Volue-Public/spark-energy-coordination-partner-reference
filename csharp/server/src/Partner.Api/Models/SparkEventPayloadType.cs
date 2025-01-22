@@ -55,5 +55,11 @@ namespace Partner.Api.Models
         /// </summary>
         [EnumMember(Value = "ResourceLPC")]
         ResourceLPC = 5,
+
+        /// <summary>
+        /// Enum LPCReservation for LPCReservation
+        /// </summary>
+        [EnumMember(Value = "LPCReservation")]
+        LPCReservation = 6,
     }
 }

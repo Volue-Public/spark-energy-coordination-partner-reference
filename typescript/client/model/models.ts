@@ -30,9 +30,11 @@ export * from './httpValidationProblemDetails';
 export * from './lPCDataPoint';
 export * from './lPCLocation';
 export * from './lPCLocationTarget';
+export * from './lPCReservationPayload';
 export * from './lPCResource';
 export * from './lPCResourceTarget';
 export * from './locationCompensation';
+export * from './locationEnergyUsagePlanReportPayload';
 export * from './locationEnergyUsageReportPayload';
 export * from './locationLPCAcknowledgmentReportPayload';
 export * from './locationLPCPayload';
@@ -124,9 +126,11 @@ import { HttpValidationProblemDetails } from './httpValidationProblemDetails';
 import { LPCDataPoint } from './lPCDataPoint';
 import { LPCLocation } from './lPCLocation';
 import { LPCLocationTarget } from './lPCLocationTarget';
+import { LPCReservationPayload } from './lPCReservationPayload';
 import { LPCResource } from './lPCResource';
 import { LPCResourceTarget } from './lPCResourceTarget';
 import { LocationCompensation } from './locationCompensation';
+import { LocationEnergyUsagePlanReportPayload } from './locationEnergyUsagePlanReportPayload';
 import { LocationEnergyUsageReportPayload } from './locationEnergyUsageReportPayload';
 import { LocationLPCAcknowledgmentReportPayload } from './locationLPCAcknowledgmentReportPayload';
 import { LocationLPCPayload } from './locationLPCPayload';
@@ -229,9 +233,11 @@ let typeMap: {[index: string]: any} = {
     "LPCDataPoint": LPCDataPoint,
     "LPCLocation": LPCLocation,
     "LPCLocationTarget": LPCLocationTarget,
+    "LPCReservationPayload": LPCReservationPayload,
     "LPCResource": LPCResource,
     "LPCResourceTarget": LPCResourceTarget,
     "LocationCompensation": LocationCompensation,
+    "LocationEnergyUsagePlanReportPayload": LocationEnergyUsagePlanReportPayload,
     "LocationEnergyUsageReportPayload": LocationEnergyUsageReportPayload,
     "LocationLPCAcknowledgmentReportPayload": LocationLPCAcknowledgmentReportPayload,
     "LocationLPCPayload": LocationLPCPayload,

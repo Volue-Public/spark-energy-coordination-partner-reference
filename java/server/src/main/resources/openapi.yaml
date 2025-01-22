@@ -76,6 +76,7 @@ components:
       - UserEligibilityUpdated
       - LocationLPCRequested
       - ResourceLPCRequested
+      - LPCReservationCreated
       type: string
     SparkEventPayload:
       additionalProperties: false
@@ -85,6 +86,7 @@ components:
           UserEligibility: '#/components/schemas/UserEligibilityPayload'
           LocationLPC: '#/components/schemas/LocationLPCPayload'
           ResourceLPC: '#/components/schemas/ResourceLPCPayload'
+          LPCReservation: '#/components/schemas/LPCReservationPayload'
         propertyName: payloadType
       example:
         payloadType: Unknown
@@ -99,6 +101,7 @@ components:
       - PriceCurve
       - LocationLPC
       - ResourceLPC
+      - LPCReservation
       type: string
     PriceCurvePayload:
       additionalProperties: false
@@ -261,5 +264,15 @@ components:
         points:
           items:
             $ref: '#/components/schemas/LPCDataPoint'
+          type: array
+      type: object
+    LPCReservationPayload:
+      additionalProperties: false
+      allOf:
+      - $ref: '#/components/schemas/SparkEventPayload'
+      properties:
+        targets:
+          items:
+            $ref: '#/components/schemas/LocationLPCTarget'
           type: array
       type: object

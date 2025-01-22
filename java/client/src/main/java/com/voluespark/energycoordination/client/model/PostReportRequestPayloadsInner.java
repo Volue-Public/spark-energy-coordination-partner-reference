@@ -32,7 +32,9 @@ import org.openapitools.jackson.nullable.JsonNullable;
   PostReportRequestPayloadsInner.JSON_PROPERTY_RESOLUTION,
   PostReportRequestPayloadsInner.JSON_PROPERTY_PAYLOAD_TYPE,
   PostReportRequestPayloadsInner.JSON_PROPERTY_ACKNOWLEDGED_TARGETS,
-  PostReportRequestPayloadsInner.JSON_PROPERTY_DECLINED_TARGETS
+  PostReportRequestPayloadsInner.JSON_PROPERTY_DECLINED_TARGETS,
+  PostReportRequestPayloadsInner.JSON_PROPERTY_SCHEDULE,
+  PostReportRequestPayloadsInner.JSON_PROPERTY_FLEXIBILITY
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
@@ -52,12 +54,18 @@ import org.openapitools.jackson.nullable.JsonNullable;
   @JsonSubTypes.Type(value = EnergyUsageReportPayload.class, name = "EnergyUsage"),
   @JsonSubTypes.Type(value = LocationEnergyUsageReportPayload.class, name = "LocationEnergyUsage"),
   @JsonSubTypes.Type(
+      value = LocationEnergyUsagePlanReportPayload.class,
+      name = "LocationEnergyUsagePlan"),
+  @JsonSubTypes.Type(
       value = LocationLPCAcknowledgmentReportPayload.class,
       name = "LocationLPCAcknowledgement"),
   @JsonSubTypes.Type(
       value = ResourceLPCAcknowledgmentReportPayload.class,
       name = "ResourceLPCAcknowledgement"),
   @JsonSubTypes.Type(value = EnergyUsageReportPayload.class, name = "EnergyUsageReportPayload"),
+  @JsonSubTypes.Type(
+      value = LocationEnergyUsagePlanReportPayload.class,
+      name = "LocationEnergyUsagePlanReportPayload"),
   @JsonSubTypes.Type(
       value = LocationEnergyUsageReportPayload.class,
       name = "LocationEnergyUsageReportPayload"),
@@ -89,6 +97,12 @@ public class PostReportRequestPayloadsInner {
 
   public static final String JSON_PROPERTY_DECLINED_TARGETS = "declinedTargets";
   private List<LPCLocation> declinedTargets = new ArrayList<>();
+
+  public static final String JSON_PROPERTY_SCHEDULE = "schedule";
+  private List<EnergyCurvePoint> schedule = new ArrayList<>();
+
+  public static final String JSON_PROPERTY_FLEXIBILITY = "flexibility";
+  private List<EnergyCurvePoint> flexibility = new ArrayList<>();
 
   public PostReportRequestPayloadsInner() {}
 
@@ -285,6 +299,70 @@ public class PostReportRequestPayloadsInner {
     this.declinedTargets = declinedTargets;
   }
 
+  public PostReportRequestPayloadsInner schedule(List<EnergyCurvePoint> schedule) {
+
+    this.schedule = schedule;
+    return this;
+  }
+
+  public PostReportRequestPayloadsInner addScheduleItem(EnergyCurvePoint scheduleItem) {
+    if (this.schedule == null) {
+      this.schedule = new ArrayList<>();
+    }
+    this.schedule.add(scheduleItem);
+    return this;
+  }
+
+  /**
+   * Get schedule
+   *
+   * @return schedule
+   */
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public List<EnergyCurvePoint> getSchedule() {
+    return schedule;
+  }
+
+  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSchedule(List<EnergyCurvePoint> schedule) {
+    this.schedule = schedule;
+  }
+
+  public PostReportRequestPayloadsInner flexibility(List<EnergyCurvePoint> flexibility) {
+
+    this.flexibility = flexibility;
+    return this;
+  }
+
+  public PostReportRequestPayloadsInner addFlexibilityItem(EnergyCurvePoint flexibilityItem) {
+    if (this.flexibility == null) {
+      this.flexibility = new ArrayList<>();
+    }
+    this.flexibility.add(flexibilityItem);
+    return this;
+  }
+
+  /**
+   * Get flexibility
+   *
+   * @return flexibility
+   */
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_FLEXIBILITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public List<EnergyCurvePoint> getFlexibility() {
+    return flexibility;
+  }
+
+  @JsonProperty(JSON_PROPERTY_FLEXIBILITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setFlexibility(List<EnergyCurvePoint> flexibility) {
+    this.flexibility = flexibility;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -302,7 +380,9 @@ public class PostReportRequestPayloadsInner {
         && Objects.equals(this.payloadType, postReportRequestPayloadsInner.payloadType)
         && Objects.equals(
             this.acknowledgedTargets, postReportRequestPayloadsInner.acknowledgedTargets)
-        && Objects.equals(this.declinedTargets, postReportRequestPayloadsInner.declinedTargets);
+        && Objects.equals(this.declinedTargets, postReportRequestPayloadsInner.declinedTargets)
+        && Objects.equals(this.schedule, postReportRequestPayloadsInner.schedule)
+        && Objects.equals(this.flexibility, postReportRequestPayloadsInner.flexibility);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -323,7 +403,9 @@ public class PostReportRequestPayloadsInner {
         resolution,
         payloadType,
         acknowledgedTargets,
-        declinedTargets);
+        declinedTargets,
+        schedule,
+        flexibility);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -346,6 +428,8 @@ public class PostReportRequestPayloadsInner {
         .append(toIndentedString(acknowledgedTargets))
         .append("\n");
     sb.append("    declinedTargets: ").append(toIndentedString(declinedTargets)).append("\n");
+    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
+    sb.append("    flexibility: ").append(toIndentedString(flexibility)).append("\n");
     sb.append("}");
     return sb.toString();
   }

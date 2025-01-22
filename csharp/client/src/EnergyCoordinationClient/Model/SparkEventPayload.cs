@@ -31,6 +31,7 @@ namespace EnergyCoordinationClient.Model
     /// </summary>
     [DataContract(Name = "SparkEventPayload")]
     [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
+    [JsonSubtypes.KnownSubType(typeof(LPCReservationPayload), "LPCReservation")]
     [JsonSubtypes.KnownSubType(typeof(LocationLPCPayload), "LocationLPC")]
     [JsonSubtypes.KnownSubType(typeof(PriceCurvePayload), "PriceCurve")]
     [JsonSubtypes.KnownSubType(typeof(ResourceLPCPayload), "ResourceLPC")]

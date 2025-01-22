@@ -26,7 +26,9 @@ public enum SparkEventPayloadType {
 
   LOCATION_LPC("LocationLPC"),
 
-  RESOURCE_LPC("ResourceLPC");
+  RESOURCE_LPC("ResourceLPC"),
+
+  LPC_RESERVATION("LPCReservation");
 
   private String value;
 
