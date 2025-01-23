@@ -41,14 +41,14 @@ namespace EnergyCoordinationClient.Model
         /// <param name="locationId">locationId.</param>
         /// <param name="meterPointId">meterPointId.</param>
         /// <param name="resolution">resolution.</param>
-        /// <param name="schedule">schedule.</param>
+        /// <param name="baseline">baseline.</param>
         /// <param name="flexibility">flexibility.</param>
         /// <param name="payloadType">payloadType (default to SparkReportPayloadType.LocationEnergyUsagePlan).</param>
         public LocationEnergyUsagePlanReportPayload(
             string locationId = default(string),
             string meterPointId = default(string),
             string resolution = default(string),
-            List<EnergyCurvePoint> schedule = default(List<EnergyCurvePoint>),
+            List<EnergyCurvePoint> baseline = default(List<EnergyCurvePoint>),
             List<EnergyCurvePoint> flexibility = default(List<EnergyCurvePoint>),
             SparkReportPayloadType? payloadType = SparkReportPayloadType.LocationEnergyUsagePlan
         )
@@ -57,7 +57,7 @@ namespace EnergyCoordinationClient.Model
             this.LocationId = locationId;
             this.MeterPointId = meterPointId;
             this.Resolution = resolution;
-            this.Schedule = schedule;
+            this.Baseline = baseline;
             this.Flexibility = flexibility;
         }
 
@@ -81,10 +81,10 @@ namespace EnergyCoordinationClient.Model
         public string Resolution { get; set; }
 
         /// <summary>
-        /// Gets or Sets Schedule
+        /// Gets or Sets Baseline
         /// </summary>
-        [DataMember(Name = "schedule", EmitDefaultValue = false)]
-        public List<EnergyCurvePoint> Schedule { get; set; }
+        [DataMember(Name = "baseline", EmitDefaultValue = false)]
+        public List<EnergyCurvePoint> Baseline { get; set; }
 
         /// <summary>
         /// Gets or Sets Flexibility
@@ -104,7 +104,7 @@ namespace EnergyCoordinationClient.Model
             sb.Append("  LocationId: ").Append(LocationId).Append("\n");
             sb.Append("  MeterPointId: ").Append(MeterPointId).Append("\n");
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
-            sb.Append("  Schedule: ").Append(Schedule).Append("\n");
+            sb.Append("  Baseline: ").Append(Baseline).Append("\n");
             sb.Append("  Flexibility: ").Append(Flexibility).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

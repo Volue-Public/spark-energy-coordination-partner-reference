@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { PostReportRequestPayloadsInner } from './postReportRequestPayloadsInner';
 
 export class PostReportRequest {
-    'eventId'?: string;
+    'eventId'?: string | null;
     'payloads'?: Array<PostReportRequestPayloadsInner>;
 
     static discriminator: string | undefined = undefined;

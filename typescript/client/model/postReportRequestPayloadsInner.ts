@@ -28,7 +28,7 @@ export class PostReportRequestPayloadsInner {
     'payloadType'?: SparkReportPayloadType;
     'acknowledgedTargets'?: Array<LPCLocation>;
     'declinedTargets'?: Array<LPCLocation>;
-    'schedule'?: Array<EnergyCurvePoint>;
+    'baseline'?: Array<EnergyCurvePoint>;
     'flexibility'?: Array<EnergyCurvePoint>;
 
     static discriminator: string | undefined = undefined;
@@ -70,8 +70,8 @@ export class PostReportRequestPayloadsInner {
             "type": "Array<LPCLocation>"
         },
         {
-            "name": "schedule",
-            "baseName": "schedule",
+            "name": "baseline",
+            "baseName": "baseline",
             "type": "Array<EnergyCurvePoint>"
         },
         {

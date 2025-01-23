@@ -12,12 +12,15 @@
 
 package com.voluespark.energycoordination.client.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /** PostReportRequest */
 @JsonPropertyOrder({
@@ -29,7 +32,7 @@ import java.util.Objects;
     comments = "Generator version: 7.9.0-SNAPSHOT")
 public class PostReportRequest {
   public static final String JSON_PROPERTY_EVENT_ID = "eventId";
-  private String eventId;
+  private JsonNullable<String> eventId = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_PAYLOADS = "payloads";
   private List<PostReportRequestPayloadsInner> payloads = new ArrayList<>();
@@ -37,8 +40,8 @@ public class PostReportRequest {
   public PostReportRequest() {}
 
   public PostReportRequest eventId(String eventId) {
+    this.eventId = JsonNullable.<String>of(eventId);
 
-    this.eventId = eventId;
     return this;
   }
 
@@ -48,16 +51,24 @@ public class PostReportRequest {
    * @return eventId
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EVENT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonIgnore
   public String getEventId() {
-    return eventId;
+    return eventId.orElse(null);
   }
 
   @JsonProperty(JSON_PROPERTY_EVENT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEventId(String eventId) {
+  public JsonNullable<String> getEventId_JsonNullable() {
+    return eventId;
+  }
+
+  @JsonProperty(JSON_PROPERTY_EVENT_ID)
+  public void setEventId_JsonNullable(JsonNullable<String> eventId) {
     this.eventId = eventId;
+  }
+
+  public void setEventId(String eventId) {
+    this.eventId = JsonNullable.<String>of(eventId);
   }
 
   public PostReportRequest payloads(List<PostReportRequestPayloadsInner> payloads) {
@@ -101,13 +112,29 @@ public class PostReportRequest {
       return false;
     }
     PostReportRequest postReportRequest = (PostReportRequest) o;
-    return Objects.equals(this.eventId, postReportRequest.eventId)
+    return equalsNullable(this.eventId, postReportRequest.eventId)
         && Objects.equals(this.payloads, postReportRequest.payloads);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b
+        || (a != null
+            && b != null
+            && a.isPresent()
+            && b.isPresent()
+            && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventId, payloads);
+    return Objects.hash(hashCodeNullable(eventId), payloads);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
   }
 
   @Override

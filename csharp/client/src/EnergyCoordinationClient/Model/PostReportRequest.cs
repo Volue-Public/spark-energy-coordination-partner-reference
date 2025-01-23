@@ -49,7 +49,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets EventId
         /// </summary>
-        [DataMember(Name = "eventId", EmitDefaultValue = false)]
+        [DataMember(Name = "eventId", EmitDefaultValue = true)]
         public string EventId { get; set; }
 
         /// <summary>

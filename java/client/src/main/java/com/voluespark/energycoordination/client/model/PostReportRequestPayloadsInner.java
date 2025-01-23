@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
   PostReportRequestPayloadsInner.JSON_PROPERTY_PAYLOAD_TYPE,
   PostReportRequestPayloadsInner.JSON_PROPERTY_ACKNOWLEDGED_TARGETS,
   PostReportRequestPayloadsInner.JSON_PROPERTY_DECLINED_TARGETS,
-  PostReportRequestPayloadsInner.JSON_PROPERTY_SCHEDULE,
+  PostReportRequestPayloadsInner.JSON_PROPERTY_BASELINE,
   PostReportRequestPayloadsInner.JSON_PROPERTY_FLEXIBILITY
 })
 @jakarta.annotation.Generated(
@@ -98,8 +98,8 @@ public class PostReportRequestPayloadsInner {
   public static final String JSON_PROPERTY_DECLINED_TARGETS = "declinedTargets";
   private List<LPCLocation> declinedTargets = new ArrayList<>();
 
-  public static final String JSON_PROPERTY_SCHEDULE = "schedule";
-  private List<EnergyCurvePoint> schedule = new ArrayList<>();
+  public static final String JSON_PROPERTY_BASELINE = "baseline";
+  private List<EnergyCurvePoint> baseline = new ArrayList<>();
 
   public static final String JSON_PROPERTY_FLEXIBILITY = "flexibility";
   private List<EnergyCurvePoint> flexibility = new ArrayList<>();
@@ -299,36 +299,36 @@ public class PostReportRequestPayloadsInner {
     this.declinedTargets = declinedTargets;
   }
 
-  public PostReportRequestPayloadsInner schedule(List<EnergyCurvePoint> schedule) {
+  public PostReportRequestPayloadsInner baseline(List<EnergyCurvePoint> baseline) {
 
-    this.schedule = schedule;
+    this.baseline = baseline;
     return this;
   }
 
-  public PostReportRequestPayloadsInner addScheduleItem(EnergyCurvePoint scheduleItem) {
-    if (this.schedule == null) {
-      this.schedule = new ArrayList<>();
+  public PostReportRequestPayloadsInner addBaselineItem(EnergyCurvePoint baselineItem) {
+    if (this.baseline == null) {
+      this.baseline = new ArrayList<>();
     }
-    this.schedule.add(scheduleItem);
+    this.baseline.add(baselineItem);
     return this;
   }
 
   /**
-   * Get schedule
+   * Get baseline
    *
-   * @return schedule
+   * @return baseline
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonProperty(JSON_PROPERTY_BASELINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public List<EnergyCurvePoint> getSchedule() {
-    return schedule;
+  public List<EnergyCurvePoint> getBaseline() {
+    return baseline;
   }
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonProperty(JSON_PROPERTY_BASELINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSchedule(List<EnergyCurvePoint> schedule) {
-    this.schedule = schedule;
+  public void setBaseline(List<EnergyCurvePoint> baseline) {
+    this.baseline = baseline;
   }
 
   public PostReportRequestPayloadsInner flexibility(List<EnergyCurvePoint> flexibility) {
@@ -381,7 +381,7 @@ public class PostReportRequestPayloadsInner {
         && Objects.equals(
             this.acknowledgedTargets, postReportRequestPayloadsInner.acknowledgedTargets)
         && Objects.equals(this.declinedTargets, postReportRequestPayloadsInner.declinedTargets)
-        && Objects.equals(this.schedule, postReportRequestPayloadsInner.schedule)
+        && Objects.equals(this.baseline, postReportRequestPayloadsInner.baseline)
         && Objects.equals(this.flexibility, postReportRequestPayloadsInner.flexibility);
   }
 
@@ -404,7 +404,7 @@ public class PostReportRequestPayloadsInner {
         payloadType,
         acknowledgedTargets,
         declinedTargets,
-        schedule,
+        baseline,
         flexibility);
   }
 
@@ -428,7 +428,7 @@ public class PostReportRequestPayloadsInner {
         .append(toIndentedString(acknowledgedTargets))
         .append("\n");
     sb.append("    declinedTargets: ").append(toIndentedString(declinedTargets)).append("\n");
-    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
+    sb.append("    baseline: ").append(toIndentedString(baseline)).append("\n");
     sb.append("    flexibility: ").append(toIndentedString(flexibility)).append("\n");
     sb.append("}");
     return sb.toString();

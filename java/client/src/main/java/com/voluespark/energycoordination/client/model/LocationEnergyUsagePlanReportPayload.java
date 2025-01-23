@@ -26,7 +26,7 @@ import java.util.Objects;
   LocationEnergyUsagePlanReportPayload.JSON_PROPERTY_LOCATION_ID,
   LocationEnergyUsagePlanReportPayload.JSON_PROPERTY_METER_POINT_ID,
   LocationEnergyUsagePlanReportPayload.JSON_PROPERTY_RESOLUTION,
-  LocationEnergyUsagePlanReportPayload.JSON_PROPERTY_SCHEDULE,
+  LocationEnergyUsagePlanReportPayload.JSON_PROPERTY_BASELINE,
   LocationEnergyUsagePlanReportPayload.JSON_PROPERTY_FLEXIBILITY
 })
 @jakarta.annotation.Generated(
@@ -53,8 +53,8 @@ public class LocationEnergyUsagePlanReportPayload extends SparkReportPayload {
   public static final String JSON_PROPERTY_RESOLUTION = "resolution";
   private String resolution;
 
-  public static final String JSON_PROPERTY_SCHEDULE = "schedule";
-  private List<EnergyCurvePoint> schedule = new ArrayList<>();
+  public static final String JSON_PROPERTY_BASELINE = "baseline";
+  private List<EnergyCurvePoint> baseline = new ArrayList<>();
 
   public static final String JSON_PROPERTY_FLEXIBILITY = "flexibility";
   private List<EnergyCurvePoint> flexibility = new ArrayList<>();
@@ -133,36 +133,36 @@ public class LocationEnergyUsagePlanReportPayload extends SparkReportPayload {
     this.resolution = resolution;
   }
 
-  public LocationEnergyUsagePlanReportPayload schedule(List<EnergyCurvePoint> schedule) {
+  public LocationEnergyUsagePlanReportPayload baseline(List<EnergyCurvePoint> baseline) {
 
-    this.schedule = schedule;
+    this.baseline = baseline;
     return this;
   }
 
-  public LocationEnergyUsagePlanReportPayload addScheduleItem(EnergyCurvePoint scheduleItem) {
-    if (this.schedule == null) {
-      this.schedule = new ArrayList<>();
+  public LocationEnergyUsagePlanReportPayload addBaselineItem(EnergyCurvePoint baselineItem) {
+    if (this.baseline == null) {
+      this.baseline = new ArrayList<>();
     }
-    this.schedule.add(scheduleItem);
+    this.baseline.add(baselineItem);
     return this;
   }
 
   /**
-   * Get schedule
+   * Get baseline
    *
-   * @return schedule
+   * @return baseline
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonProperty(JSON_PROPERTY_BASELINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public List<EnergyCurvePoint> getSchedule() {
-    return schedule;
+  public List<EnergyCurvePoint> getBaseline() {
+    return baseline;
   }
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonProperty(JSON_PROPERTY_BASELINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSchedule(List<EnergyCurvePoint> schedule) {
-    this.schedule = schedule;
+  public void setBaseline(List<EnergyCurvePoint> baseline) {
+    this.baseline = baseline;
   }
 
   public LocationEnergyUsagePlanReportPayload flexibility(List<EnergyCurvePoint> flexibility) {
@@ -216,7 +216,7 @@ public class LocationEnergyUsagePlanReportPayload extends SparkReportPayload {
     return Objects.equals(this.locationId, locationEnergyUsagePlanReportPayload.locationId)
         && Objects.equals(this.meterPointId, locationEnergyUsagePlanReportPayload.meterPointId)
         && Objects.equals(this.resolution, locationEnergyUsagePlanReportPayload.resolution)
-        && Objects.equals(this.schedule, locationEnergyUsagePlanReportPayload.schedule)
+        && Objects.equals(this.baseline, locationEnergyUsagePlanReportPayload.baseline)
         && Objects.equals(this.flexibility, locationEnergyUsagePlanReportPayload.flexibility)
         && super.equals(o);
   }
@@ -224,7 +224,7 @@ public class LocationEnergyUsagePlanReportPayload extends SparkReportPayload {
   @Override
   public int hashCode() {
     return Objects.hash(
-        locationId, meterPointId, resolution, schedule, flexibility, super.hashCode());
+        locationId, meterPointId, resolution, baseline, flexibility, super.hashCode());
   }
 
   @Override
@@ -235,7 +235,7 @@ public class LocationEnergyUsagePlanReportPayload extends SparkReportPayload {
     sb.append("    locationId: ").append(toIndentedString(locationId)).append("\n");
     sb.append("    meterPointId: ").append(toIndentedString(meterPointId)).append("\n");
     sb.append("    resolution: ").append(toIndentedString(resolution)).append("\n");
-    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
+    sb.append("    baseline: ").append(toIndentedString(baseline)).append("\n");
     sb.append("    flexibility: ").append(toIndentedString(flexibility)).append("\n");
     sb.append("}");
     return sb.toString();

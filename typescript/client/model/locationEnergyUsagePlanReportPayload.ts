@@ -19,7 +19,7 @@ export class LocationEnergyUsagePlanReportPayload extends SparkReportPayload {
     'locationId'?: string;
     'meterPointId'?: string;
     'resolution'?: string;
-    'schedule'?: Array<EnergyCurvePoint>;
+    'baseline'?: Array<EnergyCurvePoint>;
     'flexibility'?: Array<EnergyCurvePoint>;
 
     static discriminator: string | undefined = undefined;
@@ -41,8 +41,8 @@ export class LocationEnergyUsagePlanReportPayload extends SparkReportPayload {
             "type": "string"
         },
         {
-            "name": "schedule",
-            "baseName": "schedule",
+            "name": "baseline",
+            "baseName": "baseline",
             "type": "Array<EnergyCurvePoint>"
         },
         {
