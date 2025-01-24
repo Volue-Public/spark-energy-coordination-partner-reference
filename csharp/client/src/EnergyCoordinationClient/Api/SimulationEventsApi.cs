@@ -29,7 +29,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate LPC Location Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Creates a &#x60;LocationLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateLocationLPCEventRequest"></param>
@@ -44,7 +44,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate LPC Location Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Creates a &#x60;LocationLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateLocationLPCEventRequest"></param>
@@ -59,7 +59,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate LPC Resource Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Creates a &#x60;ResourceLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateResourceLPCEventRequest"></param>
@@ -74,7 +74,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate LPC Resource Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Creates a &#x60;ResourceLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateResourceLPCEventRequest"></param>
@@ -89,7 +89,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate Price Curve Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
+        /// Creates a &#x60;PriceCurve&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulatePriceCurveEventRequest"></param>
@@ -104,7 +104,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate Price Curve Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
+        /// Creates a &#x60;PriceCurve&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulatePriceCurveEventRequest"></param>
@@ -119,7 +119,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate User Eligibility Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;UserEligibilityEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+        /// Creates a &#x60;UserEligibility&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -130,7 +130,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate User Eligibility Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;UserEligibilityEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+        /// Creates a &#x60;UserEligibility&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -151,7 +151,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate LPC Location Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Creates a &#x60;LocationLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateLocationLPCEventRequest"></param>
@@ -169,7 +169,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate LPC Location Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Creates a &#x60;LocationLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateLocationLPCEventRequest"></param>
@@ -189,7 +189,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate LPC Resource Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Creates a &#x60;ResourceLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateResourceLPCEventRequest"></param>
@@ -207,7 +207,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate LPC Resource Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Creates a &#x60;ResourceLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateResourceLPCEventRequest"></param>
@@ -227,7 +227,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate Price Curve Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
+        /// Creates a &#x60;PriceCurve&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulatePriceCurveEventRequest"></param>
@@ -245,7 +245,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate Price Curve Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
+        /// Creates a &#x60;PriceCurve&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulatePriceCurveEventRequest"></param>
@@ -265,7 +265,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate User Eligibility Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;UserEligibilityEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+        /// Creates a &#x60;UserEligibility&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -281,7 +281,7 @@ namespace EnergyCoordinationClient.Api
         /// Simulate User Eligibility Event
         /// </summary>
         /// <remarks>
-        /// Creates a &#x60;UserEligibilityEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+        /// Creates a &#x60;UserEligibility&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
         /// </remarks>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -441,7 +441,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate LPC Location Event Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Simulate LPC Location Event Creates a &#x60;LocationLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateLocationLPCEventRequest"></param>
@@ -458,7 +458,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate LPC Location Event Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Simulate LPC Location Event Creates a &#x60;LocationLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateLocationLPCEventRequest"></param>
@@ -541,7 +541,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate LPC Location Event Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Simulate LPC Location Event Creates a &#x60;LocationLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateLocationLPCEventRequest"></param>
@@ -566,7 +566,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate LPC Location Event Creates a &#x60;LocationLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Simulate LPC Location Event Creates a &#x60;LocationLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;locations&#x60; parameter is not specified, random locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateLocationLPCEventRequest"></param>
@@ -656,7 +656,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateResourceLPCEventRequest"></param>
@@ -673,7 +673,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateResourceLPCEventRequest"></param>
@@ -756,7 +756,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateResourceLPCEventRequest"></param>
@@ -781,7 +781,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPCRequestedEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
+        /// Simulate LPC Resource Event Creates a &#x60;ResourceLPC&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;resources&#x60; parameter is not specified, random resources at locations will be targeted if any exist.  - If the &#x60;points&#x60; parameter is not specified, a random points array with maximum power will be generated.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulateResourceLPCEventRequest"></param>
@@ -871,7 +871,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate Price Curve Event Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
+        /// Simulate Price Curve Event Creates a &#x60;PriceCurve&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulatePriceCurveEventRequest"></param>
@@ -888,7 +888,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate Price Curve Event Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
+        /// Simulate Price Curve Event Creates a &#x60;PriceCurve&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulatePriceCurveEventRequest"></param>
@@ -971,7 +971,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate Price Curve Event Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
+        /// Simulate Price Curve Event Creates a &#x60;PriceCurve&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulatePriceCurveEventRequest"></param>
@@ -996,7 +996,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate Price Curve Event Creates a &#x60;PriceCurveEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
+        /// Simulate Price Curve Event Creates a &#x60;PriceCurve&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the &#x60;targets&#x60; parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the &#x60;priceArea&#x60; parameter is not specified, a random price area will be selected.  - If the &#x60;priceCurveDelta&#x60; parameter is not specified, a random price curve delta will be created.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="simulatePriceCurveEventRequest"></param>
@@ -1086,7 +1086,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate User Eligibility Event Creates a &#x60;UserEligibilityEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+        /// Simulate User Eligibility Event Creates a &#x60;UserEligibility&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1099,7 +1099,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate User Eligibility Event Creates a &#x60;UserEligibilityEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+        /// Simulate User Eligibility Event Creates a &#x60;UserEligibility&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1169,7 +1169,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate User Eligibility Event Creates a &#x60;UserEligibilityEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+        /// Simulate User Eligibility Event Creates a &#x60;UserEligibility&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1191,7 +1191,7 @@ namespace EnergyCoordinationClient.Api
         }
 
         /// <summary>
-        /// Simulate User Eligibility Event Creates a &#x60;UserEligibilityEvent&#x60; in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+        /// Simulate User Eligibility Event Creates a &#x60;UserEligibility&#x60; event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
         /// </summary>
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

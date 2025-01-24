@@ -96,7 +96,7 @@ export class SimulationEventsApi {
     }
 
     /**
-     * Creates a `LocationLPCRequestedEvent` in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `locations` parameter is not specified, random locations will be targeted if any exist.  - If the `points` parameter is not specified, a random points array with maximum power will be generated.
+     * Creates a `LocationLPC` event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `locations` parameter is not specified, random locations will be targeted if any exist.  - If the `points` parameter is not specified, a random points array with maximum power will be generated.
      * @summary Simulate LPC Location Event
      * @param simulateLocationLPCEventRequest 
      */
@@ -168,7 +168,7 @@ export class SimulationEventsApi {
         });
     }
     /**
-     * Creates a `ResourceLPCRequestedEvent` in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `resources` parameter is not specified, random resources at locations will be targeted if any exist.  - If the `points` parameter is not specified, a random points array with maximum power will be generated.
+     * Creates a `ResourceLPC` event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `resources` parameter is not specified, random resources at locations will be targeted if any exist.  - If the `points` parameter is not specified, a random points array with maximum power will be generated.
      * @summary Simulate LPC Resource Event
      * @param simulateResourceLPCEventRequest 
      */
@@ -240,7 +240,7 @@ export class SimulationEventsApi {
         });
     }
     /**
-     * Creates a `PriceCurveEvent` in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `targets` parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the `priceArea` parameter is not specified, a random price area will be selected.  - If the `priceCurveDelta` parameter is not specified, a random price curve delta will be created.
+     * Creates a `PriceCurve` event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  - If the `targets` parameter is not specified, simulated resources and locations will be targeted instead if any exist.  - If the `priceArea` parameter is not specified, a random price area will be selected.  - If the `priceCurveDelta` parameter is not specified, a random price curve delta will be created.
      * @summary Simulate Price Curve Event
      * @param simulatePriceCurveEventRequest 
      */
@@ -312,7 +312,7 @@ export class SimulationEventsApi {
         });
     }
     /**
-     * Creates a `UserEligibilityEvent` in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
+     * Creates a `UserEligibility` event in the system using the given parameters. The event will be sent to all webhooks that subscribe to the given type of event.  This event does not affect the eligibility of any users. It is only used to simulate the event.  For actual events, you can call the /users/eligible endpoint to check which users are eligible.
      * @summary Simulate User Eligibility Event
      */
     public async postUserEligibilitySimulation (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SimulateEventResponse;  }> {
