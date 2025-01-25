@@ -38,11 +38,17 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationEnergyUsagePlanReportPayload" /> class.
         /// </summary>
-        /// <param name="locationId">locationId.</param>
-        /// <param name="meterPointId">meterPointId.</param>
-        /// <param name="resolution">resolution.</param>
-        /// <param name="baseline">baseline.</param>
-        /// <param name="flexibility">flexibility.</param>
+        [JsonConstructorAttribute]
+        protected LocationEnergyUsagePlanReportPayload() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationEnergyUsagePlanReportPayload" /> class.
+        /// </summary>
+        /// <param name="locationId">locationId (required).</param>
+        /// <param name="meterPointId">meterPointId (required).</param>
+        /// <param name="resolution">resolution (required).</param>
+        /// <param name="baseline">baseline (required).</param>
+        /// <param name="flexibility">flexibility (required).</param>
         /// <param name="payloadType">payloadType (default to SparkReportPayloadType.LocationEnergyUsagePlan).</param>
         public LocationEnergyUsagePlanReportPayload(
             string locationId = default(string),
@@ -54,42 +60,77 @@ namespace EnergyCoordinationClient.Model
         )
             : base(payloadType)
         {
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new ArgumentNullException(
+                    "locationId is a required property for LocationEnergyUsagePlanReportPayload and cannot be null"
+                );
+            }
             this.LocationId = locationId;
+            // to ensure "meterPointId" is required (not null)
+            if (meterPointId == null)
+            {
+                throw new ArgumentNullException(
+                    "meterPointId is a required property for LocationEnergyUsagePlanReportPayload and cannot be null"
+                );
+            }
             this.MeterPointId = meterPointId;
+            // to ensure "resolution" is required (not null)
+            if (resolution == null)
+            {
+                throw new ArgumentNullException(
+                    "resolution is a required property for LocationEnergyUsagePlanReportPayload and cannot be null"
+                );
+            }
             this.Resolution = resolution;
+            // to ensure "baseline" is required (not null)
+            if (baseline == null)
+            {
+                throw new ArgumentNullException(
+                    "baseline is a required property for LocationEnergyUsagePlanReportPayload and cannot be null"
+                );
+            }
             this.Baseline = baseline;
+            // to ensure "flexibility" is required (not null)
+            if (flexibility == null)
+            {
+                throw new ArgumentNullException(
+                    "flexibility is a required property for LocationEnergyUsagePlanReportPayload and cannot be null"
+                );
+            }
             this.Flexibility = flexibility;
         }
 
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
-        [DataMember(Name = "locationId", EmitDefaultValue = false)]
+        [DataMember(Name = "locationId", IsRequired = true, EmitDefaultValue = true)]
         public string LocationId { get; set; }
 
         /// <summary>
         /// Gets or Sets MeterPointId
         /// </summary>
-        [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
+        [DataMember(Name = "meterPointId", IsRequired = true, EmitDefaultValue = true)]
         public string MeterPointId { get; set; }
 
         /// <summary>
         /// Gets or Sets Resolution
         /// </summary>
         /// <example>02:00:00</example>
-        [DataMember(Name = "resolution", EmitDefaultValue = false)]
+        [DataMember(Name = "resolution", IsRequired = true, EmitDefaultValue = true)]
         public string Resolution { get; set; }
 
         /// <summary>
         /// Gets or Sets Baseline
         /// </summary>
-        [DataMember(Name = "baseline", EmitDefaultValue = false)]
+        [DataMember(Name = "baseline", IsRequired = true, EmitDefaultValue = true)]
         public List<EnergyCurvePoint> Baseline { get; set; }
 
         /// <summary>
         /// Gets or Sets Flexibility
         /// </summary>
-        [DataMember(Name = "flexibility", EmitDefaultValue = false)]
+        [DataMember(Name = "flexibility", IsRequired = true, EmitDefaultValue = true)]
         public List<EnergyCurvePoint> Flexibility { get; set; }
 
         /// <summary>

@@ -15,7 +15,7 @@ import { GetEventResponsePayload } from './getEventResponsePayload';
 
 export class GetEventResponse {
     'payload'?: GetEventResponsePayload;
-    'id'?: string;
+    'id': string;
     'createdAt'?: Date;
 
     static discriminator: string | undefined = undefined;

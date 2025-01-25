@@ -48,6 +48,8 @@ public class UserSparkProgramApi {
   /**
    * Delete User Enrollment Remove a user from the SPARK Program
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>404</b> - Not Found
@@ -106,6 +108,8 @@ public class UserSparkProgramApi {
   /**
    * Delete User Enrollment Remove a user from the SPARK Program
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>404</b> - Not Found
@@ -122,6 +126,8 @@ public class UserSparkProgramApi {
 
   /**
    * Delete User Enrollment Remove a user from the SPARK Program
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -140,6 +146,8 @@ public class UserSparkProgramApi {
 
   /**
    * Delete User Enrollment Remove a user from the SPARK Program
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *

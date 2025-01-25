@@ -174,6 +174,8 @@ public class UserResourcesLocationBoundApi {
   /**
    * Create Location Bound Resource Create a resource at a location.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
@@ -183,7 +185,6 @@ public class UserResourcesLocationBoundApi {
    * @param userId The userId parameter
    * @param locationId The locationId parameter
    * @param postLocationBoundResourceRequest The postLocationBoundResourceRequest parameter
-   * @return GetLocationBoundResourceResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postLocationBoundResourceRequestCreation(
@@ -241,8 +242,7 @@ public class UserResourcesLocationBoundApi {
 
     String[] localVarAuthNames = new String[] {"Bearer"};
 
-    ParameterizedTypeReference<GetLocationBoundResourceResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetLocationBoundResourceResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return apiClient.invokeAPI(
         "/users/{userId}/locations/{locationId}/resources",
         HttpMethod.POST,
@@ -261,6 +261,8 @@ public class UserResourcesLocationBoundApi {
   /**
    * Create Location Bound Resource Create a resource at a location.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
@@ -270,16 +272,14 @@ public class UserResourcesLocationBoundApi {
    * @param userId The userId parameter
    * @param locationId The locationId parameter
    * @param postLocationBoundResourceRequest The postLocationBoundResourceRequest parameter
-   * @return GetLocationBoundResourceResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetLocationBoundResourceResponse> postLocationBoundResource(
+  public Mono<Void> postLocationBoundResource(
       String userId,
       String locationId,
       PostLocationBoundResourceRequest postLocationBoundResourceRequest)
       throws WebClientResponseException {
-    ParameterizedTypeReference<GetLocationBoundResourceResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetLocationBoundResourceResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationBoundResourceRequestCreation(
             userId, locationId, postLocationBoundResourceRequest)
         .bodyToMono(localVarReturnType);
@@ -288,6 +288,8 @@ public class UserResourcesLocationBoundApi {
   /**
    * Create Location Bound Resource Create a resource at a location.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
@@ -297,17 +299,14 @@ public class UserResourcesLocationBoundApi {
    * @param userId The userId parameter
    * @param locationId The locationId parameter
    * @param postLocationBoundResourceRequest The postLocationBoundResourceRequest parameter
-   * @return ResponseEntity&lt;GetLocationBoundResourceResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetLocationBoundResourceResponse>>
-      postLocationBoundResourceWithHttpInfo(
-          String userId,
-          String locationId,
-          PostLocationBoundResourceRequest postLocationBoundResourceRequest)
-          throws WebClientResponseException {
-    ParameterizedTypeReference<GetLocationBoundResourceResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetLocationBoundResourceResponse>() {};
+  public Mono<ResponseEntity<Void>> postLocationBoundResourceWithHttpInfo(
+      String userId,
+      String locationId,
+      PostLocationBoundResourceRequest postLocationBoundResourceRequest)
+      throws WebClientResponseException {
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationBoundResourceRequestCreation(
             userId, locationId, postLocationBoundResourceRequest)
         .toEntity(localVarReturnType);
@@ -315,6 +314,8 @@ public class UserResourcesLocationBoundApi {
 
   /**
    * Create Location Bound Resource Create a resource at a location.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *

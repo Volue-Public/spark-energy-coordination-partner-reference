@@ -45,15 +45,15 @@ public class GetUserEligibilityResponse {
    *
    * @return userId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_USER_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getUserId() {
     return userId;
   }
 
   @JsonProperty(JSON_PROPERTY_USER_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUserId(String userId) {
     this.userId = userId;
   }
@@ -69,15 +69,15 @@ public class GetUserEligibilityResponse {
    *
    * @return isEligible
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_IS_ELIGIBLE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Boolean getIsEligible() {
     return isEligible;
   }
 
   @JsonProperty(JSON_PROPERTY_IS_ELIGIBLE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsEligible(Boolean isEligible) {
     this.isEligible = isEligible;
   }

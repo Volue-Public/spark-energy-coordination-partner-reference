@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { GetLocationResponse } from './getLocationResponse';
 
 export class PostLocationsBatchResponse {
-    'locations'?: Array<GetLocationResponse>;
+    'locations': Array<GetLocationResponse>;
 
     static discriminator: string | undefined = undefined;
 

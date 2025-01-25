@@ -86,15 +86,15 @@ public class WebhookNotificationLog {
    *
    * @return webhookId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_WEBHOOK_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getWebhookId() {
     return webhookId;
   }
 
   @JsonProperty(JSON_PROPERTY_WEBHOOK_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhookId(String webhookId) {
     this.webhookId = webhookId;
   }
@@ -110,15 +110,15 @@ public class WebhookNotificationLog {
    *
    * @return tenantId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_TENANT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getTenantId() {
     return tenantId;
   }
 
   @JsonProperty(JSON_PROPERTY_TENANT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTenantId(String tenantId) {
     this.tenantId = tenantId;
   }
@@ -262,15 +262,15 @@ public class WebhookNotificationLog {
    *
    * @return webhookUrl
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public URI getWebhookUrl() {
     return webhookUrl;
   }
 
   @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhookUrl(URI webhookUrl) {
     this.webhookUrl = webhookUrl;
   }

@@ -25,6 +25,22 @@ public class UserEligibilityPayload extends SparkEventPayload {
 
   @Valid private List<String> removedUsers = new ArrayList<>();
 
+  public UserEligibilityPayload() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public UserEligibilityPayload(
+      OffsetDateTime lastUpdated,
+      List<String> addedUsers,
+      List<String> removedUsers,
+      SparkEventPayloadType payloadType) {
+    super(payloadType);
+    this.lastUpdated = lastUpdated;
+    this.addedUsers = addedUsers;
+    this.removedUsers = removedUsers;
+  }
+
   public UserEligibilityPayload lastUpdated(OffsetDateTime lastUpdated) {
     this.lastUpdated = lastUpdated;
     return this;
@@ -35,8 +51,9 @@ public class UserEligibilityPayload extends SparkEventPayload {
    *
    * @return lastUpdated
    */
+  @NotNull
   @Valid
-  @Schema(name = "lastUpdated", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "lastUpdated", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("lastUpdated")
   public OffsetDateTime getLastUpdated() {
     return lastUpdated;
@@ -64,7 +81,8 @@ public class UserEligibilityPayload extends SparkEventPayload {
    *
    * @return addedUsers
    */
-  @Schema(name = "addedUsers", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "addedUsers", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("addedUsers")
   public List<String> getAddedUsers() {
     return addedUsers;
@@ -92,7 +110,8 @@ public class UserEligibilityPayload extends SparkEventPayload {
    *
    * @return removedUsers
    */
-  @Schema(name = "removedUsers", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "removedUsers", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("removedUsers")
   public List<String> getRemovedUsers() {
     return removedUsers;

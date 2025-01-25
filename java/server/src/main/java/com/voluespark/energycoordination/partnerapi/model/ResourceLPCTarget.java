@@ -26,6 +26,24 @@ public class ResourceLPCTarget {
 
   @Valid private List<@Valid LPCDataPoint> points = new ArrayList<>();
 
+  public ResourceLPCTarget() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public ResourceLPCTarget(
+      String meterPointId,
+      String locationId,
+      String resourceId,
+      String resolution,
+      List<@Valid LPCDataPoint> points) {
+    this.meterPointId = meterPointId;
+    this.locationId = locationId;
+    this.resourceId = resourceId;
+    this.resolution = resolution;
+    this.points = points;
+  }
+
   public ResourceLPCTarget meterPointId(String meterPointId) {
     this.meterPointId = meterPointId;
     return this;
@@ -36,7 +54,8 @@ public class ResourceLPCTarget {
    *
    * @return meterPointId
    */
-  @Schema(name = "meterPointId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "meterPointId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("meterPointId")
   public String getMeterPointId() {
     return meterPointId;
@@ -56,7 +75,8 @@ public class ResourceLPCTarget {
    *
    * @return locationId
    */
-  @Schema(name = "locationId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "locationId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("locationId")
   public String getLocationId() {
     return locationId;
@@ -76,7 +96,8 @@ public class ResourceLPCTarget {
    *
    * @return resourceId
    */
-  @Schema(name = "resourceId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "resourceId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("resourceId")
   public String getResourceId() {
     return resourceId;
@@ -96,10 +117,8 @@ public class ResourceLPCTarget {
    *
    * @return resolution
    */
-  @Schema(
-      name = "resolution",
-      example = "02:00:00",
-      requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "resolution", example = "02:00:00", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("resolution")
   public String getResolution() {
     return resolution;
@@ -127,8 +146,9 @@ public class ResourceLPCTarget {
    *
    * @return points
    */
+  @NotNull
   @Valid
-  @Schema(name = "points", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "points", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("points")
   public List<@Valid LPCDataPoint> getPoints() {
     return points;

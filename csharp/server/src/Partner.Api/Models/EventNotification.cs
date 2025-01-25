@@ -29,36 +29,42 @@ namespace Partner.Api.Models
         /// <summary>
         /// Gets or Sets NotificationId
         /// </summary>
+        [Required]
         [DataMember(Name = "notificationId", EmitDefaultValue = false)]
         public string NotificationId { get; set; }
 
         /// <summary>
         /// Gets or Sets EventId
         /// </summary>
+        [Required]
         [DataMember(Name = "eventId", EmitDefaultValue = false)]
         public string EventId { get; set; }
 
         /// <summary>
         /// Gets or Sets EventCreatedAtUtc
         /// </summary>
+        [Required]
         [DataMember(Name = "eventCreatedAtUtc", EmitDefaultValue = true)]
         public DateTimeOffset EventCreatedAtUtc { get; set; }
 
         /// <summary>
         /// Gets or Sets NotificationSentUtc
         /// </summary>
+        [Required]
         [DataMember(Name = "notificationSentUtc", EmitDefaultValue = true)]
         public DateTimeOffset NotificationSentUtc { get; set; }
 
         /// <summary>
         /// Gets or Sets NotificationType
         /// </summary>
+        [Required]
         [DataMember(Name = "notificationType", EmitDefaultValue = true)]
         public NotificationType NotificationType { get; set; }
 
         /// <summary>
         /// Gets or Sets Payload
         /// </summary>
+        [Required]
         [DataMember(Name = "payload", EmitDefaultValue = false)]
         public SparkEventPayload Payload { get; set; }
 

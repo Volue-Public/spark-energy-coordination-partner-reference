@@ -34,13 +34,26 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMpidEligibilityResponse" /> class.
         /// </summary>
-        /// <param name="meterPointId">meterPointId.</param>
-        /// <param name="isEligible">isEligible.</param>
+        [JsonConstructorAttribute]
+        protected GetMpidEligibilityResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetMpidEligibilityResponse" /> class.
+        /// </summary>
+        /// <param name="meterPointId">meterPointId (required).</param>
+        /// <param name="isEligible">isEligible (required).</param>
         public GetMpidEligibilityResponse(
             string meterPointId = default(string),
             bool isEligible = default(bool)
         )
         {
+            // to ensure "meterPointId" is required (not null)
+            if (meterPointId == null)
+            {
+                throw new ArgumentNullException(
+                    "meterPointId is a required property for GetMpidEligibilityResponse and cannot be null"
+                );
+            }
             this.MeterPointId = meterPointId;
             this.IsEligible = isEligible;
         }
@@ -48,13 +61,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets MeterPointId
         /// </summary>
-        [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
+        [DataMember(Name = "meterPointId", IsRequired = true, EmitDefaultValue = true)]
         public string MeterPointId { get; set; }
 
         /// <summary>
         /// Gets or Sets IsEligible
         /// </summary>
-        [DataMember(Name = "isEligible", EmitDefaultValue = true)]
+        [DataMember(Name = "isEligible", IsRequired = true, EmitDefaultValue = true)]
         public bool IsEligible { get; set; }
 
         /// <summary>

@@ -46,15 +46,15 @@ public class EnergyCurvePoint {
    *
    * @return timestamp
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_TIMESTAMP)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
   @JsonProperty(JSON_PROPERTY_TIMESTAMP)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTimestamp(OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
@@ -70,15 +70,15 @@ public class EnergyCurvePoint {
    *
    * @return kiloWattHours
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_KILO_WATT_HOURS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Double getKiloWattHours() {
     return kiloWattHours;
   }
 
   @JsonProperty(JSON_PROPERTY_KILO_WATT_HOURS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setKiloWattHours(Double kiloWattHours) {
     this.kiloWattHours = kiloWattHours;
   }

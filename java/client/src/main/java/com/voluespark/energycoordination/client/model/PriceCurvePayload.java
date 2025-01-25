@@ -72,15 +72,15 @@ public class PriceCurvePayload extends SparkEventPayload {
    *
    * @return targets
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_TARGETS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<PriceCurveTarget> getTargets() {
     return targets;
   }
 
   @JsonProperty(JSON_PROPERTY_TARGETS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTargets(List<PriceCurveTarget> targets) {
     this.targets = targets;
   }
@@ -96,15 +96,15 @@ public class PriceCurvePayload extends SparkEventPayload {
    *
    * @return priceCurveDelta
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_PRICE_CURVE_DELTA)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public PriceCurve getPriceCurveDelta() {
     return priceCurveDelta;
   }
 
   @JsonProperty(JSON_PROPERTY_PRICE_CURVE_DELTA)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPriceCurveDelta(PriceCurve priceCurveDelta) {
     this.priceCurveDelta = priceCurveDelta;
   }
@@ -120,15 +120,15 @@ public class PriceCurvePayload extends SparkEventPayload {
    *
    * @return priceArea
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_PRICE_AREA)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public PriceArea getPriceArea() {
     return priceArea;
   }
 
   @JsonProperty(JSON_PROPERTY_PRICE_AREA)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPriceArea(PriceArea priceArea) {
     this.priceArea = priceArea;
   }

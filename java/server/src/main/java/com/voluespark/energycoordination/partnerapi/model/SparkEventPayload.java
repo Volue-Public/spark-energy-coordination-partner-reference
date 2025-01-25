@@ -37,6 +37,15 @@ public class SparkEventPayload {
 
   private SparkEventPayloadType payloadType;
 
+  public SparkEventPayload() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public SparkEventPayload(SparkEventPayloadType payloadType) {
+    this.payloadType = payloadType;
+  }
+
   public SparkEventPayload payloadType(SparkEventPayloadType payloadType) {
     this.payloadType = payloadType;
     return this;
@@ -47,8 +56,9 @@ public class SparkEventPayload {
    *
    * @return payloadType
    */
+  @NotNull
   @Valid
-  @Schema(name = "payloadType", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "payloadType", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("payloadType")
   public SparkEventPayloadType getPayloadType() {
     return payloadType;

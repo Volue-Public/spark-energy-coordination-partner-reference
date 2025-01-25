@@ -22,6 +22,22 @@ public class PriceCurvePayload extends SparkEventPayload {
 
   private PriceArea priceArea;
 
+  public PriceCurvePayload() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public PriceCurvePayload(
+      List<@Valid PriceCurveTarget> targets,
+      PriceCurve priceCurveDelta,
+      PriceArea priceArea,
+      SparkEventPayloadType payloadType) {
+    super(payloadType);
+    this.targets = targets;
+    this.priceCurveDelta = priceCurveDelta;
+    this.priceArea = priceArea;
+  }
+
   public PriceCurvePayload targets(List<@Valid PriceCurveTarget> targets) {
     this.targets = targets;
     return this;
@@ -40,8 +56,9 @@ public class PriceCurvePayload extends SparkEventPayload {
    *
    * @return targets
    */
+  @NotNull
   @Valid
-  @Schema(name = "targets", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "targets", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("targets")
   public List<@Valid PriceCurveTarget> getTargets() {
     return targets;
@@ -61,8 +78,9 @@ public class PriceCurvePayload extends SparkEventPayload {
    *
    * @return priceCurveDelta
    */
+  @NotNull
   @Valid
-  @Schema(name = "priceCurveDelta", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "priceCurveDelta", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("priceCurveDelta")
   public PriceCurve getPriceCurveDelta() {
     return priceCurveDelta;
@@ -82,8 +100,9 @@ public class PriceCurvePayload extends SparkEventPayload {
    *
    * @return priceArea
    */
+  @NotNull
   @Valid
-  @Schema(name = "priceArea", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "priceArea", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("priceArea")
   public PriceArea getPriceArea() {
     return priceArea;

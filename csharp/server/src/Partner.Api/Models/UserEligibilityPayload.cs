@@ -31,18 +31,21 @@ namespace Partner.Api.Models
         /// <summary>
         /// Gets or Sets LastUpdated
         /// </summary>
+        [Required]
         [DataMember(Name = "lastUpdated", EmitDefaultValue = true)]
         public DateTimeOffset LastUpdated { get; set; }
 
         /// <summary>
         /// Gets or Sets AddedUsers
         /// </summary>
+        [Required]
         [DataMember(Name = "addedUsers", EmitDefaultValue = false)]
         public List<string> AddedUsers { get; set; }
 
         /// <summary>
         /// Gets or Sets RemovedUsers
         /// </summary>
+        [Required]
         [DataMember(Name = "removedUsers", EmitDefaultValue = false)]
         public List<string> RemovedUsers { get; set; }
 

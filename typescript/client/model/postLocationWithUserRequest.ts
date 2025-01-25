@@ -15,12 +15,12 @@ import { Coordinate } from './coordinate';
 import { LocationType } from './locationType';
 
 export class PostLocationWithUserRequest {
-    'locationId'?: string;
+    'locationId': string;
     'locationType'?: LocationType;
     'coordinates'?: Coordinate;
     'meterPointId'?: string | null;
     'meterPointIds'?: Array<string> | null;
-    'userId'?: string;
+    'userId': string;
 
     static discriminator: string | undefined = undefined;
 

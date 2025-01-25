@@ -45,6 +45,8 @@ public class ResourcesApi {
    * Delete Resource Returns 204 No Content if the resource was deleted successfully. Returns 404
    * Not Found if the resource to delete does not exist.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>400</b> - Bad Request
@@ -104,6 +106,8 @@ public class ResourcesApi {
    * Delete Resource Returns 204 No Content if the resource was deleted successfully. Returns 404
    * Not Found if the resource to delete does not exist.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>400</b> - Bad Request
@@ -121,6 +125,8 @@ public class ResourcesApi {
   /**
    * Delete Resource Returns 204 No Content if the resource was deleted successfully. Returns 404
    * Not Found if the resource to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -140,6 +146,8 @@ public class ResourcesApi {
   /**
    * Delete Resource Returns 204 No Content if the resource was deleted successfully. Returns 404
    * Not Found if the resource to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *

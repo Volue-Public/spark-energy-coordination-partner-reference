@@ -34,21 +34,34 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets ResourceType
         /// </summary>
-        [DataMember(Name = "resourceType", EmitDefaultValue = false)]
-        public ResourceType? ResourceType { get; set; }
+        [DataMember(Name = "resourceType", IsRequired = true, EmitDefaultValue = true)]
+        public ResourceType ResourceType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PostLocationBoundResourceRequest" /> class.
         /// </summary>
-        /// <param name="resourceId">resourceId.</param>
-        /// <param name="resourceType">resourceType.</param>
+        [JsonConstructorAttribute]
+        protected PostLocationBoundResourceRequest() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostLocationBoundResourceRequest" /> class.
+        /// </summary>
+        /// <param name="resourceId">resourceId (required).</param>
+        /// <param name="resourceType">resourceType (required).</param>
         /// <param name="meterPointId">meterPointId.</param>
         public PostLocationBoundResourceRequest(
             string resourceId = default(string),
-            ResourceType? resourceType = default(ResourceType?),
+            ResourceType resourceType = default(ResourceType),
             string meterPointId = default(string)
         )
         {
+            // to ensure "resourceId" is required (not null)
+            if (resourceId == null)
+            {
+                throw new ArgumentNullException(
+                    "resourceId is a required property for PostLocationBoundResourceRequest and cannot be null"
+                );
+            }
             this.ResourceId = resourceId;
             this.ResourceType = resourceType;
             this.MeterPointId = meterPointId;
@@ -57,7 +70,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets ResourceId
         /// </summary>
-        [DataMember(Name = "resourceId", EmitDefaultValue = false)]
+        [DataMember(Name = "resourceId", IsRequired = true, EmitDefaultValue = true)]
         public string ResourceId { get; set; }
 
         /// <summary>

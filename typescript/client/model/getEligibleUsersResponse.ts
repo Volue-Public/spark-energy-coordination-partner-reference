@@ -15,7 +15,7 @@ import { ApiPagination } from './apiPagination';
 import { GetUserResponse } from './getUserResponse';
 
 export class GetEligibleUsersResponse {
-    'pagination'?: ApiPagination;
+    'pagination': ApiPagination;
     'users'?: Array<GetUserResponse>;
 
     static discriminator: string | undefined = undefined;

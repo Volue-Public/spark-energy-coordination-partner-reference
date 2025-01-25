@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { SparkEventPayloadType } from './sparkEventPayloadType';
 
 export class SparkEventPayload {
-    'payloadType'?: SparkEventPayloadType;
+    'payloadType': SparkEventPayloadType;
 
     static discriminator: string | undefined = "payloadType";
 

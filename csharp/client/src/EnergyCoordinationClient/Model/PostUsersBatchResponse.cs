@@ -34,16 +34,29 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostUsersBatchResponse" /> class.
         /// </summary>
-        /// <param name="users">users.</param>
+        [JsonConstructorAttribute]
+        protected PostUsersBatchResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostUsersBatchResponse" /> class.
+        /// </summary>
+        /// <param name="users">users (required).</param>
         public PostUsersBatchResponse(List<GetUserResponse> users = default(List<GetUserResponse>))
         {
+            // to ensure "users" is required (not null)
+            if (users == null)
+            {
+                throw new ArgumentNullException(
+                    "users is a required property for PostUsersBatchResponse and cannot be null"
+                );
+            }
             this.Users = users;
         }
 
         /// <summary>
         /// Gets or Sets Users
         /// </summary>
-        [DataMember(Name = "users", EmitDefaultValue = false)]
+        [DataMember(Name = "users", IsRequired = true, EmitDefaultValue = true)]
         public List<GetUserResponse> Users { get; set; }
 
         /// <summary>

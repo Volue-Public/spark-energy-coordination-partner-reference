@@ -40,21 +40,34 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Problem" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Problem() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Problem" /> class.
+        /// </summary>
         /// <param name="problemType">problemType.</param>
-        /// <param name="message">message.</param>
+        /// <param name="message">message (required).</param>
         public Problem(
             ProblemType? problemType = default(ProblemType?),
             string message = default(string)
         )
         {
-            this.ProblemType = problemType;
+            // to ensure "message" is required (not null)
+            if (message == null)
+            {
+                throw new ArgumentNullException(
+                    "message is a required property for Problem and cannot be null"
+                );
+            }
             this.Message = message;
+            this.ProblemType = problemType;
         }
 
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
-        [DataMember(Name = "message", EmitDefaultValue = false)]
+        [DataMember(Name = "message", IsRequired = true, EmitDefaultValue = true)]
         public string Message { get; set; }
 
         /// <summary>

@@ -49,15 +49,15 @@ public class PostLocationsBatchRequest {
    *
    * @return locations
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_LOCATIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<PostLocationWithUserRequest> getLocations() {
     return locations;
   }
 
   @JsonProperty(JSON_PROPERTY_LOCATIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLocations(List<PostLocationWithUserRequest> locations) {
     this.locations = locations;
   }

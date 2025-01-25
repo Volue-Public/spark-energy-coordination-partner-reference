@@ -84,6 +84,7 @@
             "$ref" : "#/components/schemas/SparkEventPayload"
           }
         },
+        "required" : [ "eventCreatedAtUtc", "eventId", "notificationId", "notificationSentUtc", "notificationType", "payload" ],
         "type" : "object"
       },
       "NotificationId" : {
@@ -113,6 +114,7 @@
             "$ref" : "#/components/schemas/SparkEventPayloadType"
           }
         },
+        "required" : [ "payloadType" ],
         "type" : "object"
       },
       "SparkEventPayloadType" : {
@@ -138,6 +140,7 @@
             "$ref" : "#/components/schemas/PriceArea"
           }
         },
+        "required" : [ "payloadType", "priceArea", "priceCurveDelta", "targets" ],
         "type" : "object"
       },
       "PriceCurveTarget" : {
@@ -150,6 +153,7 @@
             "type" : "string"
           }
         },
+        "required" : [ "locationId", "resourceId" ],
         "type" : "object"
       },
       "ResourceId" : {
@@ -230,6 +234,7 @@
             "type" : "array"
           }
         },
+        "required" : [ "addedUsers", "lastUpdated", "payloadType", "removedUsers" ],
         "type" : "object"
       },
       "LocationLPCPayload" : {
@@ -245,6 +250,7 @@
             "type" : "array"
           }
         },
+        "required" : [ "payloadType", "targets" ],
         "type" : "object"
       },
       "LocationLPCTarget" : {
@@ -268,6 +274,7 @@
             "type" : "array"
           }
         },
+        "required" : [ "locationId", "meterPointId", "points", "resolution" ],
         "type" : "object"
       },
       "MeterPointId" : {
@@ -300,6 +307,7 @@
             "type" : "array"
           }
         },
+        "required" : [ "payloadType", "targets" ],
         "type" : "object"
       },
       "ResourceLPCTarget" : {
@@ -326,6 +334,7 @@
             "type" : "array"
           }
         },
+        "required" : [ "locationId", "meterPointId", "points", "resolution", "resourceId" ],
         "type" : "object"
       },
       "LPCReservationPayload" : {
@@ -341,6 +350,7 @@
             "type" : "array"
           }
         },
+        "required" : [ "payloadType", "targets" ],
         "type" : "object"
       }
     }

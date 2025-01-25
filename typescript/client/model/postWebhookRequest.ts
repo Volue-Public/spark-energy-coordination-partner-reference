@@ -16,7 +16,7 @@ import { NotificationType } from './notificationType';
 export class PostWebhookRequest {
     'name'?: string | null;
     'webhookSecret'?: string | null;
-    'webhookUrl'?: string;
+    'webhookUrl': string;
     'notificationTypes'?: Array<NotificationType>;
 
     static discriminator: string | undefined = undefined;

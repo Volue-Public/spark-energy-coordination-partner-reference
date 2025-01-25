@@ -18,6 +18,17 @@ public class ResourceLPCPayload extends SparkEventPayload {
 
   @Valid private List<@Valid ResourceLPCTarget> targets = new ArrayList<>();
 
+  public ResourceLPCPayload() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public ResourceLPCPayload(
+      List<@Valid ResourceLPCTarget> targets, SparkEventPayloadType payloadType) {
+    super(payloadType);
+    this.targets = targets;
+  }
+
   public ResourceLPCPayload targets(List<@Valid ResourceLPCTarget> targets) {
     this.targets = targets;
     return this;
@@ -36,8 +47,9 @@ public class ResourceLPCPayload extends SparkEventPayload {
    *
    * @return targets
    */
+  @NotNull
   @Valid
-  @Schema(name = "targets", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "targets", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("targets")
   public List<@Valid ResourceLPCTarget> getTargets() {
     return targets;

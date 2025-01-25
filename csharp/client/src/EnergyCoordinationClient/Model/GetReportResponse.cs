@@ -34,7 +34,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetReportResponse" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
+        [JsonConstructorAttribute]
+        protected GetReportResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetReportResponse" /> class.
+        /// </summary>
+        /// <param name="id">id (required).</param>
         /// <param name="eventId">eventId.</param>
         /// <param name="createdAt">createdAt.</param>
         public GetReportResponse(
@@ -43,6 +49,13 @@ namespace EnergyCoordinationClient.Model
             DateTimeOffset createdAt = default(DateTimeOffset)
         )
         {
+            // to ensure "id" is required (not null)
+            if (id == null)
+            {
+                throw new ArgumentNullException(
+                    "id is a required property for GetReportResponse and cannot be null"
+                );
+            }
             this.Id = id;
             this.EventId = eventId;
             this.CreatedAt = createdAt;
@@ -51,7 +64,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>

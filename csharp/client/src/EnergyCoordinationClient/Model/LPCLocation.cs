@@ -34,27 +34,47 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LPCLocation" /> class.
         /// </summary>
-        /// <param name="locationId">locationId.</param>
-        /// <param name="meterPointId">meterPointId.</param>
+        [JsonConstructorAttribute]
+        protected LPCLocation() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LPCLocation" /> class.
+        /// </summary>
+        /// <param name="locationId">locationId (required).</param>
+        /// <param name="meterPointId">meterPointId (required).</param>
         public LPCLocation(
             string locationId = default(string),
             string meterPointId = default(string)
         )
         {
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new ArgumentNullException(
+                    "locationId is a required property for LPCLocation and cannot be null"
+                );
+            }
             this.LocationId = locationId;
+            // to ensure "meterPointId" is required (not null)
+            if (meterPointId == null)
+            {
+                throw new ArgumentNullException(
+                    "meterPointId is a required property for LPCLocation and cannot be null"
+                );
+            }
             this.MeterPointId = meterPointId;
         }
 
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
-        [DataMember(Name = "locationId", EmitDefaultValue = false)]
+        [DataMember(Name = "locationId", IsRequired = true, EmitDefaultValue = true)]
         public string LocationId { get; set; }
 
         /// <summary>
         /// Gets or Sets MeterPointId
         /// </summary>
-        [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
+        [DataMember(Name = "meterPointId", IsRequired = true, EmitDefaultValue = true)]
         public string MeterPointId { get; set; }
 
         /// <summary>

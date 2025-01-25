@@ -21,15 +21,15 @@ import { ResourceLPCAcknowledgmentReportPayload } from './resourceLPCAcknowledgm
 import { SparkReportPayloadType } from './sparkReportPayloadType';
 
 export class PostReportRequestPayloadsInner {
-    'locationId'?: string;
-    'meterPointId'?: string;
+    'locationId': string;
+    'meterPointId': string;
     'points'?: Array<EnergyCurvePoint>;
-    'resolution'?: string;
+    'resolution': string;
     'payloadType'?: SparkReportPayloadType;
     'acknowledgedTargets'?: Array<LPCLocation>;
     'declinedTargets'?: Array<LPCLocation>;
-    'baseline'?: Array<EnergyCurvePoint>;
-    'flexibility'?: Array<EnergyCurvePoint>;
+    'baseline': Array<EnergyCurvePoint>;
+    'flexibility': Array<EnergyCurvePoint>;
 
     static discriminator: string | undefined = undefined;
 

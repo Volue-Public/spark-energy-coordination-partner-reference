@@ -14,9 +14,9 @@ import { RequestFile } from './models';
 import { ResourceType } from './resourceType';
 
 export class GetResourceResponse {
-    'resourceId'?: string;
-    'resourceType'?: ResourceType;
-    'userId'?: string;
+    'resourceId': string;
+    'resourceType': ResourceType;
+    'userId': string;
     'locationId'?: string | null;
     'meterPointId'?: string | null;
 

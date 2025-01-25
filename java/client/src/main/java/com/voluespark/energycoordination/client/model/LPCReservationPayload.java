@@ -62,15 +62,15 @@ public class LPCReservationPayload extends SparkEventPayload {
    *
    * @return targets
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_TARGETS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<LocationLPCTarget> getTargets() {
     return targets;
   }
 
   @JsonProperty(JSON_PROPERTY_TARGETS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTargets(List<LocationLPCTarget> targets) {
     this.targets = targets;
   }

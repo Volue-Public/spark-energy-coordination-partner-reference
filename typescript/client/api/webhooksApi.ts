@@ -109,7 +109,7 @@ export class WebhooksApi {
             .replace('{' + 'webhookId' + '}', encodeURIComponent(String(webhookId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/problem+json', 'application/json'];
+        const produces = ['application/json', 'application/problem+json'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -543,7 +543,7 @@ export class WebhooksApi {
      * @summary Create a Webhook
      * @param postWebhookRequest 
      */
-    public async postWebhook (postWebhookRequest: PostWebhookRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetWebhookResponse;  }> {
+    public async postWebhook (postWebhookRequest: PostWebhookRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -594,13 +594,12 @@ export class WebhooksApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: GetWebhookResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "GetWebhookResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -700,6 +699,13 @@ export class WebhooksApi {
             .replace('{' + 'webhookId' + '}', encodeURIComponent(String(webhookId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
         let localVarFormParams: any = {};
 
         // verify required parameter 'webhookId' is not null or undefined

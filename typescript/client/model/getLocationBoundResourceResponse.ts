@@ -14,10 +14,10 @@ import { RequestFile } from './models';
 import { ResourceType } from './resourceType';
 
 export class GetLocationBoundResourceResponse {
-    'resourceId'?: string;
-    'resourceType'?: ResourceType;
-    'locationId'?: string;
-    'userId'?: string;
+    'resourceId': string;
+    'resourceType': ResourceType;
+    'locationId': string;
+    'userId': string;
     'meterPointId'?: string | null;
 
     static discriminator: string | undefined = undefined;

@@ -34,28 +34,55 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets ResourceType
         /// </summary>
-        [DataMember(Name = "resourceType", EmitDefaultValue = false)]
-        public ResourceType? ResourceType { get; set; }
+        [DataMember(Name = "resourceType", IsRequired = true, EmitDefaultValue = true)]
+        public ResourceType ResourceType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetLocationBoundResourceResponse" /> class.
         /// </summary>
-        /// <param name="resourceId">resourceId.</param>
-        /// <param name="resourceType">resourceType.</param>
-        /// <param name="locationId">locationId.</param>
-        /// <param name="userId">userId.</param>
+        [JsonConstructorAttribute]
+        protected GetLocationBoundResourceResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetLocationBoundResourceResponse" /> class.
+        /// </summary>
+        /// <param name="resourceId">resourceId (required).</param>
+        /// <param name="resourceType">resourceType (required).</param>
+        /// <param name="locationId">locationId (required).</param>
+        /// <param name="userId">userId (required).</param>
         /// <param name="meterPointId">meterPointId.</param>
         public GetLocationBoundResourceResponse(
             string resourceId = default(string),
-            ResourceType? resourceType = default(ResourceType?),
+            ResourceType resourceType = default(ResourceType),
             string locationId = default(string),
             string userId = default(string),
             string meterPointId = default(string)
         )
         {
+            // to ensure "resourceId" is required (not null)
+            if (resourceId == null)
+            {
+                throw new ArgumentNullException(
+                    "resourceId is a required property for GetLocationBoundResourceResponse and cannot be null"
+                );
+            }
             this.ResourceId = resourceId;
             this.ResourceType = resourceType;
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new ArgumentNullException(
+                    "locationId is a required property for GetLocationBoundResourceResponse and cannot be null"
+                );
+            }
             this.LocationId = locationId;
+            // to ensure "userId" is required (not null)
+            if (userId == null)
+            {
+                throw new ArgumentNullException(
+                    "userId is a required property for GetLocationBoundResourceResponse and cannot be null"
+                );
+            }
             this.UserId = userId;
             this.MeterPointId = meterPointId;
         }
@@ -63,19 +90,19 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets ResourceId
         /// </summary>
-        [DataMember(Name = "resourceId", EmitDefaultValue = false)]
+        [DataMember(Name = "resourceId", IsRequired = true, EmitDefaultValue = true)]
         public string ResourceId { get; set; }
 
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
-        [DataMember(Name = "locationId", EmitDefaultValue = false)]
+        [DataMember(Name = "locationId", IsRequired = true, EmitDefaultValue = true)]
         public string LocationId { get; set; }
 
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
-        [DataMember(Name = "userId", EmitDefaultValue = false)]
+        [DataMember(Name = "userId", IsRequired = true, EmitDefaultValue = true)]
         public string UserId { get; set; }
 
         /// <summary>

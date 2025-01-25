@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class PriceCurveTarget {
-    'resourceId'?: string;
-    'locationId'?: string;
+    'resourceId': string;
+    'locationId': string;
 
     static discriminator: string | undefined = undefined;
 

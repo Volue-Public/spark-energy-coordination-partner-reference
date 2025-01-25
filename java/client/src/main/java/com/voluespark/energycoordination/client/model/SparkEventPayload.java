@@ -60,15 +60,15 @@ public class SparkEventPayload {
    *
    * @return payloadType
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_PAYLOAD_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public SparkEventPayloadType getPayloadType() {
     return payloadType;
   }
 
   @JsonProperty(JSON_PROPERTY_PAYLOAD_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPayloadType(SparkEventPayloadType payloadType) {
     this.payloadType = payloadType;
   }

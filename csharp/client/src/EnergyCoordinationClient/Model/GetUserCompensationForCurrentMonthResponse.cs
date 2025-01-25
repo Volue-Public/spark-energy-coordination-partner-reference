@@ -34,8 +34,14 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetUserCompensationForCurrentMonthResponse" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected GetUserCompensationForCurrentMonthResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetUserCompensationForCurrentMonthResponse" /> class.
+        /// </summary>
         /// <param name="userId">userId.</param>
-        /// <param name="period">period.</param>
+        /// <param name="period">period (required).</param>
         /// <param name="locationCompensations">locationCompensations.</param>
         public GetUserCompensationForCurrentMonthResponse(
             string userId = default(string),
@@ -43,8 +49,15 @@ namespace EnergyCoordinationClient.Model
             List<LocationCompensation> locationCompensations = default(List<LocationCompensation>)
         )
         {
-            this.UserId = userId;
+            // to ensure "period" is required (not null)
+            if (period == null)
+            {
+                throw new ArgumentNullException(
+                    "period is a required property for GetUserCompensationForCurrentMonthResponse and cannot be null"
+                );
+            }
             this.Period = period;
+            this.UserId = userId;
             this.LocationCompensations = locationCompensations;
         }
 
@@ -57,7 +70,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Period
         /// </summary>
-        [DataMember(Name = "period", EmitDefaultValue = false)]
+        [DataMember(Name = "period", IsRequired = true, EmitDefaultValue = true)]
         public Period Period { get; set; }
 
         /// <summary>

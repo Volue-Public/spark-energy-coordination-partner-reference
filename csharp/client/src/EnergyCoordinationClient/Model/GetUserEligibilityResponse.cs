@@ -34,13 +34,26 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetUserEligibilityResponse" /> class.
         /// </summary>
-        /// <param name="userId">userId.</param>
-        /// <param name="isEligible">isEligible.</param>
+        [JsonConstructorAttribute]
+        protected GetUserEligibilityResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetUserEligibilityResponse" /> class.
+        /// </summary>
+        /// <param name="userId">userId (required).</param>
+        /// <param name="isEligible">isEligible (required).</param>
         public GetUserEligibilityResponse(
             string userId = default(string),
             bool isEligible = default(bool)
         )
         {
+            // to ensure "userId" is required (not null)
+            if (userId == null)
+            {
+                throw new ArgumentNullException(
+                    "userId is a required property for GetUserEligibilityResponse and cannot be null"
+                );
+            }
             this.UserId = userId;
             this.IsEligible = isEligible;
         }
@@ -48,13 +61,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
-        [DataMember(Name = "userId", EmitDefaultValue = false)]
+        [DataMember(Name = "userId", IsRequired = true, EmitDefaultValue = true)]
         public string UserId { get; set; }
 
         /// <summary>
         /// Gets or Sets IsEligible
         /// </summary>
-        [DataMember(Name = "isEligible", EmitDefaultValue = true)]
+        [DataMember(Name = "isEligible", IsRequired = true, EmitDefaultValue = true)]
         public bool IsEligible { get; set; }
 
         /// <summary>

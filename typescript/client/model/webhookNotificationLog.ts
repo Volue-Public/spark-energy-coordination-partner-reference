@@ -14,14 +14,14 @@ import { RequestFile } from './models';
 import { NotificationType } from './notificationType';
 
 export class WebhookNotificationLog {
-    'webhookId'?: string;
-    'tenantId'?: string;
+    'webhookId': string;
+    'tenantId': string;
     'partnerEventId'?: string;
     'notificationId'?: string;
     'notificationType'?: NotificationType;
     'notificationSent'?: Date;
     'sparkSignature'?: string | null;
-    'webhookUrl'?: string;
+    'webhookUrl': string;
     'requestTimeout'?: boolean;
     'responseStatusCode'?: number | null;
     'requestDurationMs'?: number | null;

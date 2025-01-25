@@ -49,15 +49,15 @@ public class GetWebhooksResponse {
    *
    * @return webhooks
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_WEBHOOKS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<GetWebhookResponse> getWebhooks() {
     return webhooks;
   }
 
   @JsonProperty(JSON_PROPERTY_WEBHOOKS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhooks(List<GetWebhookResponse> webhooks) {
     this.webhooks = webhooks;
   }

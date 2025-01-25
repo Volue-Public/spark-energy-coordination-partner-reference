@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class GetUserEligibilityResponse {
-    'userId'?: string;
-    'isEligible'?: boolean;
+    'userId': string;
+    'isEligible': boolean;
 
     static discriminator: string | undefined = undefined;
 

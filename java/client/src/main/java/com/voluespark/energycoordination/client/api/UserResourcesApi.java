@@ -1,7 +1,6 @@
 package com.voluespark.energycoordination.client.api;
 
 
-import com.voluespark.energycoordination.client.model.GetResourceResponse;
 import com.voluespark.energycoordination.client.model.GetUserResourcesResponse;
 import com.voluespark.energycoordination.client.model.PostVehicleResourceRequest;
 import java.util.HashMap;
@@ -160,13 +159,14 @@ public class UserResourcesApi {
   /**
    * Create Vehicle Resource
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param userId The userId parameter
    * @param postVehicleResourceRequest The postVehicleResourceRequest parameter
-   * @return GetResourceResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postVehicleRequestCreation(
@@ -210,8 +210,7 @@ public class UserResourcesApi {
 
     String[] localVarAuthNames = new String[] {"Bearer"};
 
-    ParameterizedTypeReference<GetResourceResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetResourceResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return apiClient.invokeAPI(
         "/users/{userId}/vehicles",
         HttpMethod.POST,
@@ -230,20 +229,20 @@ public class UserResourcesApi {
   /**
    * Create Vehicle Resource
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param userId The userId parameter
    * @param postVehicleResourceRequest The postVehicleResourceRequest parameter
-   * @return GetResourceResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetResourceResponse> postVehicle(
+  public Mono<Void> postVehicle(
       String userId, PostVehicleResourceRequest postVehicleResourceRequest)
       throws WebClientResponseException {
-    ParameterizedTypeReference<GetResourceResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetResourceResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postVehicleRequestCreation(userId, postVehicleResourceRequest)
         .bodyToMono(localVarReturnType);
   }
@@ -251,26 +250,28 @@ public class UserResourcesApi {
   /**
    * Create Vehicle Resource
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param userId The userId parameter
    * @param postVehicleResourceRequest The postVehicleResourceRequest parameter
-   * @return ResponseEntity&lt;GetResourceResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetResourceResponse>> postVehicleWithHttpInfo(
+  public Mono<ResponseEntity<Void>> postVehicleWithHttpInfo(
       String userId, PostVehicleResourceRequest postVehicleResourceRequest)
       throws WebClientResponseException {
-    ParameterizedTypeReference<GetResourceResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetResourceResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postVehicleRequestCreation(userId, postVehicleResourceRequest)
         .toEntity(localVarReturnType);
   }
 
   /**
    * Create Vehicle Resource
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *

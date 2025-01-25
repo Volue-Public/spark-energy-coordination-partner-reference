@@ -14,11 +14,11 @@ import { RequestFile } from './models';
 import { LPCDataPoint } from './lPCDataPoint';
 
 export class ResourceLPCTarget {
-    'meterPointId'?: string;
-    'locationId'?: string;
-    'resourceId'?: string;
-    'resolution'?: string;
-    'points'?: Array<LPCDataPoint>;
+    'meterPointId': string;
+    'locationId': string;
+    'resourceId': string;
+    'resolution': string;
+    'points': Array<LPCDataPoint>;
 
     static discriminator: string | undefined = undefined;
 

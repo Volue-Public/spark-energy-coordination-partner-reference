@@ -65,15 +65,15 @@ public class UserEligibilityPayload extends SparkEventPayload {
    *
    * @return lastUpdated
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getLastUpdated() {
     return lastUpdated;
   }
 
   @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastUpdated(OffsetDateTime lastUpdated) {
     this.lastUpdated = lastUpdated;
   }
@@ -97,15 +97,15 @@ public class UserEligibilityPayload extends SparkEventPayload {
    *
    * @return addedUsers
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ADDED_USERS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<String> getAddedUsers() {
     return addedUsers;
   }
 
   @JsonProperty(JSON_PROPERTY_ADDED_USERS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAddedUsers(List<String> addedUsers) {
     this.addedUsers = addedUsers;
   }
@@ -129,15 +129,15 @@ public class UserEligibilityPayload extends SparkEventPayload {
    *
    * @return removedUsers
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_REMOVED_USERS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<String> getRemovedUsers() {
     return removedUsers;
   }
 
   @JsonProperty(JSON_PROPERTY_REMOVED_USERS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRemovedUsers(List<String> removedUsers) {
     this.removedUsers = removedUsers;
   }

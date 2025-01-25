@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class GetMpidEligibilityResponse {
-    'meterPointId'?: string;
-    'isEligible'?: boolean;
+    'meterPointId': string;
+    'isEligible': boolean;
 
     static discriminator: string | undefined = undefined;
 

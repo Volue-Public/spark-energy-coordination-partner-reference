@@ -34,8 +34,14 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetEventResponse" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected GetEventResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetEventResponse" /> class.
+        /// </summary>
         /// <param name="payload">payload.</param>
-        /// <param name="id">id.</param>
+        /// <param name="id">id (required).</param>
         /// <param name="createdAt">createdAt.</param>
         public GetEventResponse(
             GetEventResponsePayload payload = default(GetEventResponsePayload),
@@ -43,8 +49,15 @@ namespace EnergyCoordinationClient.Model
             DateTimeOffset createdAt = default(DateTimeOffset)
         )
         {
-            this.Payload = payload;
+            // to ensure "id" is required (not null)
+            if (id == null)
+            {
+                throw new ArgumentNullException(
+                    "id is a required property for GetEventResponse and cannot be null"
+                );
+            }
             this.Id = id;
+            this.Payload = payload;
             this.CreatedAt = createdAt;
         }
 
@@ -57,7 +70,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>

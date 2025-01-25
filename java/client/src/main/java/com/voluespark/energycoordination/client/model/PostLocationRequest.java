@@ -62,15 +62,15 @@ public class PostLocationRequest {
    *
    * @return locationId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getLocationId() {
     return locationId;
   }
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLocationId(String locationId) {
     this.locationId = locationId;
   }

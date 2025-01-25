@@ -75,15 +75,15 @@ public class GetUserCompensationForCurrentMonthResponse {
    *
    * @return period
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_PERIOD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Period getPeriod() {
     return period;
   }
 
   @JsonProperty(JSON_PROPERTY_PERIOD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPeriod(Period period) {
     this.period = period;
   }

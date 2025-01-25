@@ -418,7 +418,7 @@ export class UserLocationsApi {
      * @param userId 
      * @param postLocationRequest 
      */
-    public async postLocation (userId: string, postLocationRequest: PostLocationRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetLocationResponse;  }> {
+    public async postLocation (userId: string, postLocationRequest: PostLocationRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/users/{userId}/locations'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let localVarQueryParameters: any = {};
@@ -475,13 +475,12 @@ export class UserLocationsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: GetLocationResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "GetLocationResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -496,7 +495,7 @@ export class UserLocationsApi {
      * @summary Create Multiple User Locations
      * @param postLocationsBatchRequest 
      */
-    public async postLocations (postLocationsBatchRequest: PostLocationsBatchRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PostLocationsBatchResponse;  }> {
+    public async postLocations (postLocationsBatchRequest: PostLocationsBatchRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/users/locations/batch';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -547,13 +546,12 @@ export class UserLocationsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: PostLocationsBatchResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "PostLocationsBatchResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

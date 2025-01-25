@@ -36,11 +36,17 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EnergyUsageReportPayload" /> class.
         /// </summary>
-        /// <param name="resourceId">resourceId.</param>
+        [JsonConstructorAttribute]
+        protected EnergyUsageReportPayload() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EnergyUsageReportPayload" /> class.
+        /// </summary>
+        /// <param name="resourceId">resourceId (required).</param>
         /// <param name="locationId">locationId.</param>
         /// <param name="meterPointId">meterPointId.</param>
         /// <param name="points">points.</param>
-        /// <param name="resolution">resolution.</param>
+        /// <param name="resolution">resolution (required).</param>
         /// <param name="curvePoints">curvePoints.</param>
         /// <param name="payloadType">payloadType (default to SparkReportPayloadType.EnergyUsage).</param>
         public EnergyUsageReportPayload(
@@ -54,18 +60,32 @@ namespace EnergyCoordinationClient.Model
         )
             : base(payloadType)
         {
+            // to ensure "resourceId" is required (not null)
+            if (resourceId == null)
+            {
+                throw new ArgumentNullException(
+                    "resourceId is a required property for EnergyUsageReportPayload and cannot be null"
+                );
+            }
             this.ResourceId = resourceId;
+            // to ensure "resolution" is required (not null)
+            if (resolution == null)
+            {
+                throw new ArgumentNullException(
+                    "resolution is a required property for EnergyUsageReportPayload and cannot be null"
+                );
+            }
+            this.Resolution = resolution;
             this.LocationId = locationId;
             this.MeterPointId = meterPointId;
             this.Points = points;
-            this.Resolution = resolution;
             this.CurvePoints = curvePoints;
         }
 
         /// <summary>
         /// Gets or Sets ResourceId
         /// </summary>
-        [DataMember(Name = "resourceId", EmitDefaultValue = false)]
+        [DataMember(Name = "resourceId", IsRequired = true, EmitDefaultValue = true)]
         public string ResourceId { get; set; }
 
         /// <summary>
@@ -90,7 +110,7 @@ namespace EnergyCoordinationClient.Model
         /// Gets or Sets Resolution
         /// </summary>
         /// <example>02:00:00</example>
-        [DataMember(Name = "resolution", EmitDefaultValue = false)]
+        [DataMember(Name = "resolution", IsRequired = true, EmitDefaultValue = true)]
         public string Resolution { get; set; }
 
         /// <summary>

@@ -34,63 +34,90 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets NotificationType
         /// </summary>
-        [DataMember(Name = "notificationType", EmitDefaultValue = false)]
-        public NotificationType? NotificationType { get; set; }
+        [DataMember(Name = "notificationType", IsRequired = true, EmitDefaultValue = true)]
+        public NotificationType NotificationType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EventNotification" /> class.
         /// </summary>
-        /// <param name="notificationId">notificationId.</param>
-        /// <param name="eventId">eventId.</param>
-        /// <param name="eventCreatedAtUtc">eventCreatedAtUtc.</param>
-        /// <param name="notificationSentUtc">notificationSentUtc.</param>
-        /// <param name="notificationType">notificationType.</param>
-        /// <param name="payload">payload.</param>
+        [JsonConstructorAttribute]
+        protected EventNotification() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EventNotification" /> class.
+        /// </summary>
+        /// <param name="notificationId">notificationId (required).</param>
+        /// <param name="eventId">eventId (required).</param>
+        /// <param name="eventCreatedAtUtc">eventCreatedAtUtc (required).</param>
+        /// <param name="notificationSentUtc">notificationSentUtc (required).</param>
+        /// <param name="notificationType">notificationType (required).</param>
+        /// <param name="payload">payload (required).</param>
         public EventNotification(
             string notificationId = default(string),
             string eventId = default(string),
             DateTimeOffset eventCreatedAtUtc = default(DateTimeOffset),
             DateTimeOffset notificationSentUtc = default(DateTimeOffset),
-            NotificationType? notificationType = default(NotificationType?),
+            NotificationType notificationType = default(NotificationType),
             SparkEventPayload payload = default(SparkEventPayload)
         )
         {
+            // to ensure "notificationId" is required (not null)
+            if (notificationId == null)
+            {
+                throw new ArgumentNullException(
+                    "notificationId is a required property for EventNotification and cannot be null"
+                );
+            }
             this.NotificationId = notificationId;
+            // to ensure "eventId" is required (not null)
+            if (eventId == null)
+            {
+                throw new ArgumentNullException(
+                    "eventId is a required property for EventNotification and cannot be null"
+                );
+            }
             this.EventId = eventId;
             this.EventCreatedAtUtc = eventCreatedAtUtc;
             this.NotificationSentUtc = notificationSentUtc;
             this.NotificationType = notificationType;
+            // to ensure "payload" is required (not null)
+            if (payload == null)
+            {
+                throw new ArgumentNullException(
+                    "payload is a required property for EventNotification and cannot be null"
+                );
+            }
             this.Payload = payload;
         }
 
         /// <summary>
         /// Gets or Sets NotificationId
         /// </summary>
-        [DataMember(Name = "notificationId", EmitDefaultValue = false)]
+        [DataMember(Name = "notificationId", IsRequired = true, EmitDefaultValue = true)]
         public string NotificationId { get; set; }
 
         /// <summary>
         /// Gets or Sets EventId
         /// </summary>
-        [DataMember(Name = "eventId", EmitDefaultValue = false)]
+        [DataMember(Name = "eventId", IsRequired = true, EmitDefaultValue = true)]
         public string EventId { get; set; }
 
         /// <summary>
         /// Gets or Sets EventCreatedAtUtc
         /// </summary>
-        [DataMember(Name = "eventCreatedAtUtc", EmitDefaultValue = false)]
+        [DataMember(Name = "eventCreatedAtUtc", IsRequired = true, EmitDefaultValue = true)]
         public DateTimeOffset EventCreatedAtUtc { get; set; }
 
         /// <summary>
         /// Gets or Sets NotificationSentUtc
         /// </summary>
-        [DataMember(Name = "notificationSentUtc", EmitDefaultValue = false)]
+        [DataMember(Name = "notificationSentUtc", IsRequired = true, EmitDefaultValue = true)]
         public DateTimeOffset NotificationSentUtc { get; set; }
 
         /// <summary>
         /// Gets or Sets Payload
         /// </summary>
-        [DataMember(Name = "payload", EmitDefaultValue = false)]
+        [DataMember(Name = "payload", IsRequired = true, EmitDefaultValue = true)]
         public SparkEventPayload Payload { get; set; }
 
         /// <summary>

@@ -18,9 +18,9 @@ import { SparkEventPayload } from './sparkEventPayload';
 import { SparkEventPayloadType } from './sparkEventPayloadType';
 
 export class PriceCurvePayload extends SparkEventPayload {
-    'targets'?: Array<PriceCurveTarget>;
-    'priceCurveDelta'?: PriceCurve;
-    'priceArea'?: PriceArea;
+    'targets': Array<PriceCurveTarget>;
+    'priceCurveDelta': PriceCurve;
+    'priceArea': PriceArea;
 
     static discriminator: string | undefined = undefined;
 

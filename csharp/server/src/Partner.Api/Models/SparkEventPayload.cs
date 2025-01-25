@@ -42,6 +42,7 @@ namespace Partner.Api.Models
         /// <summary>
         /// Gets or Sets PayloadType
         /// </summary>
+        [Required]
         [DataMember(Name = "payloadType", EmitDefaultValue = true)]
         public SparkEventPayloadType PayloadType { get; set; }
 

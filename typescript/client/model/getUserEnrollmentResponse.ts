@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class GetUserEnrollmentResponse {
     'isEnrolled'?: boolean;
-    'userId'?: string;
+    'userId': string;
     'enrollmentId'?: string | null;
     'enrollmentDate'?: Date | null;
 

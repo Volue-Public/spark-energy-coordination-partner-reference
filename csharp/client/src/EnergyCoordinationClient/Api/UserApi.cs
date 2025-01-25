@@ -110,8 +110,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postUserRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetUserResponse</returns>
-        GetUserResponse PostUser(PostUserRequest postUserRequest, int operationIndex = 0);
+        /// <returns></returns>
+        void PostUser(PostUserRequest postUserRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create a User
@@ -122,8 +122,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postUserRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetUserResponse</returns>
-        ApiResponse<GetUserResponse> PostUserWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUserWithHttpInfo(
             PostUserRequest postUserRequest,
             int operationIndex = 0
         );
@@ -134,11 +134,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postUsersBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PostUsersBatchResponse</returns>
-        PostUsersBatchResponse PostUsers(
-            PostUsersBatchRequest postUsersBatchRequest,
-            int operationIndex = 0
-        );
+        /// <returns></returns>
+        void PostUsers(PostUsersBatchRequest postUsersBatchRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Multiple Users
@@ -149,8 +146,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postUsersBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PostUsersBatchResponse</returns>
-        ApiResponse<PostUsersBatchResponse> PostUsersWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersWithHttpInfo(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0
         );
@@ -285,8 +282,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postUserRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetUserResponse</returns>
-        System.Threading.Tasks.Task<GetUserResponse> PostUserAsync(
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUserAsync(
             PostUserRequest postUserRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -303,8 +300,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postUserRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetUserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUserResponse>> PostUserWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUserWithHttpInfoAsync(
             PostUserRequest postUserRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -321,8 +318,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postUsersBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PostUsersBatchResponse</returns>
-        System.Threading.Tasks.Task<PostUsersBatchResponse> PostUsersAsync(
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersAsync(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -339,8 +336,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postUsersBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PostUsersBatchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PostUsersBatchResponse>> PostUsersWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersWithHttpInfoAsync(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -1143,12 +1140,10 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postUserRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetUserResponse</returns>
-        public GetUserResponse PostUser(PostUserRequest postUserRequest, int operationIndex = 0)
+        /// <returns></returns>
+        public void PostUser(PostUserRequest postUserRequest, int operationIndex = 0)
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetUserResponse> localVarResponse =
-                PostUserWithHttpInfo(postUserRequest);
-            return localVarResponse.Data;
+            PostUserWithHttpInfo(postUserRequest);
         }
 
         /// <summary>
@@ -1157,8 +1152,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postUserRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetUserResponse</returns>
-        public EnergyCoordinationClient.Client.ApiResponse<GetUserResponse> PostUserWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<Object> PostUserWithHttpInfo(
             PostUserRequest postUserRequest,
             int operationIndex = 0
         )
@@ -1214,7 +1209,7 @@ namespace EnergyCoordinationClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<GetUserResponse>(
+            var localVarResponse = this.Client.Post<Object>(
                 "/users",
                 localVarRequestOptions,
                 this.Configuration
@@ -1238,18 +1233,16 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postUserRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetUserResponse</returns>
-        public async System.Threading.Tasks.Task<GetUserResponse> PostUserAsync(
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUserAsync(
             PostUserRequest postUserRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
                 default(global::System.Threading.CancellationToken)
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetUserResponse> localVarResponse =
-                await PostUserWithHttpInfoAsync(postUserRequest, operationIndex, cancellationToken)
-                    .ConfigureAwait(false);
-            return localVarResponse.Data;
+            await PostUserWithHttpInfoAsync(postUserRequest, operationIndex, cancellationToken)
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1259,8 +1252,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postUserRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetUserResponse)</returns>
-        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetUserResponse>> PostUserWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostUserWithHttpInfoAsync(
             PostUserRequest postUserRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -1319,7 +1312,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = await this
-                .AsynchronousClient.PostAsync<GetUserResponse>(
+                .AsynchronousClient.PostAsync<Object>(
                     "/users",
                     localVarRequestOptions,
                     this.Configuration,
@@ -1345,15 +1338,10 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postUsersBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PostUsersBatchResponse</returns>
-        public PostUsersBatchResponse PostUsers(
-            PostUsersBatchRequest postUsersBatchRequest,
-            int operationIndex = 0
-        )
+        /// <returns></returns>
+        public void PostUsers(PostUsersBatchRequest postUsersBatchRequest, int operationIndex = 0)
         {
-            EnergyCoordinationClient.Client.ApiResponse<PostUsersBatchResponse> localVarResponse =
-                PostUsersWithHttpInfo(postUsersBatchRequest);
-            return localVarResponse.Data;
+            PostUsersWithHttpInfo(postUsersBatchRequest);
         }
 
         /// <summary>
@@ -1362,8 +1350,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postUsersBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PostUsersBatchResponse</returns>
-        public EnergyCoordinationClient.Client.ApiResponse<PostUsersBatchResponse> PostUsersWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<Object> PostUsersWithHttpInfo(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0
         )
@@ -1419,7 +1407,7 @@ namespace EnergyCoordinationClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PostUsersBatchResponse>(
+            var localVarResponse = this.Client.Post<Object>(
                 "/users/batch",
                 localVarRequestOptions,
                 this.Configuration
@@ -1443,22 +1431,20 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postUsersBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PostUsersBatchResponse</returns>
-        public async System.Threading.Tasks.Task<PostUsersBatchResponse> PostUsersAsync(
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersAsync(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
                 default(global::System.Threading.CancellationToken)
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<PostUsersBatchResponse> localVarResponse =
-                await PostUsersWithHttpInfoAsync(
-                        postUsersBatchRequest,
-                        operationIndex,
-                        cancellationToken
-                    )
-                    .ConfigureAwait(false);
-            return localVarResponse.Data;
+            await PostUsersWithHttpInfoAsync(
+                    postUsersBatchRequest,
+                    operationIndex,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1468,8 +1454,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postUsersBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PostUsersBatchResponse)</returns>
-        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<PostUsersBatchResponse>> PostUsersWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostUsersWithHttpInfoAsync(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -1528,7 +1514,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = await this
-                .AsynchronousClient.PostAsync<PostUsersBatchResponse>(
+                .AsynchronousClient.PostAsync<Object>(
                     "/users/batch",
                     localVarRequestOptions,
                     this.Configuration,

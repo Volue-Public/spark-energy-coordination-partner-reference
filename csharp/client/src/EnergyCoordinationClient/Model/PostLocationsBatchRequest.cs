@@ -34,18 +34,31 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostLocationsBatchRequest" /> class.
         /// </summary>
-        /// <param name="locations">locations.</param>
+        [JsonConstructorAttribute]
+        protected PostLocationsBatchRequest() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostLocationsBatchRequest" /> class.
+        /// </summary>
+        /// <param name="locations">locations (required).</param>
         public PostLocationsBatchRequest(
             List<PostLocationWithUserRequest> locations = default(List<PostLocationWithUserRequest>)
         )
         {
+            // to ensure "locations" is required (not null)
+            if (locations == null)
+            {
+                throw new ArgumentNullException(
+                    "locations is a required property for PostLocationsBatchRequest and cannot be null"
+                );
+            }
             this.Locations = locations;
         }
 
         /// <summary>
         /// Gets or Sets Locations
         /// </summary>
-        [DataMember(Name = "locations", EmitDefaultValue = false)]
+        [DataMember(Name = "locations", IsRequired = true, EmitDefaultValue = true)]
         public List<PostLocationWithUserRequest> Locations { get; set; }
 
         /// <summary>

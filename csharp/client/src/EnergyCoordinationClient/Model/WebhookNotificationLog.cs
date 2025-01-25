@@ -40,14 +40,20 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookNotificationLog" /> class.
         /// </summary>
-        /// <param name="webhookId">webhookId.</param>
-        /// <param name="tenantId">tenantId.</param>
+        [JsonConstructorAttribute]
+        protected WebhookNotificationLog() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WebhookNotificationLog" /> class.
+        /// </summary>
+        /// <param name="webhookId">webhookId (required).</param>
+        /// <param name="tenantId">tenantId (required).</param>
         /// <param name="partnerEventId">partnerEventId.</param>
         /// <param name="notificationId">notificationId.</param>
         /// <param name="notificationType">notificationType.</param>
         /// <param name="notificationSent">notificationSent.</param>
         /// <param name="sparkSignature">sparkSignature.</param>
-        /// <param name="webhookUrl">webhookUrl.</param>
+        /// <param name="webhookUrl">webhookUrl (required).</param>
         /// <param name="requestTimeout">requestTimeout.</param>
         /// <param name="responseStatusCode">responseStatusCode.</param>
         /// <param name="requestDurationMs">requestDurationMs.</param>
@@ -65,14 +71,35 @@ namespace EnergyCoordinationClient.Model
             long? requestDurationMs = default(long?)
         )
         {
+            // to ensure "webhookId" is required (not null)
+            if (webhookId == null)
+            {
+                throw new ArgumentNullException(
+                    "webhookId is a required property for WebhookNotificationLog and cannot be null"
+                );
+            }
             this.WebhookId = webhookId;
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException(
+                    "tenantId is a required property for WebhookNotificationLog and cannot be null"
+                );
+            }
             this.TenantId = tenantId;
+            // to ensure "webhookUrl" is required (not null)
+            if (webhookUrl == null)
+            {
+                throw new ArgumentNullException(
+                    "webhookUrl is a required property for WebhookNotificationLog and cannot be null"
+                );
+            }
+            this.WebhookUrl = webhookUrl;
             this.PartnerEventId = partnerEventId;
             this.NotificationId = notificationId;
             this.NotificationType = notificationType;
             this.NotificationSent = notificationSent;
             this.SparkSignature = sparkSignature;
-            this.WebhookUrl = webhookUrl;
             this.RequestTimeout = requestTimeout;
             this.ResponseStatusCode = responseStatusCode;
             this.RequestDurationMs = requestDurationMs;
@@ -81,13 +108,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets WebhookId
         /// </summary>
-        [DataMember(Name = "webhookId", EmitDefaultValue = false)]
+        [DataMember(Name = "webhookId", IsRequired = true, EmitDefaultValue = true)]
         public string WebhookId { get; set; }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
@@ -117,7 +144,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets WebhookUrl
         /// </summary>
-        [DataMember(Name = "webhookUrl", EmitDefaultValue = false)]
+        [DataMember(Name = "webhookUrl", IsRequired = true, EmitDefaultValue = true)]
         public string WebhookUrl { get; set; }
 
         /// <summary>

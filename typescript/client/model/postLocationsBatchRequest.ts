@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { PostLocationWithUserRequest } from './postLocationWithUserRequest';
 
 export class PostLocationsBatchRequest {
-    'locations'?: Array<PostLocationWithUserRequest>;
+    'locations': Array<PostLocationWithUserRequest>;
 
     static discriminator: string | undefined = undefined;
 

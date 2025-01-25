@@ -15,9 +15,9 @@ import { SparkEventPayload } from './sparkEventPayload';
 import { SparkEventPayloadType } from './sparkEventPayloadType';
 
 export class UserEligibilityPayload extends SparkEventPayload {
-    'lastUpdated'?: Date;
-    'addedUsers'?: Array<string>;
-    'removedUsers'?: Array<string>;
+    'lastUpdated': Date;
+    'addedUsers': Array<string>;
+    'removedUsers': Array<string>;
 
     static discriminator: string | undefined = undefined;
 

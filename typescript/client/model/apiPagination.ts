@@ -13,9 +13,9 @@
 import { RequestFile } from './models';
 
 export class ApiPagination {
-    'totalRecords'?: number;
-    'pageSize'?: number;
-    'currentPage'?: number;
+    'totalRecords': number;
+    'pageSize': number;
+    'currentPage': number;
     'totalPages'?: number;
     'nextPage'?: number | null;
     'previousPage'?: number | null;

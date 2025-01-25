@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { GetWebhookResponse } from './getWebhookResponse';
 
 export class GetWebhooksResponse {
-    'webhooks'?: Array<GetWebhookResponse>;
+    'webhooks': Array<GetWebhookResponse>;
 
     static discriminator: string | undefined = undefined;
 

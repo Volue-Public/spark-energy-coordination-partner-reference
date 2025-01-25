@@ -14,8 +14,8 @@ import { RequestFile } from './models';
 import { ResourceType } from './resourceType';
 
 export class PostVehicleResourceRequest {
-    'resourceId'?: string;
-    'resourceType'?: ResourceType;
+    'resourceId': string;
+    'resourceType': ResourceType;
 
     static discriminator: string | undefined = undefined;
 

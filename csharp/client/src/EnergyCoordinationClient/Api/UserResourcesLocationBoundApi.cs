@@ -70,8 +70,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="locationId"></param>
         /// <param name="postLocationBoundResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetLocationBoundResourceResponse</returns>
-        GetLocationBoundResourceResponse PostLocationBoundResource(
+        /// <returns></returns>
+        void PostLocationBoundResource(
             string userId,
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
@@ -89,8 +89,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="locationId"></param>
         /// <param name="postLocationBoundResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetLocationBoundResourceResponse</returns>
-        ApiResponse<GetLocationBoundResourceResponse> PostLocationBoundResourceWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostLocationBoundResourceWithHttpInfo(
             string userId,
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
@@ -161,8 +161,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationBoundResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetLocationBoundResourceResponse</returns>
-        System.Threading.Tasks.Task<GetLocationBoundResourceResponse> PostLocationBoundResourceAsync(
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostLocationBoundResourceAsync(
             string userId,
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
@@ -183,10 +183,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationBoundResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetLocationBoundResourceResponse)</returns>
-        System.Threading.Tasks.Task<
-            ApiResponse<GetLocationBoundResourceResponse>
-        > PostLocationBoundResourceWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostLocationBoundResourceWithHttpInfoAsync(
             string userId,
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
@@ -618,21 +616,19 @@ namespace EnergyCoordinationClient.Api
         /// <param name="locationId"></param>
         /// <param name="postLocationBoundResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetLocationBoundResourceResponse</returns>
-        public GetLocationBoundResourceResponse PostLocationBoundResource(
+        /// <returns></returns>
+        public void PostLocationBoundResource(
             string userId,
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
             int operationIndex = 0
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetLocationBoundResourceResponse> localVarResponse =
-                PostLocationBoundResourceWithHttpInfo(
-                    userId,
-                    locationId,
-                    postLocationBoundResourceRequest
-                );
-            return localVarResponse.Data;
+            PostLocationBoundResourceWithHttpInfo(
+                userId,
+                locationId,
+                postLocationBoundResourceRequest
+            );
         }
 
         /// <summary>
@@ -643,8 +639,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="locationId"></param>
         /// <param name="postLocationBoundResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetLocationBoundResourceResponse</returns>
-        public EnergyCoordinationClient.Client.ApiResponse<GetLocationBoundResourceResponse> PostLocationBoundResourceWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<Object> PostLocationBoundResourceWithHttpInfo(
             string userId,
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
@@ -729,7 +725,7 @@ namespace EnergyCoordinationClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<GetLocationBoundResourceResponse>(
+            var localVarResponse = this.Client.Post<Object>(
                 "/users/{userId}/locations/{locationId}/resources",
                 localVarRequestOptions,
                 this.Configuration
@@ -758,8 +754,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationBoundResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetLocationBoundResourceResponse</returns>
-        public async System.Threading.Tasks.Task<GetLocationBoundResourceResponse> PostLocationBoundResourceAsync(
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostLocationBoundResourceAsync(
             string userId,
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
@@ -768,16 +764,14 @@ namespace EnergyCoordinationClient.Api
                 default(global::System.Threading.CancellationToken)
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetLocationBoundResourceResponse> localVarResponse =
-                await PostLocationBoundResourceWithHttpInfoAsync(
-                        userId,
-                        locationId,
-                        postLocationBoundResourceRequest,
-                        operationIndex,
-                        cancellationToken
-                    )
-                    .ConfigureAwait(false);
-            return localVarResponse.Data;
+            await PostLocationBoundResourceWithHttpInfoAsync(
+                    userId,
+                    locationId,
+                    postLocationBoundResourceRequest,
+                    operationIndex,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -789,8 +783,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationBoundResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetLocationBoundResourceResponse)</returns>
-        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetLocationBoundResourceResponse>> PostLocationBoundResourceWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostLocationBoundResourceWithHttpInfoAsync(
             string userId,
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
@@ -878,7 +872,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = await this
-                .AsynchronousClient.PostAsync<GetLocationBoundResourceResponse>(
+                .AsynchronousClient.PostAsync<Object>(
                     "/users/{userId}/locations/{locationId}/resources",
                     localVarRequestOptions,
                     this.Configuration,

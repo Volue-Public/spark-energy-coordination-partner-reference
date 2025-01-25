@@ -117,15 +117,15 @@ public class PostReportRequestPayloadsInner {
    *
    * @return locationId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getLocationId() {
     return locationId;
   }
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLocationId(String locationId) {
     this.locationId = locationId;
   }
@@ -141,15 +141,15 @@ public class PostReportRequestPayloadsInner {
    *
    * @return meterPointId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getMeterPointId() {
     return meterPointId;
   }
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMeterPointId(String meterPointId) {
     this.meterPointId = meterPointId;
   }
@@ -197,15 +197,15 @@ public class PostReportRequestPayloadsInner {
    *
    * @return resolution
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_RESOLUTION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getResolution() {
     return resolution;
   }
 
   @JsonProperty(JSON_PROPERTY_RESOLUTION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setResolution(String resolution) {
     this.resolution = resolution;
   }
@@ -318,15 +318,15 @@ public class PostReportRequestPayloadsInner {
    *
    * @return baseline
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_BASELINE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<EnergyCurvePoint> getBaseline() {
     return baseline;
   }
 
   @JsonProperty(JSON_PROPERTY_BASELINE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setBaseline(List<EnergyCurvePoint> baseline) {
     this.baseline = baseline;
   }
@@ -350,15 +350,15 @@ public class PostReportRequestPayloadsInner {
    *
    * @return flexibility
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_FLEXIBILITY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<EnergyCurvePoint> getFlexibility() {
     return flexibility;
   }
 
   @JsonProperty(JSON_PROPERTY_FLEXIBILITY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFlexibility(List<EnergyCurvePoint> flexibility) {
     this.flexibility = flexibility;
   }

@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class GetUserResponse {
-    'userId'?: string;
+    'userId': string;
 
     static discriminator: string | undefined = undefined;
 

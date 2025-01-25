@@ -36,21 +36,34 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LPCReservationPayload" /> class.
         /// </summary>
-        /// <param name="targets">targets.</param>
-        /// <param name="payloadType">payloadType (default to SparkEventPayloadType.LPCReservation).</param>
+        [JsonConstructorAttribute]
+        protected LPCReservationPayload() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LPCReservationPayload" /> class.
+        /// </summary>
+        /// <param name="targets">targets (required).</param>
+        /// <param name="payloadType">payloadType (required) (default to SparkEventPayloadType.LPCReservation).</param>
         public LPCReservationPayload(
             List<LocationLPCTarget> targets = default(List<LocationLPCTarget>),
-            SparkEventPayloadType? payloadType = SparkEventPayloadType.LPCReservation
+            SparkEventPayloadType payloadType = SparkEventPayloadType.LPCReservation
         )
             : base(payloadType)
         {
+            // to ensure "targets" is required (not null)
+            if (targets == null)
+            {
+                throw new ArgumentNullException(
+                    "targets is a required property for LPCReservationPayload and cannot be null"
+                );
+            }
             this.Targets = targets;
         }
 
         /// <summary>
         /// Gets or Sets Targets
         /// </summary>
-        [DataMember(Name = "targets", EmitDefaultValue = false)]
+        [DataMember(Name = "targets", IsRequired = true, EmitDefaultValue = true)]
         public List<LocationLPCTarget> Targets { get; set; }
 
         /// <summary>

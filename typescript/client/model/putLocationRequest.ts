@@ -15,7 +15,7 @@ import { Coordinate } from './coordinate';
 import { LocationType } from './locationType';
 
 export class PutLocationRequest {
-    'locationId'?: string;
+    'locationId': string;
     'locationType'?: LocationType;
     'coordinates'?: Coordinate;
     'meterPointId'?: string | null;

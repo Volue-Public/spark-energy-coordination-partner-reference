@@ -13,9 +13,9 @@
 import { RequestFile } from './models';
 
 export class LPCResource {
-    'meterPointId'?: string;
-    'locationId'?: string;
-    'resourceId'?: string;
+    'meterPointId': string;
+    'locationId': string;
+    'resourceId': string;
 
     static discriminator: string | undefined = undefined;
 

@@ -47,15 +47,15 @@ public class GetEligibleUsersResponse {
    *
    * @return pagination
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_PAGINATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public ApiPagination getPagination() {
     return pagination;
   }
 
   @JsonProperty(JSON_PROPERTY_PAGINATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPagination(ApiPagination pagination) {
     this.pagination = pagination;
   }

@@ -36,39 +36,59 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEligibilityPayload" /> class.
         /// </summary>
-        /// <param name="lastUpdated">lastUpdated.</param>
-        /// <param name="addedUsers">addedUsers.</param>
-        /// <param name="removedUsers">removedUsers.</param>
-        /// <param name="payloadType">payloadType (default to SparkEventPayloadType.UserEligibility).</param>
+        [JsonConstructorAttribute]
+        protected UserEligibilityPayload() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserEligibilityPayload" /> class.
+        /// </summary>
+        /// <param name="lastUpdated">lastUpdated (required).</param>
+        /// <param name="addedUsers">addedUsers (required).</param>
+        /// <param name="removedUsers">removedUsers (required).</param>
+        /// <param name="payloadType">payloadType (required) (default to SparkEventPayloadType.UserEligibility).</param>
         public UserEligibilityPayload(
             DateTimeOffset lastUpdated = default(DateTimeOffset),
             List<string> addedUsers = default(List<string>),
             List<string> removedUsers = default(List<string>),
-            SparkEventPayloadType? payloadType = SparkEventPayloadType.UserEligibility
+            SparkEventPayloadType payloadType = SparkEventPayloadType.UserEligibility
         )
             : base(payloadType)
         {
             this.LastUpdated = lastUpdated;
+            // to ensure "addedUsers" is required (not null)
+            if (addedUsers == null)
+            {
+                throw new ArgumentNullException(
+                    "addedUsers is a required property for UserEligibilityPayload and cannot be null"
+                );
+            }
             this.AddedUsers = addedUsers;
+            // to ensure "removedUsers" is required (not null)
+            if (removedUsers == null)
+            {
+                throw new ArgumentNullException(
+                    "removedUsers is a required property for UserEligibilityPayload and cannot be null"
+                );
+            }
             this.RemovedUsers = removedUsers;
         }
 
         /// <summary>
         /// Gets or Sets LastUpdated
         /// </summary>
-        [DataMember(Name = "lastUpdated", EmitDefaultValue = false)]
+        [DataMember(Name = "lastUpdated", IsRequired = true, EmitDefaultValue = true)]
         public DateTimeOffset LastUpdated { get; set; }
 
         /// <summary>
         /// Gets or Sets AddedUsers
         /// </summary>
-        [DataMember(Name = "addedUsers", EmitDefaultValue = false)]
+        [DataMember(Name = "addedUsers", IsRequired = true, EmitDefaultValue = true)]
         public List<string> AddedUsers { get; set; }
 
         /// <summary>
         /// Gets or Sets RemovedUsers
         /// </summary>
-        [DataMember(Name = "removedUsers", EmitDefaultValue = false)]
+        [DataMember(Name = "removedUsers", IsRequired = true, EmitDefaultValue = true)]
         public List<string> RemovedUsers { get; set; }
 
         /// <summary>

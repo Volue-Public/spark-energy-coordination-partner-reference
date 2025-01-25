@@ -66,6 +66,13 @@ components:
           $ref: '#/components/schemas/NotificationType'
         payload:
           $ref: '#/components/schemas/SparkEventPayload'
+      required:
+      - eventCreatedAtUtc
+      - eventId
+      - notificationId
+      - notificationSentUtc
+      - notificationType
+      - payload
       type: object
     NotificationId:
       type: string
@@ -93,6 +100,8 @@ components:
       properties:
         payloadType:
           $ref: '#/components/schemas/SparkEventPayloadType'
+      required:
+      - payloadType
       type: object
     SparkEventPayloadType:
       enum:
@@ -116,6 +125,11 @@ components:
           $ref: '#/components/schemas/PriceCurve'
         priceArea:
           $ref: '#/components/schemas/PriceArea'
+      required:
+      - payloadType
+      - priceArea
+      - priceCurveDelta
+      - targets
       type: object
     PriceCurveTarget:
       additionalProperties: false
@@ -124,6 +138,9 @@ components:
           type: string
         locationId:
           type: string
+      required:
+      - locationId
+      - resourceId
       type: object
     ResourceId:
       type: string
@@ -199,6 +216,11 @@ components:
           items:
             type: string
           type: array
+      required:
+      - addedUsers
+      - lastUpdated
+      - payloadType
+      - removedUsers
       type: object
     LocationLPCPayload:
       additionalProperties: false
@@ -209,6 +231,9 @@ components:
           items:
             $ref: '#/components/schemas/LocationLPCTarget'
           type: array
+      required:
+      - payloadType
+      - targets
       type: object
     LocationLPCTarget:
       additionalProperties: false
@@ -225,6 +250,11 @@ components:
           items:
             $ref: '#/components/schemas/LPCDataPoint'
           type: array
+      required:
+      - locationId
+      - meterPointId
+      - points
+      - resolution
       type: object
     MeterPointId:
       type: string
@@ -247,6 +277,9 @@ components:
           items:
             $ref: '#/components/schemas/ResourceLPCTarget'
           type: array
+      required:
+      - payloadType
+      - targets
       type: object
     ResourceLPCTarget:
       additionalProperties: false
@@ -265,6 +298,12 @@ components:
           items:
             $ref: '#/components/schemas/LPCDataPoint'
           type: array
+      required:
+      - locationId
+      - meterPointId
+      - points
+      - resolution
+      - resourceId
       type: object
     LPCReservationPayload:
       additionalProperties: false
@@ -275,4 +314,7 @@ components:
           items:
             $ref: '#/components/schemas/LocationLPCTarget'
           type: array
+      required:
+      - payloadType
+      - targets
       type: object

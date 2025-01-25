@@ -29,18 +29,21 @@ namespace Partner.Api.Models
         /// <summary>
         /// Gets or Sets MeterPointId
         /// </summary>
+        [Required]
         [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
         public string MeterPointId { get; set; }
 
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
+        [Required]
         [DataMember(Name = "locationId", EmitDefaultValue = false)]
         public string LocationId { get; set; }
 
         /// <summary>
         /// Gets or Sets ResourceId
         /// </summary>
+        [Required]
         [DataMember(Name = "resourceId", EmitDefaultValue = false)]
         public string ResourceId { get; set; }
 
@@ -48,12 +51,14 @@ namespace Partner.Api.Models
         /// Gets or Sets Resolution
         /// </summary>
         /// <example>02:00:00</example>
+        [Required]
         [DataMember(Name = "resolution", EmitDefaultValue = false)]
         public string Resolution { get; set; }
 
         /// <summary>
         /// Gets or Sets Points
         /// </summary>
+        [Required]
         [DataMember(Name = "points", EmitDefaultValue = false)]
         public List<LPCDataPoint> Points { get; set; }
 

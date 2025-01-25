@@ -24,6 +24,19 @@ public class LocationLPCTarget {
 
   @Valid private List<@Valid LPCDataPoint> points = new ArrayList<>();
 
+  public LocationLPCTarget() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public LocationLPCTarget(
+      String locationId, String meterPointId, String resolution, List<@Valid LPCDataPoint> points) {
+    this.locationId = locationId;
+    this.meterPointId = meterPointId;
+    this.resolution = resolution;
+    this.points = points;
+  }
+
   public LocationLPCTarget locationId(String locationId) {
     this.locationId = locationId;
     return this;
@@ -34,7 +47,8 @@ public class LocationLPCTarget {
    *
    * @return locationId
    */
-  @Schema(name = "locationId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "locationId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("locationId")
   public String getLocationId() {
     return locationId;
@@ -54,7 +68,8 @@ public class LocationLPCTarget {
    *
    * @return meterPointId
    */
-  @Schema(name = "meterPointId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "meterPointId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("meterPointId")
   public String getMeterPointId() {
     return meterPointId;
@@ -74,10 +89,8 @@ public class LocationLPCTarget {
    *
    * @return resolution
    */
-  @Schema(
-      name = "resolution",
-      example = "02:00:00",
-      requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "resolution", example = "02:00:00", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("resolution")
   public String getResolution() {
     return resolution;
@@ -105,8 +118,9 @@ public class LocationLPCTarget {
    *
    * @return points
    */
+  @NotNull
   @Valid
-  @Schema(name = "points", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "points", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("points")
   public List<@Valid LPCDataPoint> getPoints() {
     return points;

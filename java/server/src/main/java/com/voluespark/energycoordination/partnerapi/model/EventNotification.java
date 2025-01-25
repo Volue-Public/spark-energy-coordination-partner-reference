@@ -30,6 +30,26 @@ public class EventNotification {
 
   private SparkEventPayload payload;
 
+  public EventNotification() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public EventNotification(
+      String notificationId,
+      String eventId,
+      OffsetDateTime eventCreatedAtUtc,
+      OffsetDateTime notificationSentUtc,
+      NotificationType notificationType,
+      SparkEventPayload payload) {
+    this.notificationId = notificationId;
+    this.eventId = eventId;
+    this.eventCreatedAtUtc = eventCreatedAtUtc;
+    this.notificationSentUtc = notificationSentUtc;
+    this.notificationType = notificationType;
+    this.payload = payload;
+  }
+
   public EventNotification notificationId(String notificationId) {
     this.notificationId = notificationId;
     return this;
@@ -40,7 +60,8 @@ public class EventNotification {
    *
    * @return notificationId
    */
-  @Schema(name = "notificationId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "notificationId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("notificationId")
   public String getNotificationId() {
     return notificationId;
@@ -60,7 +81,8 @@ public class EventNotification {
    *
    * @return eventId
    */
-  @Schema(name = "eventId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "eventId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("eventId")
   public String getEventId() {
     return eventId;
@@ -80,8 +102,9 @@ public class EventNotification {
    *
    * @return eventCreatedAtUtc
    */
+  @NotNull
   @Valid
-  @Schema(name = "eventCreatedAtUtc", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "eventCreatedAtUtc", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("eventCreatedAtUtc")
   public OffsetDateTime getEventCreatedAtUtc() {
     return eventCreatedAtUtc;
@@ -101,8 +124,9 @@ public class EventNotification {
    *
    * @return notificationSentUtc
    */
+  @NotNull
   @Valid
-  @Schema(name = "notificationSentUtc", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "notificationSentUtc", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("notificationSentUtc")
   public OffsetDateTime getNotificationSentUtc() {
     return notificationSentUtc;
@@ -122,8 +146,9 @@ public class EventNotification {
    *
    * @return notificationType
    */
+  @NotNull
   @Valid
-  @Schema(name = "notificationType", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "notificationType", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("notificationType")
   public NotificationType getNotificationType() {
     return notificationType;
@@ -143,8 +168,9 @@ public class EventNotification {
    *
    * @return payload
    */
+  @NotNull
   @Valid
-  @Schema(name = "payload", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "payload", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("payload")
   public SparkEventPayload getPayload() {
     return payload;

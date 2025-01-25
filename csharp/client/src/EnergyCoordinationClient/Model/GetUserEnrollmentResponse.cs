@@ -34,7 +34,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetUserEnrollmentResponse" /> class.
         /// </summary>
-        /// <param name="userId">userId.</param>
+        [JsonConstructorAttribute]
+        protected GetUserEnrollmentResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetUserEnrollmentResponse" /> class.
+        /// </summary>
+        /// <param name="userId">userId (required).</param>
         /// <param name="enrollmentId">enrollmentId.</param>
         /// <param name="enrollmentDate">enrollmentDate.</param>
         public GetUserEnrollmentResponse(
@@ -43,6 +49,13 @@ namespace EnergyCoordinationClient.Model
             DateTimeOffset? enrollmentDate = default(DateTimeOffset?)
         )
         {
+            // to ensure "userId" is required (not null)
+            if (userId == null)
+            {
+                throw new ArgumentNullException(
+                    "userId is a required property for GetUserEnrollmentResponse and cannot be null"
+                );
+            }
             this.UserId = userId;
             this.EnrollmentId = enrollmentId;
             this.EnrollmentDate = enrollmentDate;
@@ -66,7 +79,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
-        [DataMember(Name = "userId", EmitDefaultValue = false)]
+        [DataMember(Name = "userId", IsRequired = true, EmitDefaultValue = true)]
         public string UserId { get; set; }
 
         /// <summary>

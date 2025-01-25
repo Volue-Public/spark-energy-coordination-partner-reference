@@ -34,13 +34,26 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetEventsResponse" /> class.
         /// </summary>
-        /// <param name="pagination">pagination.</param>
+        [JsonConstructorAttribute]
+        protected GetEventsResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetEventsResponse" /> class.
+        /// </summary>
+        /// <param name="pagination">pagination (required).</param>
         /// <param name="events">events.</param>
         public GetEventsResponse(
             ApiPagination pagination = default(ApiPagination),
             List<GetEventResponse> events = default(List<GetEventResponse>)
         )
         {
+            // to ensure "pagination" is required (not null)
+            if (pagination == null)
+            {
+                throw new ArgumentNullException(
+                    "pagination is a required property for GetEventsResponse and cannot be null"
+                );
+            }
             this.Pagination = pagination;
             this.Events = events;
         }
@@ -48,7 +61,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Pagination
         /// </summary>
-        [DataMember(Name = "pagination", EmitDefaultValue = false)]
+        [DataMember(Name = "pagination", IsRequired = true, EmitDefaultValue = true)]
         public ApiPagination Pagination { get; set; }
 
         /// <summary>

@@ -191,11 +191,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postWebhookRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetWebhookResponse</returns>
-        GetWebhookResponse PostWebhook(
-            PostWebhookRequest postWebhookRequest,
-            int operationIndex = 0
-        );
+        /// <returns></returns>
+        void PostWebhook(PostWebhookRequest postWebhookRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create a Webhook
@@ -206,8 +203,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postWebhookRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetWebhookResponse</returns>
-        ApiResponse<GetWebhookResponse> PostWebhookWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostWebhookWithHttpInfo(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0
         );
@@ -520,8 +517,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postWebhookRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetWebhookResponse</returns>
-        System.Threading.Tasks.Task<GetWebhookResponse> PostWebhookAsync(
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostWebhookAsync(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -538,8 +535,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postWebhookRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetWebhookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetWebhookResponse>> PostWebhookWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostWebhookWithHttpInfoAsync(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -812,7 +809,7 @@ namespace EnergyCoordinationClient.Api
             string[] _contentTypes = new string[] { };
 
             // to determine the Accept header
-            string[] _accepts = new string[] { "application/problem+json", "application/json" };
+            string[] _accepts = new string[] { "application/json", "application/problem+json" };
 
             var localVarContentType =
                 EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -917,7 +914,7 @@ namespace EnergyCoordinationClient.Api
             string[] _contentTypes = new string[] { };
 
             // to determine the Accept header
-            string[] _accepts = new string[] { "application/problem+json", "application/json" };
+            string[] _accepts = new string[] { "application/json", "application/problem+json" };
 
             var localVarContentType =
                 EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2102,15 +2099,10 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postWebhookRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetWebhookResponse</returns>
-        public GetWebhookResponse PostWebhook(
-            PostWebhookRequest postWebhookRequest,
-            int operationIndex = 0
-        )
+        /// <returns></returns>
+        public void PostWebhook(PostWebhookRequest postWebhookRequest, int operationIndex = 0)
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetWebhookResponse> localVarResponse =
-                PostWebhookWithHttpInfo(postWebhookRequest);
-            return localVarResponse.Data;
+            PostWebhookWithHttpInfo(postWebhookRequest);
         }
 
         /// <summary>
@@ -2119,8 +2111,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postWebhookRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetWebhookResponse</returns>
-        public EnergyCoordinationClient.Client.ApiResponse<GetWebhookResponse> PostWebhookWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<Object> PostWebhookWithHttpInfo(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0
         )
@@ -2176,7 +2168,7 @@ namespace EnergyCoordinationClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<GetWebhookResponse>(
+            var localVarResponse = this.Client.Post<Object>(
                 "/webhooks",
                 localVarRequestOptions,
                 this.Configuration
@@ -2200,22 +2192,20 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postWebhookRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetWebhookResponse</returns>
-        public async System.Threading.Tasks.Task<GetWebhookResponse> PostWebhookAsync(
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostWebhookAsync(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
                 default(global::System.Threading.CancellationToken)
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetWebhookResponse> localVarResponse =
-                await PostWebhookWithHttpInfoAsync(
-                        postWebhookRequest,
-                        operationIndex,
-                        cancellationToken
-                    )
-                    .ConfigureAwait(false);
-            return localVarResponse.Data;
+            await PostWebhookWithHttpInfoAsync(
+                    postWebhookRequest,
+                    operationIndex,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -2225,8 +2215,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postWebhookRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetWebhookResponse)</returns>
-        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetWebhookResponse>> PostWebhookWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostWebhookWithHttpInfoAsync(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -2285,7 +2275,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = await this
-                .AsynchronousClient.PostAsync<GetWebhookResponse>(
+                .AsynchronousClient.PostAsync<Object>(
                     "/webhooks",
                     localVarRequestOptions,
                     this.Configuration,
@@ -2591,7 +2581,7 @@ namespace EnergyCoordinationClient.Api
             string[] _contentTypes = new string[] { };
 
             // to determine the Accept header
-            string[] _accepts = new string[] { };
+            string[] _accepts = new string[] { "application/json" };
 
             var localVarContentType =
                 EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2715,7 +2705,7 @@ namespace EnergyCoordinationClient.Api
             string[] _contentTypes = new string[] { };
 
             // to determine the Accept header
-            string[] _accepts = new string[] { };
+            string[] _accepts = new string[] { "application/json" };
 
             var localVarContentType =
                 EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);

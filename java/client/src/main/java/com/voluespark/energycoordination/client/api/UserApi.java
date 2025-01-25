@@ -5,7 +5,6 @@ import com.voluespark.energycoordination.client.model.GetUserResponse;
 import com.voluespark.energycoordination.client.model.GetUsersResponse;
 import com.voluespark.energycoordination.client.model.PostUserRequest;
 import com.voluespark.energycoordination.client.model.PostUsersBatchRequest;
-import com.voluespark.energycoordination.client.model.PostUsersBatchResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -48,6 +47,8 @@ public class UserApi {
   /**
    * Delete User Returns 204 No Content if the user was deleted successfully. Returns 404 Not Found
    * if the user to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -108,6 +109,8 @@ public class UserApi {
    * Delete User Returns 204 No Content if the user was deleted successfully. Returns 404 Not Found
    * if the user to delete does not exist.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>400</b> - Bad Request
@@ -125,6 +128,8 @@ public class UserApi {
   /**
    * Delete User Returns 204 No Content if the user was deleted successfully. Returns 404 Not Found
    * if the user to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -144,6 +149,8 @@ public class UserApi {
   /**
    * Delete User Returns 204 No Content if the user was deleted successfully. Returns 404 Not Found
    * if the user to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -383,12 +390,13 @@ public class UserApi {
   /**
    * Create a User
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postUserRequest The postUserRequest parameter
-   * @return GetUserResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postUserRequestCreation(PostUserRequest postUserRequest)
@@ -419,8 +427,7 @@ public class UserApi {
 
     String[] localVarAuthNames = new String[] {"Bearer"};
 
-    ParameterizedTypeReference<GetUserResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetUserResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return apiClient.invokeAPI(
         "/users",
         HttpMethod.POST,
@@ -439,41 +446,42 @@ public class UserApi {
   /**
    * Create a User
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postUserRequest The postUserRequest parameter
-   * @return GetUserResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetUserResponse> postUser(PostUserRequest postUserRequest)
-      throws WebClientResponseException {
-    ParameterizedTypeReference<GetUserResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetUserResponse>() {};
+  public Mono<Void> postUser(PostUserRequest postUserRequest) throws WebClientResponseException {
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postUserRequestCreation(postUserRequest).bodyToMono(localVarReturnType);
   }
 
   /**
    * Create a User
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postUserRequest The postUserRequest parameter
-   * @return ResponseEntity&lt;GetUserResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetUserResponse>> postUserWithHttpInfo(PostUserRequest postUserRequest)
+  public Mono<ResponseEntity<Void>> postUserWithHttpInfo(PostUserRequest postUserRequest)
       throws WebClientResponseException {
-    ParameterizedTypeReference<GetUserResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetUserResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postUserRequestCreation(postUserRequest).toEntity(localVarReturnType);
   }
 
   /**
    * Create a User
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *
@@ -491,12 +499,13 @@ public class UserApi {
   /**
    * Create Multiple Users
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postUsersBatchRequest The postUsersBatchRequest parameter
-   * @return PostUsersBatchResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postUsersRequestCreation(PostUsersBatchRequest postUsersBatchRequest)
@@ -527,8 +536,7 @@ public class UserApi {
 
     String[] localVarAuthNames = new String[] {"Bearer"};
 
-    ParameterizedTypeReference<PostUsersBatchResponse> localVarReturnType =
-        new ParameterizedTypeReference<PostUsersBatchResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return apiClient.invokeAPI(
         "/users/batch",
         HttpMethod.POST,
@@ -547,41 +555,43 @@ public class UserApi {
   /**
    * Create Multiple Users
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postUsersBatchRequest The postUsersBatchRequest parameter
-   * @return PostUsersBatchResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<PostUsersBatchResponse> postUsers(PostUsersBatchRequest postUsersBatchRequest)
+  public Mono<Void> postUsers(PostUsersBatchRequest postUsersBatchRequest)
       throws WebClientResponseException {
-    ParameterizedTypeReference<PostUsersBatchResponse> localVarReturnType =
-        new ParameterizedTypeReference<PostUsersBatchResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postUsersRequestCreation(postUsersBatchRequest).bodyToMono(localVarReturnType);
   }
 
   /**
    * Create Multiple Users
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postUsersBatchRequest The postUsersBatchRequest parameter
-   * @return ResponseEntity&lt;PostUsersBatchResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<PostUsersBatchResponse>> postUsersWithHttpInfo(
+  public Mono<ResponseEntity<Void>> postUsersWithHttpInfo(
       PostUsersBatchRequest postUsersBatchRequest) throws WebClientResponseException {
-    ParameterizedTypeReference<PostUsersBatchResponse> localVarReturnType =
-        new ParameterizedTypeReference<PostUsersBatchResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postUsersRequestCreation(postUsersBatchRequest).toEntity(localVarReturnType);
   }
 
   /**
    * Create Multiple Users
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *

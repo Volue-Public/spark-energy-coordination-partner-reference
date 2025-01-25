@@ -16,7 +16,7 @@ import { SparkEventPayload } from './sparkEventPayload';
 import { SparkEventPayloadType } from './sparkEventPayloadType';
 
 export class LocationLPCPayload extends SparkEventPayload {
-    'targets'?: Array<LocationLPCTarget>;
+    'targets': Array<LocationLPCTarget>;
 
     static discriminator: string | undefined = undefined;
 

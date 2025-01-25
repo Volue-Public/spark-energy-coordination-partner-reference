@@ -34,18 +34,31 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWebhooksResponse" /> class.
         /// </summary>
-        /// <param name="webhooks">webhooks.</param>
+        [JsonConstructorAttribute]
+        protected GetWebhooksResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetWebhooksResponse" /> class.
+        /// </summary>
+        /// <param name="webhooks">webhooks (required).</param>
         public GetWebhooksResponse(
             List<GetWebhookResponse> webhooks = default(List<GetWebhookResponse>)
         )
         {
+            // to ensure "webhooks" is required (not null)
+            if (webhooks == null)
+            {
+                throw new ArgumentNullException(
+                    "webhooks is a required property for GetWebhooksResponse and cannot be null"
+                );
+            }
             this.Webhooks = webhooks;
         }
 
         /// <summary>
         /// Gets or Sets Webhooks
         /// </summary>
-        [DataMember(Name = "webhooks", EmitDefaultValue = false)]
+        [DataMember(Name = "webhooks", IsRequired = true, EmitDefaultValue = true)]
         public List<GetWebhookResponse> Webhooks { get; set; }
 
         /// <summary>

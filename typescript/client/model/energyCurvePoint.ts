@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class EnergyCurvePoint {
-    'timestamp'?: Date;
-    'kiloWattHours'?: number;
+    'timestamp': Date;
+    'kiloWattHours': number;
 
     static discriminator: string | undefined = undefined;
 

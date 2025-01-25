@@ -45,15 +45,15 @@ public class PriceCurveTarget {
    *
    * @return resourceId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getResourceId() {
     return resourceId;
   }
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setResourceId(String resourceId) {
     this.resourceId = resourceId;
   }
@@ -69,15 +69,15 @@ public class PriceCurveTarget {
    *
    * @return locationId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getLocationId() {
     return locationId;
   }
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLocationId(String locationId) {
     this.locationId = locationId;
   }

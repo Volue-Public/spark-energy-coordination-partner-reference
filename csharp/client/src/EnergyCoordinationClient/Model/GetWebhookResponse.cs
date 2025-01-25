@@ -40,8 +40,14 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWebhookResponse" /> class.
         /// </summary>
-        /// <param name="webhookId">webhookId.</param>
-        /// <param name="webhookUrl">webhookUrl.</param>
+        [JsonConstructorAttribute]
+        protected GetWebhookResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetWebhookResponse" /> class.
+        /// </summary>
+        /// <param name="webhookId">webhookId (required).</param>
+        /// <param name="webhookUrl">webhookUrl (required).</param>
         /// <param name="name">name.</param>
         /// <param name="notificationTypes">notificationTypes.</param>
         /// <param name="enabled">enabled.</param>
@@ -61,7 +67,21 @@ namespace EnergyCoordinationClient.Model
             DateTimeOffset lastAnalyzedTimestamp = default(DateTimeOffset)
         )
         {
+            // to ensure "webhookId" is required (not null)
+            if (webhookId == null)
+            {
+                throw new ArgumentNullException(
+                    "webhookId is a required property for GetWebhookResponse and cannot be null"
+                );
+            }
             this.WebhookId = webhookId;
+            // to ensure "webhookUrl" is required (not null)
+            if (webhookUrl == null)
+            {
+                throw new ArgumentNullException(
+                    "webhookUrl is a required property for GetWebhookResponse and cannot be null"
+                );
+            }
             this.WebhookUrl = webhookUrl;
             this.Name = name;
             this.NotificationTypes = notificationTypes;
@@ -75,13 +95,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets WebhookId
         /// </summary>
-        [DataMember(Name = "webhookId", EmitDefaultValue = false)]
+        [DataMember(Name = "webhookId", IsRequired = true, EmitDefaultValue = true)]
         public string WebhookId { get; set; }
 
         /// <summary>
         /// Gets or Sets WebhookUrl
         /// </summary>
-        [DataMember(Name = "webhookUrl", EmitDefaultValue = false)]
+        [DataMember(Name = "webhookUrl", IsRequired = true, EmitDefaultValue = true)]
         public string WebhookUrl { get; set; }
 
         /// <summary>

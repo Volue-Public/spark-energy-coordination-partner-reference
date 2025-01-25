@@ -122,15 +122,15 @@ public class PostWebhookRequest {
    *
    * @return webhookUrl
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getWebhookUrl() {
     return webhookUrl;
   }
 
   @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhookUrl(String webhookUrl) {
     this.webhookUrl = webhookUrl;
   }

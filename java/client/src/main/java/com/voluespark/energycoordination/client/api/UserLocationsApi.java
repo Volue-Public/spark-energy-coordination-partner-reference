@@ -5,7 +5,6 @@ import com.voluespark.energycoordination.client.model.GetLocationResponse;
 import com.voluespark.energycoordination.client.model.PatchLocationRequest;
 import com.voluespark.energycoordination.client.model.PostLocationRequest;
 import com.voluespark.energycoordination.client.model.PostLocationsBatchRequest;
-import com.voluespark.energycoordination.client.model.PostLocationsBatchResponse;
 import com.voluespark.energycoordination.client.model.PutLocationRequest;
 import java.util.HashMap;
 import java.util.List;
@@ -50,6 +49,8 @@ public class UserLocationsApi {
   /**
    * Delete User Location Returns 204 No Content if the location was deleted successfully. Returns
    * 404 Not Found if the location to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -122,6 +123,8 @@ public class UserLocationsApi {
    * Delete User Location Returns 204 No Content if the location was deleted successfully. Returns
    * 404 Not Found if the location to delete does not exist.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>400</b> - Bad Request
@@ -142,6 +145,8 @@ public class UserLocationsApi {
    * Delete User Location Returns 204 No Content if the location was deleted successfully. Returns
    * 404 Not Found if the location to delete does not exist.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>400</b> - Bad Request
@@ -161,6 +166,8 @@ public class UserLocationsApi {
   /**
    * Delete User Location Returns 204 No Content if the location was deleted successfully. Returns
    * 404 Not Found if the location to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -586,6 +593,8 @@ public class UserLocationsApi {
   /**
    * Create User Location
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>409</b> - Conflict
@@ -596,7 +605,6 @@ public class UserLocationsApi {
    *
    * @param userId The userId parameter
    * @param postLocationRequest The postLocationRequest parameter
-   * @return GetLocationResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postLocationRequestCreation(
@@ -639,8 +647,7 @@ public class UserLocationsApi {
 
     String[] localVarAuthNames = new String[] {"Bearer"};
 
-    ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetLocationResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return apiClient.invokeAPI(
         "/users/{userId}/locations",
         HttpMethod.POST,
@@ -659,6 +666,8 @@ public class UserLocationsApi {
   /**
    * Create User Location
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>409</b> - Conflict
@@ -669,19 +678,19 @@ public class UserLocationsApi {
    *
    * @param userId The userId parameter
    * @param postLocationRequest The postLocationRequest parameter
-   * @return GetLocationResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetLocationResponse> postLocation(
-      String userId, PostLocationRequest postLocationRequest) throws WebClientResponseException {
-    ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetLocationResponse>() {};
+  public Mono<Void> postLocation(String userId, PostLocationRequest postLocationRequest)
+      throws WebClientResponseException {
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationRequestCreation(userId, postLocationRequest).bodyToMono(localVarReturnType);
   }
 
   /**
    * Create User Location
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>409</b> - Conflict
@@ -692,18 +701,18 @@ public class UserLocationsApi {
    *
    * @param userId The userId parameter
    * @param postLocationRequest The postLocationRequest parameter
-   * @return ResponseEntity&lt;GetLocationResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetLocationResponse>> postLocationWithHttpInfo(
+  public Mono<ResponseEntity<Void>> postLocationWithHttpInfo(
       String userId, PostLocationRequest postLocationRequest) throws WebClientResponseException {
-    ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetLocationResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationRequestCreation(userId, postLocationRequest).toEntity(localVarReturnType);
   }
 
   /**
    * Create User Location
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *
@@ -728,12 +737,13 @@ public class UserLocationsApi {
    * request body should be an array of objects, each containing a user id and a create location
    * request.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postLocationsBatchRequest The postLocationsBatchRequest parameter
-   * @return PostLocationsBatchResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postLocationsRequestCreation(
@@ -764,8 +774,7 @@ public class UserLocationsApi {
 
     String[] localVarAuthNames = new String[] {"Bearer"};
 
-    ParameterizedTypeReference<PostLocationsBatchResponse> localVarReturnType =
-        new ParameterizedTypeReference<PostLocationsBatchResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return apiClient.invokeAPI(
         "/users/locations/batch",
         HttpMethod.POST,
@@ -786,18 +795,18 @@ public class UserLocationsApi {
    * request body should be an array of objects, each containing a user id and a create location
    * request.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postLocationsBatchRequest The postLocationsBatchRequest parameter
-   * @return PostLocationsBatchResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<PostLocationsBatchResponse> postLocations(
-      PostLocationsBatchRequest postLocationsBatchRequest) throws WebClientResponseException {
-    ParameterizedTypeReference<PostLocationsBatchResponse> localVarReturnType =
-        new ParameterizedTypeReference<PostLocationsBatchResponse>() {};
+  public Mono<Void> postLocations(PostLocationsBatchRequest postLocationsBatchRequest)
+      throws WebClientResponseException {
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationsRequestCreation(postLocationsBatchRequest).bodyToMono(localVarReturnType);
   }
 
@@ -806,18 +815,18 @@ public class UserLocationsApi {
    * request body should be an array of objects, each containing a user id and a create location
    * request.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postLocationsBatchRequest The postLocationsBatchRequest parameter
-   * @return ResponseEntity&lt;PostLocationsBatchResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<PostLocationsBatchResponse>> postLocationsWithHttpInfo(
+  public Mono<ResponseEntity<Void>> postLocationsWithHttpInfo(
       PostLocationsBatchRequest postLocationsBatchRequest) throws WebClientResponseException {
-    ParameterizedTypeReference<PostLocationsBatchResponse> localVarReturnType =
-        new ParameterizedTypeReference<PostLocationsBatchResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationsRequestCreation(postLocationsBatchRequest).toEntity(localVarReturnType);
   }
 
@@ -825,6 +834,8 @@ public class UserLocationsApi {
    * Create Multiple User Locations Create multiple locations for several users at once. \&quot;The
    * request body should be an array of objects, each containing a user id and a create location
    * request.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *

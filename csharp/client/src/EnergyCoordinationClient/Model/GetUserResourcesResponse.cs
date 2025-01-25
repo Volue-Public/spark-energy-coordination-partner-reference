@@ -34,18 +34,31 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetUserResourcesResponse" /> class.
         /// </summary>
-        /// <param name="resources">resources.</param>
+        [JsonConstructorAttribute]
+        protected GetUserResourcesResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetUserResourcesResponse" /> class.
+        /// </summary>
+        /// <param name="resources">resources (required).</param>
         public GetUserResourcesResponse(
             List<GetResourceResponse> resources = default(List<GetResourceResponse>)
         )
         {
+            // to ensure "resources" is required (not null)
+            if (resources == null)
+            {
+                throw new ArgumentNullException(
+                    "resources is a required property for GetUserResourcesResponse and cannot be null"
+                );
+            }
             this.Resources = resources;
         }
 
         /// <summary>
         /// Gets or Sets Resources
         /// </summary>
-        [DataMember(Name = "resources", EmitDefaultValue = false)]
+        [DataMember(Name = "resources", IsRequired = true, EmitDefaultValue = true)]
         public List<GetResourceResponse> Resources { get; set; }
 
         /// <summary>

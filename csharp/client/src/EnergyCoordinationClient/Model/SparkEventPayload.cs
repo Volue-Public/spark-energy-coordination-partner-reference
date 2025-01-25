@@ -41,16 +41,20 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets PayloadType
         /// </summary>
-        [DataMember(Name = "payloadType", EmitDefaultValue = false)]
-        public SparkEventPayloadType? PayloadType { get; set; }
+        [DataMember(Name = "payloadType", IsRequired = true, EmitDefaultValue = true)]
+        public SparkEventPayloadType PayloadType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SparkEventPayload" /> class.
         /// </summary>
-        /// <param name="payloadType">payloadType.</param>
-        public SparkEventPayload(
-            SparkEventPayloadType? payloadType = default(SparkEventPayloadType?)
-        )
+        [JsonConstructorAttribute]
+        protected SparkEventPayload() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SparkEventPayload" /> class.
+        /// </summary>
+        /// <param name="payloadType">payloadType (required).</param>
+        public SparkEventPayload(SparkEventPayloadType payloadType = default(SparkEventPayloadType))
         {
             this.PayloadType = payloadType;
         }

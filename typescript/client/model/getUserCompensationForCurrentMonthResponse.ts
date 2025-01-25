@@ -16,7 +16,7 @@ import { Period } from './period';
 
 export class GetUserCompensationForCurrentMonthResponse {
     'userId'?: string;
-    'period'?: Period;
+    'period': Period;
     'locationCompensations'?: Array<LocationCompensation>;
 
     static discriminator: string | undefined = undefined;

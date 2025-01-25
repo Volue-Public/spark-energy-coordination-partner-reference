@@ -34,13 +34,26 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetEligibleUsersResponse" /> class.
         /// </summary>
-        /// <param name="pagination">pagination.</param>
+        [JsonConstructorAttribute]
+        protected GetEligibleUsersResponse() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetEligibleUsersResponse" /> class.
+        /// </summary>
+        /// <param name="pagination">pagination (required).</param>
         /// <param name="users">users.</param>
         public GetEligibleUsersResponse(
             ApiPagination pagination = default(ApiPagination),
             List<GetUserResponse> users = default(List<GetUserResponse>)
         )
         {
+            // to ensure "pagination" is required (not null)
+            if (pagination == null)
+            {
+                throw new ArgumentNullException(
+                    "pagination is a required property for GetEligibleUsersResponse and cannot be null"
+                );
+            }
             this.Pagination = pagination;
             this.Users = users;
         }
@@ -48,7 +61,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Pagination
         /// </summary>
-        [DataMember(Name = "pagination", EmitDefaultValue = false)]
+        [DataMember(Name = "pagination", IsRequired = true, EmitDefaultValue = true)]
         public ApiPagination Pagination { get; set; }
 
         /// <summary>

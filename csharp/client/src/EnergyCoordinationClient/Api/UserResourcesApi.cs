@@ -59,8 +59,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="userId"></param>
         /// <param name="postVehicleResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetResourceResponse</returns>
-        GetResourceResponse PostVehicle(
+        /// <returns></returns>
+        void PostVehicle(
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0
@@ -76,8 +76,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="userId"></param>
         /// <param name="postVehicleResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetResourceResponse</returns>
-        ApiResponse<GetResourceResponse> PostVehicleWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostVehicleWithHttpInfo(
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0
@@ -140,8 +140,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postVehicleResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetResourceResponse</returns>
-        System.Threading.Tasks.Task<GetResourceResponse> PostVehicleAsync(
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostVehicleAsync(
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0,
@@ -160,8 +160,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postVehicleResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetResourceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetResourceResponse>> PostVehicleWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostVehicleWithHttpInfoAsync(
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0,
@@ -539,16 +539,14 @@ namespace EnergyCoordinationClient.Api
         /// <param name="userId"></param>
         /// <param name="postVehicleResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetResourceResponse</returns>
-        public GetResourceResponse PostVehicle(
+        /// <returns></returns>
+        public void PostVehicle(
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetResourceResponse> localVarResponse =
-                PostVehicleWithHttpInfo(userId, postVehicleResourceRequest);
-            return localVarResponse.Data;
+            PostVehicleWithHttpInfo(userId, postVehicleResourceRequest);
         }
 
         /// <summary>
@@ -558,8 +556,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="userId"></param>
         /// <param name="postVehicleResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetResourceResponse</returns>
-        public EnergyCoordinationClient.Client.ApiResponse<GetResourceResponse> PostVehicleWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<Object> PostVehicleWithHttpInfo(
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0
@@ -629,7 +627,7 @@ namespace EnergyCoordinationClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<GetResourceResponse>(
+            var localVarResponse = this.Client.Post<Object>(
                 "/users/{userId}/vehicles",
                 localVarRequestOptions,
                 this.Configuration
@@ -654,8 +652,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postVehicleResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetResourceResponse</returns>
-        public async System.Threading.Tasks.Task<GetResourceResponse> PostVehicleAsync(
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostVehicleAsync(
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0,
@@ -663,15 +661,13 @@ namespace EnergyCoordinationClient.Api
                 default(global::System.Threading.CancellationToken)
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetResourceResponse> localVarResponse =
-                await PostVehicleWithHttpInfoAsync(
-                        userId,
-                        postVehicleResourceRequest,
-                        operationIndex,
-                        cancellationToken
-                    )
-                    .ConfigureAwait(false);
-            return localVarResponse.Data;
+            await PostVehicleWithHttpInfoAsync(
+                    userId,
+                    postVehicleResourceRequest,
+                    operationIndex,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -682,8 +678,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postVehicleResourceRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetResourceResponse)</returns>
-        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetResourceResponse>> PostVehicleWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostVehicleWithHttpInfoAsync(
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0,
@@ -756,7 +752,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = await this
-                .AsynchronousClient.PostAsync<GetResourceResponse>(
+                .AsynchronousClient.PostAsync<Object>(
                     "/users/{userId}/vehicles",
                     localVarRequestOptions,
                     this.Configuration,

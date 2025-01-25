@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class LPCLocation {
-    'locationId'?: string;
-    'meterPointId'?: string;
+    'locationId': string;
+    'meterPointId': string;
 
     static discriminator: string | undefined = undefined;
 

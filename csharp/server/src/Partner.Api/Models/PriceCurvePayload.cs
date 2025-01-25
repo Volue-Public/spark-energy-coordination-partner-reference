@@ -29,18 +29,21 @@ namespace Partner.Api.Models
         /// <summary>
         /// Gets or Sets Targets
         /// </summary>
+        [Required]
         [DataMember(Name = "targets", EmitDefaultValue = false)]
         public List<PriceCurveTarget> Targets { get; set; }
 
         /// <summary>
         /// Gets or Sets PriceCurveDelta
         /// </summary>
+        [Required]
         [DataMember(Name = "priceCurveDelta", EmitDefaultValue = false)]
         public PriceCurve PriceCurveDelta { get; set; }
 
         /// <summary>
         /// Gets or Sets PriceArea
         /// </summary>
+        [Required]
         [DataMember(Name = "priceArea", EmitDefaultValue = true)]
         public PriceArea PriceArea { get; set; }
 

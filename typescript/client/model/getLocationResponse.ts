@@ -15,7 +15,7 @@ import { Coordinate } from './coordinate';
 import { LocationType } from './locationType';
 
 export class GetLocationResponse {
-    'locationId'?: string;
+    'locationId': string;
     'locationType'?: LocationType;
     'coordinates'?: Coordinate;
     'meterPointId'?: string | null;

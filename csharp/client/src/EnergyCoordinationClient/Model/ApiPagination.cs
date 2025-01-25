@@ -34,9 +34,15 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiPagination" /> class.
         /// </summary>
-        /// <param name="totalRecords">totalRecords.</param>
-        /// <param name="pageSize">pageSize.</param>
-        /// <param name="currentPage">currentPage.</param>
+        [JsonConstructorAttribute]
+        protected ApiPagination() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApiPagination" /> class.
+        /// </summary>
+        /// <param name="totalRecords">totalRecords (required).</param>
+        /// <param name="pageSize">pageSize (required).</param>
+        /// <param name="currentPage">currentPage (required).</param>
         public ApiPagination(
             int totalRecords = default(int),
             int pageSize = default(int),
@@ -51,19 +57,19 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets TotalRecords
         /// </summary>
-        [DataMember(Name = "totalRecords", EmitDefaultValue = false)]
+        [DataMember(Name = "totalRecords", IsRequired = true, EmitDefaultValue = true)]
         public int TotalRecords { get; set; }
 
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
-        [DataMember(Name = "pageSize", EmitDefaultValue = false)]
+        [DataMember(Name = "pageSize", IsRequired = true, EmitDefaultValue = true)]
         public int PageSize { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrentPage
         /// </summary>
-        [DataMember(Name = "currentPage", EmitDefaultValue = false)]
+        [DataMember(Name = "currentPage", IsRequired = true, EmitDefaultValue = true)]
         public int CurrentPage { get; set; }
 
         /// <summary>

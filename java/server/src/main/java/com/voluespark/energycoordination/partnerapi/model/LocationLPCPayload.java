@@ -18,6 +18,17 @@ public class LocationLPCPayload extends SparkEventPayload {
 
   @Valid private List<@Valid LocationLPCTarget> targets = new ArrayList<>();
 
+  public LocationLPCPayload() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public LocationLPCPayload(
+      List<@Valid LocationLPCTarget> targets, SparkEventPayloadType payloadType) {
+    super(payloadType);
+    this.targets = targets;
+  }
+
   public LocationLPCPayload targets(List<@Valid LocationLPCTarget> targets) {
     this.targets = targets;
     return this;
@@ -36,8 +47,9 @@ public class LocationLPCPayload extends SparkEventPayload {
    *
    * @return targets
    */
+  @NotNull
   @Valid
-  @Schema(name = "targets", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @Schema(name = "targets", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("targets")
   public List<@Valid LocationLPCTarget> getTargets() {
     return targets;

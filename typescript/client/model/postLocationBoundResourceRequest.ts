@@ -14,8 +14,8 @@ import { RequestFile } from './models';
 import { ResourceType } from './resourceType';
 
 export class PostLocationBoundResourceRequest {
-    'resourceId'?: string;
-    'resourceType'?: ResourceType;
+    'resourceId': string;
+    'resourceType': ResourceType;
     'meterPointId'?: string | null;
 
     static discriminator: string | undefined = undefined;

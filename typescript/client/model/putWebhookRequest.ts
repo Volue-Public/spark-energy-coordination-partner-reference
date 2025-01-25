@@ -15,7 +15,7 @@ import { NotificationType } from './notificationType';
 
 export class PutWebhookRequest {
     'webhookSecret'?: string | null;
-    'webhookUrl'?: string;
+    'webhookUrl': string;
     'notificationTypes'?: Array<NotificationType>;
     'enabled'?: boolean;
     'name'?: string | null;

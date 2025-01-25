@@ -16,7 +16,7 @@ import { SparkEventPayload } from './sparkEventPayload';
 import { SparkEventPayloadType } from './sparkEventPayloadType';
 
 export class ResourceLPCPayload extends SparkEventPayload {
-    'targets'?: Array<ResourceLPCTarget>;
+    'targets': Array<ResourceLPCTarget>;
 
     static discriminator: string | undefined = undefined;
 

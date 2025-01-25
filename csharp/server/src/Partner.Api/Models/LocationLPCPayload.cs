@@ -29,6 +29,7 @@ namespace Partner.Api.Models
         /// <summary>
         /// Gets or Sets Targets
         /// </summary>
+        [Required]
         [DataMember(Name = "targets", EmitDefaultValue = false)]
         public List<LocationLPCTarget> Targets { get; set; }
 

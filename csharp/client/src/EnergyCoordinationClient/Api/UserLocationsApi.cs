@@ -152,8 +152,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="userId"></param>
         /// <param name="postLocationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetLocationResponse</returns>
-        GetLocationResponse PostLocation(
+        /// <returns></returns>
+        void PostLocation(
             string userId,
             PostLocationRequest postLocationRequest,
             int operationIndex = 0
@@ -169,8 +169,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="userId"></param>
         /// <param name="postLocationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetLocationResponse</returns>
-        ApiResponse<GetLocationResponse> PostLocationWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostLocationWithHttpInfo(
             string userId,
             PostLocationRequest postLocationRequest,
             int operationIndex = 0
@@ -185,8 +185,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLocationsBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PostLocationsBatchResponse</returns>
-        PostLocationsBatchResponse PostLocations(
+        /// <returns></returns>
+        void PostLocations(
             PostLocationsBatchRequest postLocationsBatchRequest,
             int operationIndex = 0
         );
@@ -200,8 +200,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLocationsBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PostLocationsBatchResponse</returns>
-        ApiResponse<PostLocationsBatchResponse> PostLocationsWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostLocationsWithHttpInfo(
             PostLocationsBatchRequest postLocationsBatchRequest,
             int operationIndex = 0
         );
@@ -426,8 +426,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetLocationResponse</returns>
-        System.Threading.Tasks.Task<GetLocationResponse> PostLocationAsync(
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostLocationAsync(
             string userId,
             PostLocationRequest postLocationRequest,
             int operationIndex = 0,
@@ -446,8 +446,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetLocationResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetLocationResponse>> PostLocationWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostLocationWithHttpInfoAsync(
             string userId,
             PostLocationRequest postLocationRequest,
             int operationIndex = 0,
@@ -465,8 +465,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationsBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PostLocationsBatchResponse</returns>
-        System.Threading.Tasks.Task<PostLocationsBatchResponse> PostLocationsAsync(
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostLocationsAsync(
             PostLocationsBatchRequest postLocationsBatchRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -483,10 +483,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationsBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PostLocationsBatchResponse)</returns>
-        System.Threading.Tasks.Task<
-            ApiResponse<PostLocationsBatchResponse>
-        > PostLocationsWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostLocationsWithHttpInfoAsync(
             PostLocationsBatchRequest postLocationsBatchRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -1691,16 +1689,14 @@ namespace EnergyCoordinationClient.Api
         /// <param name="userId"></param>
         /// <param name="postLocationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GetLocationResponse</returns>
-        public GetLocationResponse PostLocation(
+        /// <returns></returns>
+        public void PostLocation(
             string userId,
             PostLocationRequest postLocationRequest,
             int operationIndex = 0
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetLocationResponse> localVarResponse =
-                PostLocationWithHttpInfo(userId, postLocationRequest);
-            return localVarResponse.Data;
+            PostLocationWithHttpInfo(userId, postLocationRequest);
         }
 
         /// <summary>
@@ -1710,8 +1706,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="userId"></param>
         /// <param name="postLocationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GetLocationResponse</returns>
-        public EnergyCoordinationClient.Client.ApiResponse<GetLocationResponse> PostLocationWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<Object> PostLocationWithHttpInfo(
             string userId,
             PostLocationRequest postLocationRequest,
             int operationIndex = 0
@@ -1781,7 +1777,7 @@ namespace EnergyCoordinationClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<GetLocationResponse>(
+            var localVarResponse = this.Client.Post<Object>(
                 "/users/{userId}/locations",
                 localVarRequestOptions,
                 this.Configuration
@@ -1806,8 +1802,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetLocationResponse</returns>
-        public async System.Threading.Tasks.Task<GetLocationResponse> PostLocationAsync(
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostLocationAsync(
             string userId,
             PostLocationRequest postLocationRequest,
             int operationIndex = 0,
@@ -1815,15 +1811,13 @@ namespace EnergyCoordinationClient.Api
                 default(global::System.Threading.CancellationToken)
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<GetLocationResponse> localVarResponse =
-                await PostLocationWithHttpInfoAsync(
-                        userId,
-                        postLocationRequest,
-                        operationIndex,
-                        cancellationToken
-                    )
-                    .ConfigureAwait(false);
-            return localVarResponse.Data;
+            await PostLocationWithHttpInfoAsync(
+                    userId,
+                    postLocationRequest,
+                    operationIndex,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1834,8 +1828,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetLocationResponse)</returns>
-        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetLocationResponse>> PostLocationWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostLocationWithHttpInfoAsync(
             string userId,
             PostLocationRequest postLocationRequest,
             int operationIndex = 0,
@@ -1908,7 +1902,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = await this
-                .AsynchronousClient.PostAsync<GetLocationResponse>(
+                .AsynchronousClient.PostAsync<Object>(
                     "/users/{userId}/locations",
                     localVarRequestOptions,
                     this.Configuration,
@@ -1934,15 +1928,13 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLocationsBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PostLocationsBatchResponse</returns>
-        public PostLocationsBatchResponse PostLocations(
+        /// <returns></returns>
+        public void PostLocations(
             PostLocationsBatchRequest postLocationsBatchRequest,
             int operationIndex = 0
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<PostLocationsBatchResponse> localVarResponse =
-                PostLocationsWithHttpInfo(postLocationsBatchRequest);
-            return localVarResponse.Data;
+            PostLocationsWithHttpInfo(postLocationsBatchRequest);
         }
 
         /// <summary>
@@ -1951,8 +1943,8 @@ namespace EnergyCoordinationClient.Api
         /// <exception cref="EnergyCoordinationClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLocationsBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PostLocationsBatchResponse</returns>
-        public EnergyCoordinationClient.Client.ApiResponse<PostLocationsBatchResponse> PostLocationsWithHttpInfo(
+        /// <returns>ApiResponse of Object(void)</returns>
+        public EnergyCoordinationClient.Client.ApiResponse<Object> PostLocationsWithHttpInfo(
             PostLocationsBatchRequest postLocationsBatchRequest,
             int operationIndex = 0
         )
@@ -2008,7 +2000,7 @@ namespace EnergyCoordinationClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PostLocationsBatchResponse>(
+            var localVarResponse = this.Client.Post<Object>(
                 "/users/locations/batch",
                 localVarRequestOptions,
                 this.Configuration
@@ -2032,22 +2024,20 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationsBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PostLocationsBatchResponse</returns>
-        public async System.Threading.Tasks.Task<PostLocationsBatchResponse> PostLocationsAsync(
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostLocationsAsync(
             PostLocationsBatchRequest postLocationsBatchRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
                 default(global::System.Threading.CancellationToken)
         )
         {
-            EnergyCoordinationClient.Client.ApiResponse<PostLocationsBatchResponse> localVarResponse =
-                await PostLocationsWithHttpInfoAsync(
-                        postLocationsBatchRequest,
-                        operationIndex,
-                        cancellationToken
-                    )
-                    .ConfigureAwait(false);
-            return localVarResponse.Data;
+            await PostLocationsWithHttpInfoAsync(
+                    postLocationsBatchRequest,
+                    operationIndex,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -2057,8 +2047,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="postLocationsBatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PostLocationsBatchResponse)</returns>
-        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<PostLocationsBatchResponse>> PostLocationsWithHttpInfoAsync(
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostLocationsWithHttpInfoAsync(
             PostLocationsBatchRequest postLocationsBatchRequest,
             int operationIndex = 0,
             System.Threading.CancellationToken cancellationToken =
@@ -2117,7 +2107,7 @@ namespace EnergyCoordinationClient.Api
 
             // make the HTTP request
             var localVarResponse = await this
-                .AsynchronousClient.PostAsync<PostLocationsBatchResponse>(
+                .AsynchronousClient.PostAsync<Object>(
                     "/users/locations/batch",
                     localVarRequestOptions,
                     this.Configuration,

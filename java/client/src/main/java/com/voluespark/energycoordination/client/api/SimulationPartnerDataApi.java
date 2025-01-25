@@ -125,6 +125,8 @@ public class SimulationPartnerDataApi {
   /**
    * Simulate DER-Partner Data Creates simulated data with users, vehicles, locations and resources.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
@@ -167,6 +169,8 @@ public class SimulationPartnerDataApi {
   /**
    * Simulate DER-Partner Data Creates simulated data with users, vehicles, locations and resources.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
@@ -180,6 +184,8 @@ public class SimulationPartnerDataApi {
 
   /**
    * Simulate DER-Partner Data Creates simulated data with users, vehicles, locations and resources.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *
@@ -195,6 +201,8 @@ public class SimulationPartnerDataApi {
 
   /**
    * Simulate DER-Partner Data Creates simulated data with users, vehicles, locations and resources.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *

@@ -22,11 +22,11 @@ import { SparkEventPayloadType } from './sparkEventPayloadType';
 import { UserEligibilityPayload } from './userEligibilityPayload';
 
 export class GetEventResponsePayload {
-    'lastUpdated'?: Date;
-    'addedUsers'?: Array<string>;
-    'removedUsers'?: Array<string>;
-    'payloadType'?: SparkEventPayloadType;
-    'targets'?: Array<LocationLPCTarget>;
+    'lastUpdated': Date;
+    'addedUsers': Array<string>;
+    'removedUsers': Array<string>;
+    'payloadType': SparkEventPayloadType;
+    'targets': Array<LocationLPCTarget>;
 
     static discriminator: string | undefined = undefined;
 

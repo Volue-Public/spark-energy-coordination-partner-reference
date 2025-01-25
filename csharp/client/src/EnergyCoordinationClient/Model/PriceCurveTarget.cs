@@ -34,27 +34,47 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PriceCurveTarget" /> class.
         /// </summary>
-        /// <param name="resourceId">resourceId.</param>
-        /// <param name="locationId">locationId.</param>
+        [JsonConstructorAttribute]
+        protected PriceCurveTarget() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PriceCurveTarget" /> class.
+        /// </summary>
+        /// <param name="resourceId">resourceId (required).</param>
+        /// <param name="locationId">locationId (required).</param>
         public PriceCurveTarget(
             string resourceId = default(string),
             string locationId = default(string)
         )
         {
+            // to ensure "resourceId" is required (not null)
+            if (resourceId == null)
+            {
+                throw new ArgumentNullException(
+                    "resourceId is a required property for PriceCurveTarget and cannot be null"
+                );
+            }
             this.ResourceId = resourceId;
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new ArgumentNullException(
+                    "locationId is a required property for PriceCurveTarget and cannot be null"
+                );
+            }
             this.LocationId = locationId;
         }
 
         /// <summary>
         /// Gets or Sets ResourceId
         /// </summary>
-        [DataMember(Name = "resourceId", EmitDefaultValue = false)]
+        [DataMember(Name = "resourceId", IsRequired = true, EmitDefaultValue = true)]
         public string ResourceId { get; set; }
 
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
-        [DataMember(Name = "locationId", EmitDefaultValue = false)]
+        [DataMember(Name = "locationId", IsRequired = true, EmitDefaultValue = true)]
         public string LocationId { get; set; }
 
         /// <summary>

@@ -51,6 +51,8 @@ public class WebhooksApi {
    * Delete a webhook Returns 204 No Content if the webhook was deleted successfully. Returns 404
    * Not Found if the webhook to delete does not exist.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>400</b> - Bad Request
@@ -83,7 +85,7 @@ public class WebhooksApi {
     final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
     final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
-    final String[] localVarAccepts = {"application/problem+json", "application/json"};
+    final String[] localVarAccepts = {"application/json", "application/problem+json"};
     final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     final String[] localVarContentTypes = {};
     final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
@@ -110,6 +112,8 @@ public class WebhooksApi {
    * Delete a webhook Returns 204 No Content if the webhook was deleted successfully. Returns 404
    * Not Found if the webhook to delete does not exist.
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>400</b> - Bad Request
@@ -127,6 +131,8 @@ public class WebhooksApi {
   /**
    * Delete a webhook Returns 204 No Content if the webhook was deleted successfully. Returns 404
    * Not Found if the webhook to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -146,6 +152,8 @@ public class WebhooksApi {
   /**
    * Delete a webhook Returns 204 No Content if the webhook was deleted successfully. Returns 404
    * Not Found if the webhook to delete does not exist.
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *
@@ -727,12 +735,13 @@ public class WebhooksApi {
   /**
    * Create a Webhook
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postWebhookRequest The postWebhookRequest parameter
-   * @return GetWebhookResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postWebhookRequestCreation(PostWebhookRequest postWebhookRequest)
@@ -763,8 +772,7 @@ public class WebhooksApi {
 
     String[] localVarAuthNames = new String[] {"Bearer"};
 
-    ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetWebhookResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return apiClient.invokeAPI(
         "/webhooks",
         HttpMethod.POST,
@@ -783,41 +791,43 @@ public class WebhooksApi {
   /**
    * Create a Webhook
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postWebhookRequest The postWebhookRequest parameter
-   * @return GetWebhookResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetWebhookResponse> postWebhook(PostWebhookRequest postWebhookRequest)
+  public Mono<Void> postWebhook(PostWebhookRequest postWebhookRequest)
       throws WebClientResponseException {
-    ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetWebhookResponse>() {};
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postWebhookRequestCreation(postWebhookRequest).bodyToMono(localVarReturnType);
   }
 
   /**
    * Create a Webhook
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>201</b> - Created
    *
    * <p><b>400</b> - Bad Request
    *
    * @param postWebhookRequest The postWebhookRequest parameter
-   * @return ResponseEntity&lt;GetWebhookResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetWebhookResponse>> postWebhookWithHttpInfo(
-      PostWebhookRequest postWebhookRequest) throws WebClientResponseException {
-    ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
-        new ParameterizedTypeReference<GetWebhookResponse>() {};
+  public Mono<ResponseEntity<Void>> postWebhookWithHttpInfo(PostWebhookRequest postWebhookRequest)
+      throws WebClientResponseException {
+    ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postWebhookRequestCreation(postWebhookRequest).toEntity(localVarReturnType);
   }
 
   /**
    * Create a Webhook
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>201</b> - Created
    *
@@ -969,6 +979,8 @@ public class WebhooksApi {
   /**
    * Enable or Disable a Webhook
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>404</b> - Not Found
@@ -1012,7 +1024,7 @@ public class WebhooksApi {
 
     queryParams.putAll(apiClient.parameterToMultiValueMap(null, "enabled", enabled));
 
-    final String[] localVarAccepts = {};
+    final String[] localVarAccepts = {"application/json"};
     final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     final String[] localVarContentTypes = {};
     final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
@@ -1038,6 +1050,8 @@ public class WebhooksApi {
   /**
    * Enable or Disable a Webhook
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>404</b> - Not Found
@@ -1056,6 +1070,8 @@ public class WebhooksApi {
   /**
    * Enable or Disable a Webhook
    *
+   * <p><b>200</b> - OK
+   *
    * <p><b>204</b> - No Content
    *
    * <p><b>404</b> - Not Found
@@ -1072,6 +1088,8 @@ public class WebhooksApi {
 
   /**
    * Enable or Disable a Webhook
+   *
+   * <p><b>200</b> - OK
    *
    * <p><b>204</b> - No Content
    *

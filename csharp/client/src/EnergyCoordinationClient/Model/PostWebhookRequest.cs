@@ -34,9 +34,15 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostWebhookRequest" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected PostWebhookRequest() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostWebhookRequest" /> class.
+        /// </summary>
         /// <param name="name">name.</param>
         /// <param name="webhookSecret">webhookSecret.</param>
-        /// <param name="webhookUrl">webhookUrl.</param>
+        /// <param name="webhookUrl">webhookUrl (required).</param>
         /// <param name="notificationTypes">notificationTypes.</param>
         public PostWebhookRequest(
             string name = default(string),
@@ -45,9 +51,16 @@ namespace EnergyCoordinationClient.Model
             List<NotificationType> notificationTypes = default(List<NotificationType>)
         )
         {
+            // to ensure "webhookUrl" is required (not null)
+            if (webhookUrl == null)
+            {
+                throw new ArgumentNullException(
+                    "webhookUrl is a required property for PostWebhookRequest and cannot be null"
+                );
+            }
+            this.WebhookUrl = webhookUrl;
             this.Name = name;
             this.WebhookSecret = webhookSecret;
-            this.WebhookUrl = webhookUrl;
             this.NotificationTypes = notificationTypes;
         }
 
@@ -66,7 +79,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets WebhookUrl
         /// </summary>
-        [DataMember(Name = "webhookUrl", EmitDefaultValue = false)]
+        [DataMember(Name = "webhookUrl", IsRequired = true, EmitDefaultValue = true)]
         public string WebhookUrl { get; set; }
 
         /// <summary>

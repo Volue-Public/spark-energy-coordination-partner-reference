@@ -15,12 +15,12 @@ import { NotificationType } from './notificationType';
 import { SparkEventPayload } from './sparkEventPayload';
 
 export class EventNotification {
-    'notificationId'?: string;
-    'eventId'?: string;
-    'eventCreatedAtUtc'?: Date;
-    'notificationSentUtc'?: Date;
-    'notificationType'?: NotificationType;
-    'payload'?: SparkEventPayload;
+    'notificationId': string;
+    'eventId': string;
+    'eventCreatedAtUtc': Date;
+    'notificationSentUtc': Date;
+    'notificationType': NotificationType;
+    'payload': SparkEventPayload;
 
     static discriminator: string | undefined = undefined;
 

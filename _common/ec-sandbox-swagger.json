@@ -22,7 +22,6 @@
           {
             "name": "page",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -31,7 +30,6 @@
           {
             "name": "pageSize",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -46,7 +44,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetEventsResponse"
                 },
-                "example": {"events":[{"id":"2e22f3b4-40da-46a4-9015-84d68c1317ff","createdAt":"2025-01-24T09:02:12.3196071+00:00","payload":{"targets":[{"locationId":"22758c22-b3d8-4d4c-b520-acf94900e73f","meterPointId":"707057500066539446","resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2025-01-24T09:02:12.3195934+00:00"}]}],"payloadType":"LocationLPC"}},{"id":"33f53699-501d-43ff-99f1-4da42e67e787","createdAt":"2025-01-24T09:02:12.3195908+00:00","payload":{"targets":[{"resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2025-01-24T09:02:12.3195665+00:00"}],"meterPointId":"707057500060753265","locationId":"2aabfbc7-c952-4663-b4de-0175dd942c7c","resourceId":"56414448-c72b-4529-8dec-095e3df992a2"}],"payloadType":"ResourceLPC"}},{"id":"be1e6110-b75c-4ad5-a53d-c14f7bb9a361","createdAt":"2025-01-24T09:02:12.3195489+00:00","payload":{"lastUpdated":"2025-01-23T09:02:12.3195499+00:00","addedUsers":["c26fcf25-06dc-4ee8-a842-c58536a9e8db"],"removedUsers":["b622f01d-ec99-4f57-b2cb-5a26b651aa8d"],"payloadType":"UserEligibility"}},{"id":"97bf019a-be0f-4c60-8045-c761d221ef2d","createdAt":"2025-01-24T09:02:12.3196221+00:00","payload":{"targets":[{"resourceId":"ba935028-c01e-49a3-b0d1-48eb737a2bf6","locationId":"507f8d1c-5216-4d95-8da4-463df814ee9a"},{"resourceId":"4732ddeb-c782-43ad-ba54-e9dd18cba77e","locationId":"c668aca2-b6df-449a-8338-eadc8d52f7cc"},{"resourceId":"b0a91462-e638-4505-884f-90a12f1189c5","locationId":"44dede55-9046-4782-bd1f-ee83c9bd4047"},{"resourceId":"519ec46a-6fb0-423c-9475-f3b0dec9fd67","locationId":"c8fc267f-64d5-4f74-9da5-386db8087604"},{"resourceId":"cfeda088-2428-45f3-81a7-bfc166722ab9","locationId":"4ff1bb52-9d4f-4f35-bb8e-a7e51100e3f8"}],"priceCurveDelta":{"points":[{"price":52.7675687288448000,"timestamp":"2025-01-25T00:00:00+00:00"},{"price":94.889413250784000,"timestamp":"2025-01-25T01:00:00+00:00"},{"price":307.191911145384000,"timestamp":"2025-01-25T02:00:00+00:00"},{"price":911.595220563871000,"timestamp":"2025-01-25T03:00:00+00:00"},{"price":962.12787435885000,"timestamp":"2025-01-25T04:00:00+00:00"},{"price":193.839303787695000,"timestamp":"2025-01-25T05:00:00+00:00"},{"price":839.638998801564000,"timestamp":"2025-01-25T06:00:00+00:00"},{"price":272.604766064875000,"timestamp":"2025-01-25T07:00:00+00:00"},{"price":672.03954799872000,"timestamp":"2025-01-25T08:00:00+00:00"},{"price":900.122185614963000,"timestamp":"2025-01-25T09:00:00+00:00"},{"price":367.726748663711000,"timestamp":"2025-01-25T10:00:00+00:00"},{"price":64.7591080069664000,"timestamp":"2025-01-25T11:00:00+00:00"},{"price":23.8740041683874000,"timestamp":"2025-01-25T12:00:00+00:00"},{"price":279.942114631256000,"timestamp":"2025-01-25T13:00:00+00:00"},{"price":76.5822462754951000,"timestamp":"2025-01-25T14:00:00+00:00"},{"price":900.262097886064000,"timestamp":"2025-01-25T15:00:00+00:00"},{"price":661.433558890212000,"timestamp":"2025-01-25T16:00:00+00:00"},{"price":102.746580558452000,"timestamp":"2025-01-25T17:00:00+00:00"},{"price":948.121547966083000,"timestamp":"2025-01-25T18:00:00+00:00"},{"price":60.3952632840317000,"timestamp":"2025-01-25T19:00:00+00:00"},{"price":884.368362250821000,"timestamp":"2025-01-25T20:00:00+00:00"},{"price":361.296332782202000,"timestamp":"2025-01-25T21:00:00+00:00"},{"price":70.0469668416327000,"timestamp":"2025-01-25T22:00:00+00:00"},{"price":492.548906106487000,"timestamp":"2025-01-25T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}],"pagination":{"totalRecords":4,"pageSize":4,"currentPage":1,"totalPages":1,"nextPage":null,"previousPage":null}}
+                "example": {"events":[{"id":"76ef904c-bb3b-4f0c-b18f-353740764561","createdAt":"2025-01-25T09:01:40.5949396+00:00","payload":{"targets":[{"locationId":"eea39858-5ab2-4505-9e1b-8273cae3f8a5","meterPointId":"707057500051931778","resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2025-01-25T09:01:40.5949227+00:00"}]}],"payloadType":"LocationLPC"}},{"id":"7fd8d82b-27ff-4ab8-a100-d75e896c0589","createdAt":"2025-01-25T09:01:40.5949198+00:00","payload":{"targets":[{"resolution":"01:00:00","points":[{"maxPowerInKiloWatts":0,"timestamp":"2025-01-25T09:01:40.5948959+00:00"}],"meterPointId":"707057500039697078","locationId":"7b033044-4118-4b88-acb9-05d36a265a59","resourceId":"3ad286ce-4977-4bc1-99c4-3f6592207ee8"}],"payloadType":"ResourceLPC"}},{"id":"10a11630-4019-413c-b6e2-3ef57af172e3","createdAt":"2025-01-25T09:01:40.5948847+00:00","payload":{"lastUpdated":"2025-01-24T09:01:40.5948859+00:00","addedUsers":["f1706e30-7394-4c24-93d0-b399f8225d18"],"removedUsers":["7963ba4c-d310-4f4a-891d-e57852b3523f"],"payloadType":"UserEligibility"}},{"id":"bfc19321-191f-43f8-ad1d-3f03e48f0419","createdAt":"2025-01-25T09:01:40.5949572+00:00","payload":{"targets":[{"resourceId":"e2a7fb53-696e-4dd5-9203-507b60311fbc","locationId":"6417a72f-197d-4b7c-9029-6fd0c185e311"},{"resourceId":"8a62754a-2fdc-4c43-980b-2a851c789772","locationId":"f30d8f62-f836-4c2c-9f86-fb55cf9b514d"},{"resourceId":"1bf25b7a-c980-4ac4-9cc1-cdd76bcb9f84","locationId":"4febbe3c-6f65-4ec3-8460-beb444792735"},{"resourceId":"e972d27d-2dd8-48d3-ac27-c1de39aecaf2","locationId":"6dde8152-09a5-4cdf-bfda-c364a557b714"},{"resourceId":"369c4686-2e78-4a36-8b2e-24814eb37772","locationId":"a7d5e048-b9f8-4229-bdb8-ddd60998bba0"}],"priceCurveDelta":{"points":[{"price":351.137872796229000,"timestamp":"2025-01-26T00:00:00+00:00"},{"price":718.04602411448000,"timestamp":"2025-01-26T01:00:00+00:00"},{"price":974.578668045183000,"timestamp":"2025-01-26T02:00:00+00:00"},{"price":566.647832301497000,"timestamp":"2025-01-26T03:00:00+00:00"},{"price":326.920993276096000,"timestamp":"2025-01-26T04:00:00+00:00"},{"price":241.202680878745000,"timestamp":"2025-01-26T05:00:00+00:00"},{"price":432.441358891901000,"timestamp":"2025-01-26T06:00:00+00:00"},{"price":790.86926566648000,"timestamp":"2025-01-26T07:00:00+00:00"},{"price":540.394501528127000,"timestamp":"2025-01-26T08:00:00+00:00"},{"price":611.947878962616000,"timestamp":"2025-01-26T09:00:00+00:00"},{"price":125.535071313178000,"timestamp":"2025-01-26T10:00:00+00:00"},{"price":750.336299534574000,"timestamp":"2025-01-26T11:00:00+00:00"},{"price":371.426915999401000,"timestamp":"2025-01-26T12:00:00+00:00"},{"price":318.17589843305000,"timestamp":"2025-01-26T13:00:00+00:00"},{"price":511.180277797847000,"timestamp":"2025-01-26T14:00:00+00:00"},{"price":554.49602984498000,"timestamp":"2025-01-26T15:00:00+00:00"},{"price":350.448324867099000,"timestamp":"2025-01-26T16:00:00+00:00"},{"price":981.616803400278000,"timestamp":"2025-01-26T17:00:00+00:00"},{"price":647.054061051388000,"timestamp":"2025-01-26T18:00:00+00:00"},{"price":554.189305156438000,"timestamp":"2025-01-26T19:00:00+00:00"},{"price":58.4785319735628000,"timestamp":"2025-01-26T20:00:00+00:00"},{"price":143.752305092968000,"timestamp":"2025-01-26T21:00:00+00:00"},{"price":201.517658575073000,"timestamp":"2025-01-26T22:00:00+00:00"},{"price":59.6739456709158000,"timestamp":"2025-01-26T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}],"pagination":{"totalRecords":4,"pageSize":4,"currentPage":1,"totalPages":1,"nextPage":null,"previousPage":null}}
               }
             }
           },
@@ -75,7 +73,6 @@
             "name": "eventId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -89,7 +86,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetEventResponse"
                 },
-                "example": {"id":"197763ae-8c88-41dc-abe5-704b8a7bdee0","createdAt":"2025-01-24T09:02:12.3201486+00:00","payload":{"targets":[{"resourceId":"18cb68a1-61a4-46fe-9223-f954155a5cf3","locationId":"d7dd8a8f-23b1-499e-b58d-d6140f519d04"},{"resourceId":"3467cb7b-e8b0-417c-879e-06856865340e","locationId":"4b132275-d539-4efb-90e9-0ddc696fd8aa"},{"resourceId":"f919e0f8-b982-42b4-8ab0-2a3cf7ef9967","locationId":"80467009-90f1-4157-8336-319013110b3c"},{"resourceId":"29ed7a9b-b6e5-4cb3-bc7b-9f9becd527e8","locationId":"e763968f-c257-49da-9da9-90ac200c9588"},{"resourceId":"e9ecc32a-e77f-4dec-81aa-18565d1ec0c8","locationId":"3287b008-a0b5-4749-b601-f13d8c6a9465"}],"priceCurveDelta":{"points":[{"price":489.322851589886000,"timestamp":"2025-01-25T00:00:00+00:00"},{"price":386.377423969546000,"timestamp":"2025-01-25T01:00:00+00:00"},{"price":940.999632219106000,"timestamp":"2025-01-25T02:00:00+00:00"},{"price":840.669960216059000,"timestamp":"2025-01-25T03:00:00+00:00"},{"price":484.718656279821000,"timestamp":"2025-01-25T04:00:00+00:00"},{"price":193.708756806523000,"timestamp":"2025-01-25T05:00:00+00:00"},{"price":942.434303872572000,"timestamp":"2025-01-25T06:00:00+00:00"},{"price":806.108246548441000,"timestamp":"2025-01-25T07:00:00+00:00"},{"price":71.2818200854698000,"timestamp":"2025-01-25T08:00:00+00:00"},{"price":571.110138596493000,"timestamp":"2025-01-25T09:00:00+00:00"},{"price":885.285542176476000,"timestamp":"2025-01-25T10:00:00+00:00"},{"price":772.899846309211000,"timestamp":"2025-01-25T11:00:00+00:00"},{"price":516.526757863686000,"timestamp":"2025-01-25T12:00:00+00:00"},{"price":547.970477990806000,"timestamp":"2025-01-25T13:00:00+00:00"},{"price":58.8225341798617000,"timestamp":"2025-01-25T14:00:00+00:00"},{"price":590.004018656773000,"timestamp":"2025-01-25T15:00:00+00:00"},{"price":17.4483078207328000,"timestamp":"2025-01-25T16:00:00+00:00"},{"price":198.878352705283000,"timestamp":"2025-01-25T17:00:00+00:00"},{"price":114.011593457147000,"timestamp":"2025-01-25T18:00:00+00:00"},{"price":982.124241479919000,"timestamp":"2025-01-25T19:00:00+00:00"},{"price":782.976441663867000,"timestamp":"2025-01-25T20:00:00+00:00"},{"price":636.530078154305000,"timestamp":"2025-01-25T21:00:00+00:00"},{"price":394.469685130136000,"timestamp":"2025-01-25T22:00:00+00:00"},{"price":602.585811495146000,"timestamp":"2025-01-25T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}
+                "example": {"id":"e95e8718-574e-4469-93db-fb2fe6d96b2d","createdAt":"2025-01-25T09:01:40.5955796+00:00","payload":{"targets":[{"resourceId":"930b5869-a06d-412a-92ea-b5e660b1f60b","locationId":"e241e982-06a2-46cc-a4a7-467ab19ce5f7"},{"resourceId":"896eb306-007e-45b8-94c3-a9220b653fc1","locationId":"1bc8c149-4ea1-4fae-ae31-d7533dc68f51"},{"resourceId":"0fb429fd-a8e1-4bb8-ad43-b7284751d5a0","locationId":"bea55fc6-b684-42c7-a1ee-26d755a07235"},{"resourceId":"1df36e91-0fac-4ac1-937a-cc05430b0791","locationId":"40bbabb5-2fa3-4423-b048-fb4791abedf8"},{"resourceId":"451e0460-7365-4319-8ebb-6dbff4ef8a6e","locationId":"8d852831-87ab-42d8-bea8-e665995910e8"}],"priceCurveDelta":{"points":[{"price":995.537350624785000,"timestamp":"2025-01-26T00:00:00+00:00"},{"price":660.578262959405000,"timestamp":"2025-01-26T01:00:00+00:00"},{"price":345.535963398057000,"timestamp":"2025-01-26T02:00:00+00:00"},{"price":207.42286671532000,"timestamp":"2025-01-26T03:00:00+00:00"},{"price":408.067580682364000,"timestamp":"2025-01-26T04:00:00+00:00"},{"price":310.630161250904000,"timestamp":"2025-01-26T05:00:00+00:00"},{"price":924.622544716742000,"timestamp":"2025-01-26T06:00:00+00:00"},{"price":494.970531021746000,"timestamp":"2025-01-26T07:00:00+00:00"},{"price":346.269840206001000,"timestamp":"2025-01-26T08:00:00+00:00"},{"price":600.675820667215000,"timestamp":"2025-01-26T09:00:00+00:00"},{"price":658.142245084338000,"timestamp":"2025-01-26T10:00:00+00:00"},{"price":859.733695202945000,"timestamp":"2025-01-26T11:00:00+00:00"},{"price":531.532894568622000,"timestamp":"2025-01-26T12:00:00+00:00"},{"price":554.322961791242000,"timestamp":"2025-01-26T13:00:00+00:00"},{"price":76.2276304237968000,"timestamp":"2025-01-26T14:00:00+00:00"},{"price":485.308662150565000,"timestamp":"2025-01-26T15:00:00+00:00"},{"price":77.2552203711225000,"timestamp":"2025-01-26T16:00:00+00:00"},{"price":281.94895952067000,"timestamp":"2025-01-26T17:00:00+00:00"},{"price":811.841755119234000,"timestamp":"2025-01-26T18:00:00+00:00"},{"price":8.25704770395696000,"timestamp":"2025-01-26T19:00:00+00:00"},{"price":410.998257174964000,"timestamp":"2025-01-26T20:00:00+00:00"},{"price":637.273433198093000,"timestamp":"2025-01-26T21:00:00+00:00"},{"price":92.0619629697881000,"timestamp":"2025-01-26T22:00:00+00:00"},{"price":894.848765968655000,"timestamp":"2025-01-26T23:00:00+00:00"}],"energyUnit":"kWh","currency":"NOK","resolution":"01:00:00"},"priceArea":"NO1","payloadType":"PriceCurve"}}
               }
             }
           },
@@ -122,7 +119,7 @@
               "schema": {
                 "$ref": "#/components/schemas/PostReportRequest"
               },
-              "example": {"eventId":"64d4172d-b329-4180-af40-31b3f2b63e77","payloads":[{"resourceId":"687f9d8e-299f-4f7a-b264-36c0c9f7339b","locationId":null,"meterPointId":null,"points":[{"timestamp":"2025-01-24T08:49:08.569315+00:00","kiloWattHours":3.14}],"resolution":"01:00:00","curvePoints":null,"payloadType":"EnergyUsage"}]}
+              "example": {"eventId":"6e654588-32c1-429b-9910-5284f7fb304a","payloads":[{"resourceId":"ec67f6bb-fb94-462e-b5aa-742649e4b434","locationId":null,"meterPointId":null,"points":[{"timestamp":"2025-01-24T17:27:07.019174+00:00","kiloWattHours":3.14}],"resolution":"01:00:00","curvePoints":null,"payloadType":"EnergyUsage"}]}
             }
           },
           "required": true
@@ -163,7 +160,6 @@
             "name": "resourceId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -177,7 +173,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetResourceResponse"
                 },
-                "example": {"resourceId":"687f9d8e-299f-4f7a-b264-36c0c9f7339b","resourceType":"HotWaterTank","userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a","locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","meterPointId":null}
+                "example": {"resourceId":"ec67f6bb-fb94-462e-b5aa-742649e4b434","resourceType":"HotWaterTank","userId":"ad945928-431f-4777-ac68-9c641d635bac","locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","meterPointId":null}
               }
             }
           },
@@ -215,13 +211,18 @@
             "name": "resourceId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "204": {
             "description": "No Content"
           },
@@ -408,6 +409,12 @@
         "description": "Creates simulated data with users, vehicles, locations and resources.",
         "operationId": "PostTenantDataSimulation",
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "201": {
             "description": "Created"
           },
@@ -449,7 +456,6 @@
           {
             "name": "page",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -458,7 +464,6 @@
           {
             "name": "pageSize",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -500,12 +505,18 @@
               "schema": {
                 "$ref": "#/components/schemas/PostUserRequest"
               },
-              "example": {"userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a"}
+              "example": {"userId":"ad945928-431f-4777-ac68-9c641d635bac"}
             }
           },
           "required": true
         },
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "201": {
             "description": "Created",
             "content": {
@@ -513,7 +524,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetUserResponse"
                 },
-                "example": {"userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a"}
+                "example": {"userId":"ad945928-431f-4777-ac68-9c641d635bac"}
               }
             }
           },
@@ -542,7 +553,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -556,7 +566,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetUserResponse"
                 },
-                "example": {"userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a"}
+                "example": {"userId":"ad945928-431f-4777-ac68-9c641d635bac"}
               }
             }
           },
@@ -587,13 +597,18 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "204": {
             "description": "No Content"
           },
@@ -631,6 +646,12 @@
           "required": true
         },
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "201": {
             "description": "Created",
             "content": {
@@ -666,7 +687,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -683,7 +703,7 @@
                     "$ref": "#/components/schemas/GetLocationResponse"
                   }
                 },
-                "example": [{"locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","locationType":"Residential","coordinates":null,"meterPointId":"8d061155-c6d1-4cc6-93b6-2061eea6f033","meterPointIds":["8d061155-c6d1-4cc6-93b6-2061eea6f033"],"userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a"}]
+                "example": [{"locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","locationType":"Residential","coordinates":null,"meterPointId":"d4b50dbd-5b1f-4846-933e-df1fa886e8da","meterPointIds":["d4b50dbd-5b1f-4846-933e-df1fa886e8da"],"userId":"ad945928-431f-4777-ac68-9c641d635bac"}]
               }
             }
           },
@@ -710,7 +730,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -722,12 +741,18 @@
               "schema": {
                 "$ref": "#/components/schemas/PostLocationRequest"
               },
-              "example": {"locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":["8d061155-c6d1-4cc6-93b6-2061eea6f033"]}
+              "example": {"locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":["d4b50dbd-5b1f-4846-933e-df1fa886e8da"]}
             }
           },
           "required": true
         },
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "201": {
             "description": "Created",
             "content": {
@@ -735,7 +760,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetLocationResponse"
                 },
-                "example": {"locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a"}
+                "example": {"locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"ad945928-431f-4777-ac68-9c641d635bac"}
               }
             }
           },
@@ -770,7 +795,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -779,7 +803,6 @@
             "name": "locationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -793,7 +816,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetLocationResponse"
                 },
-                "example": {"locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a"}
+                "example": {"locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"ad945928-431f-4777-ac68-9c641d635bac"}
               }
             }
           },
@@ -823,7 +846,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -832,7 +854,6 @@
             "name": "locationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -856,7 +877,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetLocationResponse"
                 },
-                "example": {"locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a"}
+                "example": {"locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"ad945928-431f-4777-ac68-9c641d635bac"}
               }
             }
           },
@@ -886,7 +907,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -895,7 +915,6 @@
             "name": "locationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -920,7 +939,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetLocationResponse"
                 },
-                "example": {"locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a"}
+                "example": {"locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":[],"userId":"ad945928-431f-4777-ac68-9c641d635bac"}
               }
             }
           },
@@ -954,7 +973,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -963,13 +981,18 @@
             "name": "locationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "204": {
             "description": "No Content"
           },
@@ -1008,6 +1031,12 @@
           "required": true
         },
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "201": {
             "description": "Created",
             "content": {
@@ -1043,7 +1072,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1055,12 +1083,18 @@
               "schema": {
                 "$ref": "#/components/schemas/PostVehicleResourceRequest"
               },
-              "example": {"resourceId":"41145665-e33e-4b2d-9ae3-ea10beb2f299","resourceType":"Vehicle"}
+              "example": {"resourceId":"360df73e-f80c-439b-ad25-b41f24383d77","resourceType":"Vehicle"}
             }
           },
           "required": true
         },
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "201": {
             "description": "Created",
             "content": {
@@ -1068,7 +1102,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetResourceResponse"
                 },
-                "example": {"resourceId":"687f9d8e-299f-4f7a-b264-36c0c9f7339b","resourceType":"HotWaterTank","userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a","locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","meterPointId":null}
+                "example": {"resourceId":"ec67f6bb-fb94-462e-b5aa-742649e4b434","resourceType":"HotWaterTank","userId":"ad945928-431f-4777-ac68-9c641d635bac","locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","meterPointId":null}
               }
             }
           },
@@ -1098,7 +1132,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1112,7 +1145,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetUserResourcesResponse"
                 },
-                "example": {"resources":[{"resourceId":"687f9d8e-299f-4f7a-b264-36c0c9f7339b","resourceType":"HotWaterTank","userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a","locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","meterPointId":null},{"resourceId":"41145665-e33e-4b2d-9ae3-ea10beb2f299","resourceType":"Vehicle","userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a","locationId":null,"meterPointId":null}]}
+                "example": {"resources":[{"resourceId":"ec67f6bb-fb94-462e-b5aa-742649e4b434","resourceType":"HotWaterTank","userId":"ad945928-431f-4777-ac68-9c641d635bac","locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","meterPointId":null},{"resourceId":"360df73e-f80c-439b-ad25-b41f24383d77","resourceType":"Vehicle","userId":"ad945928-431f-4777-ac68-9c641d635bac","locationId":null,"meterPointId":null}]}
               }
             }
           },
@@ -1135,7 +1168,6 @@
             "name": "locationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1144,7 +1176,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1161,7 +1192,7 @@
                     "$ref": "#/components/schemas/GetLocationBoundResourceResponse"
                   }
                 },
-                "example": [{"resourceId":"687f9d8e-299f-4f7a-b264-36c0c9f7339b","resourceType":"HotWaterTank","locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a","meterPointId":null},{"resourceId":"c0422dec-2faf-4d91-bfd4-e5a52b18f0ab","resourceType":"Charger","locationId":"07454de5-0e25-4172-8b96-5542ba3f378b","userId":"22ebb1b2-b112-480f-af4d-7b93d9b6f64a","meterPointId":null}]
+                "example": [{"resourceId":"ec67f6bb-fb94-462e-b5aa-742649e4b434","resourceType":"HotWaterTank","locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","userId":"ad945928-431f-4777-ac68-9c641d635bac","meterPointId":null},{"resourceId":"34e04ae2-bab4-421b-89ad-f912dbd446a1","resourceType":"Charger","locationId":"21dfa725-77f4-4ad7-a0d1-c0361b6ba210","userId":"ad945928-431f-4777-ac68-9c641d635bac","meterPointId":null}]
               }
             }
           },
@@ -1182,7 +1213,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1191,7 +1221,6 @@
             "name": "locationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1203,12 +1232,18 @@
               "schema": {
                 "$ref": "#/components/schemas/PostLocationBoundResourceRequest"
               },
-              "example": {"meterPointId":"8d061155-c6d1-4cc6-93b6-2061eea6f033","resourceId":"687f9d8e-299f-4f7a-b264-36c0c9f7339b","resourceType":"HotWaterTank"}
+              "example": {"meterPointId":"d4b50dbd-5b1f-4846-933e-df1fa886e8da","resourceId":"ec67f6bb-fb94-462e-b5aa-742649e4b434","resourceType":"HotWaterTank"}
             }
           },
           "required": true
         },
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "201": {
             "description": "Created",
             "content": {
@@ -1255,7 +1290,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1299,7 +1333,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1343,13 +1376,18 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "204": {
             "description": "No Content"
           },
@@ -1382,7 +1420,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1427,7 +1464,6 @@
           {
             "name": "page",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1436,7 +1472,6 @@
           {
             "name": "pageSize",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1479,7 +1514,6 @@
             "name": "userId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1525,7 +1559,6 @@
             "name": "mpid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1560,7 +1593,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhooksResponse"
                 },
-                "example": {"webhooks":[{"webhookId":"ace604ac-4bd6-4efb-8129-531f99406371","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-24T09:02:12.3283228+00:00","createdDate":"2025-01-24T09:02:12.328322+00:00","lastAnalyzedTimestamp":"2025-01-24T09:02:12.328323+00:00"}]}
+                "example": {"webhooks":[{"webhookId":"acdfa0bd-db21-4f63-8782-32ce3a102f5b","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-25T09:01:40.6040335+00:00","createdDate":"2025-01-25T09:01:40.6040329+00:00","lastAnalyzedTimestamp":"2025-01-25T09:01:40.6040336+00:00"}]}
               }
             }
           }
@@ -1584,6 +1617,12 @@
           "required": true
         },
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "201": {
             "description": "Created",
             "content": {
@@ -1591,7 +1630,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhookResponse"
                 },
-                "example": {"webhookId":"ace604ac-4bd6-4efb-8129-531f99406371","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-24T09:02:12.3287899+00:00","createdDate":"2025-01-24T09:02:12.3287895+00:00","lastAnalyzedTimestamp":"2025-01-24T09:02:12.32879+00:00"}
+                "example": {"webhookId":"acdfa0bd-db21-4f63-8782-32ce3a102f5b","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-25T09:01:40.604463+00:00","createdDate":"2025-01-25T09:01:40.6044626+00:00","lastAnalyzedTimestamp":"2025-01-25T09:01:40.6044631+00:00"}
               }
             }
           },
@@ -1620,7 +1659,6 @@
             "name": "webhookId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1634,7 +1672,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhookResponse"
                 },
-                "example": {"webhookId":"ace604ac-4bd6-4efb-8129-531f99406371","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-24T09:02:12.3290393+00:00","createdDate":"2025-01-24T09:02:12.3290391+00:00","lastAnalyzedTimestamp":"2025-01-24T09:02:12.3290394+00:00"}
+                "example": {"webhookId":"acdfa0bd-db21-4f63-8782-32ce3a102f5b","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-25T09:01:40.6047632+00:00","createdDate":"2025-01-25T09:01:40.6047628+00:00","lastAnalyzedTimestamp":"2025-01-25T09:01:40.6047633+00:00"}
               }
             }
           },
@@ -1664,7 +1702,6 @@
             "name": "webhookId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1689,7 +1726,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhookResponse"
                 },
-                "example": {"webhookId":"ace604ac-4bd6-4efb-8129-531f99406371","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-24T09:02:12.3294655+00:00","createdDate":"2025-01-24T09:02:12.3294651+00:00","lastAnalyzedTimestamp":"2025-01-24T09:02:12.3294656+00:00"}
+                "example": {"webhookId":"acdfa0bd-db21-4f63-8782-32ce3a102f5b","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-25T09:01:40.6052003+00:00","createdDate":"2025-01-25T09:01:40.6051999+00:00","lastAnalyzedTimestamp":"2025-01-25T09:01:40.6052004+00:00"}
               }
             }
           },
@@ -1720,13 +1757,18 @@
             "name": "webhookId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "204": {
             "description": "No Content"
           },
@@ -1763,7 +1805,6 @@
             "name": "webhookId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1787,7 +1828,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/GetWebhookResponse"
                 },
-                "example": {"webhookId":"ace604ac-4bd6-4efb-8129-531f99406371","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-24T09:02:12.3298605+00:00","createdDate":"2025-01-24T09:02:12.3298602+00:00","lastAnalyzedTimestamp":"2025-01-24T09:02:12.3298606+00:00"}
+                "example": {"webhookId":"acdfa0bd-db21-4f63-8782-32ce3a102f5b","webhookUrl":"https://example.com/api","name":"Example Webhook","notificationTypes":["PriceCurveCreated"],"enabled":true,"status":"Healthy","modifiedDate":"2025-01-25T09:01:40.6057498+00:00","createdDate":"2025-01-25T09:01:40.6057494+00:00","lastAnalyzedTimestamp":"2025-01-25T09:01:40.6057499+00:00"}
               }
             }
           },
@@ -1819,7 +1860,6 @@
             "name": "webhookId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1828,13 +1868,18 @@
             "name": "enabled",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": { }
+            }
+          },
           "204": {
             "description": "No Content"
           },
@@ -1855,7 +1900,6 @@
           {
             "name": "webhookId",
             "in": "query",
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/WebhookId"
             }
@@ -1863,7 +1907,6 @@
           {
             "name": "page",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1872,7 +1915,6 @@
           {
             "name": "pageSize",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1915,7 +1957,6 @@
             "name": "notificationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1949,6 +1990,11 @@
   "components": {
     "schemas": {
       "ApiPagination": {
+        "required": [
+          "currentPage",
+          "pageSize",
+          "totalRecords"
+        ],
         "type": "object",
         "properties": {
           "totalRecords": {
@@ -2007,6 +2053,10 @@
         "type": "string"
       },
       "EnergyCurvePoint": {
+        "required": [
+          "kiloWattHours",
+          "timestamp"
+        ],
         "type": "object",
         "properties": {
           "timestamp": {
@@ -2028,6 +2078,10 @@
         "type": "string"
       },
       "EnergyUsageReportPayload": {
+        "required": [
+          "resolution",
+          "resourceId"
+        ],
         "type": "object",
         "allOf": [
           {
@@ -2072,6 +2126,14 @@
         "type": "string"
       },
       "EventNotification": {
+        "required": [
+          "eventCreatedAtUtc",
+          "eventId",
+          "notificationId",
+          "notificationSentUtc",
+          "notificationType",
+          "payload"
+        ],
         "type": "object",
         "properties": {
           "notificationId": {
@@ -2098,6 +2160,9 @@
         "additionalProperties": false
       },
       "GetEligibleUsersResponse": {
+        "required": [
+          "pagination"
+        ],
         "type": "object",
         "properties": {
           "pagination": {
@@ -2113,6 +2178,9 @@
         "additionalProperties": false
       },
       "GetEventResponse": {
+        "required": [
+          "id"
+        ],
         "type": "object",
         "properties": {
           "payload": {
@@ -2145,6 +2213,9 @@
         "additionalProperties": false
       },
       "GetEventsResponse": {
+        "required": [
+          "pagination"
+        ],
         "type": "object",
         "properties": {
           "pagination": {
@@ -2160,6 +2231,12 @@
         "additionalProperties": false
       },
       "GetLocationBoundResourceResponse": {
+        "required": [
+          "locationId",
+          "resourceId",
+          "resourceType",
+          "userId"
+        ],
         "type": "object",
         "properties": {
           "resourceId": {
@@ -2182,6 +2259,9 @@
         "additionalProperties": false
       },
       "GetLocationResponse": {
+        "required": [
+          "locationId"
+        ],
         "type": "object",
         "properties": {
           "locationId": {
@@ -2213,6 +2293,10 @@
         "additionalProperties": false
       },
       "GetMpidEligibilityResponse": {
+        "required": [
+          "isEligible",
+          "meterPointId"
+        ],
         "type": "object",
         "properties": {
           "meterPointId": {
@@ -2225,6 +2309,9 @@
         "additionalProperties": false
       },
       "GetReportResponse": {
+        "required": [
+          "id"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -2242,6 +2329,11 @@
         "additionalProperties": false
       },
       "GetResourceResponse": {
+        "required": [
+          "resourceId",
+          "resourceType",
+          "userId"
+        ],
         "type": "object",
         "properties": {
           "resourceId": {
@@ -2265,6 +2357,9 @@
         "additionalProperties": false
       },
       "GetUserCompensationForCurrentMonthResponse": {
+        "required": [
+          "period"
+        ],
         "type": "object",
         "properties": {
           "userId": {
@@ -2283,6 +2378,10 @@
         "additionalProperties": false
       },
       "GetUserEligibilityResponse": {
+        "required": [
+          "isEligible",
+          "userId"
+        ],
         "type": "object",
         "properties": {
           "userId": {
@@ -2295,6 +2394,9 @@
         "additionalProperties": false
       },
       "GetUserEnrollmentResponse": {
+        "required": [
+          "userId"
+        ],
         "type": "object",
         "properties": {
           "isEnrolled": {
@@ -2318,6 +2420,9 @@
         "additionalProperties": false
       },
       "GetUserResourcesResponse": {
+        "required": [
+          "resources"
+        ],
         "type": "object",
         "properties": {
           "resources": {
@@ -2330,6 +2435,9 @@
         "additionalProperties": false
       },
       "GetUserResponse": {
+        "required": [
+          "userId"
+        ],
         "type": "object",
         "properties": {
           "userId": {
@@ -2339,6 +2447,9 @@
         "additionalProperties": false
       },
       "GetUsersResponse": {
+        "required": [
+          "pagination"
+        ],
         "type": "object",
         "properties": {
           "pagination": {
@@ -2381,6 +2492,10 @@
         "additionalProperties": false
       },
       "GetWebhookResponse": {
+        "required": [
+          "webhookId",
+          "webhookUrl"
+        ],
         "type": "object",
         "properties": {
           "webhookId": {
@@ -2421,6 +2536,9 @@
         "additionalProperties": false
       },
       "GetWebhooksResponse": {
+        "required": [
+          "webhooks"
+        ],
         "type": "object",
         "properties": {
           "webhooks": {
@@ -2483,6 +2601,10 @@
         "additionalProperties": false
       },
       "LPCLocation": {
+        "required": [
+          "locationId",
+          "meterPointId"
+        ],
         "type": "object",
         "properties": {
           "locationId": {
@@ -2511,6 +2633,10 @@
         "additionalProperties": false
       },
       "LPCReservationPayload": {
+        "required": [
+          "payloadType",
+          "targets"
+        ],
         "type": "object",
         "allOf": [
           {
@@ -2528,6 +2654,11 @@
         "additionalProperties": false
       },
       "LPCResource": {
+        "required": [
+          "locationId",
+          "meterPointId",
+          "resourceId"
+        ],
         "type": "object",
         "properties": {
           "meterPointId": {
@@ -2591,6 +2722,13 @@
         "additionalProperties": false
       },
       "LocationEnergyUsagePlanReportPayload": {
+        "required": [
+          "baseline",
+          "flexibility",
+          "locationId",
+          "meterPointId",
+          "resolution"
+        ],
         "type": "object",
         "allOf": [
           {
@@ -2625,6 +2763,11 @@
         "additionalProperties": false
       },
       "LocationEnergyUsageReportPayload": {
+        "required": [
+          "locationId",
+          "meterPointId",
+          "resolution"
+        ],
         "type": "object",
         "allOf": [
           {
@@ -2679,6 +2822,10 @@
         "additionalProperties": false
       },
       "LocationLPCPayload": {
+        "required": [
+          "payloadType",
+          "targets"
+        ],
         "type": "object",
         "allOf": [
           {
@@ -2696,6 +2843,12 @@
         "additionalProperties": false
       },
       "LocationLPCTarget": {
+        "required": [
+          "locationId",
+          "meterPointId",
+          "points",
+          "resolution"
+        ],
         "type": "object",
         "properties": {
           "locationId": {
@@ -2819,6 +2972,10 @@
         "additionalProperties": false
       },
       "PostLocationBoundResourceRequest": {
+        "required": [
+          "resourceId",
+          "resourceType"
+        ],
         "type": "object",
         "properties": {
           "resourceId": {
@@ -2835,6 +2992,9 @@
         "additionalProperties": false
       },
       "PostLocationRequest": {
+        "required": [
+          "locationId"
+        ],
         "type": "object",
         "properties": {
           "locationId": {
@@ -2862,6 +3022,10 @@
         "additionalProperties": false
       },
       "PostLocationWithUserRequest": {
+        "required": [
+          "locationId",
+          "userId"
+        ],
         "type": "object",
         "properties": {
           "locationId": {
@@ -2892,6 +3056,9 @@
         "additionalProperties": false
       },
       "PostLocationsBatchRequest": {
+        "required": [
+          "locations"
+        ],
         "type": "object",
         "properties": {
           "locations": {
@@ -2904,6 +3071,9 @@
         "additionalProperties": false
       },
       "PostLocationsBatchResponse": {
+        "required": [
+          "locations"
+        ],
         "type": "object",
         "properties": {
           "locations": {
@@ -2948,6 +3118,9 @@
         "additionalProperties": false
       },
       "PostUserRequest": {
+        "required": [
+          "userId"
+        ],
         "type": "object",
         "properties": {
           "userId": {
@@ -2957,6 +3130,9 @@
         "additionalProperties": false
       },
       "PostUsersBatchRequest": {
+        "required": [
+          "users"
+        ],
         "type": "object",
         "properties": {
           "users": {
@@ -2969,6 +3145,9 @@
         "additionalProperties": false
       },
       "PostUsersBatchResponse": {
+        "required": [
+          "users"
+        ],
         "type": "object",
         "properties": {
           "users": {
@@ -2981,6 +3160,10 @@
         "additionalProperties": false
       },
       "PostVehicleResourceRequest": {
+        "required": [
+          "resourceId",
+          "resourceType"
+        ],
         "type": "object",
         "properties": {
           "resourceId": {
@@ -2993,6 +3176,9 @@
         "additionalProperties": false
       },
       "PostWebhookRequest": {
+        "required": [
+          "webhookUrl"
+        ],
         "type": "object",
         "properties": {
           "name": {
@@ -3057,6 +3243,12 @@
         "additionalProperties": false
       },
       "PriceCurvePayload": {
+        "required": [
+          "payloadType",
+          "priceArea",
+          "priceCurveDelta",
+          "targets"
+        ],
         "type": "object",
         "allOf": [
           {
@@ -3094,6 +3286,10 @@
         "additionalProperties": false
       },
       "PriceCurveTarget": {
+        "required": [
+          "locationId",
+          "resourceId"
+        ],
         "type": "object",
         "properties": {
           "resourceId": {
@@ -3106,6 +3302,9 @@
         "additionalProperties": false
       },
       "Problem": {
+        "required": [
+          "message"
+        ],
         "type": "object",
         "properties": {
           "problemType": {
@@ -3125,6 +3324,9 @@
         "type": "string"
       },
       "PutLocationRequest": {
+        "required": [
+          "locationId"
+        ],
         "type": "object",
         "properties": {
           "locationId": {
@@ -3152,6 +3354,9 @@
         "additionalProperties": false
       },
       "PutWebhookRequest": {
+        "required": [
+          "webhookUrl"
+        ],
         "type": "object",
         "properties": {
           "webhookSecret": {
@@ -3204,6 +3409,10 @@
         "additionalProperties": false
       },
       "ResourceLPCPayload": {
+        "required": [
+          "payloadType",
+          "targets"
+        ],
         "type": "object",
         "allOf": [
           {
@@ -3221,6 +3430,13 @@
         "additionalProperties": false
       },
       "ResourceLPCTarget": {
+        "required": [
+          "locationId",
+          "meterPointId",
+          "points",
+          "resolution",
+          "resourceId"
+        ],
         "type": "object",
         "properties": {
           "meterPointId": {
@@ -3327,6 +3543,9 @@
         "additionalProperties": false
       },
       "SparkEventPayload": {
+        "required": [
+          "payloadType"
+        ],
         "type": "object",
         "properties": {
           "payloadType": {
@@ -3389,6 +3608,12 @@
         "type": "string"
       },
       "UserEligibilityPayload": {
+        "required": [
+          "addedUsers",
+          "lastUpdated",
+          "payloadType",
+          "removedUsers"
+        ],
         "type": "object",
         "allOf": [
           {
@@ -3422,6 +3647,11 @@
         "type": "string"
       },
       "WebhookNotificationLog": {
+        "required": [
+          "tenantId",
+          "webhookId",
+          "webhookUrl"
+        ],
         "type": "object",
         "properties": {
           "webhookId": {

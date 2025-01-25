@@ -49,15 +49,15 @@ public class GetUserResourcesResponse {
    *
    * @return resources
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_RESOURCES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<GetResourceResponse> getResources() {
     return resources;
   }
 
   @JsonProperty(JSON_PROPERTY_RESOURCES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setResources(List<GetResourceResponse> resources) {
     this.resources = resources;
   }

@@ -17,6 +17,16 @@ public class PriceCurveTarget {
 
   private String locationId;
 
+  public PriceCurveTarget() {
+    super();
+  }
+
+  /** Constructor with only required parameters */
+  public PriceCurveTarget(String resourceId, String locationId) {
+    this.resourceId = resourceId;
+    this.locationId = locationId;
+  }
+
   public PriceCurveTarget resourceId(String resourceId) {
     this.resourceId = resourceId;
     return this;
@@ -27,7 +37,8 @@ public class PriceCurveTarget {
    *
    * @return resourceId
    */
-  @Schema(name = "resourceId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "resourceId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("resourceId")
   public String getResourceId() {
     return resourceId;
@@ -47,7 +58,8 @@ public class PriceCurveTarget {
    *
    * @return locationId
    */
-  @Schema(name = "locationId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull
+  @Schema(name = "locationId", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("locationId")
   public String getLocationId() {
     return locationId;

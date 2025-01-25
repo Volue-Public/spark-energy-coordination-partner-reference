@@ -36,25 +36,45 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets PriceArea
         /// </summary>
-        [DataMember(Name = "priceArea", EmitDefaultValue = false)]
-        public PriceArea? PriceArea { get; set; }
+        [DataMember(Name = "priceArea", IsRequired = true, EmitDefaultValue = true)]
+        public PriceArea PriceArea { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PriceCurvePayload" /> class.
         /// </summary>
-        /// <param name="targets">targets.</param>
-        /// <param name="priceCurveDelta">priceCurveDelta.</param>
-        /// <param name="priceArea">priceArea.</param>
-        /// <param name="payloadType">payloadType (default to SparkEventPayloadType.PriceCurve).</param>
+        [JsonConstructorAttribute]
+        protected PriceCurvePayload() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PriceCurvePayload" /> class.
+        /// </summary>
+        /// <param name="targets">targets (required).</param>
+        /// <param name="priceCurveDelta">priceCurveDelta (required).</param>
+        /// <param name="priceArea">priceArea (required).</param>
+        /// <param name="payloadType">payloadType (required) (default to SparkEventPayloadType.PriceCurve).</param>
         public PriceCurvePayload(
             List<PriceCurveTarget> targets = default(List<PriceCurveTarget>),
             PriceCurve priceCurveDelta = default(PriceCurve),
-            PriceArea? priceArea = default(PriceArea?),
-            SparkEventPayloadType? payloadType = SparkEventPayloadType.PriceCurve
+            PriceArea priceArea = default(PriceArea),
+            SparkEventPayloadType payloadType = SparkEventPayloadType.PriceCurve
         )
             : base(payloadType)
         {
+            // to ensure "targets" is required (not null)
+            if (targets == null)
+            {
+                throw new ArgumentNullException(
+                    "targets is a required property for PriceCurvePayload and cannot be null"
+                );
+            }
             this.Targets = targets;
+            // to ensure "priceCurveDelta" is required (not null)
+            if (priceCurveDelta == null)
+            {
+                throw new ArgumentNullException(
+                    "priceCurveDelta is a required property for PriceCurvePayload and cannot be null"
+                );
+            }
             this.PriceCurveDelta = priceCurveDelta;
             this.PriceArea = priceArea;
         }
@@ -62,13 +82,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Targets
         /// </summary>
-        [DataMember(Name = "targets", EmitDefaultValue = false)]
+        [DataMember(Name = "targets", IsRequired = true, EmitDefaultValue = true)]
         public List<PriceCurveTarget> Targets { get; set; }
 
         /// <summary>
         /// Gets or Sets PriceCurveDelta
         /// </summary>
-        [DataMember(Name = "priceCurveDelta", EmitDefaultValue = false)]
+        [DataMember(Name = "priceCurveDelta", IsRequired = true, EmitDefaultValue = true)]
         public PriceCurve PriceCurveDelta { get; set; }
 
         /// <summary>

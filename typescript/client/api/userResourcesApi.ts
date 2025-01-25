@@ -173,7 +173,7 @@ export class UserResourcesApi {
      * @param userId 
      * @param postVehicleResourceRequest 
      */
-    public async postVehicle (userId: string, postVehicleResourceRequest: PostVehicleResourceRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetResourceResponse;  }> {
+    public async postVehicle (userId: string, postVehicleResourceRequest: PostVehicleResourceRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/users/{userId}/vehicles'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let localVarQueryParameters: any = {};
@@ -230,13 +230,12 @@ export class UserResourcesApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: GetResourceResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "GetResourceResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

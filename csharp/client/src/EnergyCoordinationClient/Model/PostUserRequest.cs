@@ -34,16 +34,29 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostUserRequest" /> class.
         /// </summary>
-        /// <param name="userId">userId.</param>
+        [JsonConstructorAttribute]
+        protected PostUserRequest() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostUserRequest" /> class.
+        /// </summary>
+        /// <param name="userId">userId (required).</param>
         public PostUserRequest(string userId = default(string))
         {
+            // to ensure "userId" is required (not null)
+            if (userId == null)
+            {
+                throw new ArgumentNullException(
+                    "userId is a required property for PostUserRequest and cannot be null"
+                );
+            }
             this.UserId = userId;
         }
 
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
-        [DataMember(Name = "userId", EmitDefaultValue = false)]
+        [DataMember(Name = "userId", IsRequired = true, EmitDefaultValue = true)]
         public string UserId { get; set; }
 
         /// <summary>

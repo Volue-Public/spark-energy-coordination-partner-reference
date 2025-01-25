@@ -15,7 +15,7 @@ import { ApiPagination } from './apiPagination';
 import { GetEventResponse } from './getEventResponse';
 
 export class GetEventsResponse {
-    'pagination'?: ApiPagination;
+    'pagination': ApiPagination;
     'events'?: Array<GetEventResponse>;
 
     static discriminator: string | undefined = undefined;

@@ -40,7 +40,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostLocationRequest" /> class.
         /// </summary>
-        /// <param name="locationId">locationId.</param>
+        [JsonConstructorAttribute]
+        protected PostLocationRequest() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostLocationRequest" /> class.
+        /// </summary>
+        /// <param name="locationId">locationId (required).</param>
         /// <param name="locationType">locationType.</param>
         /// <param name="coordinates">coordinates.</param>
         /// <param name="meterPointId">meterPointId.</param>
@@ -53,6 +59,13 @@ namespace EnergyCoordinationClient.Model
             List<string> meterPointIds = default(List<string>)
         )
         {
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new ArgumentNullException(
+                    "locationId is a required property for PostLocationRequest and cannot be null"
+                );
+            }
             this.LocationId = locationId;
             this.LocationType = locationType;
             this.Coordinates = coordinates;
@@ -63,7 +76,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
-        [DataMember(Name = "locationId", EmitDefaultValue = false)]
+        [DataMember(Name = "locationId", IsRequired = true, EmitDefaultValue = true)]
         public string LocationId { get; set; }
 
         /// <summary>

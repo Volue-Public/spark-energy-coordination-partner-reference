@@ -29,12 +29,14 @@ namespace Partner.Api.Models
         /// <summary>
         /// Gets or Sets ResourceId
         /// </summary>
+        [Required]
         [DataMember(Name = "resourceId", EmitDefaultValue = false)]
         public string ResourceId { get; set; }
 
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
+        [Required]
         [DataMember(Name = "locationId", EmitDefaultValue = false)]
         public string LocationId { get; set; }
 

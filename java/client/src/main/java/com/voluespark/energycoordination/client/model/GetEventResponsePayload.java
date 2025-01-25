@@ -86,15 +86,15 @@ public class GetEventResponsePayload {
    *
    * @return lastUpdated
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getLastUpdated() {
     return lastUpdated;
   }
 
   @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastUpdated(OffsetDateTime lastUpdated) {
     this.lastUpdated = lastUpdated;
   }
@@ -118,15 +118,15 @@ public class GetEventResponsePayload {
    *
    * @return addedUsers
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ADDED_USERS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<String> getAddedUsers() {
     return addedUsers;
   }
 
   @JsonProperty(JSON_PROPERTY_ADDED_USERS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAddedUsers(List<String> addedUsers) {
     this.addedUsers = addedUsers;
   }
@@ -150,15 +150,15 @@ public class GetEventResponsePayload {
    *
    * @return removedUsers
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_REMOVED_USERS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<String> getRemovedUsers() {
     return removedUsers;
   }
 
   @JsonProperty(JSON_PROPERTY_REMOVED_USERS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRemovedUsers(List<String> removedUsers) {
     this.removedUsers = removedUsers;
   }
@@ -174,15 +174,15 @@ public class GetEventResponsePayload {
    *
    * @return payloadType
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_PAYLOAD_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public SparkEventPayloadType getPayloadType() {
     return payloadType;
   }
 
   @JsonProperty(JSON_PROPERTY_PAYLOAD_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPayloadType(SparkEventPayloadType payloadType) {
     this.payloadType = payloadType;
   }
@@ -206,15 +206,15 @@ public class GetEventResponsePayload {
    *
    * @return targets
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_TARGETS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<LocationLPCTarget> getTargets() {
     return targets;
   }
 
   @JsonProperty(JSON_PROPERTY_TARGETS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTargets(List<LocationLPCTarget> targets) {
     this.targets = targets;
   }

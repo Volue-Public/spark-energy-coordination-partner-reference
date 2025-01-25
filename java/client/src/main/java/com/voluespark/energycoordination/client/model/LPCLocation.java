@@ -45,15 +45,15 @@ public class LPCLocation {
    *
    * @return locationId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getLocationId() {
     return locationId;
   }
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLocationId(String locationId) {
     this.locationId = locationId;
   }
@@ -69,15 +69,15 @@ public class LPCLocation {
    *
    * @return meterPointId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getMeterPointId() {
     return meterPointId;
   }
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMeterPointId(String meterPointId) {
     this.meterPointId = meterPointId;
   }

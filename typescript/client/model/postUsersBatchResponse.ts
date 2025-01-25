@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { GetUserResponse } from './getUserResponse';
 
 export class PostUsersBatchResponse {
-    'users'?: Array<GetUserResponse>;
+    'users': Array<GetUserResponse>;
 
     static discriminator: string | undefined = undefined;
 

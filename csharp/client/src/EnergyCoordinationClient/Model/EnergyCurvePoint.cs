@@ -34,8 +34,14 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EnergyCurvePoint" /> class.
         /// </summary>
-        /// <param name="timestamp">timestamp.</param>
-        /// <param name="kiloWattHours">kiloWattHours.</param>
+        [JsonConstructorAttribute]
+        protected EnergyCurvePoint() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EnergyCurvePoint" /> class.
+        /// </summary>
+        /// <param name="timestamp">timestamp (required).</param>
+        /// <param name="kiloWattHours">kiloWattHours (required).</param>
         public EnergyCurvePoint(
             DateTimeOffset timestamp = default(DateTimeOffset),
             double kiloWattHours = default(double)
@@ -48,13 +54,13 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
-        [DataMember(Name = "timestamp", EmitDefaultValue = false)]
+        [DataMember(Name = "timestamp", IsRequired = true, EmitDefaultValue = true)]
         public DateTimeOffset Timestamp { get; set; }
 
         /// <summary>
         /// Gets or Sets KiloWattHours
         /// </summary>
-        [DataMember(Name = "kiloWattHours", EmitDefaultValue = false)]
+        [DataMember(Name = "kiloWattHours", IsRequired = true, EmitDefaultValue = true)]
         public double KiloWattHours { get; set; }
 
         /// <summary>

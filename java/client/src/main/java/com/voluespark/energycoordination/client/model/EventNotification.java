@@ -62,15 +62,15 @@ public class EventNotification {
    *
    * @return notificationId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getNotificationId() {
     return notificationId;
   }
 
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNotificationId(String notificationId) {
     this.notificationId = notificationId;
   }
@@ -86,15 +86,15 @@ public class EventNotification {
    *
    * @return eventId
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_EVENT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getEventId() {
     return eventId;
   }
 
   @JsonProperty(JSON_PROPERTY_EVENT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventId(String eventId) {
     this.eventId = eventId;
   }
@@ -110,15 +110,15 @@ public class EventNotification {
    *
    * @return eventCreatedAtUtc
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_EVENT_CREATED_AT_UTC)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getEventCreatedAtUtc() {
     return eventCreatedAtUtc;
   }
 
   @JsonProperty(JSON_PROPERTY_EVENT_CREATED_AT_UTC)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventCreatedAtUtc(OffsetDateTime eventCreatedAtUtc) {
     this.eventCreatedAtUtc = eventCreatedAtUtc;
   }
@@ -134,15 +134,15 @@ public class EventNotification {
    *
    * @return notificationSentUtc
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_SENT_UTC)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getNotificationSentUtc() {
     return notificationSentUtc;
   }
 
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_SENT_UTC)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNotificationSentUtc(OffsetDateTime notificationSentUtc) {
     this.notificationSentUtc = notificationSentUtc;
   }
@@ -158,15 +158,15 @@ public class EventNotification {
    *
    * @return notificationType
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public NotificationType getNotificationType() {
     return notificationType;
   }
 
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNotificationType(NotificationType notificationType) {
     this.notificationType = notificationType;
   }
@@ -182,15 +182,15 @@ public class EventNotification {
    *
    * @return payload
    */
-  @jakarta.annotation.Nullable
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_PAYLOAD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public SparkEventPayload getPayload() {
     return payload;
   }
 
   @JsonProperty(JSON_PROPERTY_PAYLOAD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPayload(SparkEventPayload payload) {
     this.payload = payload;
   }

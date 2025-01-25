@@ -15,7 +15,7 @@ import { ProblemType } from './problemType';
 
 export class Problem {
     'problemType'?: ProblemType;
-    'message'?: string;
+    'message': string;
 
     static discriminator: string | undefined = undefined;
 

@@ -16,10 +16,10 @@ import { SparkReportPayload } from './sparkReportPayload';
 import { SparkReportPayloadType } from './sparkReportPayloadType';
 
 export class LocationEnergyUsageReportPayload extends SparkReportPayload {
-    'locationId'?: string;
-    'meterPointId'?: string;
+    'locationId': string;
+    'meterPointId': string;
     'points'?: Array<EnergyCurvePoint>;
-    'resolution'?: string;
+    'resolution': string;
 
     static discriminator: string | undefined = undefined;
 

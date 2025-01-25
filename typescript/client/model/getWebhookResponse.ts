@@ -15,8 +15,8 @@ import { NotificationType } from './notificationType';
 import { WebhookStatus } from './webhookStatus';
 
 export class GetWebhookResponse {
-    'webhookId'?: string;
-    'webhookUrl'?: string;
+    'webhookId': string;
+    'webhookUrl': string;
     'name'?: string | null;
     'notificationTypes'?: Array<NotificationType>;
     'enabled'?: boolean;

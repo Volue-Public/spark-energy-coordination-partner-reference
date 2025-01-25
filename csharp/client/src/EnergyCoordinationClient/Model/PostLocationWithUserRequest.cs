@@ -40,12 +40,18 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PostLocationWithUserRequest" /> class.
         /// </summary>
-        /// <param name="locationId">locationId.</param>
+        [JsonConstructorAttribute]
+        protected PostLocationWithUserRequest() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PostLocationWithUserRequest" /> class.
+        /// </summary>
+        /// <param name="locationId">locationId (required).</param>
         /// <param name="locationType">locationType.</param>
         /// <param name="coordinates">coordinates.</param>
         /// <param name="meterPointId">meterPointId.</param>
         /// <param name="meterPointIds">meterPointIds.</param>
-        /// <param name="userId">userId.</param>
+        /// <param name="userId">userId (required).</param>
         public PostLocationWithUserRequest(
             string locationId = default(string),
             LocationType? locationType = default(LocationType?),
@@ -55,18 +61,32 @@ namespace EnergyCoordinationClient.Model
             string userId = default(string)
         )
         {
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new ArgumentNullException(
+                    "locationId is a required property for PostLocationWithUserRequest and cannot be null"
+                );
+            }
             this.LocationId = locationId;
+            // to ensure "userId" is required (not null)
+            if (userId == null)
+            {
+                throw new ArgumentNullException(
+                    "userId is a required property for PostLocationWithUserRequest and cannot be null"
+                );
+            }
+            this.UserId = userId;
             this.LocationType = locationType;
             this.Coordinates = coordinates;
             this.MeterPointId = meterPointId;
             this.MeterPointIds = meterPointIds;
-            this.UserId = userId;
         }
 
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
-        [DataMember(Name = "locationId", EmitDefaultValue = false)]
+        [DataMember(Name = "locationId", IsRequired = true, EmitDefaultValue = true)]
         public string LocationId { get; set; }
 
         /// <summary>
@@ -91,7 +111,7 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
-        [DataMember(Name = "userId", EmitDefaultValue = false)]
+        [DataMember(Name = "userId", IsRequired = true, EmitDefaultValue = true)]
         public string UserId { get; set; }
 
         /// <summary>

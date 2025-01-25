@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { GetResourceResponse } from './getResourceResponse';
 
 export class GetUserResourcesResponse {
-    'resources'?: Array<GetResourceResponse>;
+    'resources': Array<GetResourceResponse>;
 
     static discriminator: string | undefined = undefined;
 

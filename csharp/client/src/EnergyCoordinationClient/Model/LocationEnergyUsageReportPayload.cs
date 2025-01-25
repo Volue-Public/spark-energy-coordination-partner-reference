@@ -36,10 +36,16 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationEnergyUsageReportPayload" /> class.
         /// </summary>
-        /// <param name="locationId">locationId.</param>
-        /// <param name="meterPointId">meterPointId.</param>
+        [JsonConstructorAttribute]
+        protected LocationEnergyUsageReportPayload() { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationEnergyUsageReportPayload" /> class.
+        /// </summary>
+        /// <param name="locationId">locationId (required).</param>
+        /// <param name="meterPointId">meterPointId (required).</param>
         /// <param name="points">points.</param>
-        /// <param name="resolution">resolution.</param>
+        /// <param name="resolution">resolution (required).</param>
         /// <param name="payloadType">payloadType (default to SparkReportPayloadType.LocationEnergyUsage).</param>
         public LocationEnergyUsageReportPayload(
             string locationId = default(string),
@@ -50,22 +56,43 @@ namespace EnergyCoordinationClient.Model
         )
             : base(payloadType)
         {
+            // to ensure "locationId" is required (not null)
+            if (locationId == null)
+            {
+                throw new ArgumentNullException(
+                    "locationId is a required property for LocationEnergyUsageReportPayload and cannot be null"
+                );
+            }
             this.LocationId = locationId;
+            // to ensure "meterPointId" is required (not null)
+            if (meterPointId == null)
+            {
+                throw new ArgumentNullException(
+                    "meterPointId is a required property for LocationEnergyUsageReportPayload and cannot be null"
+                );
+            }
             this.MeterPointId = meterPointId;
-            this.Points = points;
+            // to ensure "resolution" is required (not null)
+            if (resolution == null)
+            {
+                throw new ArgumentNullException(
+                    "resolution is a required property for LocationEnergyUsageReportPayload and cannot be null"
+                );
+            }
             this.Resolution = resolution;
+            this.Points = points;
         }
 
         /// <summary>
         /// Gets or Sets LocationId
         /// </summary>
-        [DataMember(Name = "locationId", EmitDefaultValue = false)]
+        [DataMember(Name = "locationId", IsRequired = true, EmitDefaultValue = true)]
         public string LocationId { get; set; }
 
         /// <summary>
         /// Gets or Sets MeterPointId
         /// </summary>
-        [DataMember(Name = "meterPointId", EmitDefaultValue = false)]
+        [DataMember(Name = "meterPointId", IsRequired = true, EmitDefaultValue = true)]
         public string MeterPointId { get; set; }
 
         /// <summary>
@@ -78,7 +105,7 @@ namespace EnergyCoordinationClient.Model
         /// Gets or Sets Resolution
         /// </summary>
         /// <example>02:00:00</example>
-        [DataMember(Name = "resolution", EmitDefaultValue = false)]
+        [DataMember(Name = "resolution", IsRequired = true, EmitDefaultValue = true)]
         public string Resolution { get; set; }
 
         /// <summary>

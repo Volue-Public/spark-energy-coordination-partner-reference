@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class GetReportResponse {
-    'id'?: string;
+    'id': string;
     'eventId'?: string | null;
     'createdAt'?: Date;
 
