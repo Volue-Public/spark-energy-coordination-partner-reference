@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "0 9 * * *" # Every day at 9AM
   workflow_dispatch:
+  pull_request:
 
 jobs:
   compare-swagger:
@@ -83,20 +84,10 @@ jobs:
           mkdir -p ~/bin/openapitools
           curl --retry 5 --retry-max-time 120 -o ~/bin/openapitools/openapi-generator-cli https://raw.githubusercontent.com/OpenAPITools/openapi-generator/master/bin/utils/openapi-generator-cli.sh
           chmod u+x ~/bin/openapitools/openapi-generator-cli
-          # This should be removed once the following PR is merged:
-          # https://github.com/OpenAPITools/openapi-generator/pull/19614
-          git clone https://github.com/OpenAPITools/openapi-generator --depth 1 ~/bin/openapitools/openapi-generator
-          cd ~/bin/openapitools/openapi-generator
-          git fetch origin pull/19614/head:pr-19614 --depth 1
-          git checkout pr-19614
-          mvn --ntp install -N
-          mvn --ntp package -Dmaven.test.skip -Djacoco.skip -Dmdep.skip -pl modules/openapi-generator,modules/openapi-generator-cli,modules/openapi-generator-core
-          cp modules/openapi-generator-cli/target/openapi-generator-cli.jar ~/bin/openapitools/openapi-generator-cli-pr19614.jar
 
       - name: Run code generation for ${{ matrix.config.language }} ${{ matrix.generator-type }}
-        # This should be removed once the PR is merged
         env:
-          OPENAPI_GENERATOR_VERSION: pr19614
+          OPENAPI_GENERATOR_VERSION: 7.12.0
         run: |
           # Remove old generated files
           cat .openapi-generator/FILES | xargs rm -f
