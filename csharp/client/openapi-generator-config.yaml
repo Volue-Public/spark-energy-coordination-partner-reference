@@ -8,3 +8,5 @@ additionalProperties:
   packageName: EnergyCoordinationClient
   packageGuid: "{278CCF37-C285-4A18-AEEA-2E77BB3A4107}"
   licenseId: MIT
+  targetFramework: net8.0
+  library: restsharp
