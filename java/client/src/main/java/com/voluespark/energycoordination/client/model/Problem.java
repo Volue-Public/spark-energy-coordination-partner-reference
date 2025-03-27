@@ -21,17 +21,17 @@ import java.util.Objects;
 @JsonPropertyOrder({Problem.JSON_PROPERTY_PROBLEM_TYPE, Problem.JSON_PROPERTY_MESSAGE})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class Problem {
   public static final String JSON_PROPERTY_PROBLEM_TYPE = "problemType";
-  private ProblemType problemType;
+  @jakarta.annotation.Nullable private ProblemType problemType;
 
   public static final String JSON_PROPERTY_MESSAGE = "message";
-  private String message;
+  @jakarta.annotation.Nonnull private String message;
 
   public Problem() {}
 
-  public Problem problemType(ProblemType problemType) {
+  public Problem problemType(@jakarta.annotation.Nullable ProblemType problemType) {
 
     this.problemType = problemType;
     return this;
@@ -51,11 +51,11 @@ public class Problem {
 
   @JsonProperty(JSON_PROPERTY_PROBLEM_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProblemType(ProblemType problemType) {
+  public void setProblemType(@jakarta.annotation.Nullable ProblemType problemType) {
     this.problemType = problemType;
   }
 
-  public Problem message(String message) {
+  public Problem message(@jakarta.annotation.Nonnull String message) {
 
     this.message = message;
     return this;
@@ -75,7 +75,7 @@ public class Problem {
 
   @JsonProperty(JSON_PROPERTY_MESSAGE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setMessage(String message) {
+  public void setMessage(@jakarta.annotation.Nonnull String message) {
     this.message = message;
   }
 

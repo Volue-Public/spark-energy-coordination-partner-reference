@@ -15,7 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /** UserEligibilityPayload */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class UserEligibilityPayload extends SparkEventPayload {
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)

@@ -26,17 +26,17 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetEventsResponse {
   public static final String JSON_PROPERTY_PAGINATION = "pagination";
-  private ApiPagination pagination;
+  @jakarta.annotation.Nonnull private ApiPagination pagination;
 
   public static final String JSON_PROPERTY_EVENTS = "events";
-  private List<GetEventResponse> events = new ArrayList<>();
+  @jakarta.annotation.Nullable private List<GetEventResponse> events = new ArrayList<>();
 
   public GetEventsResponse() {}
 
-  public GetEventsResponse pagination(ApiPagination pagination) {
+  public GetEventsResponse pagination(@jakarta.annotation.Nonnull ApiPagination pagination) {
 
     this.pagination = pagination;
     return this;
@@ -56,11 +56,11 @@ public class GetEventsResponse {
 
   @JsonProperty(JSON_PROPERTY_PAGINATION)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setPagination(ApiPagination pagination) {
+  public void setPagination(@jakarta.annotation.Nonnull ApiPagination pagination) {
     this.pagination = pagination;
   }
 
-  public GetEventsResponse events(List<GetEventResponse> events) {
+  public GetEventsResponse events(@jakarta.annotation.Nullable List<GetEventResponse> events) {
 
     this.events = events;
     return this;
@@ -88,7 +88,7 @@ public class GetEventsResponse {
 
   @JsonProperty(JSON_PROPERTY_EVENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEvents(List<GetEventResponse> events) {
+  public void setEvents(@jakarta.annotation.Nullable List<GetEventResponse> events) {
     this.events = events;
   }
 

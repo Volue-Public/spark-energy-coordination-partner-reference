@@ -13,7 +13,7 @@ import java.util.Objects;
 /** LocationLPCPayload */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class LocationLPCPayload extends SparkEventPayload {
 
   @Valid private List<@Valid LocationLPCTarget> targets = new ArrayList<>();

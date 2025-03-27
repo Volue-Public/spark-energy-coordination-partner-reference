@@ -30,7 +30,6 @@ namespace EnergyCoordinationClient.Model
     /// PriceCurvePayload
     /// </summary>
     [DataContract(Name = "PriceCurvePayload")]
-    [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
     public partial class PriceCurvePayload : SparkEventPayload, IValidatableObject
     {
         /// <summary>

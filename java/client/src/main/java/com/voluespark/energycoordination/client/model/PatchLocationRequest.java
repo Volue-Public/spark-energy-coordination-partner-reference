@@ -30,20 +30,22 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PatchLocationRequest {
   public static final String JSON_PROPERTY_LOCATION_TYPE = "locationType";
-  private LocationType locationType;
+  @jakarta.annotation.Nullable private LocationType locationType;
 
   public static final String JSON_PROPERTY_COORDINATES = "coordinates";
-  private Coordinate coordinates;
+  @jakarta.annotation.Nullable private Coordinate coordinates;
 
   public static final String JSON_PROPERTY_METER_POINT_IDS = "meterPointIds";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<List<String>> meterPointIds = JsonNullable.<List<String>>undefined();
 
   public PatchLocationRequest() {}
 
-  public PatchLocationRequest locationType(LocationType locationType) {
+  public PatchLocationRequest locationType(@jakarta.annotation.Nullable LocationType locationType) {
 
     this.locationType = locationType;
     return this;
@@ -63,11 +65,11 @@ public class PatchLocationRequest {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocationType(LocationType locationType) {
+  public void setLocationType(@jakarta.annotation.Nullable LocationType locationType) {
     this.locationType = locationType;
   }
 
-  public PatchLocationRequest coordinates(Coordinate coordinates) {
+  public PatchLocationRequest coordinates(@jakarta.annotation.Nullable Coordinate coordinates) {
 
     this.coordinates = coordinates;
     return this;
@@ -87,11 +89,12 @@ public class PatchLocationRequest {
 
   @JsonProperty(JSON_PROPERTY_COORDINATES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCoordinates(Coordinate coordinates) {
+  public void setCoordinates(@jakarta.annotation.Nullable Coordinate coordinates) {
     this.coordinates = coordinates;
   }
 
-  public PatchLocationRequest meterPointIds(List<String> meterPointIds) {
+  public PatchLocationRequest meterPointIds(
+      @jakarta.annotation.Nullable List<String> meterPointIds) {
     this.meterPointIds = JsonNullable.<List<String>>of(meterPointIds);
 
     return this;
@@ -131,7 +134,7 @@ public class PatchLocationRequest {
     this.meterPointIds = meterPointIds;
   }
 
-  public void setMeterPointIds(List<String> meterPointIds) {
+  public void setMeterPointIds(@jakarta.annotation.Nullable List<String> meterPointIds) {
     this.meterPointIds = JsonNullable.<List<String>>of(meterPointIds);
   }
 

@@ -18,6 +18,9 @@ export class PostLocationWithUserRequest {
     'locationId': string;
     'locationType'?: LocationType;
     'coordinates'?: Coordinate;
+    /**
+    * @deprecated
+    */
     'meterPointId'?: string | null;
     'meterPointIds'?: Array<string> | null;
     'userId': string;

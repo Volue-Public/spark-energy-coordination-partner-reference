@@ -21,14 +21,14 @@ import java.util.Objects;
 @JsonPropertyOrder({GetUserResponse.JSON_PROPERTY_USER_ID})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetUserResponse {
   public static final String JSON_PROPERTY_USER_ID = "userId";
-  private String userId;
+  @jakarta.annotation.Nonnull private String userId;
 
   public GetUserResponse() {}
 
-  public GetUserResponse userId(String userId) {
+  public GetUserResponse userId(@jakarta.annotation.Nonnull String userId) {
 
     this.userId = userId;
     return this;
@@ -48,7 +48,7 @@ public class GetUserResponse {
 
   @JsonProperty(JSON_PROPERTY_USER_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setUserId(String userId) {
+  public void setUserId(@jakarta.annotation.Nonnull String userId) {
     this.userId = userId;
   }
 

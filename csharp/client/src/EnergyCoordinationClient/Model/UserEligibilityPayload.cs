@@ -30,7 +30,6 @@ namespace EnergyCoordinationClient.Model
     /// UserEligibilityPayload
     /// </summary>
     [DataContract(Name = "UserEligibilityPayload")]
-    [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
     public partial class UserEligibilityPayload : SparkEventPayload, IValidatableObject
     {
         /// <summary>

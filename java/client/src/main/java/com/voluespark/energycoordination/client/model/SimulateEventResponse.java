@@ -21,14 +21,15 @@ import java.util.Objects;
 @JsonPropertyOrder({SimulateEventResponse.JSON_PROPERTY_SIMULATED_EVENT})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class SimulateEventResponse {
   public static final String JSON_PROPERTY_SIMULATED_EVENT = "simulatedEvent";
-  private GetEventResponse simulatedEvent;
+  @jakarta.annotation.Nullable private GetEventResponse simulatedEvent;
 
   public SimulateEventResponse() {}
 
-  public SimulateEventResponse simulatedEvent(GetEventResponse simulatedEvent) {
+  public SimulateEventResponse simulatedEvent(
+      @jakarta.annotation.Nullable GetEventResponse simulatedEvent) {
 
     this.simulatedEvent = simulatedEvent;
     return this;
@@ -48,7 +49,7 @@ public class SimulateEventResponse {
 
   @JsonProperty(JSON_PROPERTY_SIMULATED_EVENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSimulatedEvent(GetEventResponse simulatedEvent) {
+  public void setSimulatedEvent(@jakarta.annotation.Nullable GetEventResponse simulatedEvent) {
     this.simulatedEvent = simulatedEvent;
   }
 

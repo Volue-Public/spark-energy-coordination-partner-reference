@@ -25,20 +25,20 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class LPCResource {
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
-  private String meterPointId;
+  @jakarta.annotation.Nonnull private String meterPointId;
 
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
-  private String locationId;
+  @jakarta.annotation.Nonnull private String locationId;
 
   public static final String JSON_PROPERTY_RESOURCE_ID = "resourceId";
-  private String resourceId;
+  @jakarta.annotation.Nonnull private String resourceId;
 
   public LPCResource() {}
 
-  public LPCResource meterPointId(String meterPointId) {
+  public LPCResource meterPointId(@jakarta.annotation.Nonnull String meterPointId) {
 
     this.meterPointId = meterPointId;
     return this;
@@ -58,11 +58,11 @@ public class LPCResource {
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setMeterPointId(String meterPointId) {
+  public void setMeterPointId(@jakarta.annotation.Nonnull String meterPointId) {
     this.meterPointId = meterPointId;
   }
 
-  public LPCResource locationId(String locationId) {
+  public LPCResource locationId(@jakarta.annotation.Nonnull String locationId) {
 
     this.locationId = locationId;
     return this;
@@ -82,11 +82,11 @@ public class LPCResource {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@jakarta.annotation.Nonnull String locationId) {
     this.locationId = locationId;
   }
 
-  public LPCResource resourceId(String resourceId) {
+  public LPCResource resourceId(@jakarta.annotation.Nonnull String resourceId) {
 
     this.resourceId = resourceId;
     return this;
@@ -106,7 +106,7 @@ public class LPCResource {
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResourceId(String resourceId) {
+  public void setResourceId(@jakarta.annotation.Nonnull String resourceId) {
     this.resourceId = resourceId;
   }
 

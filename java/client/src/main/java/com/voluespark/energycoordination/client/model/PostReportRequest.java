@@ -29,17 +29,21 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PostReportRequest {
   public static final String JSON_PROPERTY_EVENT_ID = "eventId";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> eventId = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_PAYLOADS = "payloads";
+
+  @jakarta.annotation.Nullable
   private List<PostReportRequestPayloadsInner> payloads = new ArrayList<>();
 
   public PostReportRequest() {}
 
-  public PostReportRequest eventId(String eventId) {
+  public PostReportRequest eventId(@jakarta.annotation.Nullable String eventId) {
     this.eventId = JsonNullable.<String>of(eventId);
 
     return this;
@@ -67,11 +71,12 @@ public class PostReportRequest {
     this.eventId = eventId;
   }
 
-  public void setEventId(String eventId) {
+  public void setEventId(@jakarta.annotation.Nullable String eventId) {
     this.eventId = JsonNullable.<String>of(eventId);
   }
 
-  public PostReportRequest payloads(List<PostReportRequestPayloadsInner> payloads) {
+  public PostReportRequest payloads(
+      @jakarta.annotation.Nullable List<PostReportRequestPayloadsInner> payloads) {
 
     this.payloads = payloads;
     return this;
@@ -99,7 +104,8 @@ public class PostReportRequest {
 
   @JsonProperty(JSON_PROPERTY_PAYLOADS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPayloads(List<PostReportRequestPayloadsInner> payloads) {
+  public void setPayloads(
+      @jakarta.annotation.Nullable List<PostReportRequestPayloadsInner> payloads) {
     this.payloads = payloads;
   }
 

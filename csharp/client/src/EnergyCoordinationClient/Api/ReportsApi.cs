@@ -286,6 +286,7 @@ namespace EnergyCoordinationClient.Api
 
             var localVarContentType =
                 EnergyCoordinationClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

@@ -30,7 +30,6 @@ namespace EnergyCoordinationClient.Model
     /// ResourceLPCPayload
     /// </summary>
     [DataContract(Name = "ResourceLPCPayload")]
-    [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
     public partial class ResourceLPCPayload : SparkEventPayload, IValidatableObject
     {
         /// <summary>

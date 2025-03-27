@@ -28,20 +28,23 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PostLocationBoundResourceRequest {
   public static final String JSON_PROPERTY_RESOURCE_ID = "resourceId";
-  private String resourceId;
+  @jakarta.annotation.Nonnull private String resourceId;
 
   public static final String JSON_PROPERTY_RESOURCE_TYPE = "resourceType";
-  private ResourceType resourceType;
+  @jakarta.annotation.Nonnull private ResourceType resourceType;
 
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> meterPointId = JsonNullable.<String>undefined();
 
   public PostLocationBoundResourceRequest() {}
 
-  public PostLocationBoundResourceRequest resourceId(String resourceId) {
+  public PostLocationBoundResourceRequest resourceId(
+      @jakarta.annotation.Nonnull String resourceId) {
 
     this.resourceId = resourceId;
     return this;
@@ -61,11 +64,12 @@ public class PostLocationBoundResourceRequest {
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResourceId(String resourceId) {
+  public void setResourceId(@jakarta.annotation.Nonnull String resourceId) {
     this.resourceId = resourceId;
   }
 
-  public PostLocationBoundResourceRequest resourceType(ResourceType resourceType) {
+  public PostLocationBoundResourceRequest resourceType(
+      @jakarta.annotation.Nonnull ResourceType resourceType) {
 
     this.resourceType = resourceType;
     return this;
@@ -85,11 +89,12 @@ public class PostLocationBoundResourceRequest {
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_TYPE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResourceType(ResourceType resourceType) {
+  public void setResourceType(@jakarta.annotation.Nonnull ResourceType resourceType) {
     this.resourceType = resourceType;
   }
 
-  public PostLocationBoundResourceRequest meterPointId(String meterPointId) {
+  public PostLocationBoundResourceRequest meterPointId(
+      @jakarta.annotation.Nullable String meterPointId) {
     this.meterPointId = JsonNullable.<String>of(meterPointId);
 
     return this;
@@ -117,7 +122,7 @@ public class PostLocationBoundResourceRequest {
     this.meterPointId = meterPointId;
   }
 
-  public void setMeterPointId(String meterPointId) {
+  public void setMeterPointId(@jakarta.annotation.Nullable String meterPointId) {
     this.meterPointId = JsonNullable.<String>of(meterPointId);
   }
 

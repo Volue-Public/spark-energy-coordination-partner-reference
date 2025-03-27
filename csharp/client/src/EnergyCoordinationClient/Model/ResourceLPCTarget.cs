@@ -116,7 +116,9 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Resolution
         /// </summary>
-        /// <example>02:00:00</example>
+        /*
+        <example>02:00:00</example>
+        */
         [DataMember(Name = "resolution", IsRequired = true, EmitDefaultValue = true)]
         public string Resolution { get; set; }
 

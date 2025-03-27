@@ -30,29 +30,29 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class LocationCompensation {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
-  private String locationId;
+  @jakarta.annotation.Nullable private String locationId;
 
   public static final String JSON_PROPERTY_METER_POINT_IDS = "meterPointIds";
-  private List<String> meterPointIds = new ArrayList<>();
+  @jakarta.annotation.Nullable private List<String> meterPointIds = new ArrayList<>();
 
   public static final String JSON_PROPERTY_ACTIVE_AMOUNT = "activeAmount";
-  private Double activeAmount;
+  @jakarta.annotation.Nullable private Double activeAmount;
 
   public static final String JSON_PROPERTY_BLOCKED_AMOUNT = "blockedAmount";
-  private Double blockedAmount;
+  @jakarta.annotation.Nullable private Double blockedAmount;
 
   public static final String JSON_PROPERTY_CURRENCY = "currency";
-  private Currency currency;
+  @jakarta.annotation.Nullable private Currency currency;
 
   public static final String JSON_PROPERTY_PROBLEMS = "problems";
-  private List<Problem> problems = new ArrayList<>();
+  @jakarta.annotation.Nullable private List<Problem> problems = new ArrayList<>();
 
   public LocationCompensation() {}
 
-  public LocationCompensation locationId(String locationId) {
+  public LocationCompensation locationId(@jakarta.annotation.Nullable String locationId) {
 
     this.locationId = locationId;
     return this;
@@ -72,11 +72,12 @@ public class LocationCompensation {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@jakarta.annotation.Nullable String locationId) {
     this.locationId = locationId;
   }
 
-  public LocationCompensation meterPointIds(List<String> meterPointIds) {
+  public LocationCompensation meterPointIds(
+      @jakarta.annotation.Nullable List<String> meterPointIds) {
 
     this.meterPointIds = meterPointIds;
     return this;
@@ -104,11 +105,11 @@ public class LocationCompensation {
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMeterPointIds(List<String> meterPointIds) {
+  public void setMeterPointIds(@jakarta.annotation.Nullable List<String> meterPointIds) {
     this.meterPointIds = meterPointIds;
   }
 
-  public LocationCompensation activeAmount(Double activeAmount) {
+  public LocationCompensation activeAmount(@jakarta.annotation.Nullable Double activeAmount) {
 
     this.activeAmount = activeAmount;
     return this;
@@ -128,11 +129,11 @@ public class LocationCompensation {
 
   @JsonProperty(JSON_PROPERTY_ACTIVE_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setActiveAmount(Double activeAmount) {
+  public void setActiveAmount(@jakarta.annotation.Nullable Double activeAmount) {
     this.activeAmount = activeAmount;
   }
 
-  public LocationCompensation blockedAmount(Double blockedAmount) {
+  public LocationCompensation blockedAmount(@jakarta.annotation.Nullable Double blockedAmount) {
 
     this.blockedAmount = blockedAmount;
     return this;
@@ -152,11 +153,11 @@ public class LocationCompensation {
 
   @JsonProperty(JSON_PROPERTY_BLOCKED_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBlockedAmount(Double blockedAmount) {
+  public void setBlockedAmount(@jakarta.annotation.Nullable Double blockedAmount) {
     this.blockedAmount = blockedAmount;
   }
 
-  public LocationCompensation currency(Currency currency) {
+  public LocationCompensation currency(@jakarta.annotation.Nullable Currency currency) {
 
     this.currency = currency;
     return this;
@@ -176,11 +177,11 @@ public class LocationCompensation {
 
   @JsonProperty(JSON_PROPERTY_CURRENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrency(Currency currency) {
+  public void setCurrency(@jakarta.annotation.Nullable Currency currency) {
     this.currency = currency;
   }
 
-  public LocationCompensation problems(List<Problem> problems) {
+  public LocationCompensation problems(@jakarta.annotation.Nullable List<Problem> problems) {
 
     this.problems = problems;
     return this;
@@ -208,7 +209,7 @@ public class LocationCompensation {
 
   @JsonProperty(JSON_PROPERTY_PROBLEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProblems(List<Problem> problems) {
+  public void setProblems(@jakarta.annotation.Nullable List<Problem> problems) {
     this.problems = problems;
   }
 

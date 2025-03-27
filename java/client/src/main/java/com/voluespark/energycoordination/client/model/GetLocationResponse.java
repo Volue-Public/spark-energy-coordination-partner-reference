@@ -34,24 +34,28 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetLocationResponse {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
-  private String locationId;
+  @jakarta.annotation.Nonnull private String locationId;
 
   public static final String JSON_PROPERTY_LOCATION_TYPE = "locationType";
-  private LocationType locationType;
+  @jakarta.annotation.Nullable private LocationType locationType;
 
   public static final String JSON_PROPERTY_COORDINATES = "coordinates";
-  private Coordinate coordinates;
+  @jakarta.annotation.Nullable private Coordinate coordinates;
 
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> meterPointId = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_METER_POINT_IDS = "meterPointIds";
-  private List<String> meterPointIds = new ArrayList<>();
+  @jakarta.annotation.Nullable private List<String> meterPointIds = new ArrayList<>();
 
   public static final String JSON_PROPERTY_USER_ID = "userId";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> userId = JsonNullable.<String>undefined();
 
   public GetLocationResponse() {}
@@ -64,7 +68,7 @@ public class GetLocationResponse {
         meterPointId == null ? JsonNullable.<String>undefined() : JsonNullable.of(meterPointId);
   }
 
-  public GetLocationResponse locationId(String locationId) {
+  public GetLocationResponse locationId(@jakarta.annotation.Nonnull String locationId) {
 
     this.locationId = locationId;
     return this;
@@ -84,11 +88,11 @@ public class GetLocationResponse {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@jakarta.annotation.Nonnull String locationId) {
     this.locationId = locationId;
   }
 
-  public GetLocationResponse locationType(LocationType locationType) {
+  public GetLocationResponse locationType(@jakarta.annotation.Nullable LocationType locationType) {
 
     this.locationType = locationType;
     return this;
@@ -108,11 +112,11 @@ public class GetLocationResponse {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocationType(LocationType locationType) {
+  public void setLocationType(@jakarta.annotation.Nullable LocationType locationType) {
     this.locationType = locationType;
   }
 
-  public GetLocationResponse coordinates(Coordinate coordinates) {
+  public GetLocationResponse coordinates(@jakarta.annotation.Nullable Coordinate coordinates) {
 
     this.coordinates = coordinates;
     return this;
@@ -132,7 +136,7 @@ public class GetLocationResponse {
 
   @JsonProperty(JSON_PROPERTY_COORDINATES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCoordinates(Coordinate coordinates) {
+  public void setCoordinates(@jakarta.annotation.Nullable Coordinate coordinates) {
     this.coordinates = coordinates;
   }
 
@@ -164,7 +168,8 @@ public class GetLocationResponse {
     this.meterPointId = meterPointId;
   }
 
-  public GetLocationResponse meterPointIds(List<String> meterPointIds) {
+  public GetLocationResponse meterPointIds(
+      @jakarta.annotation.Nullable List<String> meterPointIds) {
 
     this.meterPointIds = meterPointIds;
     return this;
@@ -192,11 +197,11 @@ public class GetLocationResponse {
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMeterPointIds(List<String> meterPointIds) {
+  public void setMeterPointIds(@jakarta.annotation.Nullable List<String> meterPointIds) {
     this.meterPointIds = meterPointIds;
   }
 
-  public GetLocationResponse userId(String userId) {
+  public GetLocationResponse userId(@jakarta.annotation.Nullable String userId) {
     this.userId = JsonNullable.<String>of(userId);
 
     return this;
@@ -224,7 +229,7 @@ public class GetLocationResponse {
     this.userId = userId;
   }
 
-  public void setUserId(String userId) {
+  public void setUserId(@jakarta.annotation.Nullable String userId) {
     this.userId = JsonNullable.<String>of(userId);
   }
 

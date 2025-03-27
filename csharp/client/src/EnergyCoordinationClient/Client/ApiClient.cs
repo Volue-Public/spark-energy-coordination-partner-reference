@@ -109,7 +109,7 @@ namespace EnergyCoordinationClient.Client
                 if (response.Headers != null)
                 {
                     var filePath = string.IsNullOrEmpty(_configuration.TempFolderPath)
-                        ? Path.GetTempPath()
+                        ? global::System.IO.Path.GetTempPath()
                         : _configuration.TempFolderPath;
                     var regex = new Regex(
                         @"Content-Disposition=.*filename=['""]?([^'""\s]+)['""]?$"
@@ -329,7 +329,7 @@ namespace EnergyCoordinationClient.Client
                 {
                     foreach (var value in headerParam.Value)
                     {
-                        request.AddHeader(headerParam.Key, value);
+                        request.AddOrUpdateHeader(headerParam.Key, value);
                     }
                 }
             }
@@ -395,11 +395,22 @@ namespace EnergyCoordinationClient.Client
                             request.AddFile(
                                 fileParam.Key,
                                 bytes,
-                                Path.GetFileName(fileStream.Name)
+                                global::System.IO.Path.GetFileName(fileStream.Name)
                             );
                         else
                             request.AddFile(fileParam.Key, bytes, "no_file_name_provided");
                     }
+                }
+            }
+
+            if (options.HeaderParameters != null)
+            {
+                if (
+                    options.HeaderParameters.TryGetValue("Content-Type", out var contentTypes)
+                    && contentTypes.Any(header => header.Contains("multipart/form-data"))
+                )
+                {
+                    request.AlwaysMultipartFormData = true;
                 }
             }
 
@@ -494,7 +505,7 @@ namespace EnergyCoordinationClient.Client
             var clientOptions = new RestClientOptions(baseUrl)
             {
                 ClientCertificates = configuration.ClientCertificates,
-                MaxTimeout = configuration.Timeout,
+                Timeout = configuration.Timeout,
                 Proxy = configuration.Proxy,
                 UserAgent = configuration.UserAgent,
                 UseDefaultCredentials = configuration.UseDefaultCredentials,
@@ -584,15 +595,16 @@ namespace EnergyCoordinationClient.Client
             }
         }
 
-        private RestResponse<T> DeserializeRestResponseFromPolicy<T>(
+        private async Task<RestResponse<T>> DeserializeRestResponseFromPolicyAsync<T>(
             RestClient client,
             RestRequest request,
-            PolicyResult<RestResponse> policyResult
+            PolicyResult<RestResponse> policyResult,
+            CancellationToken cancellationToken = default
         )
         {
             if (policyResult.Outcome == OutcomeType.Successful)
             {
-                return client.Deserialize<T>(policyResult.Result);
+                return await client.Deserialize<T>(policyResult.Result, cancellationToken);
             }
             else
             {
@@ -629,9 +641,7 @@ namespace EnergyCoordinationClient.Client
                 {
                     var policy = RetryConfiguration.RetryPolicy;
                     var policyResult = policy.ExecuteAndCapture(() => client.Execute(request));
-                    return Task.FromResult(
-                        DeserializeRestResponseFromPolicy<T>(client, request, policyResult)
-                    );
+                    return DeserializeRestResponseFromPolicyAsync<T>(client, request, policyResult);
                 }
                 else
                 {
@@ -666,7 +676,12 @@ namespace EnergyCoordinationClient.Client
                             cancellationToken
                         )
                         .ConfigureAwait(false);
-                    return DeserializeRestResponseFromPolicy<T>(client, request, policyResult);
+                    return await DeserializeRestResponseFromPolicyAsync<T>(
+                        client,
+                        request,
+                        policyResult,
+                        cancellationToken
+                    );
                 }
                 else
                 {

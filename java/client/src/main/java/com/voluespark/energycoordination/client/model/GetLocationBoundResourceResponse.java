@@ -30,26 +30,29 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetLocationBoundResourceResponse {
   public static final String JSON_PROPERTY_RESOURCE_ID = "resourceId";
-  private String resourceId;
+  @jakarta.annotation.Nonnull private String resourceId;
 
   public static final String JSON_PROPERTY_RESOURCE_TYPE = "resourceType";
-  private ResourceType resourceType;
+  @jakarta.annotation.Nonnull private ResourceType resourceType;
 
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
-  private String locationId;
+  @jakarta.annotation.Nonnull private String locationId;
 
   public static final String JSON_PROPERTY_USER_ID = "userId";
-  private String userId;
+  @jakarta.annotation.Nonnull private String userId;
 
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> meterPointId = JsonNullable.<String>undefined();
 
   public GetLocationBoundResourceResponse() {}
 
-  public GetLocationBoundResourceResponse resourceId(String resourceId) {
+  public GetLocationBoundResourceResponse resourceId(
+      @jakarta.annotation.Nonnull String resourceId) {
 
     this.resourceId = resourceId;
     return this;
@@ -69,11 +72,12 @@ public class GetLocationBoundResourceResponse {
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResourceId(String resourceId) {
+  public void setResourceId(@jakarta.annotation.Nonnull String resourceId) {
     this.resourceId = resourceId;
   }
 
-  public GetLocationBoundResourceResponse resourceType(ResourceType resourceType) {
+  public GetLocationBoundResourceResponse resourceType(
+      @jakarta.annotation.Nonnull ResourceType resourceType) {
 
     this.resourceType = resourceType;
     return this;
@@ -93,11 +97,12 @@ public class GetLocationBoundResourceResponse {
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_TYPE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResourceType(ResourceType resourceType) {
+  public void setResourceType(@jakarta.annotation.Nonnull ResourceType resourceType) {
     this.resourceType = resourceType;
   }
 
-  public GetLocationBoundResourceResponse locationId(String locationId) {
+  public GetLocationBoundResourceResponse locationId(
+      @jakarta.annotation.Nonnull String locationId) {
 
     this.locationId = locationId;
     return this;
@@ -117,11 +122,11 @@ public class GetLocationBoundResourceResponse {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@jakarta.annotation.Nonnull String locationId) {
     this.locationId = locationId;
   }
 
-  public GetLocationBoundResourceResponse userId(String userId) {
+  public GetLocationBoundResourceResponse userId(@jakarta.annotation.Nonnull String userId) {
 
     this.userId = userId;
     return this;
@@ -141,11 +146,12 @@ public class GetLocationBoundResourceResponse {
 
   @JsonProperty(JSON_PROPERTY_USER_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setUserId(String userId) {
+  public void setUserId(@jakarta.annotation.Nonnull String userId) {
     this.userId = userId;
   }
 
-  public GetLocationBoundResourceResponse meterPointId(String meterPointId) {
+  public GetLocationBoundResourceResponse meterPointId(
+      @jakarta.annotation.Nullable String meterPointId) {
     this.meterPointId = JsonNullable.<String>of(meterPointId);
 
     return this;
@@ -173,7 +179,7 @@ public class GetLocationBoundResourceResponse {
     this.meterPointId = meterPointId;
   }
 
-  public void setMeterPointId(String meterPointId) {
+  public void setMeterPointId(@jakarta.annotation.Nullable String meterPointId) {
     this.meterPointId = JsonNullable.<String>of(meterPointId);
   }
 

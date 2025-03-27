@@ -30,7 +30,6 @@ namespace EnergyCoordinationClient.Model
     /// LocationLPCAcknowledgmentReportPayload
     /// </summary>
     [DataContract(Name = "LocationLPCAcknowledgmentReportPayload")]
-    [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
     public partial class LocationLPCAcknowledgmentReportPayload
         : SparkReportPayload,
             IValidatableObject

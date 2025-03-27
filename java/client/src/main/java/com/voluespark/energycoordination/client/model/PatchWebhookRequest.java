@@ -32,27 +32,35 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PatchWebhookRequest {
   public static final String JSON_PROPERTY_WEBHOOK_SECRET = "webhookSecret";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> webhookSecret = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_WEBHOOK_URL = "webhookUrl";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> webhookUrl = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_NOTIFICATION_TYPES = "notificationTypes";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<List<NotificationType>> notificationTypes =
       JsonNullable.<List<NotificationType>>undefined();
 
   public static final String JSON_PROPERTY_ENABLED = "enabled";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<Boolean> enabled = JsonNullable.<Boolean>undefined();
 
   public static final String JSON_PROPERTY_NAME = "name";
-  private JsonNullable<String> name = JsonNullable.<String>undefined();
+  @jakarta.annotation.Nullable private JsonNullable<String> name = JsonNullable.<String>undefined();
 
   public PatchWebhookRequest() {}
 
-  public PatchWebhookRequest webhookSecret(String webhookSecret) {
+  public PatchWebhookRequest webhookSecret(@jakarta.annotation.Nullable String webhookSecret) {
     this.webhookSecret = JsonNullable.<String>of(webhookSecret);
 
     return this;
@@ -80,11 +88,11 @@ public class PatchWebhookRequest {
     this.webhookSecret = webhookSecret;
   }
 
-  public void setWebhookSecret(String webhookSecret) {
+  public void setWebhookSecret(@jakarta.annotation.Nullable String webhookSecret) {
     this.webhookSecret = JsonNullable.<String>of(webhookSecret);
   }
 
-  public PatchWebhookRequest webhookUrl(String webhookUrl) {
+  public PatchWebhookRequest webhookUrl(@jakarta.annotation.Nullable String webhookUrl) {
     this.webhookUrl = JsonNullable.<String>of(webhookUrl);
 
     return this;
@@ -112,11 +120,12 @@ public class PatchWebhookRequest {
     this.webhookUrl = webhookUrl;
   }
 
-  public void setWebhookUrl(String webhookUrl) {
+  public void setWebhookUrl(@jakarta.annotation.Nullable String webhookUrl) {
     this.webhookUrl = JsonNullable.<String>of(webhookUrl);
   }
 
-  public PatchWebhookRequest notificationTypes(List<NotificationType> notificationTypes) {
+  public PatchWebhookRequest notificationTypes(
+      @jakarta.annotation.Nullable List<NotificationType> notificationTypes) {
     this.notificationTypes = JsonNullable.<List<NotificationType>>of(notificationTypes);
 
     return this;
@@ -157,11 +166,12 @@ public class PatchWebhookRequest {
     this.notificationTypes = notificationTypes;
   }
 
-  public void setNotificationTypes(List<NotificationType> notificationTypes) {
+  public void setNotificationTypes(
+      @jakarta.annotation.Nullable List<NotificationType> notificationTypes) {
     this.notificationTypes = JsonNullable.<List<NotificationType>>of(notificationTypes);
   }
 
-  public PatchWebhookRequest enabled(Boolean enabled) {
+  public PatchWebhookRequest enabled(@jakarta.annotation.Nullable Boolean enabled) {
     this.enabled = JsonNullable.<Boolean>of(enabled);
 
     return this;
@@ -189,11 +199,11 @@ public class PatchWebhookRequest {
     this.enabled = enabled;
   }
 
-  public void setEnabled(Boolean enabled) {
+  public void setEnabled(@jakarta.annotation.Nullable Boolean enabled) {
     this.enabled = JsonNullable.<Boolean>of(enabled);
   }
 
-  public PatchWebhookRequest name(String name) {
+  public PatchWebhookRequest name(@jakarta.annotation.Nullable String name) {
     this.name = JsonNullable.<String>of(name);
 
     return this;
@@ -221,7 +231,7 @@ public class PatchWebhookRequest {
     this.name = name;
   }
 
-  public void setName(String name) {
+  public void setName(@jakarta.annotation.Nullable String name) {
     this.name = JsonNullable.<String>of(name);
   }
 

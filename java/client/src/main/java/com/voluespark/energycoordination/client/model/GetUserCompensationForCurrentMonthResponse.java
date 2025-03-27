@@ -27,20 +27,23 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetUserCompensationForCurrentMonthResponse {
   public static final String JSON_PROPERTY_USER_ID = "userId";
-  private String userId;
+  @jakarta.annotation.Nullable private String userId;
 
   public static final String JSON_PROPERTY_PERIOD = "period";
-  private Period period;
+  @jakarta.annotation.Nonnull private Period period;
 
   public static final String JSON_PROPERTY_LOCATION_COMPENSATIONS = "locationCompensations";
+
+  @jakarta.annotation.Nullable
   private List<LocationCompensation> locationCompensations = new ArrayList<>();
 
   public GetUserCompensationForCurrentMonthResponse() {}
 
-  public GetUserCompensationForCurrentMonthResponse userId(String userId) {
+  public GetUserCompensationForCurrentMonthResponse userId(
+      @jakarta.annotation.Nullable String userId) {
 
     this.userId = userId;
     return this;
@@ -60,11 +63,12 @@ public class GetUserCompensationForCurrentMonthResponse {
 
   @JsonProperty(JSON_PROPERTY_USER_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserId(String userId) {
+  public void setUserId(@jakarta.annotation.Nullable String userId) {
     this.userId = userId;
   }
 
-  public GetUserCompensationForCurrentMonthResponse period(Period period) {
+  public GetUserCompensationForCurrentMonthResponse period(
+      @jakarta.annotation.Nonnull Period period) {
 
     this.period = period;
     return this;
@@ -84,12 +88,12 @@ public class GetUserCompensationForCurrentMonthResponse {
 
   @JsonProperty(JSON_PROPERTY_PERIOD)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setPeriod(Period period) {
+  public void setPeriod(@jakarta.annotation.Nonnull Period period) {
     this.period = period;
   }
 
   public GetUserCompensationForCurrentMonthResponse locationCompensations(
-      List<LocationCompensation> locationCompensations) {
+      @jakarta.annotation.Nullable List<LocationCompensation> locationCompensations) {
 
     this.locationCompensations = locationCompensations;
     return this;
@@ -118,7 +122,8 @@ public class GetUserCompensationForCurrentMonthResponse {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_COMPENSATIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocationCompensations(List<LocationCompensation> locationCompensations) {
+  public void setLocationCompensations(
+      @jakarta.annotation.Nullable List<LocationCompensation> locationCompensations) {
     this.locationCompensations = locationCompensations;
   }
 

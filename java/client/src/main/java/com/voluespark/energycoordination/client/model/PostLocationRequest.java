@@ -32,26 +32,30 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PostLocationRequest {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
-  private String locationId;
+  @jakarta.annotation.Nonnull private String locationId;
 
   public static final String JSON_PROPERTY_LOCATION_TYPE = "locationType";
-  private LocationType locationType;
+  @jakarta.annotation.Nullable private LocationType locationType;
 
   public static final String JSON_PROPERTY_COORDINATES = "coordinates";
-  private Coordinate coordinates;
+  @jakarta.annotation.Nullable private Coordinate coordinates;
 
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> meterPointId = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_METER_POINT_IDS = "meterPointIds";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<List<String>> meterPointIds = JsonNullable.<List<String>>undefined();
 
   public PostLocationRequest() {}
 
-  public PostLocationRequest locationId(String locationId) {
+  public PostLocationRequest locationId(@jakarta.annotation.Nonnull String locationId) {
 
     this.locationId = locationId;
     return this;
@@ -71,11 +75,11 @@ public class PostLocationRequest {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@jakarta.annotation.Nonnull String locationId) {
     this.locationId = locationId;
   }
 
-  public PostLocationRequest locationType(LocationType locationType) {
+  public PostLocationRequest locationType(@jakarta.annotation.Nullable LocationType locationType) {
 
     this.locationType = locationType;
     return this;
@@ -95,11 +99,11 @@ public class PostLocationRequest {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocationType(LocationType locationType) {
+  public void setLocationType(@jakarta.annotation.Nullable LocationType locationType) {
     this.locationType = locationType;
   }
 
-  public PostLocationRequest coordinates(Coordinate coordinates) {
+  public PostLocationRequest coordinates(@jakarta.annotation.Nullable Coordinate coordinates) {
 
     this.coordinates = coordinates;
     return this;
@@ -119,11 +123,11 @@ public class PostLocationRequest {
 
   @JsonProperty(JSON_PROPERTY_COORDINATES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCoordinates(Coordinate coordinates) {
+  public void setCoordinates(@jakarta.annotation.Nullable Coordinate coordinates) {
     this.coordinates = coordinates;
   }
 
-  public PostLocationRequest meterPointId(String meterPointId) {
+  public PostLocationRequest meterPointId(@jakarta.annotation.Nullable String meterPointId) {
     this.meterPointId = JsonNullable.<String>of(meterPointId);
 
     return this;
@@ -153,11 +157,12 @@ public class PostLocationRequest {
     this.meterPointId = meterPointId;
   }
 
-  public void setMeterPointId(String meterPointId) {
+  public void setMeterPointId(@jakarta.annotation.Nullable String meterPointId) {
     this.meterPointId = JsonNullable.<String>of(meterPointId);
   }
 
-  public PostLocationRequest meterPointIds(List<String> meterPointIds) {
+  public PostLocationRequest meterPointIds(
+      @jakarta.annotation.Nullable List<String> meterPointIds) {
     this.meterPointIds = JsonNullable.<List<String>>of(meterPointIds);
 
     return this;
@@ -197,7 +202,7 @@ public class PostLocationRequest {
     this.meterPointIds = meterPointIds;
   }
 
-  public void setMeterPointIds(List<String> meterPointIds) {
+  public void setMeterPointIds(@jakarta.annotation.Nullable List<String> meterPointIds) {
     this.meterPointIds = JsonNullable.<List<String>>of(meterPointIds);
   }
 

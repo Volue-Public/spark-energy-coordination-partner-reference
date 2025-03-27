@@ -29,20 +29,22 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetReportResponse {
   public static final String JSON_PROPERTY_ID = "id";
-  private String id;
+  @jakarta.annotation.Nonnull private String id;
 
   public static final String JSON_PROPERTY_EVENT_ID = "eventId";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> eventId = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_CREATED_AT = "createdAt";
-  private OffsetDateTime createdAt;
+  @jakarta.annotation.Nullable private OffsetDateTime createdAt;
 
   public GetReportResponse() {}
 
-  public GetReportResponse id(String id) {
+  public GetReportResponse id(@jakarta.annotation.Nonnull String id) {
 
     this.id = id;
     return this;
@@ -62,11 +64,11 @@ public class GetReportResponse {
 
   @JsonProperty(JSON_PROPERTY_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setId(String id) {
+  public void setId(@jakarta.annotation.Nonnull String id) {
     this.id = id;
   }
 
-  public GetReportResponse eventId(String eventId) {
+  public GetReportResponse eventId(@jakarta.annotation.Nullable String eventId) {
     this.eventId = JsonNullable.<String>of(eventId);
 
     return this;
@@ -94,11 +96,11 @@ public class GetReportResponse {
     this.eventId = eventId;
   }
 
-  public void setEventId(String eventId) {
+  public void setEventId(@jakarta.annotation.Nullable String eventId) {
     this.eventId = JsonNullable.<String>of(eventId);
   }
 
-  public GetReportResponse createdAt(OffsetDateTime createdAt) {
+  public GetReportResponse createdAt(@jakarta.annotation.Nullable OffsetDateTime createdAt) {
 
     this.createdAt = createdAt;
     return this;
@@ -118,7 +120,7 @@ public class GetReportResponse {
 
   @JsonProperty(JSON_PROPERTY_CREATED_AT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedAt(OffsetDateTime createdAt) {
+  public void setCreatedAt(@jakarta.annotation.Nullable OffsetDateTime createdAt) {
     this.createdAt = createdAt;
   }
 

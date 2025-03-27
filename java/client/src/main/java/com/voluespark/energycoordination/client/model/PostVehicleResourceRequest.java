@@ -24,17 +24,17 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PostVehicleResourceRequest {
   public static final String JSON_PROPERTY_RESOURCE_ID = "resourceId";
-  private String resourceId;
+  @jakarta.annotation.Nonnull private String resourceId;
 
   public static final String JSON_PROPERTY_RESOURCE_TYPE = "resourceType";
-  private ResourceType resourceType;
+  @jakarta.annotation.Nonnull private ResourceType resourceType;
 
   public PostVehicleResourceRequest() {}
 
-  public PostVehicleResourceRequest resourceId(String resourceId) {
+  public PostVehicleResourceRequest resourceId(@jakarta.annotation.Nonnull String resourceId) {
 
     this.resourceId = resourceId;
     return this;
@@ -54,11 +54,12 @@ public class PostVehicleResourceRequest {
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResourceId(String resourceId) {
+  public void setResourceId(@jakarta.annotation.Nonnull String resourceId) {
     this.resourceId = resourceId;
   }
 
-  public PostVehicleResourceRequest resourceType(ResourceType resourceType) {
+  public PostVehicleResourceRequest resourceType(
+      @jakarta.annotation.Nonnull ResourceType resourceType) {
 
     this.resourceType = resourceType;
     return this;
@@ -78,7 +79,7 @@ public class PostVehicleResourceRequest {
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_TYPE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResourceType(ResourceType resourceType) {
+  public void setResourceType(@jakarta.annotation.Nonnull ResourceType resourceType) {
     this.resourceType = resourceType;
   }
 

@@ -31,23 +31,25 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PostWebhookRequest {
   public static final String JSON_PROPERTY_NAME = "name";
-  private JsonNullable<String> name = JsonNullable.<String>undefined();
+  @jakarta.annotation.Nullable private JsonNullable<String> name = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_WEBHOOK_SECRET = "webhookSecret";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> webhookSecret = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_WEBHOOK_URL = "webhookUrl";
-  private String webhookUrl;
+  @jakarta.annotation.Nonnull private String webhookUrl;
 
   public static final String JSON_PROPERTY_NOTIFICATION_TYPES = "notificationTypes";
-  private List<NotificationType> notificationTypes = new ArrayList<>();
+  @jakarta.annotation.Nullable private List<NotificationType> notificationTypes = new ArrayList<>();
 
   public PostWebhookRequest() {}
 
-  public PostWebhookRequest name(String name) {
+  public PostWebhookRequest name(@jakarta.annotation.Nullable String name) {
     this.name = JsonNullable.<String>of(name);
 
     return this;
@@ -75,11 +77,11 @@ public class PostWebhookRequest {
     this.name = name;
   }
 
-  public void setName(String name) {
+  public void setName(@jakarta.annotation.Nullable String name) {
     this.name = JsonNullable.<String>of(name);
   }
 
-  public PostWebhookRequest webhookSecret(String webhookSecret) {
+  public PostWebhookRequest webhookSecret(@jakarta.annotation.Nullable String webhookSecret) {
     this.webhookSecret = JsonNullable.<String>of(webhookSecret);
 
     return this;
@@ -107,11 +109,11 @@ public class PostWebhookRequest {
     this.webhookSecret = webhookSecret;
   }
 
-  public void setWebhookSecret(String webhookSecret) {
+  public void setWebhookSecret(@jakarta.annotation.Nullable String webhookSecret) {
     this.webhookSecret = JsonNullable.<String>of(webhookSecret);
   }
 
-  public PostWebhookRequest webhookUrl(String webhookUrl) {
+  public PostWebhookRequest webhookUrl(@jakarta.annotation.Nonnull String webhookUrl) {
 
     this.webhookUrl = webhookUrl;
     return this;
@@ -131,11 +133,12 @@ public class PostWebhookRequest {
 
   @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setWebhookUrl(String webhookUrl) {
+  public void setWebhookUrl(@jakarta.annotation.Nonnull String webhookUrl) {
     this.webhookUrl = webhookUrl;
   }
 
-  public PostWebhookRequest notificationTypes(List<NotificationType> notificationTypes) {
+  public PostWebhookRequest notificationTypes(
+      @jakarta.annotation.Nullable List<NotificationType> notificationTypes) {
 
     this.notificationTypes = notificationTypes;
     return this;
@@ -163,7 +166,8 @@ public class PostWebhookRequest {
 
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotificationTypes(List<NotificationType> notificationTypes) {
+  public void setNotificationTypes(
+      @jakarta.annotation.Nullable List<NotificationType> notificationTypes) {
     this.notificationTypes = notificationTypes;
   }
 

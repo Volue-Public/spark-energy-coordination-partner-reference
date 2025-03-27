@@ -21,6 +21,9 @@ export class EnergyUsageReportPayload extends SparkReportPayload {
     'meterPointId'?: string | null;
     'points'?: Array<EnergyCurvePoint>;
     'resolution': string;
+    /**
+    * @deprecated
+    */
     'curvePoints'?: Array<EnergyCurvePoint> | null;
 
     static discriminator: string | undefined = undefined;

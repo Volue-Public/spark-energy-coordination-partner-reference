@@ -30,21 +30,24 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class SimulatePriceCurveEventRequest {
   public static final String JSON_PROPERTY_TARGETS = "targets";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<List<PriceCurveTarget>> targets =
       JsonNullable.<List<PriceCurveTarget>>undefined();
 
   public static final String JSON_PROPERTY_PRICE_CURVE_DELTA = "priceCurveDelta";
-  private PriceCurve priceCurveDelta;
+  @jakarta.annotation.Nullable private PriceCurve priceCurveDelta;
 
   public static final String JSON_PROPERTY_PRICE_AREA = "priceArea";
-  private PriceArea priceArea;
+  @jakarta.annotation.Nullable private PriceArea priceArea;
 
   public SimulatePriceCurveEventRequest() {}
 
-  public SimulatePriceCurveEventRequest targets(List<PriceCurveTarget> targets) {
+  public SimulatePriceCurveEventRequest targets(
+      @jakarta.annotation.Nullable List<PriceCurveTarget> targets) {
     this.targets = JsonNullable.<List<PriceCurveTarget>>of(targets);
 
     return this;
@@ -84,11 +87,12 @@ public class SimulatePriceCurveEventRequest {
     this.targets = targets;
   }
 
-  public void setTargets(List<PriceCurveTarget> targets) {
+  public void setTargets(@jakarta.annotation.Nullable List<PriceCurveTarget> targets) {
     this.targets = JsonNullable.<List<PriceCurveTarget>>of(targets);
   }
 
-  public SimulatePriceCurveEventRequest priceCurveDelta(PriceCurve priceCurveDelta) {
+  public SimulatePriceCurveEventRequest priceCurveDelta(
+      @jakarta.annotation.Nullable PriceCurve priceCurveDelta) {
 
     this.priceCurveDelta = priceCurveDelta;
     return this;
@@ -108,11 +112,12 @@ public class SimulatePriceCurveEventRequest {
 
   @JsonProperty(JSON_PROPERTY_PRICE_CURVE_DELTA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPriceCurveDelta(PriceCurve priceCurveDelta) {
+  public void setPriceCurveDelta(@jakarta.annotation.Nullable PriceCurve priceCurveDelta) {
     this.priceCurveDelta = priceCurveDelta;
   }
 
-  public SimulatePriceCurveEventRequest priceArea(PriceArea priceArea) {
+  public SimulatePriceCurveEventRequest priceArea(
+      @jakarta.annotation.Nullable PriceArea priceArea) {
 
     this.priceArea = priceArea;
     return this;
@@ -132,7 +137,7 @@ public class SimulatePriceCurveEventRequest {
 
   @JsonProperty(JSON_PROPERTY_PRICE_AREA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPriceArea(PriceArea priceArea) {
+  public void setPriceArea(@jakarta.annotation.Nullable PriceArea priceArea) {
     this.priceArea = priceArea;
   }
 

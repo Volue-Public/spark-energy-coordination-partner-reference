@@ -23,14 +23,14 @@ import java.util.Objects;
 @JsonPropertyOrder({PostUsersBatchResponse.JSON_PROPERTY_USERS})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PostUsersBatchResponse {
   public static final String JSON_PROPERTY_USERS = "users";
-  private List<GetUserResponse> users = new ArrayList<>();
+  @jakarta.annotation.Nonnull private List<GetUserResponse> users = new ArrayList<>();
 
   public PostUsersBatchResponse() {}
 
-  public PostUsersBatchResponse users(List<GetUserResponse> users) {
+  public PostUsersBatchResponse users(@jakarta.annotation.Nonnull List<GetUserResponse> users) {
 
     this.users = users;
     return this;
@@ -58,7 +58,7 @@ public class PostUsersBatchResponse {
 
   @JsonProperty(JSON_PROPERTY_USERS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setUsers(List<GetUserResponse> users) {
+  public void setUsers(@jakarta.annotation.Nonnull List<GetUserResponse> users) {
     this.users = users;
   }
 

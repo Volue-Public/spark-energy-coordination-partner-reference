@@ -12,6 +12,8 @@
 
 package com.voluespark.energycoordination.client.model;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -34,29 +36,37 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
-public class HttpValidationProblemDetails extends HashMap<String, Object> {
+    comments = "Generator version: 7.12.0")
+public class HttpValidationProblemDetails {
   public static final String JSON_PROPERTY_TYPE = "type";
-  private JsonNullable<String> type = JsonNullable.<String>undefined();
+  @jakarta.annotation.Nullable private JsonNullable<String> type = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_TITLE = "title";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> title = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_STATUS = "status";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<Integer> status = JsonNullable.<Integer>undefined();
 
   public static final String JSON_PROPERTY_DETAIL = "detail";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> detail = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_INSTANCE = "instance";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> instance = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private Map<String, List<String>> errors = new HashMap<>();
+  @jakarta.annotation.Nullable private Map<String, List<String>> errors = new HashMap<>();
 
   public HttpValidationProblemDetails() {}
 
-  public HttpValidationProblemDetails type(String type) {
+  public HttpValidationProblemDetails type(@jakarta.annotation.Nullable String type) {
     this.type = JsonNullable.<String>of(type);
 
     return this;
@@ -84,11 +94,11 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
     this.type = type;
   }
 
-  public void setType(String type) {
+  public void setType(@jakarta.annotation.Nullable String type) {
     this.type = JsonNullable.<String>of(type);
   }
 
-  public HttpValidationProblemDetails title(String title) {
+  public HttpValidationProblemDetails title(@jakarta.annotation.Nullable String title) {
     this.title = JsonNullable.<String>of(title);
 
     return this;
@@ -116,11 +126,11 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
     this.title = title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@jakarta.annotation.Nullable String title) {
     this.title = JsonNullable.<String>of(title);
   }
 
-  public HttpValidationProblemDetails status(Integer status) {
+  public HttpValidationProblemDetails status(@jakarta.annotation.Nullable Integer status) {
     this.status = JsonNullable.<Integer>of(status);
 
     return this;
@@ -148,11 +158,11 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
     this.status = status;
   }
 
-  public void setStatus(Integer status) {
+  public void setStatus(@jakarta.annotation.Nullable Integer status) {
     this.status = JsonNullable.<Integer>of(status);
   }
 
-  public HttpValidationProblemDetails detail(String detail) {
+  public HttpValidationProblemDetails detail(@jakarta.annotation.Nullable String detail) {
     this.detail = JsonNullable.<String>of(detail);
 
     return this;
@@ -180,11 +190,11 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
     this.detail = detail;
   }
 
-  public void setDetail(String detail) {
+  public void setDetail(@jakarta.annotation.Nullable String detail) {
     this.detail = JsonNullable.<String>of(detail);
   }
 
-  public HttpValidationProblemDetails instance(String instance) {
+  public HttpValidationProblemDetails instance(@jakarta.annotation.Nullable String instance) {
     this.instance = JsonNullable.<String>of(instance);
 
     return this;
@@ -212,11 +222,12 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
     this.instance = instance;
   }
 
-  public void setInstance(String instance) {
+  public void setInstance(@jakarta.annotation.Nullable String instance) {
     this.instance = JsonNullable.<String>of(instance);
   }
 
-  public HttpValidationProblemDetails errors(Map<String, List<String>> errors) {
+  public HttpValidationProblemDetails errors(
+      @jakarta.annotation.Nullable Map<String, List<String>> errors) {
 
     this.errors = errors;
     return this;
@@ -244,8 +255,54 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
 
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(Map<String, List<String>> errors) {
+  public void setErrors(@jakarta.annotation.Nullable Map<String, List<String>> errors) {
     this.errors = errors;
+  }
+
+  /**
+   * A container for additional, undeclared properties. This is a holder for any undeclared
+   * properties as specified with the 'additionalProperties' keyword in the OAS document.
+   */
+  private Map<String, Object> additionalProperties;
+
+  /**
+   * Set the additional (undeclared) property with the specified name and value. If the property
+   * does not already exist, create it otherwise replace it.
+   *
+   * @param key the name of the property
+   * @param value the value of the property
+   * @return self reference
+   */
+  @JsonAnySetter
+  public HttpValidationProblemDetails putAdditionalProperty(String key, Object value) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Object>();
+    }
+    this.additionalProperties.put(key, value);
+    return this;
+  }
+
+  /**
+   * Return the additional (undeclared) properties.
+   *
+   * @return the additional (undeclared) properties
+   */
+  @JsonAnyGetter
+  public Map<String, Object> getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key the name of the property
+   * @return the additional (undeclared) property with the specified name
+   */
+  public Object getAdditionalProperty(String key) {
+    if (this.additionalProperties == null) {
+      return null;
+    }
+    return this.additionalProperties.get(key);
   }
 
   @Override
@@ -263,7 +320,8 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
         && equalsNullable(this.detail, httpValidationProblemDetails.detail)
         && equalsNullable(this.instance, httpValidationProblemDetails.instance)
         && Objects.equals(this.errors, httpValidationProblemDetails.errors)
-        && super.equals(o);
+        && Objects.equals(
+            this.additionalProperties, httpValidationProblemDetails.additionalProperties);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -284,7 +342,7 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
         hashCodeNullable(detail),
         hashCodeNullable(instance),
         errors,
-        super.hashCode());
+        additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -298,13 +356,15 @@ public class HttpValidationProblemDetails extends HashMap<String, Object> {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class HttpValidationProblemDetails {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    detail: ").append(toIndentedString(detail)).append("\n");
     sb.append("    instance: ").append(toIndentedString(instance)).append("\n");
     sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("    additionalProperties: ")
+        .append(toIndentedString(additionalProperties))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }

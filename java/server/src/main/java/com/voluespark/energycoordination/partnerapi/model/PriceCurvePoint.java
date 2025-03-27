@@ -9,17 +9,18 @@ import java.time.OffsetDateTime;
 import java.util.*;
 import java.util.Objects;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.lang.Nullable;
 
 /** PriceCurvePoint */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PriceCurvePoint {
 
-  private Double price;
+  private @Nullable Double price;
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-  private OffsetDateTime timestamp;
+  private @Nullable OffsetDateTime timestamp;
 
   public PriceCurvePoint price(Double price) {
     this.price = price;

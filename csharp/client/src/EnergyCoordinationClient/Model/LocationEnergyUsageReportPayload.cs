@@ -30,7 +30,6 @@ namespace EnergyCoordinationClient.Model
     /// LocationEnergyUsageReportPayload
     /// </summary>
     [DataContract(Name = "LocationEnergyUsageReportPayload")]
-    [JsonConverter(typeof(JsonSubtypes), "PayloadType")]
     public partial class LocationEnergyUsageReportPayload : SparkReportPayload, IValidatableObject
     {
         /// <summary>
@@ -104,7 +103,9 @@ namespace EnergyCoordinationClient.Model
         /// <summary>
         /// Gets or Sets Resolution
         /// </summary>
-        /// <example>02:00:00</example>
+        /*
+        <example>02:00:00</example>
+        */
         [DataMember(Name = "resolution", IsRequired = true, EmitDefaultValue = true)]
         public string Resolution { get; set; }
 

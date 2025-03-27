@@ -38,44 +38,50 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class WebhookNotificationLog {
   public static final String JSON_PROPERTY_WEBHOOK_ID = "webhookId";
-  private String webhookId;
+  @jakarta.annotation.Nonnull private String webhookId;
 
   public static final String JSON_PROPERTY_TENANT_ID = "tenantId";
-  private String tenantId;
+  @jakarta.annotation.Nonnull private String tenantId;
 
   public static final String JSON_PROPERTY_PARTNER_EVENT_ID = "partnerEventId";
-  private String partnerEventId;
+  @jakarta.annotation.Nullable private String partnerEventId;
 
   public static final String JSON_PROPERTY_NOTIFICATION_ID = "notificationId";
-  private String notificationId;
+  @jakarta.annotation.Nullable private String notificationId;
 
   public static final String JSON_PROPERTY_NOTIFICATION_TYPE = "notificationType";
-  private NotificationType notificationType;
+  @jakarta.annotation.Nullable private NotificationType notificationType;
 
   public static final String JSON_PROPERTY_NOTIFICATION_SENT = "notificationSent";
-  private OffsetDateTime notificationSent;
+  @jakarta.annotation.Nullable private OffsetDateTime notificationSent;
 
   public static final String JSON_PROPERTY_SPARK_SIGNATURE = "sparkSignature";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<String> sparkSignature = JsonNullable.<String>undefined();
 
   public static final String JSON_PROPERTY_WEBHOOK_URL = "webhookUrl";
-  private URI webhookUrl;
+  @jakarta.annotation.Nonnull private URI webhookUrl;
 
   public static final String JSON_PROPERTY_REQUEST_TIMEOUT = "requestTimeout";
-  private Boolean requestTimeout;
+  @jakarta.annotation.Nullable private Boolean requestTimeout;
 
   public static final String JSON_PROPERTY_RESPONSE_STATUS_CODE = "responseStatusCode";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<Integer> responseStatusCode = JsonNullable.<Integer>undefined();
 
   public static final String JSON_PROPERTY_REQUEST_DURATION_MS = "requestDurationMs";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<Long> requestDurationMs = JsonNullable.<Long>undefined();
 
   public WebhookNotificationLog() {}
 
-  public WebhookNotificationLog webhookId(String webhookId) {
+  public WebhookNotificationLog webhookId(@jakarta.annotation.Nonnull String webhookId) {
 
     this.webhookId = webhookId;
     return this;
@@ -95,11 +101,11 @@ public class WebhookNotificationLog {
 
   @JsonProperty(JSON_PROPERTY_WEBHOOK_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setWebhookId(String webhookId) {
+  public void setWebhookId(@jakarta.annotation.Nonnull String webhookId) {
     this.webhookId = webhookId;
   }
 
-  public WebhookNotificationLog tenantId(String tenantId) {
+  public WebhookNotificationLog tenantId(@jakarta.annotation.Nonnull String tenantId) {
 
     this.tenantId = tenantId;
     return this;
@@ -119,11 +125,11 @@ public class WebhookNotificationLog {
 
   @JsonProperty(JSON_PROPERTY_TENANT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@jakarta.annotation.Nonnull String tenantId) {
     this.tenantId = tenantId;
   }
 
-  public WebhookNotificationLog partnerEventId(String partnerEventId) {
+  public WebhookNotificationLog partnerEventId(@jakarta.annotation.Nullable String partnerEventId) {
 
     this.partnerEventId = partnerEventId;
     return this;
@@ -143,11 +149,11 @@ public class WebhookNotificationLog {
 
   @JsonProperty(JSON_PROPERTY_PARTNER_EVENT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPartnerEventId(String partnerEventId) {
+  public void setPartnerEventId(@jakarta.annotation.Nullable String partnerEventId) {
     this.partnerEventId = partnerEventId;
   }
 
-  public WebhookNotificationLog notificationId(String notificationId) {
+  public WebhookNotificationLog notificationId(@jakarta.annotation.Nullable String notificationId) {
 
     this.notificationId = notificationId;
     return this;
@@ -167,11 +173,12 @@ public class WebhookNotificationLog {
 
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotificationId(String notificationId) {
+  public void setNotificationId(@jakarta.annotation.Nullable String notificationId) {
     this.notificationId = notificationId;
   }
 
-  public WebhookNotificationLog notificationType(NotificationType notificationType) {
+  public WebhookNotificationLog notificationType(
+      @jakarta.annotation.Nullable NotificationType notificationType) {
 
     this.notificationType = notificationType;
     return this;
@@ -191,11 +198,12 @@ public class WebhookNotificationLog {
 
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotificationType(NotificationType notificationType) {
+  public void setNotificationType(@jakarta.annotation.Nullable NotificationType notificationType) {
     this.notificationType = notificationType;
   }
 
-  public WebhookNotificationLog notificationSent(OffsetDateTime notificationSent) {
+  public WebhookNotificationLog notificationSent(
+      @jakarta.annotation.Nullable OffsetDateTime notificationSent) {
 
     this.notificationSent = notificationSent;
     return this;
@@ -215,11 +223,11 @@ public class WebhookNotificationLog {
 
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_SENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotificationSent(OffsetDateTime notificationSent) {
+  public void setNotificationSent(@jakarta.annotation.Nullable OffsetDateTime notificationSent) {
     this.notificationSent = notificationSent;
   }
 
-  public WebhookNotificationLog sparkSignature(String sparkSignature) {
+  public WebhookNotificationLog sparkSignature(@jakarta.annotation.Nullable String sparkSignature) {
     this.sparkSignature = JsonNullable.<String>of(sparkSignature);
 
     return this;
@@ -247,11 +255,11 @@ public class WebhookNotificationLog {
     this.sparkSignature = sparkSignature;
   }
 
-  public void setSparkSignature(String sparkSignature) {
+  public void setSparkSignature(@jakarta.annotation.Nullable String sparkSignature) {
     this.sparkSignature = JsonNullable.<String>of(sparkSignature);
   }
 
-  public WebhookNotificationLog webhookUrl(URI webhookUrl) {
+  public WebhookNotificationLog webhookUrl(@jakarta.annotation.Nonnull URI webhookUrl) {
 
     this.webhookUrl = webhookUrl;
     return this;
@@ -271,11 +279,12 @@ public class WebhookNotificationLog {
 
   @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setWebhookUrl(URI webhookUrl) {
+  public void setWebhookUrl(@jakarta.annotation.Nonnull URI webhookUrl) {
     this.webhookUrl = webhookUrl;
   }
 
-  public WebhookNotificationLog requestTimeout(Boolean requestTimeout) {
+  public WebhookNotificationLog requestTimeout(
+      @jakarta.annotation.Nullable Boolean requestTimeout) {
 
     this.requestTimeout = requestTimeout;
     return this;
@@ -295,11 +304,12 @@ public class WebhookNotificationLog {
 
   @JsonProperty(JSON_PROPERTY_REQUEST_TIMEOUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRequestTimeout(Boolean requestTimeout) {
+  public void setRequestTimeout(@jakarta.annotation.Nullable Boolean requestTimeout) {
     this.requestTimeout = requestTimeout;
   }
 
-  public WebhookNotificationLog responseStatusCode(Integer responseStatusCode) {
+  public WebhookNotificationLog responseStatusCode(
+      @jakarta.annotation.Nullable Integer responseStatusCode) {
     this.responseStatusCode = JsonNullable.<Integer>of(responseStatusCode);
 
     return this;
@@ -327,11 +337,12 @@ public class WebhookNotificationLog {
     this.responseStatusCode = responseStatusCode;
   }
 
-  public void setResponseStatusCode(Integer responseStatusCode) {
+  public void setResponseStatusCode(@jakarta.annotation.Nullable Integer responseStatusCode) {
     this.responseStatusCode = JsonNullable.<Integer>of(responseStatusCode);
   }
 
-  public WebhookNotificationLog requestDurationMs(Long requestDurationMs) {
+  public WebhookNotificationLog requestDurationMs(
+      @jakarta.annotation.Nullable Long requestDurationMs) {
     this.requestDurationMs = JsonNullable.<Long>of(requestDurationMs);
 
     return this;
@@ -359,7 +370,7 @@ public class WebhookNotificationLog {
     this.requestDurationMs = requestDurationMs;
   }
 
-  public void setRequestDurationMs(Long requestDurationMs) {
+  public void setRequestDurationMs(@jakarta.annotation.Nullable Long requestDurationMs) {
     this.requestDurationMs = JsonNullable.<Long>of(requestDurationMs);
   }
 

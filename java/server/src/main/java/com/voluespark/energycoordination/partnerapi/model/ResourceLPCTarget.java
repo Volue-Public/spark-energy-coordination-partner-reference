@@ -13,7 +13,7 @@ import java.util.Objects;
 /** ResourceLPCTarget */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class ResourceLPCTarget {
 
   private String meterPointId;

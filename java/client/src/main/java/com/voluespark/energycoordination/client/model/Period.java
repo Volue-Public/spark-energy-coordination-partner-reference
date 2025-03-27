@@ -22,17 +22,17 @@ import java.util.Objects;
 @JsonPropertyOrder({Period.JSON_PROPERTY_FROM, Period.JSON_PROPERTY_TO})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class Period {
   public static final String JSON_PROPERTY_FROM = "from";
-  private LocalDate from;
+  @jakarta.annotation.Nullable private LocalDate from;
 
   public static final String JSON_PROPERTY_TO = "to";
-  private LocalDate to;
+  @jakarta.annotation.Nullable private LocalDate to;
 
   public Period() {}
 
-  public Period from(LocalDate from) {
+  public Period from(@jakarta.annotation.Nullable LocalDate from) {
 
     this.from = from;
     return this;
@@ -52,11 +52,11 @@ public class Period {
 
   @JsonProperty(JSON_PROPERTY_FROM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFrom(LocalDate from) {
+  public void setFrom(@jakarta.annotation.Nullable LocalDate from) {
     this.from = from;
   }
 
-  public Period to(LocalDate to) {
+  public Period to(@jakarta.annotation.Nullable LocalDate to) {
 
     this.to = to;
     return this;
@@ -76,7 +76,7 @@ public class Period {
 
   @JsonProperty(JSON_PROPERTY_TO)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTo(LocalDate to) {
+  public void setTo(@jakarta.annotation.Nullable LocalDate to) {
     this.to = to;
   }
 

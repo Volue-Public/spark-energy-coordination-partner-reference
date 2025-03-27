@@ -29,17 +29,19 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class LPCLocationTarget {
   public static final String JSON_PROPERTY_LOCATION = "location";
-  private LocationTarget location;
+  @jakarta.annotation.Nullable private LocationTarget location;
 
   public static final String JSON_PROPERTY_POINTS = "points";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<List<LPCDataPoint>> points = JsonNullable.<List<LPCDataPoint>>undefined();
 
   public LPCLocationTarget() {}
 
-  public LPCLocationTarget location(LocationTarget location) {
+  public LPCLocationTarget location(@jakarta.annotation.Nullable LocationTarget location) {
 
     this.location = location;
     return this;
@@ -59,11 +61,11 @@ public class LPCLocationTarget {
 
   @JsonProperty(JSON_PROPERTY_LOCATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocation(LocationTarget location) {
+  public void setLocation(@jakarta.annotation.Nullable LocationTarget location) {
     this.location = location;
   }
 
-  public LPCLocationTarget points(List<LPCDataPoint> points) {
+  public LPCLocationTarget points(@jakarta.annotation.Nullable List<LPCDataPoint> points) {
     this.points = JsonNullable.<List<LPCDataPoint>>of(points);
 
     return this;
@@ -103,7 +105,7 @@ public class LPCLocationTarget {
     this.points = points;
   }
 
-  public void setPoints(List<LPCDataPoint> points) {
+  public void setPoints(@jakarta.annotation.Nullable List<LPCDataPoint> points) {
     this.points = JsonNullable.<List<LPCDataPoint>>of(points);
   }
 

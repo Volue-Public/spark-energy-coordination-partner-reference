@@ -24,18 +24,18 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetWebhookNotificationLogByIdResponse {
   public static final String JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOG = "webhookNotificationLog";
-  private WebhookNotificationLog webhookNotificationLog;
+  @jakarta.annotation.Nullable private WebhookNotificationLog webhookNotificationLog;
 
   public static final String JSON_PROPERTY_NOTIFICATION_CONTENT = "notificationContent";
-  private String notificationContent;
+  @jakarta.annotation.Nullable private String notificationContent;
 
   public GetWebhookNotificationLogByIdResponse() {}
 
   public GetWebhookNotificationLogByIdResponse webhookNotificationLog(
-      WebhookNotificationLog webhookNotificationLog) {
+      @jakarta.annotation.Nullable WebhookNotificationLog webhookNotificationLog) {
 
     this.webhookNotificationLog = webhookNotificationLog;
     return this;
@@ -55,11 +55,13 @@ public class GetWebhookNotificationLogByIdResponse {
 
   @JsonProperty(JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWebhookNotificationLog(WebhookNotificationLog webhookNotificationLog) {
+  public void setWebhookNotificationLog(
+      @jakarta.annotation.Nullable WebhookNotificationLog webhookNotificationLog) {
     this.webhookNotificationLog = webhookNotificationLog;
   }
 
-  public GetWebhookNotificationLogByIdResponse notificationContent(String notificationContent) {
+  public GetWebhookNotificationLogByIdResponse notificationContent(
+      @jakarta.annotation.Nullable String notificationContent) {
 
     this.notificationContent = notificationContent;
     return this;
@@ -79,7 +81,7 @@ public class GetWebhookNotificationLogByIdResponse {
 
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotificationContent(String notificationContent) {
+  public void setNotificationContent(@jakarta.annotation.Nullable String notificationContent) {
     this.notificationContent = notificationContent;
   }
 

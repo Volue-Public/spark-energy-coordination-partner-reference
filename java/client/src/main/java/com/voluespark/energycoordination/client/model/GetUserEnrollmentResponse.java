@@ -32,18 +32,22 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetUserEnrollmentResponse {
   public static final String JSON_PROPERTY_IS_ENROLLED = "isEnrolled";
-  private Boolean isEnrolled;
+  @jakarta.annotation.Nullable private Boolean isEnrolled;
 
   public static final String JSON_PROPERTY_USER_ID = "userId";
-  private String userId;
+  @jakarta.annotation.Nonnull private String userId;
 
   public static final String JSON_PROPERTY_ENROLLMENT_ID = "enrollmentId";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<UUID> enrollmentId = JsonNullable.<UUID>undefined();
 
   public static final String JSON_PROPERTY_ENROLLMENT_DATE = "enrollmentDate";
+
+  @jakarta.annotation.Nullable
   private JsonNullable<OffsetDateTime> enrollmentDate = JsonNullable.<OffsetDateTime>undefined();
 
   public GetUserEnrollmentResponse() {}
@@ -67,7 +71,7 @@ public class GetUserEnrollmentResponse {
     return isEnrolled;
   }
 
-  public GetUserEnrollmentResponse userId(String userId) {
+  public GetUserEnrollmentResponse userId(@jakarta.annotation.Nonnull String userId) {
 
     this.userId = userId;
     return this;
@@ -87,11 +91,11 @@ public class GetUserEnrollmentResponse {
 
   @JsonProperty(JSON_PROPERTY_USER_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setUserId(String userId) {
+  public void setUserId(@jakarta.annotation.Nonnull String userId) {
     this.userId = userId;
   }
 
-  public GetUserEnrollmentResponse enrollmentId(UUID enrollmentId) {
+  public GetUserEnrollmentResponse enrollmentId(@jakarta.annotation.Nullable UUID enrollmentId) {
     this.enrollmentId = JsonNullable.<UUID>of(enrollmentId);
 
     return this;
@@ -119,11 +123,12 @@ public class GetUserEnrollmentResponse {
     this.enrollmentId = enrollmentId;
   }
 
-  public void setEnrollmentId(UUID enrollmentId) {
+  public void setEnrollmentId(@jakarta.annotation.Nullable UUID enrollmentId) {
     this.enrollmentId = JsonNullable.<UUID>of(enrollmentId);
   }
 
-  public GetUserEnrollmentResponse enrollmentDate(OffsetDateTime enrollmentDate) {
+  public GetUserEnrollmentResponse enrollmentDate(
+      @jakarta.annotation.Nullable OffsetDateTime enrollmentDate) {
     this.enrollmentDate = JsonNullable.<OffsetDateTime>of(enrollmentDate);
 
     return this;
@@ -151,7 +156,7 @@ public class GetUserEnrollmentResponse {
     this.enrollmentDate = enrollmentDate;
   }
 
-  public void setEnrollmentDate(OffsetDateTime enrollmentDate) {
+  public void setEnrollmentDate(@jakarta.annotation.Nullable OffsetDateTime enrollmentDate) {
     this.enrollmentDate = JsonNullable.<OffsetDateTime>of(enrollmentDate);
   }
 

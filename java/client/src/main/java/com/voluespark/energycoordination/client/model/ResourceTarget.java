@@ -25,20 +25,20 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class ResourceTarget {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
-  private String locationId;
+  @jakarta.annotation.Nullable private String locationId;
 
   public static final String JSON_PROPERTY_RESOURCE_ID = "resourceId";
-  private String resourceId;
+  @jakarta.annotation.Nullable private String resourceId;
 
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
-  private String meterPointId;
+  @jakarta.annotation.Nullable private String meterPointId;
 
   public ResourceTarget() {}
 
-  public ResourceTarget locationId(String locationId) {
+  public ResourceTarget locationId(@jakarta.annotation.Nullable String locationId) {
 
     this.locationId = locationId;
     return this;
@@ -58,11 +58,11 @@ public class ResourceTarget {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@jakarta.annotation.Nullable String locationId) {
     this.locationId = locationId;
   }
 
-  public ResourceTarget resourceId(String resourceId) {
+  public ResourceTarget resourceId(@jakarta.annotation.Nullable String resourceId) {
 
     this.resourceId = resourceId;
     return this;
@@ -82,11 +82,11 @@ public class ResourceTarget {
 
   @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setResourceId(String resourceId) {
+  public void setResourceId(@jakarta.annotation.Nullable String resourceId) {
     this.resourceId = resourceId;
   }
 
-  public ResourceTarget meterPointId(String meterPointId) {
+  public ResourceTarget meterPointId(@jakarta.annotation.Nullable String meterPointId) {
 
     this.meterPointId = meterPointId;
     return this;
@@ -106,7 +106,7 @@ public class ResourceTarget {
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMeterPointId(String meterPointId) {
+  public void setMeterPointId(@jakarta.annotation.Nullable String meterPointId) {
     this.meterPointId = meterPointId;
   }
 

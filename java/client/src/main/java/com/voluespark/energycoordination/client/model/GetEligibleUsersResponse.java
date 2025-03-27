@@ -26,17 +26,17 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetEligibleUsersResponse {
   public static final String JSON_PROPERTY_PAGINATION = "pagination";
-  private ApiPagination pagination;
+  @jakarta.annotation.Nonnull private ApiPagination pagination;
 
   public static final String JSON_PROPERTY_USERS = "users";
-  private List<GetUserResponse> users = new ArrayList<>();
+  @jakarta.annotation.Nullable private List<GetUserResponse> users = new ArrayList<>();
 
   public GetEligibleUsersResponse() {}
 
-  public GetEligibleUsersResponse pagination(ApiPagination pagination) {
+  public GetEligibleUsersResponse pagination(@jakarta.annotation.Nonnull ApiPagination pagination) {
 
     this.pagination = pagination;
     return this;
@@ -56,11 +56,11 @@ public class GetEligibleUsersResponse {
 
   @JsonProperty(JSON_PROPERTY_PAGINATION)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setPagination(ApiPagination pagination) {
+  public void setPagination(@jakarta.annotation.Nonnull ApiPagination pagination) {
     this.pagination = pagination;
   }
 
-  public GetEligibleUsersResponse users(List<GetUserResponse> users) {
+  public GetEligibleUsersResponse users(@jakarta.annotation.Nullable List<GetUserResponse> users) {
 
     this.users = users;
     return this;
@@ -88,7 +88,7 @@ public class GetEligibleUsersResponse {
 
   @JsonProperty(JSON_PROPERTY_USERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUsers(List<GetUserResponse> users) {
+  public void setUsers(@jakarta.annotation.Nullable List<GetUserResponse> users) {
     this.users = users;
   }
 

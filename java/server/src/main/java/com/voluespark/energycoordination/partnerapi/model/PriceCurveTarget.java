@@ -10,7 +10,7 @@ import java.util.Objects;
 /** PriceCurveTarget */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PriceCurveTarget {
 
   private String resourceId;

@@ -26,20 +26,20 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetEventResponse {
   public static final String JSON_PROPERTY_PAYLOAD = "payload";
-  private GetEventResponsePayload payload;
+  @jakarta.annotation.Nullable private GetEventResponsePayload payload;
 
   public static final String JSON_PROPERTY_ID = "id";
-  private String id;
+  @jakarta.annotation.Nonnull private String id;
 
   public static final String JSON_PROPERTY_CREATED_AT = "createdAt";
-  private OffsetDateTime createdAt;
+  @jakarta.annotation.Nullable private OffsetDateTime createdAt;
 
   public GetEventResponse() {}
 
-  public GetEventResponse payload(GetEventResponsePayload payload) {
+  public GetEventResponse payload(@jakarta.annotation.Nullable GetEventResponsePayload payload) {
 
     this.payload = payload;
     return this;
@@ -59,11 +59,11 @@ public class GetEventResponse {
 
   @JsonProperty(JSON_PROPERTY_PAYLOAD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPayload(GetEventResponsePayload payload) {
+  public void setPayload(@jakarta.annotation.Nullable GetEventResponsePayload payload) {
     this.payload = payload;
   }
 
-  public GetEventResponse id(String id) {
+  public GetEventResponse id(@jakarta.annotation.Nonnull String id) {
 
     this.id = id;
     return this;
@@ -83,11 +83,11 @@ public class GetEventResponse {
 
   @JsonProperty(JSON_PROPERTY_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setId(String id) {
+  public void setId(@jakarta.annotation.Nonnull String id) {
     this.id = id;
   }
 
-  public GetEventResponse createdAt(OffsetDateTime createdAt) {
+  public GetEventResponse createdAt(@jakarta.annotation.Nullable OffsetDateTime createdAt) {
 
     this.createdAt = createdAt;
     return this;
@@ -107,7 +107,7 @@ public class GetEventResponse {
 
   @JsonProperty(JSON_PROPERTY_CREATED_AT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedAt(OffsetDateTime createdAt) {
+  public void setCreatedAt(@jakarta.annotation.Nullable OffsetDateTime createdAt) {
     this.createdAt = createdAt;
   }
 

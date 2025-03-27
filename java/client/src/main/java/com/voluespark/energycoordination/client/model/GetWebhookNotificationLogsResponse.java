@@ -26,18 +26,20 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetWebhookNotificationLogsResponse {
   public static final String JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOGS = "webhookNotificationLogs";
+
+  @jakarta.annotation.Nullable
   private List<WebhookNotificationLog> webhookNotificationLogs = new ArrayList<>();
 
   public static final String JSON_PROPERTY_PAGINATION = "pagination";
-  private ApiPagination pagination;
+  @jakarta.annotation.Nullable private ApiPagination pagination;
 
   public GetWebhookNotificationLogsResponse() {}
 
   public GetWebhookNotificationLogsResponse webhookNotificationLogs(
-      List<WebhookNotificationLog> webhookNotificationLogs) {
+      @jakarta.annotation.Nullable List<WebhookNotificationLog> webhookNotificationLogs) {
 
     this.webhookNotificationLogs = webhookNotificationLogs;
     return this;
@@ -66,11 +68,13 @@ public class GetWebhookNotificationLogsResponse {
 
   @JsonProperty(JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWebhookNotificationLogs(List<WebhookNotificationLog> webhookNotificationLogs) {
+  public void setWebhookNotificationLogs(
+      @jakarta.annotation.Nullable List<WebhookNotificationLog> webhookNotificationLogs) {
     this.webhookNotificationLogs = webhookNotificationLogs;
   }
 
-  public GetWebhookNotificationLogsResponse pagination(ApiPagination pagination) {
+  public GetWebhookNotificationLogsResponse pagination(
+      @jakarta.annotation.Nullable ApiPagination pagination) {
 
     this.pagination = pagination;
     return this;
@@ -90,7 +94,7 @@ public class GetWebhookNotificationLogsResponse {
 
   @JsonProperty(JSON_PROPERTY_PAGINATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPagination(ApiPagination pagination) {
+  public void setPagination(@jakarta.annotation.Nullable ApiPagination pagination) {
     this.pagination = pagination;
   }
 

@@ -25,17 +25,17 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class LPCDataPoint {
   public static final String JSON_PROPERTY_MAX_POWER_IN_KILO_WATTS = "maxPowerInKiloWatts";
-  private Double maxPowerInKiloWatts;
+  @jakarta.annotation.Nullable private Double maxPowerInKiloWatts;
 
   public static final String JSON_PROPERTY_TIMESTAMP = "timestamp";
-  private OffsetDateTime timestamp;
+  @jakarta.annotation.Nullable private OffsetDateTime timestamp;
 
   public LPCDataPoint() {}
 
-  public LPCDataPoint maxPowerInKiloWatts(Double maxPowerInKiloWatts) {
+  public LPCDataPoint maxPowerInKiloWatts(@jakarta.annotation.Nullable Double maxPowerInKiloWatts) {
 
     this.maxPowerInKiloWatts = maxPowerInKiloWatts;
     return this;
@@ -55,11 +55,11 @@ public class LPCDataPoint {
 
   @JsonProperty(JSON_PROPERTY_MAX_POWER_IN_KILO_WATTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaxPowerInKiloWatts(Double maxPowerInKiloWatts) {
+  public void setMaxPowerInKiloWatts(@jakarta.annotation.Nullable Double maxPowerInKiloWatts) {
     this.maxPowerInKiloWatts = maxPowerInKiloWatts;
   }
 
-  public LPCDataPoint timestamp(OffsetDateTime timestamp) {
+  public LPCDataPoint timestamp(@jakarta.annotation.Nullable OffsetDateTime timestamp) {
 
     this.timestamp = timestamp;
     return this;
@@ -79,7 +79,7 @@ public class LPCDataPoint {
 
   @JsonProperty(JSON_PROPERTY_TIMESTAMP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTimestamp(OffsetDateTime timestamp) {
+  public void setTimestamp(@jakarta.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 

@@ -9,17 +9,18 @@ import java.time.OffsetDateTime;
 import java.util.*;
 import java.util.Objects;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.lang.Nullable;
 
 /** LPCDataPoint */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class LPCDataPoint {
 
-  private Double maxPowerInKiloWatts;
+  private @Nullable Double maxPowerInKiloWatts;
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-  private OffsetDateTime timestamp;
+  private @Nullable OffsetDateTime timestamp;
 
   public LPCDataPoint maxPowerInKiloWatts(Double maxPowerInKiloWatts) {
     this.maxPowerInKiloWatts = maxPowerInKiloWatts;

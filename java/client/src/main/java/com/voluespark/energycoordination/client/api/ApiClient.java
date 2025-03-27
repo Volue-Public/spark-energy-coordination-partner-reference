@@ -56,7 +56,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class ApiClient extends JavaTimeFormatter {
   public enum CollectionFormat {
     CSV(","),

@@ -24,17 +24,17 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetUserEligibilityResponse {
   public static final String JSON_PROPERTY_USER_ID = "userId";
-  private String userId;
+  @jakarta.annotation.Nonnull private String userId;
 
   public static final String JSON_PROPERTY_IS_ELIGIBLE = "isEligible";
-  private Boolean isEligible;
+  @jakarta.annotation.Nonnull private Boolean isEligible;
 
   public GetUserEligibilityResponse() {}
 
-  public GetUserEligibilityResponse userId(String userId) {
+  public GetUserEligibilityResponse userId(@jakarta.annotation.Nonnull String userId) {
 
     this.userId = userId;
     return this;
@@ -54,11 +54,11 @@ public class GetUserEligibilityResponse {
 
   @JsonProperty(JSON_PROPERTY_USER_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setUserId(String userId) {
+  public void setUserId(@jakarta.annotation.Nonnull String userId) {
     this.userId = userId;
   }
 
-  public GetUserEligibilityResponse isEligible(Boolean isEligible) {
+  public GetUserEligibilityResponse isEligible(@jakarta.annotation.Nonnull Boolean isEligible) {
 
     this.isEligible = isEligible;
     return this;
@@ -78,7 +78,7 @@ public class GetUserEligibilityResponse {
 
   @JsonProperty(JSON_PROPERTY_IS_ELIGIBLE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setIsEligible(Boolean isEligible) {
+  public void setIsEligible(@jakarta.annotation.Nonnull Boolean isEligible) {
     this.isEligible = isEligible;
   }
 

@@ -28,23 +28,23 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class LocationLPCTarget {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
-  private String locationId;
+  @jakarta.annotation.Nonnull private String locationId;
 
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
-  private String meterPointId;
+  @jakarta.annotation.Nonnull private String meterPointId;
 
   public static final String JSON_PROPERTY_RESOLUTION = "resolution";
-  private String resolution;
+  @jakarta.annotation.Nonnull private String resolution;
 
   public static final String JSON_PROPERTY_POINTS = "points";
-  private List<LPCDataPoint> points = new ArrayList<>();
+  @jakarta.annotation.Nonnull private List<LPCDataPoint> points = new ArrayList<>();
 
   public LocationLPCTarget() {}
 
-  public LocationLPCTarget locationId(String locationId) {
+  public LocationLPCTarget locationId(@jakarta.annotation.Nonnull String locationId) {
 
     this.locationId = locationId;
     return this;
@@ -64,11 +64,11 @@ public class LocationLPCTarget {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@jakarta.annotation.Nonnull String locationId) {
     this.locationId = locationId;
   }
 
-  public LocationLPCTarget meterPointId(String meterPointId) {
+  public LocationLPCTarget meterPointId(@jakarta.annotation.Nonnull String meterPointId) {
 
     this.meterPointId = meterPointId;
     return this;
@@ -88,11 +88,11 @@ public class LocationLPCTarget {
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setMeterPointId(String meterPointId) {
+  public void setMeterPointId(@jakarta.annotation.Nonnull String meterPointId) {
     this.meterPointId = meterPointId;
   }
 
-  public LocationLPCTarget resolution(String resolution) {
+  public LocationLPCTarget resolution(@jakarta.annotation.Nonnull String resolution) {
 
     this.resolution = resolution;
     return this;
@@ -112,11 +112,11 @@ public class LocationLPCTarget {
 
   @JsonProperty(JSON_PROPERTY_RESOLUTION)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResolution(String resolution) {
+  public void setResolution(@jakarta.annotation.Nonnull String resolution) {
     this.resolution = resolution;
   }
 
-  public LocationLPCTarget points(List<LPCDataPoint> points) {
+  public LocationLPCTarget points(@jakarta.annotation.Nonnull List<LPCDataPoint> points) {
 
     this.points = points;
     return this;
@@ -144,7 +144,7 @@ public class LocationLPCTarget {
 
   @JsonProperty(JSON_PROPERTY_POINTS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setPoints(List<LPCDataPoint> points) {
+  public void setPoints(@jakarta.annotation.Nonnull List<LPCDataPoint> points) {
     this.points = points;
   }
 

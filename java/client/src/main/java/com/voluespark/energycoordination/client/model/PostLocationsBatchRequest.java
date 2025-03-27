@@ -23,14 +23,17 @@ import java.util.Objects;
 @JsonPropertyOrder({PostLocationsBatchRequest.JSON_PROPERTY_LOCATIONS})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PostLocationsBatchRequest {
   public static final String JSON_PROPERTY_LOCATIONS = "locations";
+
+  @jakarta.annotation.Nonnull
   private List<PostLocationWithUserRequest> locations = new ArrayList<>();
 
   public PostLocationsBatchRequest() {}
 
-  public PostLocationsBatchRequest locations(List<PostLocationWithUserRequest> locations) {
+  public PostLocationsBatchRequest locations(
+      @jakarta.annotation.Nonnull List<PostLocationWithUserRequest> locations) {
 
     this.locations = locations;
     return this;
@@ -58,7 +61,8 @@ public class PostLocationsBatchRequest {
 
   @JsonProperty(JSON_PROPERTY_LOCATIONS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLocations(List<PostLocationWithUserRequest> locations) {
+  public void setLocations(
+      @jakarta.annotation.Nonnull List<PostLocationWithUserRequest> locations) {
     this.locations = locations;
   }
 

@@ -24,17 +24,17 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class LocationTarget {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
-  private String locationId;
+  @jakarta.annotation.Nullable private String locationId;
 
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
-  private String meterPointId;
+  @jakarta.annotation.Nullable private String meterPointId;
 
   public LocationTarget() {}
 
-  public LocationTarget locationId(String locationId) {
+  public LocationTarget locationId(@jakarta.annotation.Nullable String locationId) {
 
     this.locationId = locationId;
     return this;
@@ -54,11 +54,11 @@ public class LocationTarget {
 
   @JsonProperty(JSON_PROPERTY_LOCATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@jakarta.annotation.Nullable String locationId) {
     this.locationId = locationId;
   }
 
-  public LocationTarget meterPointId(String meterPointId) {
+  public LocationTarget meterPointId(@jakarta.annotation.Nullable String meterPointId) {
 
     this.meterPointId = meterPointId;
     return this;
@@ -78,7 +78,7 @@ public class LocationTarget {
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMeterPointId(String meterPointId) {
+  public void setMeterPointId(@jakarta.annotation.Nullable String meterPointId) {
     this.meterPointId = meterPointId;
   }
 

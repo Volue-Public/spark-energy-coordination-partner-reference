@@ -24,17 +24,17 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class GetMpidEligibilityResponse {
   public static final String JSON_PROPERTY_METER_POINT_ID = "meterPointId";
-  private String meterPointId;
+  @jakarta.annotation.Nonnull private String meterPointId;
 
   public static final String JSON_PROPERTY_IS_ELIGIBLE = "isEligible";
-  private Boolean isEligible;
+  @jakarta.annotation.Nonnull private Boolean isEligible;
 
   public GetMpidEligibilityResponse() {}
 
-  public GetMpidEligibilityResponse meterPointId(String meterPointId) {
+  public GetMpidEligibilityResponse meterPointId(@jakarta.annotation.Nonnull String meterPointId) {
 
     this.meterPointId = meterPointId;
     return this;
@@ -54,11 +54,11 @@ public class GetMpidEligibilityResponse {
 
   @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setMeterPointId(String meterPointId) {
+  public void setMeterPointId(@jakarta.annotation.Nonnull String meterPointId) {
     this.meterPointId = meterPointId;
   }
 
-  public GetMpidEligibilityResponse isEligible(Boolean isEligible) {
+  public GetMpidEligibilityResponse isEligible(@jakarta.annotation.Nonnull Boolean isEligible) {
 
     this.isEligible = isEligible;
     return this;
@@ -78,7 +78,7 @@ public class GetMpidEligibilityResponse {
 
   @JsonProperty(JSON_PROPERTY_IS_ELIGIBLE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setIsEligible(Boolean isEligible) {
+  public void setIsEligible(@jakarta.annotation.Nonnull Boolean isEligible) {
     this.isEligible = isEligible;
   }
 

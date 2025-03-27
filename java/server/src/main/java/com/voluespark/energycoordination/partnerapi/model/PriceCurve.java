@@ -9,20 +9,21 @@ import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import org.springframework.lang.Nullable;
 
 /** PriceCurve */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.9.0-SNAPSHOT")
+    comments = "Generator version: 7.12.0")
 public class PriceCurve {
 
   @Valid private List<@Valid PriceCurvePoint> points = new ArrayList<>();
 
-  private EnergyUnit energyUnit;
+  private @Nullable EnergyUnit energyUnit;
 
-  private Currency currency;
+  private @Nullable Currency currency;
 
-  private String resolution;
+  private @Nullable String resolution;
 
   public PriceCurve points(List<@Valid PriceCurvePoint> points) {
     this.points = points;

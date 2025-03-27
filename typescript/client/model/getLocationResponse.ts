@@ -18,6 +18,9 @@ export class GetLocationResponse {
     'locationId': string;
     'locationType'?: LocationType;
     'coordinates'?: Coordinate;
+    /**
+    * @deprecated
+    */
     'meterPointId'?: string | null;
     'meterPointIds'?: Array<string>;
     'userId'?: string | null;
