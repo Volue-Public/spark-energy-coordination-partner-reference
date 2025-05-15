@@ -16,14 +16,7 @@ case "$language" in
     run_command="java -jar cli-client/target/cli-client-*-jar-with-dependencies.jar"
     ;;
   typescript)
-    build_command="
-    # There seems to be an issue with the TS openapi generation, these sed commands fix it.
-    sed -i '/suppressImplicitAnyIndexErrors/d' tsconfig.json
-    sed -i -e 's/extends any//g' -e 's/return super.*(\(.*\)).*/return \1;/g' model/httpValidationProblemDetails.ts
-    sed -i 's/\"license\": \"Unlicense\"/\"license\": \"MIT\"/' package.json
-    npm install
-    npm run build
-    "
+    build_command="npm install"
     run_command="node cli-client/index.mjs"
     ;;
   *)

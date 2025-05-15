@@ -1,6 +1,6 @@
 import { argv, stderr, exit, env } from "process";
-import { APIS } from "../dist/api/apis.js";
-import { HttpBearerAuth } from "../dist/model/models.js";
+import apis from "../dist/apis/index.js";
+import { Configuration } from "../dist/runtime.js";
 
 function exitIf(condition, errorMessage) {
     if (condition) {
@@ -13,14 +13,14 @@ function exitIf(condition, errorMessage) {
 function deserializeValue(value) {
     try {
         if (!isNaN(value)) {
-            return parseFloat(value);  // Convert to number if applicable
+            return parseFloat(value);
         } else if (value.toLowerCase() === "true" || value.toLowerCase() === "false") {
-            return value.toLowerCase() === "true";  // Convert to boolean if applicable
+            return value.toLowerCase() === "true";
         } else {
-            return JSON.parse(value);  // Try to parse as JSON (for objects)
+            return JSON.parse(value);
         }
     } catch (e) {
-        return value;  // If parsing fails, return as string
+        return value;
     }
 }
 
@@ -31,39 +31,48 @@ const apiName = argv[3];
 const apiMethodName = argv[4];
 const inputArguments = argv.slice(5);
 
-const apiClass = APIS.find(api => api.name === apiName);
-const availableApis = APIS.map(api => api.name).join(", ")
+const apiClass = Object.entries(apis).find(api => api[0] === apiName)[1]
+const availableApis = Object.keys(apis).join(", ")
 exitIf(!apiClass, `No API named ${apiName} found. Available APIs: ${availableApis}`);
-const apiInstance = new apiClass(baseUrl);
 
 const jwtToken = env.JWT_TOKEN;
 exitIf(!jwtToken, "JWT_TOKEN environment variable is not set");
-const bearerAuth = new HttpBearerAuth();
-bearerAuth.accessToken = jwtToken;
-apiInstance.setDefaultAuthentication(bearerAuth);
-
-const apiMethod = apiInstance[apiMethodName];
+const config = new Configuration({ basePath: baseUrl, accessToken: jwtToken });
+const apiInstance = new apiClass(config);
+const apiMethod = apiInstance[apiMethodName + "Raw"];
 exitIf(!apiMethod, `No method named ${apiMethodName} found in ${apiName}.`);
 
-// Function to get parameter names copied from: https://stackoverflow.com/a/31194949
-const methodParams = (apiMethod + '')
-    .replace(/[/][/].*$/mg, '') // strip single-line comments
-    .replace(/\s+/g, '') // strip white space
-    .replace(/[/][*][^/*]*[*][/]/g, '') // strip multi-line comments
-    .split('){', 1)[0].replace(/^[^(]*[(]/, '') // extract the parameters
-    .split(',').filter(Boolean) // split & filter
-    .join(", ");
+const requiredMatches = (apiMethod+'').matchAll(/requestParameters\['(\w+)'\] == null/g);
+const requiredParams = Array.from(requiredMatches, m => m[1]);
+const optionalMatches = (apiMethod+'').matchAll(/requestParameters\['(\w+)'\] != null/g);
+const optionalParams = Array.from(optionalMatches, m => m[1]);
+const allParamsFormatted = [
+    ...requiredParams,
+    ...optionalParams.map(p => `${p}?`)
+].join(', ');
 exitIf(
-    inputArguments.length < apiMethod.length,
-    `Incorrect number of arguments provided. Expected: ${methodParams}`
+    inputArguments.length < requiredParams.length ||
+        inputArguments.length > requiredParams.length + optionalParams.length,
+    `Incorrect number of arguments provided. Parameters: ${allParamsFormatted}`,
 );
 
 const deserializedArguments = inputArguments.map(arg => deserializeValue(arg));
+const requestParameters = {};
+for (let i = 0; i < requiredParams.length; i++) {
+    requestParameters[requiredParams[i]] = deserializedArguments[i];
+}
+for (let i = 0; i + requiredParams.length < deserializedArguments.length; i++) {
+    requestParameters[optionalParams[i]] = deserializedArguments[i + requiredParams.length];
+}
 
 try {
-    const response = await apiMethod.apply(apiInstance, deserializedArguments);
-    console.log(JSON.stringify(response.body, null, 2));
+    const response = await apiMethod.apply(apiInstance, [requestParameters, null]);
+    if (response.raw.ok !== true) {
+        throw new Error("Not OK response: " + response.raw);
+    }
+    console.log(JSON.stringify(await response.value(), null, 2));
 } catch (error) {
     stderr.write(`API call failed: ${error.message}\n`);
+    stderr.write(error);
     exit(1);
 }
