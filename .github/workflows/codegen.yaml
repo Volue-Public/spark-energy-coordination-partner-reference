@@ -40,7 +40,7 @@ jobs:
     name: Codegen for ${{ matrix.config.language }} ${{ matrix.generator-type }}
     runs-on: ubuntu-latest
     needs: compare-swagger
-    if: needs.compare-swagger.outputs.checksums_match == 'false'
+    if: needs.compare-swagger.outputs.checksums_match == 'false' || github.event_name == 'pull_request'
     defaults:
       run:
         working-directory: ${{ matrix.config.language }}/${{ matrix.generator-type }}
