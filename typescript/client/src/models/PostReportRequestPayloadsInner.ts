@@ -63,9 +63,6 @@ export function PostReportRequestPayloadsInnerFromJSONTyped(json: any, ignoreDis
     if (json == null) {
         return json;
     }
-    if (typeof json !== 'object') {
-        return json;
-    }
     if (instanceOfEnergyUsageReportPayload(json)) {
         return EnergyUsageReportPayloadFromJSONTyped(json, true);
     }
@@ -93,9 +90,7 @@ export function PostReportRequestPayloadsInnerToJSONTyped(value?: PostReportRequ
     if (value == null) {
         return value;
     }
-    if (typeof value !== 'object') {
-        return value;
-    }
+
     if (instanceOfEnergyUsageReportPayload(value)) {
         return EnergyUsageReportPayloadToJSON(value as EnergyUsageReportPayload);
     }

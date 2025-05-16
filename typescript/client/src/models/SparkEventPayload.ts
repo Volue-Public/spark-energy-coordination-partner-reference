@@ -103,7 +103,7 @@ export function SparkEventPayloadToJSONTyped(value?: SparkEventPayload | null, i
             case 'UserEligibility':
                 return UserEligibilityPayloadToJSONTyped(value as UserEligibilityPayload, ignoreDiscriminator);
             default:
-                return value;
+                throw new Error(`No variant of SparkEventPayload exists with 'payloadType=${value['payloadType']}'`);
         }
     }
 

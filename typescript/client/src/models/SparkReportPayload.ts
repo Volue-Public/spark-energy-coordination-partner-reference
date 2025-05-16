@@ -102,7 +102,7 @@ export function SparkReportPayloadToJSONTyped(value?: SparkReportPayload | null,
             case 'ResourceLPCAcknowledgement':
                 return ResourceLPCAcknowledgmentReportPayloadToJSONTyped(value as ResourceLPCAcknowledgmentReportPayload, ignoreDiscriminator);
             default:
-                return value;
+                throw new Error(`No variant of SparkReportPayload exists with 'payloadType=${value['payloadType']}'`);
         }
     }
 
