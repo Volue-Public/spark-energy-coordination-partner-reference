@@ -115,7 +115,7 @@ async function example() {
     // string
     locationId: locationId_example,
     // PostLocationBoundResourceRequest
-    postLocationBoundResourceRequest: {"meterPointId":"4258b430-7a9f-4826-a40f-348464b9482a","resourceId":"43b68e7b-bc17-4b3b-b041-296a2fd8a5fe","resourceType":"HotWaterTank"},
+    postLocationBoundResourceRequest: {"meterPointId":"f6a7b8c9-d0e1-2345-f123-456789012345","resourceId":"e5f6a7b8-c9d0-1234-ef12-345678901234","resourceType":"HotWaterTank"},
   } satisfies PostLocationBoundResourceOperationRequest;
 
   try {

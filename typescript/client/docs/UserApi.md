@@ -257,7 +257,7 @@ async function example() {
 
   const body = {
     // PostUserRequest
-    postUserRequest: {"userId":"86f6613b-db13-4887-b0e2-158ec62b4b75"},
+    postUserRequest: {"userId":"b2c3d4e5-f6a7-8901-bcde-f12345678901"},
   } satisfies PostUserOperationRequest;
 
   try {

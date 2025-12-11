@@ -340,7 +340,7 @@ async function example() {
     // string
     userId: userId_example,
     // PostLocationRequest
-    postLocationRequest: {"locationId":"04e8b18b-ed73-4e80-880d-8219b4769304","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":["4258b430-7a9f-4826-a40f-348464b9482a"]},
+    postLocationRequest: {"locationId":"c3d4e5f6-a7b8-9012-cdef-123456789012","locationType":"Residential","coordinates":null,"meterPointId":null,"meterPointIds":["f6a7b8c9-d0e1-2345-f123-456789012345"]},
   } satisfies PostLocationOperationRequest;
 
   try {

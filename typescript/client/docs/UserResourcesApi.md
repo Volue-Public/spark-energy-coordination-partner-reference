@@ -108,7 +108,7 @@ async function example() {
     // string
     userId: userId_example,
     // PostVehicleResourceRequest
-    postVehicleResourceRequest: {"resourceId":"72afee74-07fd-408a-a6f6-6ca86ed3547e","resourceType":"Vehicle"},
+    postVehicleResourceRequest: {"resourceId":"d4e5f6a7-b8c9-0123-def1-234567890123","resourceType":"Vehicle"},
   } satisfies PostVehicleRequest;
 
   try {
