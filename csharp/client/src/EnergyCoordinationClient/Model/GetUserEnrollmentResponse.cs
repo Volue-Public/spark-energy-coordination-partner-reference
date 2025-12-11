@@ -44,9 +44,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="enrollmentId">enrollmentId.</param>
         /// <param name="enrollmentDate">enrollmentDate.</param>
         public GetUserEnrollmentResponse(
-            string userId = default(string),
-            Guid? enrollmentId = default(Guid?),
-            DateTimeOffset? enrollmentDate = default(DateTimeOffset?)
+            string userId = default,
+            Guid? enrollmentId = default,
+            DateTimeOffset? enrollmentDate = default
         )
         {
             // to ensure "userId" is required (not null)

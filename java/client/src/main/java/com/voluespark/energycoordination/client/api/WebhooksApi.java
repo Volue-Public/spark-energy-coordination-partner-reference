@@ -11,7 +11,6 @@ import com.voluespark.energycoordination.client.model.PutWebhookRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -26,7 +25,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class WebhooksApi {
   private ApiClient apiClient;
 
@@ -34,7 +33,6 @@ public class WebhooksApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public WebhooksApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -62,8 +60,8 @@ public class WebhooksApi {
    * @param webhookId The webhookId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec deleteWebhookByIdRequestCreation(String webhookId)
-      throws WebClientResponseException {
+  private ResponseSpec deleteWebhookByIdRequestCreation(
+      @jakarta.annotation.Nonnull String webhookId) throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'webhookId' is set
     if (webhookId == null) {
@@ -123,7 +121,8 @@ public class WebhooksApi {
    * @param webhookId The webhookId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> deleteWebhookById(String webhookId) throws WebClientResponseException {
+  public Mono<Void> deleteWebhookById(@jakarta.annotation.Nonnull String webhookId)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteWebhookByIdRequestCreation(webhookId).bodyToMono(localVarReturnType);
   }
@@ -143,8 +142,8 @@ public class WebhooksApi {
    * @param webhookId The webhookId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<Void>> deleteWebhookByIdWithHttpInfo(String webhookId)
-      throws WebClientResponseException {
+  public Mono<ResponseEntity<Void>> deleteWebhookByIdWithHttpInfo(
+      @jakarta.annotation.Nonnull String webhookId) throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteWebhookByIdRequestCreation(webhookId).toEntity(localVarReturnType);
   }
@@ -165,8 +164,8 @@ public class WebhooksApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec deleteWebhookByIdWithResponseSpec(String webhookId)
-      throws WebClientResponseException {
+  public ResponseSpec deleteWebhookByIdWithResponseSpec(
+      @jakarta.annotation.Nonnull String webhookId) throws WebClientResponseException {
     return deleteWebhookByIdRequestCreation(webhookId);
   }
 
@@ -183,7 +182,7 @@ public class WebhooksApi {
    * @return GetWebhookResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getWebhookByIdRequestCreation(String webhookId)
+  private ResponseSpec getWebhookByIdRequestCreation(@jakarta.annotation.Nonnull String webhookId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'webhookId' is set
@@ -243,7 +242,7 @@ public class WebhooksApi {
    * @return GetWebhookResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetWebhookResponse> getWebhookById(String webhookId)
+  public Mono<GetWebhookResponse> getWebhookById(@jakarta.annotation.Nonnull String webhookId)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookResponse>() {};
@@ -263,8 +262,8 @@ public class WebhooksApi {
    * @return ResponseEntity&lt;GetWebhookResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetWebhookResponse>> getWebhookByIdWithHttpInfo(String webhookId)
-      throws WebClientResponseException {
+  public Mono<ResponseEntity<GetWebhookResponse>> getWebhookByIdWithHttpInfo(
+      @jakarta.annotation.Nonnull String webhookId) throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookResponse>() {};
     return getWebhookByIdRequestCreation(webhookId).toEntity(localVarReturnType);
@@ -283,7 +282,7 @@ public class WebhooksApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getWebhookByIdWithResponseSpec(String webhookId)
+  public ResponseSpec getWebhookByIdWithResponseSpec(@jakarta.annotation.Nonnull String webhookId)
       throws WebClientResponseException {
     return getWebhookByIdRequestCreation(webhookId);
   }
@@ -299,8 +298,8 @@ public class WebhooksApi {
    * @return GetWebhookNotificationLogByIdResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getWebhookNotificationLogByIdRequestCreation(String notificationId)
-      throws WebClientResponseException {
+  private ResponseSpec getWebhookNotificationLogByIdRequestCreation(
+      @jakarta.annotation.Nonnull String notificationId) throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'notificationId' is set
     if (notificationId == null) {
@@ -359,7 +358,7 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<GetWebhookNotificationLogByIdResponse> getWebhookNotificationLogById(
-      String notificationId) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String notificationId) throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookNotificationLogByIdResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookNotificationLogByIdResponse>() {};
     return getWebhookNotificationLogByIdRequestCreation(notificationId)
@@ -378,7 +377,7 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetWebhookNotificationLogByIdResponse>>
-      getWebhookNotificationLogByIdWithHttpInfo(String notificationId)
+      getWebhookNotificationLogByIdWithHttpInfo(@jakarta.annotation.Nonnull String notificationId)
           throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookNotificationLogByIdResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookNotificationLogByIdResponse>() {};
@@ -397,8 +396,8 @@ public class WebhooksApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getWebhookNotificationLogByIdWithResponseSpec(String notificationId)
-      throws WebClientResponseException {
+  public ResponseSpec getWebhookNotificationLogByIdWithResponseSpec(
+      @jakarta.annotation.Nonnull String notificationId) throws WebClientResponseException {
     return getWebhookNotificationLogByIdRequestCreation(notificationId);
   }
 
@@ -416,7 +415,10 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec getWebhookNotificationLogsRequestCreation(
-      String webhookId, Integer page, Integer pageSize) throws WebClientResponseException {
+      @jakarta.annotation.Nullable String webhookId,
+      @jakarta.annotation.Nullable Integer page,
+      @jakarta.annotation.Nullable Integer pageSize)
+      throws WebClientResponseException {
     Object postBody = null;
     // create path and map variables
     final Map<String, Object> pathParams = new HashMap<String, Object>();
@@ -468,7 +470,10 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<GetWebhookNotificationLogsResponse> getWebhookNotificationLogs(
-      String webhookId, Integer page, Integer pageSize) throws WebClientResponseException {
+      @jakarta.annotation.Nullable String webhookId,
+      @jakarta.annotation.Nullable Integer page,
+      @jakarta.annotation.Nullable Integer pageSize)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookNotificationLogsResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookNotificationLogsResponse>() {};
     return getWebhookNotificationLogsRequestCreation(webhookId, page, pageSize)
@@ -489,7 +494,10 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetWebhookNotificationLogsResponse>>
-      getWebhookNotificationLogsWithHttpInfo(String webhookId, Integer page, Integer pageSize)
+      getWebhookNotificationLogsWithHttpInfo(
+          @jakarta.annotation.Nullable String webhookId,
+          @jakarta.annotation.Nullable Integer page,
+          @jakarta.annotation.Nullable Integer pageSize)
           throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookNotificationLogsResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookNotificationLogsResponse>() {};
@@ -511,7 +519,10 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec getWebhookNotificationLogsWithResponseSpec(
-      String webhookId, Integer page, Integer pageSize) throws WebClientResponseException {
+      @jakarta.annotation.Nullable String webhookId,
+      @jakarta.annotation.Nullable Integer page,
+      @jakarta.annotation.Nullable Integer pageSize)
+      throws WebClientResponseException {
     return getWebhookNotificationLogsRequestCreation(webhookId, page, pageSize);
   }
 
@@ -613,7 +624,9 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec patchWebhookByIdRequestCreation(
-      String webhookId, PatchWebhookRequest patchWebhookRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId,
+      @jakarta.annotation.Nonnull PatchWebhookRequest patchWebhookRequest)
+      throws WebClientResponseException {
     Object postBody = patchWebhookRequest;
     // verify the required parameter 'webhookId' is set
     if (webhookId == null) {
@@ -684,7 +697,9 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<GetWebhookResponse> patchWebhookById(
-      String webhookId, PatchWebhookRequest patchWebhookRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId,
+      @jakarta.annotation.Nonnull PatchWebhookRequest patchWebhookRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookResponse>() {};
     return patchWebhookByIdRequestCreation(webhookId, patchWebhookRequest)
@@ -706,7 +721,9 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetWebhookResponse>> patchWebhookByIdWithHttpInfo(
-      String webhookId, PatchWebhookRequest patchWebhookRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId,
+      @jakarta.annotation.Nonnull PatchWebhookRequest patchWebhookRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookResponse>() {};
     return patchWebhookByIdRequestCreation(webhookId, patchWebhookRequest)
@@ -728,7 +745,9 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec patchWebhookByIdWithResponseSpec(
-      String webhookId, PatchWebhookRequest patchWebhookRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId,
+      @jakarta.annotation.Nonnull PatchWebhookRequest patchWebhookRequest)
+      throws WebClientResponseException {
     return patchWebhookByIdRequestCreation(webhookId, patchWebhookRequest);
   }
 
@@ -744,7 +763,8 @@ public class WebhooksApi {
    * @param postWebhookRequest The postWebhookRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec postWebhookRequestCreation(PostWebhookRequest postWebhookRequest)
+  private ResponseSpec postWebhookRequestCreation(
+      @jakarta.annotation.Nonnull PostWebhookRequest postWebhookRequest)
       throws WebClientResponseException {
     Object postBody = postWebhookRequest;
     // verify the required parameter 'postWebhookRequest' is set
@@ -800,7 +820,7 @@ public class WebhooksApi {
    * @param postWebhookRequest The postWebhookRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> postWebhook(PostWebhookRequest postWebhookRequest)
+  public Mono<Void> postWebhook(@jakarta.annotation.Nonnull PostWebhookRequest postWebhookRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postWebhookRequestCreation(postWebhookRequest).bodyToMono(localVarReturnType);
@@ -818,7 +838,8 @@ public class WebhooksApi {
    * @param postWebhookRequest The postWebhookRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<Void>> postWebhookWithHttpInfo(PostWebhookRequest postWebhookRequest)
+  public Mono<ResponseEntity<Void>> postWebhookWithHttpInfo(
+      @jakarta.annotation.Nonnull PostWebhookRequest postWebhookRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postWebhookRequestCreation(postWebhookRequest).toEntity(localVarReturnType);
@@ -837,7 +858,8 @@ public class WebhooksApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec postWebhookWithResponseSpec(PostWebhookRequest postWebhookRequest)
+  public ResponseSpec postWebhookWithResponseSpec(
+      @jakarta.annotation.Nonnull PostWebhookRequest postWebhookRequest)
       throws WebClientResponseException {
     return postWebhookRequestCreation(postWebhookRequest);
   }
@@ -857,7 +879,9 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec updateWebhookByIdRequestCreation(
-      String webhookId, PutWebhookRequest putWebhookRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId,
+      @jakarta.annotation.Nonnull PutWebhookRequest putWebhookRequest)
+      throws WebClientResponseException {
     Object postBody = putWebhookRequest;
     // verify the required parameter 'webhookId' is set
     if (webhookId == null) {
@@ -928,7 +952,9 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<GetWebhookResponse> updateWebhookById(
-      String webhookId, PutWebhookRequest putWebhookRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId,
+      @jakarta.annotation.Nonnull PutWebhookRequest putWebhookRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookResponse>() {};
     return updateWebhookByIdRequestCreation(webhookId, putWebhookRequest)
@@ -950,7 +976,9 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetWebhookResponse>> updateWebhookByIdWithHttpInfo(
-      String webhookId, PutWebhookRequest putWebhookRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId,
+      @jakarta.annotation.Nonnull PutWebhookRequest putWebhookRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetWebhookResponse> localVarReturnType =
         new ParameterizedTypeReference<GetWebhookResponse>() {};
     return updateWebhookByIdRequestCreation(webhookId, putWebhookRequest)
@@ -972,7 +1000,9 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec updateWebhookByIdWithResponseSpec(
-      String webhookId, PutWebhookRequest putWebhookRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId,
+      @jakarta.annotation.Nonnull PutWebhookRequest putWebhookRequest)
+      throws WebClientResponseException {
     return updateWebhookByIdRequestCreation(webhookId, putWebhookRequest);
   }
 
@@ -989,7 +1019,8 @@ public class WebhooksApi {
    * @param enabled The enabled parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec updateWebhookEnabledByIdRequestCreation(String webhookId, Boolean enabled)
+  private ResponseSpec updateWebhookEnabledByIdRequestCreation(
+      @jakarta.annotation.Nonnull String webhookId, @jakarta.annotation.Nonnull Boolean enabled)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'webhookId' is set
@@ -1060,7 +1091,8 @@ public class WebhooksApi {
    * @param enabled The enabled parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> updateWebhookEnabledById(String webhookId, Boolean enabled)
+  public Mono<Void> updateWebhookEnabledById(
+      @jakarta.annotation.Nonnull String webhookId, @jakarta.annotation.Nonnull Boolean enabled)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return updateWebhookEnabledByIdRequestCreation(webhookId, enabled)
@@ -1081,7 +1113,8 @@ public class WebhooksApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<Void>> updateWebhookEnabledByIdWithHttpInfo(
-      String webhookId, Boolean enabled) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String webhookId, @jakarta.annotation.Nonnull Boolean enabled)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return updateWebhookEnabledByIdRequestCreation(webhookId, enabled).toEntity(localVarReturnType);
   }
@@ -1100,7 +1133,8 @@ public class WebhooksApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec updateWebhookEnabledByIdWithResponseSpec(String webhookId, Boolean enabled)
+  public ResponseSpec updateWebhookEnabledByIdWithResponseSpec(
+      @jakarta.annotation.Nonnull String webhookId, @jakarta.annotation.Nonnull Boolean enabled)
       throws WebClientResponseException {
     return updateWebhookEnabledByIdRequestCreation(webhookId, enabled);
   }

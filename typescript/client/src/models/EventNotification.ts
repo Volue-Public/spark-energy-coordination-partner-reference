@@ -119,8 +119,8 @@ export function EventNotificationToJSONTyped(value?: EventNotification | null, i
         
         'notificationId': value['notificationId'],
         'eventId': value['eventId'],
-        'eventCreatedAtUtc': ((value['eventCreatedAtUtc']).toISOString()),
-        'notificationSentUtc': ((value['notificationSentUtc']).toISOString()),
+        'eventCreatedAtUtc': value['eventCreatedAtUtc'].toISOString(),
+        'notificationSentUtc': value['notificationSentUtc'].toISOString(),
         'notificationType': NotificationTypeToJSON(value['notificationType']),
         'payload': SparkEventPayloadToJSON(value['payload']),
     };

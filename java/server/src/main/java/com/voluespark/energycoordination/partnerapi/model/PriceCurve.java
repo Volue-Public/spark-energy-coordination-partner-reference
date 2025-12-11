@@ -14,7 +14,7 @@ import org.springframework.lang.Nullable;
 /** PriceCurve */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PriceCurve {
 
   @Valid private List<@Valid PriceCurvePoint> points = new ArrayList<>();
@@ -54,7 +54,7 @@ public class PriceCurve {
     this.points = points;
   }
 
-  public PriceCurve energyUnit(EnergyUnit energyUnit) {
+  public PriceCurve energyUnit(@Nullable EnergyUnit energyUnit) {
     this.energyUnit = energyUnit;
     return this;
   }
@@ -67,15 +67,15 @@ public class PriceCurve {
   @Valid
   @Schema(name = "energyUnit", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("energyUnit")
-  public EnergyUnit getEnergyUnit() {
+  public @Nullable EnergyUnit getEnergyUnit() {
     return energyUnit;
   }
 
-  public void setEnergyUnit(EnergyUnit energyUnit) {
+  public void setEnergyUnit(@Nullable EnergyUnit energyUnit) {
     this.energyUnit = energyUnit;
   }
 
-  public PriceCurve currency(Currency currency) {
+  public PriceCurve currency(@Nullable Currency currency) {
     this.currency = currency;
     return this;
   }
@@ -88,15 +88,15 @@ public class PriceCurve {
   @Valid
   @Schema(name = "currency", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("currency")
-  public Currency getCurrency() {
+  public @Nullable Currency getCurrency() {
     return currency;
   }
 
-  public void setCurrency(Currency currency) {
+  public void setCurrency(@Nullable Currency currency) {
     this.currency = currency;
   }
 
-  public PriceCurve resolution(String resolution) {
+  public PriceCurve resolution(@Nullable String resolution) {
     this.resolution = resolution;
     return this;
   }
@@ -111,11 +111,11 @@ public class PriceCurve {
       example = "02:00:00",
       requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("resolution")
-  public String getResolution() {
+  public @Nullable String getResolution() {
     return resolution;
   }
 
-  public void setResolution(String resolution) {
+  public void setResolution(@Nullable String resolution) {
     this.resolution = resolution;
   }
 

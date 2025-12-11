@@ -44,9 +44,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="priceCurveDelta">priceCurveDelta.</param>
         /// <param name="priceArea">priceArea.</param>
         public SimulatePriceCurveEventRequest(
-            List<PriceCurveTarget> targets = default(List<PriceCurveTarget>),
-            PriceCurve priceCurveDelta = default(PriceCurve),
-            PriceArea? priceArea = default(PriceArea?)
+            List<PriceCurveTarget> targets = default,
+            PriceCurve priceCurveDelta = default,
+            PriceArea? priceArea = default
         )
         {
             this.Targets = targets;

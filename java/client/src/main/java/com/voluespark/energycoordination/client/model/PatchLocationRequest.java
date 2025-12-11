@@ -30,7 +30,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PatchLocationRequest {
   public static final String JSON_PROPERTY_LOCATION_TYPE = "locationType";
   @jakarta.annotation.Nullable private LocationType locationType;
@@ -57,13 +57,13 @@ public class PatchLocationRequest {
    * @return locationType
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOCATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public LocationType getLocationType() {
     return locationType;
   }
 
-  @JsonProperty(JSON_PROPERTY_LOCATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLocationType(@jakarta.annotation.Nullable LocationType locationType) {
     this.locationType = locationType;
@@ -81,13 +81,13 @@ public class PatchLocationRequest {
    * @return coordinates
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COORDINATES)
+  @JsonProperty(value = JSON_PROPERTY_COORDINATES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Coordinate getCoordinates() {
     return coordinates;
   }
 
-  @JsonProperty(JSON_PROPERTY_COORDINATES)
+  @JsonProperty(value = JSON_PROPERTY_COORDINATES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCoordinates(@jakarta.annotation.Nullable Coordinate coordinates) {
     this.coordinates = coordinates;
@@ -123,7 +123,7 @@ public class PatchLocationRequest {
     return meterPointIds.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_METER_POINT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_METER_POINT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<List<String>> getMeterPointIds_JsonNullable() {
     return meterPointIds;

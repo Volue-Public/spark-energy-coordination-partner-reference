@@ -23,7 +23,7 @@ import java.util.Objects;
 @JsonPropertyOrder({GetWebhooksResponse.JSON_PROPERTY_WEBHOOKS})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class GetWebhooksResponse {
   public static final String JSON_PROPERTY_WEBHOOKS = "webhooks";
   @jakarta.annotation.Nonnull private List<GetWebhookResponse> webhooks = new ArrayList<>();
@@ -51,13 +51,13 @@ public class GetWebhooksResponse {
    * @return webhooks
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_WEBHOOKS)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOKS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<GetWebhookResponse> getWebhooks() {
     return webhooks;
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOKS)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOKS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhooks(@jakarta.annotation.Nonnull List<GetWebhookResponse> webhooks) {
     this.webhooks = webhooks;

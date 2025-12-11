@@ -22,7 +22,7 @@ import java.util.Objects;
 @JsonPropertyOrder({Period.JSON_PROPERTY_FROM, Period.JSON_PROPERTY_TO})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class Period {
   public static final String JSON_PROPERTY_FROM = "from";
   @jakarta.annotation.Nullable private LocalDate from;
@@ -44,13 +44,13 @@ public class Period {
    * @return from
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FROM)
+  @JsonProperty(value = JSON_PROPERTY_FROM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public LocalDate getFrom() {
     return from;
   }
 
-  @JsonProperty(JSON_PROPERTY_FROM)
+  @JsonProperty(value = JSON_PROPERTY_FROM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFrom(@jakarta.annotation.Nullable LocalDate from) {
     this.from = from;
@@ -68,13 +68,13 @@ public class Period {
    * @return to
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TO)
+  @JsonProperty(value = JSON_PROPERTY_TO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public LocalDate getTo() {
     return to;
   }
 
-  @JsonProperty(JSON_PROPERTY_TO)
+  @JsonProperty(value = JSON_PROPERTY_TO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTo(@jakarta.annotation.Nullable LocalDate to) {
     this.to = to;

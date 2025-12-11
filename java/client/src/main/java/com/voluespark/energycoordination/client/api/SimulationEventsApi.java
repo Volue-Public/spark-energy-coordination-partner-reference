@@ -8,7 +8,6 @@ import com.voluespark.energycoordination.client.model.SimulateResourceLPCEventRe
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -23,7 +22,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class SimulationEventsApi {
   private ApiClient apiClient;
 
@@ -31,7 +30,6 @@ public class SimulationEventsApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public SimulationEventsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -60,7 +58,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postLPCLocationSimulationRequestCreation(
-      SimulateLocationLPCEventRequest simulateLocationLPCEventRequest)
+      @jakarta.annotation.Nonnull SimulateLocationLPCEventRequest simulateLocationLPCEventRequest)
       throws WebClientResponseException {
     Object postBody = simulateLocationLPCEventRequest;
     // verify the required parameter 'simulateLocationLPCEventRequest' is set
@@ -122,7 +120,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<SimulateEventResponse> postLPCLocationSimulation(
-      SimulateLocationLPCEventRequest simulateLocationLPCEventRequest)
+      @jakarta.annotation.Nonnull SimulateLocationLPCEventRequest simulateLocationLPCEventRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<SimulateEventResponse> localVarReturnType =
         new ParameterizedTypeReference<SimulateEventResponse>() {};
@@ -146,7 +144,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<SimulateEventResponse>> postLPCLocationSimulationWithHttpInfo(
-      SimulateLocationLPCEventRequest simulateLocationLPCEventRequest)
+      @jakarta.annotation.Nonnull SimulateLocationLPCEventRequest simulateLocationLPCEventRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<SimulateEventResponse> localVarReturnType =
         new ParameterizedTypeReference<SimulateEventResponse>() {};
@@ -170,7 +168,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec postLPCLocationSimulationWithResponseSpec(
-      SimulateLocationLPCEventRequest simulateLocationLPCEventRequest)
+      @jakarta.annotation.Nonnull SimulateLocationLPCEventRequest simulateLocationLPCEventRequest)
       throws WebClientResponseException {
     return postLPCLocationSimulationRequestCreation(simulateLocationLPCEventRequest);
   }
@@ -191,7 +189,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postLPCResourceSimulationRequestCreation(
-      SimulateResourceLPCEventRequest simulateResourceLPCEventRequest)
+      @jakarta.annotation.Nonnull SimulateResourceLPCEventRequest simulateResourceLPCEventRequest)
       throws WebClientResponseException {
     Object postBody = simulateResourceLPCEventRequest;
     // verify the required parameter 'simulateResourceLPCEventRequest' is set
@@ -253,7 +251,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<SimulateEventResponse> postLPCResourceSimulation(
-      SimulateResourceLPCEventRequest simulateResourceLPCEventRequest)
+      @jakarta.annotation.Nonnull SimulateResourceLPCEventRequest simulateResourceLPCEventRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<SimulateEventResponse> localVarReturnType =
         new ParameterizedTypeReference<SimulateEventResponse>() {};
@@ -277,7 +275,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<SimulateEventResponse>> postLPCResourceSimulationWithHttpInfo(
-      SimulateResourceLPCEventRequest simulateResourceLPCEventRequest)
+      @jakarta.annotation.Nonnull SimulateResourceLPCEventRequest simulateResourceLPCEventRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<SimulateEventResponse> localVarReturnType =
         new ParameterizedTypeReference<SimulateEventResponse>() {};
@@ -301,7 +299,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec postLPCResourceSimulationWithResponseSpec(
-      SimulateResourceLPCEventRequest simulateResourceLPCEventRequest)
+      @jakarta.annotation.Nonnull SimulateResourceLPCEventRequest simulateResourceLPCEventRequest)
       throws WebClientResponseException {
     return postLPCResourceSimulationRequestCreation(simulateResourceLPCEventRequest);
   }
@@ -323,7 +321,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postPriceCurveSimulationRequestCreation(
-      SimulatePriceCurveEventRequest simulatePriceCurveEventRequest)
+      @jakarta.annotation.Nonnull SimulatePriceCurveEventRequest simulatePriceCurveEventRequest)
       throws WebClientResponseException {
     Object postBody = simulatePriceCurveEventRequest;
     // verify the required parameter 'simulatePriceCurveEventRequest' is set
@@ -386,7 +384,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<SimulateEventResponse> postPriceCurveSimulation(
-      SimulatePriceCurveEventRequest simulatePriceCurveEventRequest)
+      @jakarta.annotation.Nonnull SimulatePriceCurveEventRequest simulatePriceCurveEventRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<SimulateEventResponse> localVarReturnType =
         new ParameterizedTypeReference<SimulateEventResponse>() {};
@@ -411,7 +409,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<SimulateEventResponse>> postPriceCurveSimulationWithHttpInfo(
-      SimulatePriceCurveEventRequest simulatePriceCurveEventRequest)
+      @jakarta.annotation.Nonnull SimulatePriceCurveEventRequest simulatePriceCurveEventRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<SimulateEventResponse> localVarReturnType =
         new ParameterizedTypeReference<SimulateEventResponse>() {};
@@ -436,7 +434,7 @@ public class SimulationEventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec postPriceCurveSimulationWithResponseSpec(
-      SimulatePriceCurveEventRequest simulatePriceCurveEventRequest)
+      @jakarta.annotation.Nonnull SimulatePriceCurveEventRequest simulatePriceCurveEventRequest)
       throws WebClientResponseException {
     return postPriceCurveSimulationRequestCreation(simulatePriceCurveEventRequest);
   }

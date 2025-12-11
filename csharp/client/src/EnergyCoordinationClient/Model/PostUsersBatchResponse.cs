@@ -41,7 +41,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="PostUsersBatchResponse" /> class.
         /// </summary>
         /// <param name="users">users (required).</param>
-        public PostUsersBatchResponse(List<GetUserResponse> users = default(List<GetUserResponse>))
+        public PostUsersBatchResponse(List<GetUserResponse> users = default)
         {
             // to ensure "users" is required (not null)
             if (users == null)

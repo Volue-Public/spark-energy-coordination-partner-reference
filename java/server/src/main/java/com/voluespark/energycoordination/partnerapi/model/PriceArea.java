@@ -9,7 +9,7 @@ import java.util.*;
 /** Gets or Sets PriceArea */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public enum PriceArea {
   UNKNOWN("Unknown"),
 
@@ -37,7 +37,7 @@ public enum PriceArea {
 
   SE4("SE4");
 
-  private String value;
+  private final String value;
 
   PriceArea(String value) {
     this.value = value;

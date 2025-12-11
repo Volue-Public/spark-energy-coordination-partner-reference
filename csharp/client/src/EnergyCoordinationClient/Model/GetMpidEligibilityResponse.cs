@@ -42,10 +42,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="meterPointId">meterPointId (required).</param>
         /// <param name="isEligible">isEligible (required).</param>
-        public GetMpidEligibilityResponse(
-            string meterPointId = default(string),
-            bool isEligible = default(bool)
-        )
+        public GetMpidEligibilityResponse(string meterPointId = default, bool isEligible = default)
         {
             // to ensure "meterPointId" is required (not null)
             if (meterPointId == null)

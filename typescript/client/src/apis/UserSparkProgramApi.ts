@@ -95,8 +95,12 @@ export class UserSparkProgramApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/enrollment`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/enrollment`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -136,8 +140,12 @@ export class UserSparkProgramApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/compensation`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/compensation`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -179,8 +187,11 @@ export class UserSparkProgramApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/eligible`;
+
         const response = await this.request({
-            path: `/users/eligible`,
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -222,8 +233,12 @@ export class UserSparkProgramApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/meters/{mpid}/eligible`;
+        urlPath = urlPath.replace(`{${"mpid"}}`, encodeURIComponent(String(requestParameters['mpid'])));
+
         const response = await this.request({
-            path: `/meters/{mpid}/eligible`.replace(`{${"mpid"}}`, encodeURIComponent(String(requestParameters['mpid']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -265,8 +280,12 @@ export class UserSparkProgramApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/eligibility`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/eligibility`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -308,8 +327,12 @@ export class UserSparkProgramApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/enrollment`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/enrollment`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -351,8 +374,12 @@ export class UserSparkProgramApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/enrollment`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/enrollment`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,

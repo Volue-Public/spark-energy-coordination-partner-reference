@@ -37,8 +37,11 @@ export class SimulationPartnerDataApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/simulation/partner`;
+
         const response = await this.request({
-            path: `/simulation/partner`,
+            path: urlPath,
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -72,8 +75,11 @@ export class SimulationPartnerDataApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/simulation/partner`;
+
         const response = await this.request({
-            path: `/simulation/partner`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,

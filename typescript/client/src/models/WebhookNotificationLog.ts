@@ -147,7 +147,7 @@ export function WebhookNotificationLogToJSONTyped(value?: WebhookNotificationLog
         'partnerEventId': value['partnerEventId'],
         'notificationId': value['notificationId'],
         'notificationType': NotificationTypeToJSON(value['notificationType']),
-        'notificationSent': value['notificationSent'] == null ? undefined : ((value['notificationSent']).toISOString()),
+        'notificationSent': value['notificationSent'] == null ? value['notificationSent'] : value['notificationSent'].toISOString(),
         'sparkSignature': value['sparkSignature'],
         'webhookUrl': value['webhookUrl'],
         'requestTimeout': value['requestTimeout'],

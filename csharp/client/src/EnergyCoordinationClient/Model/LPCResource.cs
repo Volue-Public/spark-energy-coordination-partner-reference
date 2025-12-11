@@ -44,9 +44,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="locationId">locationId (required).</param>
         /// <param name="resourceId">resourceId (required).</param>
         public LPCResource(
-            string meterPointId = default(string),
-            string locationId = default(string),
-            string resourceId = default(string)
+            string meterPointId = default,
+            string locationId = default,
+            string resourceId = default
         )
         {
             // to ensure "meterPointId" is required (not null)

@@ -50,7 +50,7 @@ namespace Partner.Api.Models
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public new string ToJson()
+        public string ToJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
 

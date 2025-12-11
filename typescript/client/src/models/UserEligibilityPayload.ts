@@ -93,7 +93,7 @@ export function UserEligibilityPayloadToJSONTyped(value?: UserEligibilityPayload
 
     return {
         ...SparkEventPayloadToJSONTyped(value, true),
-        'lastUpdated': ((value['lastUpdated']).toISOString()),
+        'lastUpdated': value['lastUpdated'].toISOString(),
         'addedUsers': value['addedUsers'],
         'removedUsers': value['removedUsers'],
     };

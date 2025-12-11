@@ -14,7 +14,7 @@ import org.springframework.lang.Nullable;
 /** PriceCurvePoint */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PriceCurvePoint {
 
   private @Nullable Double price;
@@ -22,7 +22,7 @@ public class PriceCurvePoint {
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private @Nullable OffsetDateTime timestamp;
 
-  public PriceCurvePoint price(Double price) {
+  public PriceCurvePoint price(@Nullable Double price) {
     this.price = price;
     return this;
   }
@@ -34,15 +34,15 @@ public class PriceCurvePoint {
    */
   @Schema(name = "price", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("price")
-  public Double getPrice() {
+  public @Nullable Double getPrice() {
     return price;
   }
 
-  public void setPrice(Double price) {
+  public void setPrice(@Nullable Double price) {
     this.price = price;
   }
 
-  public PriceCurvePoint timestamp(OffsetDateTime timestamp) {
+  public PriceCurvePoint timestamp(@Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
     return this;
   }
@@ -55,11 +55,11 @@ public class PriceCurvePoint {
   @Valid
   @Schema(name = "timestamp", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("timestamp")
-  public OffsetDateTime getTimestamp() {
+  public @Nullable OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(OffsetDateTime timestamp) {
+  public void setTimestamp(@Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 

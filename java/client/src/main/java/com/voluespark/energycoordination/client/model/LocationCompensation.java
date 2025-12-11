@@ -30,7 +30,7 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class LocationCompensation {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
   @jakarta.annotation.Nullable private String locationId;
@@ -64,13 +64,13 @@ public class LocationCompensation {
    * @return locationId
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getLocationId() {
     return locationId;
   }
 
-  @JsonProperty(JSON_PROPERTY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLocationId(@jakarta.annotation.Nullable String locationId) {
     this.locationId = locationId;
@@ -97,13 +97,13 @@ public class LocationCompensation {
    * @return meterPointIds
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_METER_POINT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_METER_POINT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<String> getMeterPointIds() {
     return meterPointIds;
   }
 
-  @JsonProperty(JSON_PROPERTY_METER_POINT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_METER_POINT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMeterPointIds(@jakarta.annotation.Nullable List<String> meterPointIds) {
     this.meterPointIds = meterPointIds;
@@ -121,13 +121,13 @@ public class LocationCompensation {
    * @return activeAmount
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACTIVE_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_ACTIVE_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Double getActiveAmount() {
     return activeAmount;
   }
 
-  @JsonProperty(JSON_PROPERTY_ACTIVE_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_ACTIVE_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setActiveAmount(@jakarta.annotation.Nullable Double activeAmount) {
     this.activeAmount = activeAmount;
@@ -145,13 +145,13 @@ public class LocationCompensation {
    * @return blockedAmount
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BLOCKED_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_BLOCKED_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Double getBlockedAmount() {
     return blockedAmount;
   }
 
-  @JsonProperty(JSON_PROPERTY_BLOCKED_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_BLOCKED_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBlockedAmount(@jakarta.annotation.Nullable Double blockedAmount) {
     this.blockedAmount = blockedAmount;
@@ -169,13 +169,13 @@ public class LocationCompensation {
    * @return currency
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENCY)
+  @JsonProperty(value = JSON_PROPERTY_CURRENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Currency getCurrency() {
     return currency;
   }
 
-  @JsonProperty(JSON_PROPERTY_CURRENCY)
+  @JsonProperty(value = JSON_PROPERTY_CURRENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrency(@jakarta.annotation.Nullable Currency currency) {
     this.currency = currency;
@@ -201,13 +201,13 @@ public class LocationCompensation {
    * @return problems
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PROBLEMS)
+  @JsonProperty(value = JSON_PROPERTY_PROBLEMS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<Problem> getProblems() {
     return problems;
   }
 
-  @JsonProperty(JSON_PROPERTY_PROBLEMS)
+  @JsonProperty(value = JSON_PROPERTY_PROBLEMS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setProblems(@jakarta.annotation.Nullable List<Problem> problems) {
     this.problems = problems;

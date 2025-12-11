@@ -9,7 +9,7 @@ import java.util.*;
 /** Gets or Sets NotificationType */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public enum NotificationType {
   UNKNOWN("Unknown"),
 
@@ -23,7 +23,7 @@ public enum NotificationType {
 
   LPC_RESERVATION_CREATED("LPCReservationCreated");
 
-  private String value;
+  private final String value;
 
   NotificationType(String value) {
     this.value = value;

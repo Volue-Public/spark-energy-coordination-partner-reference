@@ -35,9 +35,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="SimulateResourceLPCEventRequest" /> class.
         /// </summary>
         /// <param name="resources">resources.</param>
-        public SimulateResourceLPCEventRequest(
-            List<LPCResourceTarget> resources = default(List<LPCResourceTarget>)
-        )
+        public SimulateResourceLPCEventRequest(List<LPCResourceTarget> resources = default)
         {
             this.Resources = resources;
         }

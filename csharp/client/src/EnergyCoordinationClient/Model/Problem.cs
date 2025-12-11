@@ -48,10 +48,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="problemType">problemType.</param>
         /// <param name="message">message (required).</param>
-        public Problem(
-            ProblemType? problemType = default(ProblemType?),
-            string message = default(string)
-        )
+        public Problem(ProblemType? problemType = default, string message = default)
         {
             // to ensure "message" is required (not null)
             if (message == null)

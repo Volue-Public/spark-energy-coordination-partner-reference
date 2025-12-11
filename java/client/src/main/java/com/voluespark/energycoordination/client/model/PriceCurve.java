@@ -28,7 +28,7 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PriceCurve {
   public static final String JSON_PROPERTY_POINTS = "points";
   @jakarta.annotation.Nullable private List<PriceCurvePoint> points = new ArrayList<>();
@@ -64,13 +64,13 @@ public class PriceCurve {
    * @return points
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_POINTS)
+  @JsonProperty(value = JSON_PROPERTY_POINTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<PriceCurvePoint> getPoints() {
     return points;
   }
 
-  @JsonProperty(JSON_PROPERTY_POINTS)
+  @JsonProperty(value = JSON_PROPERTY_POINTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPoints(@jakarta.annotation.Nullable List<PriceCurvePoint> points) {
     this.points = points;
@@ -88,13 +88,13 @@ public class PriceCurve {
    * @return energyUnit
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENERGY_UNIT)
+  @JsonProperty(value = JSON_PROPERTY_ENERGY_UNIT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public EnergyUnit getEnergyUnit() {
     return energyUnit;
   }
 
-  @JsonProperty(JSON_PROPERTY_ENERGY_UNIT)
+  @JsonProperty(value = JSON_PROPERTY_ENERGY_UNIT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEnergyUnit(@jakarta.annotation.Nullable EnergyUnit energyUnit) {
     this.energyUnit = energyUnit;
@@ -112,13 +112,13 @@ public class PriceCurve {
    * @return currency
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENCY)
+  @JsonProperty(value = JSON_PROPERTY_CURRENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Currency getCurrency() {
     return currency;
   }
 
-  @JsonProperty(JSON_PROPERTY_CURRENCY)
+  @JsonProperty(value = JSON_PROPERTY_CURRENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrency(@jakarta.annotation.Nullable Currency currency) {
     this.currency = currency;
@@ -136,13 +136,13 @@ public class PriceCurve {
    * @return resolution
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RESOLUTION)
+  @JsonProperty(value = JSON_PROPERTY_RESOLUTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getResolution() {
     return resolution;
   }
 
-  @JsonProperty(JSON_PROPERTY_RESOLUTION)
+  @JsonProperty(value = JSON_PROPERTY_RESOLUTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResolution(@jakarta.annotation.Nullable String resolution) {
     this.resolution = resolution;

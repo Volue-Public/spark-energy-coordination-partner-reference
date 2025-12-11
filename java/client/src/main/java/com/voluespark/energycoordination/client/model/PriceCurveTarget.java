@@ -24,7 +24,7 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PriceCurveTarget {
   public static final String JSON_PROPERTY_RESOURCE_ID = "resourceId";
   @jakarta.annotation.Nonnull private String resourceId;
@@ -46,13 +46,13 @@ public class PriceCurveTarget {
    * @return resourceId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCE_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getResourceId() {
     return resourceId;
   }
 
-  @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCE_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setResourceId(@jakarta.annotation.Nonnull String resourceId) {
     this.resourceId = resourceId;
@@ -70,13 +70,13 @@ public class PriceCurveTarget {
    * @return locationId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getLocationId() {
     return locationId;
   }
 
-  @JsonProperty(JSON_PROPERTY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLocationId(@jakarta.annotation.Nonnull String locationId) {
     this.locationId = locationId;

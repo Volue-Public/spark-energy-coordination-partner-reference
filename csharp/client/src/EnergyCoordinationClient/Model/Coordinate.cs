@@ -36,7 +36,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="latitude">latitude.</param>
         /// <param name="longitude">longitude.</param>
-        public Coordinate(double latitude = default(double), double longitude = default(double))
+        public Coordinate(double latitude = default, double longitude = default)
         {
             this.Latitude = latitude;
             this.Longitude = longitude;

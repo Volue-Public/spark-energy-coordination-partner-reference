@@ -83,7 +83,7 @@ export function GetUserEnrollmentResponseToJSONTyped(value?: Omit<GetUserEnrollm
         
         'userId': value['userId'],
         'enrollmentId': value['enrollmentId'],
-        'enrollmentDate': value['enrollmentDate'] == null ? undefined : ((value['enrollmentDate'] as any).toISOString()),
+        'enrollmentDate': value['enrollmentDate'] == null ? value['enrollmentDate'] : value['enrollmentDate'].toISOString(),
     };
 }
 

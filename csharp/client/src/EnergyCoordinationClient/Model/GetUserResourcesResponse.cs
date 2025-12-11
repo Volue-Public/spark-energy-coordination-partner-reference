@@ -41,9 +41,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="GetUserResourcesResponse" /> class.
         /// </summary>
         /// <param name="resources">resources (required).</param>
-        public GetUserResourcesResponse(
-            List<GetResourceResponse> resources = default(List<GetResourceResponse>)
-        )
+        public GetUserResourcesResponse(List<GetResourceResponse> resources = default)
         {
             // to ensure "resources" is required (not null)
             if (resources == null)

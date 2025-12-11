@@ -22,7 +22,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/EventNotification'
+              $ref: "#/components/schemas/EventNotification"
         required: true
       responses:
         "200":
@@ -63,9 +63,9 @@ components:
           format: date-time
           type: string
         notificationType:
-          $ref: '#/components/schemas/NotificationType'
+          $ref: "#/components/schemas/NotificationType"
         payload:
-          $ref: '#/components/schemas/SparkEventPayload'
+          $ref: "#/components/schemas/SparkEventPayload"
       required:
       - eventCreatedAtUtc
       - eventId
@@ -89,17 +89,17 @@ components:
       additionalProperties: false
       discriminator:
         mapping:
-          PriceCurve: '#/components/schemas/PriceCurvePayload'
-          UserEligibility: '#/components/schemas/UserEligibilityPayload'
-          LocationLPC: '#/components/schemas/LocationLPCPayload'
-          ResourceLPC: '#/components/schemas/ResourceLPCPayload'
-          LPCReservation: '#/components/schemas/LPCReservationPayload'
+          PriceCurve: "#/components/schemas/PriceCurvePayload"
+          UserEligibility: "#/components/schemas/UserEligibilityPayload"
+          LocationLPC: "#/components/schemas/LocationLPCPayload"
+          ResourceLPC: "#/components/schemas/ResourceLPCPayload"
+          LPCReservation: "#/components/schemas/LPCReservationPayload"
         propertyName: payloadType
       example:
         payloadType: Unknown
       properties:
         payloadType:
-          $ref: '#/components/schemas/SparkEventPayloadType'
+          $ref: "#/components/schemas/SparkEventPayloadType"
       required:
       - payloadType
       type: object
@@ -113,24 +113,26 @@ components:
       - LPCReservation
       type: string
     PriceCurvePayload:
-      additionalProperties: false
       allOf:
-      - $ref: '#/components/schemas/SparkEventPayload'
-      properties:
-        targets:
-          items:
-            $ref: '#/components/schemas/PriceCurveTarget'
-          type: array
-        priceCurveDelta:
-          $ref: '#/components/schemas/PriceCurve'
-        priceArea:
-          $ref: '#/components/schemas/PriceArea'
-      required:
-      - payloadType
-      - priceArea
-      - priceCurveDelta
-      - targets
+      - $ref: "#/components/schemas/SparkEventPayload"
+      - additionalProperties: false
+        properties:
+          targets:
+            items:
+              $ref: "#/components/schemas/PriceCurveTarget"
+            type: array
+          priceCurveDelta:
+            $ref: "#/components/schemas/PriceCurve"
+          priceArea:
+            $ref: "#/components/schemas/PriceArea"
+        required:
+        - priceArea
+        - priceCurveDelta
+        - targets
+        type: object
+        example: null
       type: object
+      example: null
     PriceCurveTarget:
       additionalProperties: false
       properties:
@@ -151,12 +153,12 @@ components:
       properties:
         points:
           items:
-            $ref: '#/components/schemas/PriceCurvePoint'
+            $ref: "#/components/schemas/PriceCurvePoint"
           type: array
         energyUnit:
-          $ref: '#/components/schemas/EnergyUnit'
+          $ref: "#/components/schemas/EnergyUnit"
         currency:
-          $ref: '#/components/schemas/Currency'
+          $ref: "#/components/schemas/Currency"
         resolution:
           example: 02:00:00
           format: time-span
@@ -201,40 +203,44 @@ components:
       - SE4
       type: string
     UserEligibilityPayload:
-      additionalProperties: false
       allOf:
-      - $ref: '#/components/schemas/SparkEventPayload'
-      properties:
-        lastUpdated:
-          format: date-time
-          type: string
-        addedUsers:
-          items:
+      - $ref: "#/components/schemas/SparkEventPayload"
+      - additionalProperties: false
+        properties:
+          lastUpdated:
+            format: date-time
             type: string
-          type: array
-        removedUsers:
-          items:
-            type: string
-          type: array
-      required:
-      - addedUsers
-      - lastUpdated
-      - payloadType
-      - removedUsers
+          addedUsers:
+            items:
+              type: string
+            type: array
+          removedUsers:
+            items:
+              type: string
+            type: array
+        required:
+        - addedUsers
+        - lastUpdated
+        - removedUsers
+        type: object
+        example: null
       type: object
+      example: null
     LocationLPCPayload:
-      additionalProperties: false
       allOf:
-      - $ref: '#/components/schemas/SparkEventPayload'
-      properties:
-        targets:
-          items:
-            $ref: '#/components/schemas/LocationLPCTarget'
-          type: array
-      required:
-      - payloadType
-      - targets
+      - $ref: "#/components/schemas/SparkEventPayload"
+      - additionalProperties: false
+        properties:
+          targets:
+            items:
+              $ref: "#/components/schemas/LocationLPCTarget"
+            type: array
+        required:
+        - targets
+        type: object
+        example: null
       type: object
+      example: null
     LocationLPCTarget:
       additionalProperties: false
       properties:
@@ -248,7 +254,7 @@ components:
           type: string
         points:
           items:
-            $ref: '#/components/schemas/LPCDataPoint'
+            $ref: "#/components/schemas/LPCDataPoint"
           type: array
       required:
       - locationId
@@ -269,18 +275,20 @@ components:
           type: string
       type: object
     ResourceLPCPayload:
-      additionalProperties: false
       allOf:
-      - $ref: '#/components/schemas/SparkEventPayload'
-      properties:
-        targets:
-          items:
-            $ref: '#/components/schemas/ResourceLPCTarget'
-          type: array
-      required:
-      - payloadType
-      - targets
+      - $ref: "#/components/schemas/SparkEventPayload"
+      - additionalProperties: false
+        properties:
+          targets:
+            items:
+              $ref: "#/components/schemas/ResourceLPCTarget"
+            type: array
+        required:
+        - targets
+        type: object
+        example: null
       type: object
+      example: null
     ResourceLPCTarget:
       additionalProperties: false
       properties:
@@ -296,7 +304,7 @@ components:
           type: string
         points:
           items:
-            $ref: '#/components/schemas/LPCDataPoint'
+            $ref: "#/components/schemas/LPCDataPoint"
           type: array
       required:
       - locationId
@@ -306,15 +314,17 @@ components:
       - resourceId
       type: object
     LPCReservationPayload:
-      additionalProperties: false
       allOf:
-      - $ref: '#/components/schemas/SparkEventPayload'
-      properties:
-        targets:
-          items:
-            $ref: '#/components/schemas/LocationLPCTarget'
-          type: array
-      required:
-      - payloadType
-      - targets
+      - $ref: "#/components/schemas/SparkEventPayload"
+      - additionalProperties: false
+        properties:
+          targets:
+            items:
+              $ref: "#/components/schemas/LocationLPCTarget"
+            type: array
+        required:
+        - targets
+        type: object
+        example: null
       type: object
+      example: null

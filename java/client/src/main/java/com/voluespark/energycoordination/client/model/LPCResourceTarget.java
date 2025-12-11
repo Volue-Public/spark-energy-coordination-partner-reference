@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class LPCResourceTarget {
   public static final String JSON_PROPERTY_RESOURCE = "resource";
   @jakarta.annotation.Nullable private ResourceTarget resource;
@@ -53,13 +53,13 @@ public class LPCResourceTarget {
    * @return resource
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RESOURCE)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public ResourceTarget getResource() {
     return resource;
   }
 
-  @JsonProperty(JSON_PROPERTY_RESOURCE)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResource(@jakarta.annotation.Nullable ResourceTarget resource) {
     this.resource = resource;
@@ -94,7 +94,7 @@ public class LPCResourceTarget {
     return points.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_POINTS)
+  @JsonProperty(value = JSON_PROPERTY_POINTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<List<LPCDataPoint>> getPoints_JsonNullable() {
     return points;

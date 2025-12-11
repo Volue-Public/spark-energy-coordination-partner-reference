@@ -21,11 +21,11 @@ import {
     SparkReportPayloadTypeToJSONTyped,
 } from './SparkReportPayloadType';
 
-import { EnergyUsageReportPayload, EnergyUsageReportPayloadFromJSONTyped, EnergyUsageReportPayloadToJSON, EnergyUsageReportPayloadToJSONTyped } from './EnergyUsageReportPayload';
-import { LocationEnergyUsageReportPayload, LocationEnergyUsageReportPayloadFromJSONTyped, LocationEnergyUsageReportPayloadToJSON, LocationEnergyUsageReportPayloadToJSONTyped } from './LocationEnergyUsageReportPayload';
-import { LocationEnergyUsagePlanReportPayload, LocationEnergyUsagePlanReportPayloadFromJSONTyped, LocationEnergyUsagePlanReportPayloadToJSON, LocationEnergyUsagePlanReportPayloadToJSONTyped } from './LocationEnergyUsagePlanReportPayload';
-import { LocationLPCAcknowledgmentReportPayload, LocationLPCAcknowledgmentReportPayloadFromJSONTyped, LocationLPCAcknowledgmentReportPayloadToJSON, LocationLPCAcknowledgmentReportPayloadToJSONTyped } from './LocationLPCAcknowledgmentReportPayload';
-import { ResourceLPCAcknowledgmentReportPayload, ResourceLPCAcknowledgmentReportPayloadFromJSONTyped, ResourceLPCAcknowledgmentReportPayloadToJSON, ResourceLPCAcknowledgmentReportPayloadToJSONTyped } from './ResourceLPCAcknowledgmentReportPayload';
+import { type EnergyUsageReportPayload, EnergyUsageReportPayloadFromJSONTyped, EnergyUsageReportPayloadToJSON, EnergyUsageReportPayloadToJSONTyped } from './EnergyUsageReportPayload';
+import { type LocationEnergyUsageReportPayload, LocationEnergyUsageReportPayloadFromJSONTyped, LocationEnergyUsageReportPayloadToJSON, LocationEnergyUsageReportPayloadToJSONTyped } from './LocationEnergyUsageReportPayload';
+import { type LocationEnergyUsagePlanReportPayload, LocationEnergyUsagePlanReportPayloadFromJSONTyped, LocationEnergyUsagePlanReportPayloadToJSON, LocationEnergyUsagePlanReportPayloadToJSONTyped } from './LocationEnergyUsagePlanReportPayload';
+import { type LocationLPCAcknowledgmentReportPayload, LocationLPCAcknowledgmentReportPayloadFromJSONTyped, LocationLPCAcknowledgmentReportPayloadToJSON, LocationLPCAcknowledgmentReportPayloadToJSONTyped } from './LocationLPCAcknowledgmentReportPayload';
+import { type ResourceLPCAcknowledgmentReportPayload, ResourceLPCAcknowledgmentReportPayloadFromJSONTyped, ResourceLPCAcknowledgmentReportPayloadToJSON, ResourceLPCAcknowledgmentReportPayloadToJSONTyped } from './ResourceLPCAcknowledgmentReportPayload';
 /**
  * 
  * @export
@@ -73,6 +73,7 @@ export function SparkReportPayloadFromJSONTyped(json: any, ignoreDiscriminator: 
         if (json['payloadType'] === 'ResourceLPCAcknowledgement') {
             return ResourceLPCAcknowledgmentReportPayloadFromJSONTyped(json, ignoreDiscriminator);
         }
+
     }
     return {
         
@@ -102,7 +103,7 @@ export function SparkReportPayloadToJSONTyped(value?: SparkReportPayload | null,
             case 'ResourceLPCAcknowledgement':
                 return ResourceLPCAcknowledgmentReportPayloadToJSONTyped(value as ResourceLPCAcknowledgmentReportPayload, ignoreDiscriminator);
             default:
-                throw new Error(`No variant of SparkReportPayload exists with 'payloadType=${value['payloadType']}'`);
+                return value;
         }
     }
 

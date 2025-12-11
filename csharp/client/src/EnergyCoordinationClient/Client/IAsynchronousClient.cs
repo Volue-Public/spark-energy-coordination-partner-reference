@@ -33,8 +33,7 @@ namespace EnergyCoordinationClient.Client
             string path,
             RequestOptions options,
             IReadableConfiguration configuration = null,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -50,8 +49,7 @@ namespace EnergyCoordinationClient.Client
             string path,
             RequestOptions options,
             IReadableConfiguration configuration = null,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -67,8 +65,7 @@ namespace EnergyCoordinationClient.Client
             string path,
             RequestOptions options,
             IReadableConfiguration configuration = null,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -84,8 +81,7 @@ namespace EnergyCoordinationClient.Client
             string path,
             RequestOptions options,
             IReadableConfiguration configuration = null,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -101,8 +97,7 @@ namespace EnergyCoordinationClient.Client
             string path,
             RequestOptions options,
             IReadableConfiguration configuration = null,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -118,8 +113,7 @@ namespace EnergyCoordinationClient.Client
             string path,
             RequestOptions options,
             IReadableConfiguration configuration = null,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -135,8 +129,7 @@ namespace EnergyCoordinationClient.Client
             string path,
             RequestOptions options,
             IReadableConfiguration configuration = null,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
     }
 }

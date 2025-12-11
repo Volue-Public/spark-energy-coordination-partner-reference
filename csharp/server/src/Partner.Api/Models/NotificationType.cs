@@ -30,36 +30,36 @@ namespace Partner.Api.Models
         /// Enum Unknown for Unknown
         /// </summary>
         [EnumMember(Value = "Unknown")]
-        Unknown = 1,
+        Unknown,
 
         /// <summary>
         /// Enum PriceCurveCreated for PriceCurveCreated
         /// </summary>
         [EnumMember(Value = "PriceCurveCreated")]
-        PriceCurveCreated = 2,
+        PriceCurveCreated,
 
         /// <summary>
         /// Enum UserEligibilityUpdated for UserEligibilityUpdated
         /// </summary>
         [EnumMember(Value = "UserEligibilityUpdated")]
-        UserEligibilityUpdated = 3,
+        UserEligibilityUpdated,
 
         /// <summary>
         /// Enum LocationLPCRequested for LocationLPCRequested
         /// </summary>
         [EnumMember(Value = "LocationLPCRequested")]
-        LocationLPCRequested = 4,
+        LocationLPCRequested,
 
         /// <summary>
         /// Enum ResourceLPCRequested for ResourceLPCRequested
         /// </summary>
         [EnumMember(Value = "ResourceLPCRequested")]
-        ResourceLPCRequested = 5,
+        ResourceLPCRequested,
 
         /// <summary>
         /// Enum LPCReservationCreated for LPCReservationCreated
         /// </summary>
         [EnumMember(Value = "LPCReservationCreated")]
-        LPCReservationCreated = 6,
+        LPCReservationCreated,
     }
 }

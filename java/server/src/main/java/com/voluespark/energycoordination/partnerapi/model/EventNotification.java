@@ -13,7 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /** EventNotification */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class EventNotification {
 
   private String notificationId;

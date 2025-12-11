@@ -57,9 +57,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="SparkReportPayload" /> class.
         /// </summary>
         /// <param name="payloadType">payloadType.</param>
-        public SparkReportPayload(
-            SparkReportPayloadType? payloadType = default(SparkReportPayloadType?)
-        )
+        public SparkReportPayload(SparkReportPayloadType? payloadType = default)
         {
             this.PayloadType = payloadType;
         }

@@ -29,7 +29,7 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class EventNotification {
   public static final String JSON_PROPERTY_NOTIFICATION_ID = "notificationId";
   @jakarta.annotation.Nonnull private String notificationId;
@@ -63,13 +63,13 @@ public class EventNotification {
    * @return notificationId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getNotificationId() {
     return notificationId;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNotificationId(@jakarta.annotation.Nonnull String notificationId) {
     this.notificationId = notificationId;
@@ -87,13 +87,13 @@ public class EventNotification {
    * @return eventId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_EVENT_ID)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getEventId() {
     return eventId;
   }
 
-  @JsonProperty(JSON_PROPERTY_EVENT_ID)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventId(@jakarta.annotation.Nonnull String eventId) {
     this.eventId = eventId;
@@ -112,13 +112,13 @@ public class EventNotification {
    * @return eventCreatedAtUtc
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_EVENT_CREATED_AT_UTC)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_CREATED_AT_UTC, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getEventCreatedAtUtc() {
     return eventCreatedAtUtc;
   }
 
-  @JsonProperty(JSON_PROPERTY_EVENT_CREATED_AT_UTC)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_CREATED_AT_UTC, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventCreatedAtUtc(@jakarta.annotation.Nonnull OffsetDateTime eventCreatedAtUtc) {
     this.eventCreatedAtUtc = eventCreatedAtUtc;
@@ -137,13 +137,13 @@ public class EventNotification {
    * @return notificationSentUtc
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_SENT_UTC)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_SENT_UTC, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getNotificationSentUtc() {
     return notificationSentUtc;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_SENT_UTC)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_SENT_UTC, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNotificationSentUtc(
       @jakarta.annotation.Nonnull OffsetDateTime notificationSentUtc) {
@@ -163,13 +163,13 @@ public class EventNotification {
    * @return notificationType
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public NotificationType getNotificationType() {
     return notificationType;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNotificationType(@jakarta.annotation.Nonnull NotificationType notificationType) {
     this.notificationType = notificationType;
@@ -187,13 +187,13 @@ public class EventNotification {
    * @return payload
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_PAYLOAD)
+  @JsonProperty(value = JSON_PROPERTY_PAYLOAD, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public SparkEventPayload getPayload() {
     return payload;
   }
 
-  @JsonProperty(JSON_PROPERTY_PAYLOAD)
+  @JsonProperty(value = JSON_PROPERTY_PAYLOAD, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPayload(@jakarta.annotation.Nonnull SparkEventPayload payload) {
     this.payload = payload;

@@ -108,8 +108,13 @@ export class UserLocationsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/locations/{locationId}`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+        urlPath = urlPath.replace(`{${"locationId"}}`, encodeURIComponent(String(requestParameters['locationId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/locations/{locationId}`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))).replace(`{${"locationId"}}`, encodeURIComponent(String(requestParameters['locationId']))),
+            path: urlPath,
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -156,8 +161,13 @@ export class UserLocationsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/locations/{locationId}`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+        urlPath = urlPath.replace(`{${"locationId"}}`, encodeURIComponent(String(requestParameters['locationId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/locations/{locationId}`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))).replace(`{${"locationId"}}`, encodeURIComponent(String(requestParameters['locationId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -197,8 +207,12 @@ export class UserLocationsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/locations`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/locations`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -254,8 +268,13 @@ export class UserLocationsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/locations/{locationId}`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+        urlPath = urlPath.replace(`{${"locationId"}}`, encodeURIComponent(String(requestParameters['locationId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/locations/{locationId}`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))).replace(`{${"locationId"}}`, encodeURIComponent(String(requestParameters['locationId']))),
+            path: urlPath,
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
@@ -305,8 +324,12 @@ export class UserLocationsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/locations`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/locations`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -349,8 +372,11 @@ export class UserLocationsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/locations/batch`;
+
         const response = await this.request({
-            path: `/users/locations/batch`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -407,8 +433,13 @@ export class UserLocationsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/locations/{locationId}`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+        urlPath = urlPath.replace(`{${"locationId"}}`, encodeURIComponent(String(requestParameters['locationId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/locations/{locationId}`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))).replace(`{${"locationId"}}`, encodeURIComponent(String(requestParameters['locationId']))),
+            path: urlPath,
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,

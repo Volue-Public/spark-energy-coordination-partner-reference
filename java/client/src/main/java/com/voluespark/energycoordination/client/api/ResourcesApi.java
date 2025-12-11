@@ -5,7 +5,6 @@ import com.voluespark.energycoordination.client.model.GetResourceResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -20,7 +19,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class ResourcesApi {
   private ApiClient apiClient;
 
@@ -28,7 +27,6 @@ public class ResourcesApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public ResourcesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -56,8 +54,8 @@ public class ResourcesApi {
    * @param resourceId The resourceId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec deleteResourceByIdRequestCreation(String resourceId)
-      throws WebClientResponseException {
+  private ResponseSpec deleteResourceByIdRequestCreation(
+      @jakarta.annotation.Nonnull String resourceId) throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'resourceId' is set
     if (resourceId == null) {
@@ -117,7 +115,8 @@ public class ResourcesApi {
    * @param resourceId The resourceId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> deleteResourceById(String resourceId) throws WebClientResponseException {
+  public Mono<Void> deleteResourceById(@jakarta.annotation.Nonnull String resourceId)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteResourceByIdRequestCreation(resourceId).bodyToMono(localVarReturnType);
   }
@@ -137,8 +136,8 @@ public class ResourcesApi {
    * @param resourceId The resourceId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<Void>> deleteResourceByIdWithHttpInfo(String resourceId)
-      throws WebClientResponseException {
+  public Mono<ResponseEntity<Void>> deleteResourceByIdWithHttpInfo(
+      @jakarta.annotation.Nonnull String resourceId) throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteResourceByIdRequestCreation(resourceId).toEntity(localVarReturnType);
   }
@@ -159,8 +158,8 @@ public class ResourcesApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec deleteResourceByIdWithResponseSpec(String resourceId)
-      throws WebClientResponseException {
+  public ResponseSpec deleteResourceByIdWithResponseSpec(
+      @jakarta.annotation.Nonnull String resourceId) throws WebClientResponseException {
     return deleteResourceByIdRequestCreation(resourceId);
   }
 
@@ -177,7 +176,7 @@ public class ResourcesApi {
    * @return GetResourceResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getResourceByIdRequestCreation(String resourceId)
+  private ResponseSpec getResourceByIdRequestCreation(@jakarta.annotation.Nonnull String resourceId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'resourceId' is set
@@ -237,7 +236,7 @@ public class ResourcesApi {
    * @return GetResourceResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetResourceResponse> getResourceById(String resourceId)
+  public Mono<GetResourceResponse> getResourceById(@jakarta.annotation.Nonnull String resourceId)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetResourceResponse> localVarReturnType =
         new ParameterizedTypeReference<GetResourceResponse>() {};
@@ -257,8 +256,8 @@ public class ResourcesApi {
    * @return ResponseEntity&lt;GetResourceResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetResourceResponse>> getResourceByIdWithHttpInfo(String resourceId)
-      throws WebClientResponseException {
+  public Mono<ResponseEntity<GetResourceResponse>> getResourceByIdWithHttpInfo(
+      @jakarta.annotation.Nonnull String resourceId) throws WebClientResponseException {
     ParameterizedTypeReference<GetResourceResponse> localVarReturnType =
         new ParameterizedTypeReference<GetResourceResponse>() {};
     return getResourceByIdRequestCreation(resourceId).toEntity(localVarReturnType);
@@ -277,7 +276,7 @@ public class ResourcesApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getResourceByIdWithResponseSpec(String resourceId)
+  public ResponseSpec getResourceByIdWithResponseSpec(@jakarta.annotation.Nonnull String resourceId)
       throws WebClientResponseException {
     return getResourceByIdRequestCreation(resourceId);
   }

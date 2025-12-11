@@ -42,10 +42,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="userId">userId (required).</param>
         /// <param name="isEligible">isEligible (required).</param>
-        public GetUserEligibilityResponse(
-            string userId = default(string),
-            bool isEligible = default(bool)
-        )
+        public GetUserEligibilityResponse(string userId = default, bool isEligible = default)
         {
             // to ensure "userId" is required (not null)
             if (userId == null)

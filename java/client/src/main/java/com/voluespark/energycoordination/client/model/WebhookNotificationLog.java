@@ -38,7 +38,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class WebhookNotificationLog {
   public static final String JSON_PROPERTY_WEBHOOK_ID = "webhookId";
   @jakarta.annotation.Nonnull private String webhookId;
@@ -93,13 +93,13 @@ public class WebhookNotificationLog {
    * @return webhookId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_ID)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getWebhookId() {
     return webhookId;
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_ID)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhookId(@jakarta.annotation.Nonnull String webhookId) {
     this.webhookId = webhookId;
@@ -117,13 +117,13 @@ public class WebhookNotificationLog {
    * @return tenantId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_TENANT_ID)
+  @JsonProperty(value = JSON_PROPERTY_TENANT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getTenantId() {
     return tenantId;
   }
 
-  @JsonProperty(JSON_PROPERTY_TENANT_ID)
+  @JsonProperty(value = JSON_PROPERTY_TENANT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTenantId(@jakarta.annotation.Nonnull String tenantId) {
     this.tenantId = tenantId;
@@ -141,13 +141,13 @@ public class WebhookNotificationLog {
    * @return partnerEventId
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARTNER_EVENT_ID)
+  @JsonProperty(value = JSON_PROPERTY_PARTNER_EVENT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getPartnerEventId() {
     return partnerEventId;
   }
 
-  @JsonProperty(JSON_PROPERTY_PARTNER_EVENT_ID)
+  @JsonProperty(value = JSON_PROPERTY_PARTNER_EVENT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPartnerEventId(@jakarta.annotation.Nullable String partnerEventId) {
     this.partnerEventId = partnerEventId;
@@ -165,13 +165,13 @@ public class WebhookNotificationLog {
    * @return notificationId
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getNotificationId() {
     return notificationId;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNotificationId(@jakarta.annotation.Nullable String notificationId) {
     this.notificationId = notificationId;
@@ -190,13 +190,13 @@ public class WebhookNotificationLog {
    * @return notificationType
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public NotificationType getNotificationType() {
     return notificationType;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNotificationType(@jakarta.annotation.Nullable NotificationType notificationType) {
     this.notificationType = notificationType;
@@ -215,13 +215,13 @@ public class WebhookNotificationLog {
    * @return notificationSent
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_SENT)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_SENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public OffsetDateTime getNotificationSent() {
     return notificationSent;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_SENT)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_SENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNotificationSent(@jakarta.annotation.Nullable OffsetDateTime notificationSent) {
     this.notificationSent = notificationSent;
@@ -244,7 +244,7 @@ public class WebhookNotificationLog {
     return sparkSignature.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_SPARK_SIGNATURE)
+  @JsonProperty(value = JSON_PROPERTY_SPARK_SIGNATURE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getSparkSignature_JsonNullable() {
     return sparkSignature;
@@ -271,13 +271,13 @@ public class WebhookNotificationLog {
    * @return webhookUrl
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_URL, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public URI getWebhookUrl() {
     return webhookUrl;
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_URL, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhookUrl(@jakarta.annotation.Nonnull URI webhookUrl) {
     this.webhookUrl = webhookUrl;
@@ -296,13 +296,13 @@ public class WebhookNotificationLog {
    * @return requestTimeout
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REQUEST_TIMEOUT)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_TIMEOUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Boolean getRequestTimeout() {
     return requestTimeout;
   }
 
-  @JsonProperty(JSON_PROPERTY_REQUEST_TIMEOUT)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_TIMEOUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRequestTimeout(@jakarta.annotation.Nullable Boolean requestTimeout) {
     this.requestTimeout = requestTimeout;
@@ -326,7 +326,7 @@ public class WebhookNotificationLog {
     return responseStatusCode.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_RESPONSE_STATUS_CODE)
+  @JsonProperty(value = JSON_PROPERTY_RESPONSE_STATUS_CODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<Integer> getResponseStatusCode_JsonNullable() {
     return responseStatusCode;
@@ -359,7 +359,7 @@ public class WebhookNotificationLog {
     return requestDurationMs.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_REQUEST_DURATION_MS)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_DURATION_MS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<Long> getRequestDurationMs_JsonNullable() {
     return requestDurationMs;

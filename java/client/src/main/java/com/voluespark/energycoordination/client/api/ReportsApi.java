@@ -6,7 +6,6 @@ import com.voluespark.energycoordination.client.model.PostReportRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -21,7 +20,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class ReportsApi {
   private ApiClient apiClient;
 
@@ -29,7 +28,6 @@ public class ReportsApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public ReportsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -53,7 +51,8 @@ public class ReportsApi {
    * @return GetReportResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec postReportRequestCreation(PostReportRequest postReportRequest)
+  private ResponseSpec postReportRequestCreation(
+      @jakarta.annotation.Nonnull PostReportRequest postReportRequest)
       throws WebClientResponseException {
     Object postBody = postReportRequest;
     // verify the required parameter 'postReportRequest' is set
@@ -109,7 +108,8 @@ public class ReportsApi {
    * @return GetReportResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetReportResponse> postReport(PostReportRequest postReportRequest)
+  public Mono<GetReportResponse> postReport(
+      @jakarta.annotation.Nonnull PostReportRequest postReportRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetReportResponse> localVarReturnType =
         new ParameterizedTypeReference<GetReportResponse>() {};
@@ -128,7 +128,8 @@ public class ReportsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetReportResponse>> postReportWithHttpInfo(
-      PostReportRequest postReportRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull PostReportRequest postReportRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetReportResponse> localVarReturnType =
         new ParameterizedTypeReference<GetReportResponse>() {};
     return postReportRequestCreation(postReportRequest).toEntity(localVarReturnType);
@@ -145,7 +146,8 @@ public class ReportsApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec postReportWithResponseSpec(PostReportRequest postReportRequest)
+  public ResponseSpec postReportWithResponseSpec(
+      @jakarta.annotation.Nonnull PostReportRequest postReportRequest)
       throws WebClientResponseException {
     return postReportRequestCreation(postReportRequest);
   }

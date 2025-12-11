@@ -44,9 +44,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="coordinates">coordinates.</param>
         /// <param name="meterPointIds">meterPointIds.</param>
         public PatchLocationRequest(
-            LocationType? locationType = default(LocationType?),
-            Coordinate coordinates = default(Coordinate),
-            List<string> meterPointIds = default(List<string>)
+            LocationType? locationType = default,
+            Coordinate coordinates = default,
+            List<string> meterPointIds = default
         )
         {
             this.LocationType = locationType;

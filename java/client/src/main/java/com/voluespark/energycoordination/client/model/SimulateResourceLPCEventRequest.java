@@ -26,7 +26,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 @JsonPropertyOrder({SimulateResourceLPCEventRequest.JSON_PROPERTY_RESOURCES})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class SimulateResourceLPCEventRequest {
   public static final String JSON_PROPERTY_RESOURCES = "resources";
 
@@ -66,7 +66,7 @@ public class SimulateResourceLPCEventRequest {
     return resources.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_RESOURCES)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<List<LPCResourceTarget>> getResources_JsonNullable() {
     return resources;

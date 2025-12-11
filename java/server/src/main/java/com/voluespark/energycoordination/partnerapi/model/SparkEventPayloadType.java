@@ -9,7 +9,7 @@ import java.util.*;
 /** Gets or Sets SparkEventPayloadType */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public enum SparkEventPayloadType {
   UNKNOWN("Unknown"),
 
@@ -23,7 +23,7 @@ public enum SparkEventPayloadType {
 
   LPC_RESERVATION("LPCReservation");
 
-  private String value;
+  private final String value;
 
   SparkEventPayloadType(String value) {
     this.value = value;

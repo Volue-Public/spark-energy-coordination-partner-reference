@@ -53,12 +53,12 @@ namespace EnergyCoordinationClient.Model
         /// <param name="notificationType">notificationType (required).</param>
         /// <param name="payload">payload (required).</param>
         public EventNotification(
-            string notificationId = default(string),
-            string eventId = default(string),
-            DateTimeOffset eventCreatedAtUtc = default(DateTimeOffset),
-            DateTimeOffset notificationSentUtc = default(DateTimeOffset),
-            NotificationType notificationType = default(NotificationType),
-            SparkEventPayload payload = default(SparkEventPayload)
+            string notificationId = default,
+            string eventId = default,
+            DateTimeOffset eventCreatedAtUtc = default,
+            DateTimeOffset notificationSentUtc = default,
+            NotificationType notificationType = default,
+            SparkEventPayload payload = default
         )
         {
             // to ensure "notificationId" is required (not null)

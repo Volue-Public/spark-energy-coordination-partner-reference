@@ -98,8 +98,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task DeleteResourceByIdAsync(
             string resourceId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -116,8 +115,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteResourceByIdWithHttpInfoAsync(
             string resourceId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -134,8 +132,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<GetResourceResponse> GetResourceByIdAsync(
             string resourceId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -154,8 +151,7 @@ namespace EnergyCoordinationClient.Api
         > GetResourceByIdWithHttpInfoAsync(
             string resourceId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -413,8 +409,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task DeleteResourceByIdAsync(
             string resourceId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await DeleteResourceByIdWithHttpInfoAsync(resourceId, operationIndex, cancellationToken)
@@ -432,8 +427,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> DeleteResourceByIdWithHttpInfoAsync(
             string resourceId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'resourceId' is set
@@ -623,8 +617,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<GetResourceResponse> GetResourceByIdAsync(
             string resourceId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetResourceResponse> localVarResponse =
@@ -648,8 +641,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetResourceResponse>> GetResourceByIdWithHttpInfoAsync(
             string resourceId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'resourceId' is set

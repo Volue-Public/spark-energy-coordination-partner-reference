@@ -69,8 +69,12 @@ export class UserResourcesApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/resources`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/resources`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -120,8 +124,12 @@ export class UserResourcesApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/users/{userId}/vehicles`;
+        urlPath = urlPath.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId'])));
+
         const response = await this.request({
-            path: `/users/{userId}/vehicles`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters['userId']))),
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,

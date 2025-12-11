@@ -52,9 +52,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="priceArea">priceArea (required).</param>
         /// <param name="payloadType">payloadType (required) (default to SparkEventPayloadType.PriceCurve).</param>
         public PriceCurvePayload(
-            List<PriceCurveTarget> targets = default(List<PriceCurveTarget>),
-            PriceCurve priceCurveDelta = default(PriceCurve),
-            PriceArea priceArea = default(PriceArea),
+            List<PriceCurveTarget> targets = default,
+            PriceCurve priceCurveDelta = default,
+            PriceArea priceArea = default,
             SparkEventPayloadType payloadType = SparkEventPayloadType.PriceCurve
         )
             : base(payloadType)

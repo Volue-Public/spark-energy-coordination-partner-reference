@@ -31,7 +31,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PostWebhookRequest {
   public static final String JSON_PROPERTY_NAME = "name";
   @jakarta.annotation.Nullable private JsonNullable<String> name = JsonNullable.<String>undefined();
@@ -66,7 +66,7 @@ public class PostWebhookRequest {
     return name.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getName_JsonNullable() {
     return name;
@@ -98,7 +98,7 @@ public class PostWebhookRequest {
     return webhookSecret.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_SECRET)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_SECRET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getWebhookSecret_JsonNullable() {
     return webhookSecret;
@@ -125,13 +125,13 @@ public class PostWebhookRequest {
    * @return webhookUrl
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_URL, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getWebhookUrl() {
     return webhookUrl;
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_URL, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhookUrl(@jakarta.annotation.Nonnull String webhookUrl) {
     this.webhookUrl = webhookUrl;
@@ -158,13 +158,13 @@ public class PostWebhookRequest {
    * @return notificationTypes
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<NotificationType> getNotificationTypes() {
     return notificationTypes;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNotificationTypes(
       @jakarta.annotation.Nullable List<NotificationType> notificationTypes) {

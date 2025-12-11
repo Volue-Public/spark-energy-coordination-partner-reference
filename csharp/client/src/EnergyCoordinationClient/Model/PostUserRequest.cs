@@ -41,7 +41,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="PostUserRequest" /> class.
         /// </summary>
         /// <param name="userId">userId (required).</param>
-        public PostUserRequest(string userId = default(string))
+        public PostUserRequest(string userId = default)
         {
             // to ensure "userId" is required (not null)
             if (userId == null)

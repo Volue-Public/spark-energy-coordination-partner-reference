@@ -56,15 +56,15 @@ namespace EnergyCoordinationClient.Model
         /// <param name="createdDate">createdDate.</param>
         /// <param name="lastAnalyzedTimestamp">lastAnalyzedTimestamp.</param>
         public GetWebhookResponse(
-            string webhookId = default(string),
-            string webhookUrl = default(string),
-            string name = default(string),
-            List<NotificationType> notificationTypes = default(List<NotificationType>),
-            bool enabled = default(bool),
-            WebhookStatus? status = default(WebhookStatus?),
-            DateTimeOffset modifiedDate = default(DateTimeOffset),
-            DateTimeOffset createdDate = default(DateTimeOffset),
-            DateTimeOffset lastAnalyzedTimestamp = default(DateTimeOffset)
+            string webhookId = default,
+            string webhookUrl = default,
+            string name = default,
+            List<NotificationType> notificationTypes = default,
+            bool enabled = default,
+            WebhookStatus? status = default,
+            DateTimeOffset modifiedDate = default,
+            DateTimeOffset createdDate = default,
+            DateTimeOffset lastAnalyzedTimestamp = default
         )
         {
             // to ensure "webhookId" is required (not null)

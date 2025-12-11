@@ -123,8 +123,7 @@ namespace EnergyCoordinationClient.Api
             string locationId,
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -145,8 +144,7 @@ namespace EnergyCoordinationClient.Api
             string locationId,
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -167,8 +165,7 @@ namespace EnergyCoordinationClient.Api
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -189,8 +186,7 @@ namespace EnergyCoordinationClient.Api
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -482,8 +478,7 @@ namespace EnergyCoordinationClient.Api
             string locationId,
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<
@@ -513,8 +508,7 @@ namespace EnergyCoordinationClient.Api
             string locationId,
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'locationId' is set
@@ -762,8 +756,7 @@ namespace EnergyCoordinationClient.Api
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await PostLocationBoundResourceWithHttpInfoAsync(
@@ -791,8 +784,7 @@ namespace EnergyCoordinationClient.Api
             string locationId,
             PostLocationBoundResourceRequest postLocationBoundResourceRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'userId' is set

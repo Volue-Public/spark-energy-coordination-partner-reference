@@ -26,7 +26,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 @JsonPropertyOrder({SimulateLocationLPCEventRequest.JSON_PROPERTY_LOCATIONS})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class SimulateLocationLPCEventRequest {
   public static final String JSON_PROPERTY_LOCATIONS = "locations";
 
@@ -66,7 +66,7 @@ public class SimulateLocationLPCEventRequest {
     return locations.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_LOCATIONS)
+  @JsonProperty(value = JSON_PROPERTY_LOCATIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<List<LPCLocationTarget>> getLocations_JsonNullable() {
     return locations;

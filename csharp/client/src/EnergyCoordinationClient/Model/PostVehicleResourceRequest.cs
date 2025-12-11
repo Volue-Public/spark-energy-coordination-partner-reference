@@ -49,8 +49,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="resourceId">resourceId (required).</param>
         /// <param name="resourceType">resourceType (required).</param>
         public PostVehicleResourceRequest(
-            string resourceId = default(string),
-            ResourceType resourceType = default(ResourceType)
+            string resourceId = default,
+            ResourceType resourceType = default
         )
         {
             // to ensure "resourceId" is required (not null)

@@ -44,9 +44,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="id">id (required).</param>
         /// <param name="createdAt">createdAt.</param>
         public GetEventResponse(
-            GetEventResponsePayload payload = default(GetEventResponsePayload),
-            string id = default(string),
-            DateTimeOffset createdAt = default(DateTimeOffset)
+            GetEventResponsePayload payload = default,
+            string id = default,
+            DateTimeOffset createdAt = default
         )
         {
             // to ensure "id" is required (not null)

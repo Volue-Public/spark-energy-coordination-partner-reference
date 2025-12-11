@@ -41,9 +41,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="PostLocationsBatchRequest" /> class.
         /// </summary>
         /// <param name="locations">locations (required).</param>
-        public PostLocationsBatchRequest(
-            List<PostLocationWithUserRequest> locations = default(List<PostLocationWithUserRequest>)
-        )
+        public PostLocationsBatchRequest(List<PostLocationWithUserRequest> locations = default)
         {
             // to ensure "locations" is required (not null)
             if (locations == null)

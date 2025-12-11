@@ -74,8 +74,11 @@ export class SimulationEventsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/simulation/events/lpc/locations`;
+
         const response = await this.request({
-            path: `/simulation/events/lpc/locations`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -120,8 +123,11 @@ export class SimulationEventsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/simulation/events/lpc/resources`;
+
         const response = await this.request({
-            path: `/simulation/events/lpc/resources`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -166,8 +172,11 @@ export class SimulationEventsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/simulation/events/pricecurve`;
+
         const response = await this.request({
-            path: `/simulation/events/pricecurve`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -203,8 +212,11 @@ export class SimulationEventsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/simulation/events/usereligibility`;
+
         const response = await this.request({
-            path: `/simulation/events/usereligibility`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,

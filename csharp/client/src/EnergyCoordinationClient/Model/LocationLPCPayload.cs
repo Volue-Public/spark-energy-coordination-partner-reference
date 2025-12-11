@@ -44,7 +44,7 @@ namespace EnergyCoordinationClient.Model
         /// <param name="targets">targets (required).</param>
         /// <param name="payloadType">payloadType (required) (default to SparkEventPayloadType.LocationLPC).</param>
         public LocationLPCPayload(
-            List<LocationLPCTarget> targets = default(List<LocationLPCTarget>),
+            List<LocationLPCTarget> targets = default,
             SparkEventPayloadType payloadType = SparkEventPayloadType.LocationLPC
         )
             : base(payloadType)

@@ -37,9 +37,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="eventId">eventId.</param>
         /// <param name="payloads">payloads.</param>
         public PostReportRequest(
-            string eventId = default(string),
-            List<PostReportRequestPayloadsInner> payloads =
-                default(List<PostReportRequestPayloadsInner>)
+            string eventId = default,
+            List<PostReportRequestPayloadsInner> payloads = default
         )
         {
             this.EventId = eventId;

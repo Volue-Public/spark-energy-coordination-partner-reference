@@ -161,8 +161,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<SimulateEventResponse> PostLPCLocationSimulationAsync(
             SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -181,8 +180,7 @@ namespace EnergyCoordinationClient.Api
         > PostLPCLocationSimulationWithHttpInfoAsync(
             SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -199,8 +197,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<SimulateEventResponse> PostLPCResourceSimulationAsync(
             SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -219,8 +216,7 @@ namespace EnergyCoordinationClient.Api
         > PostLPCResourceSimulationWithHttpInfoAsync(
             SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -237,8 +233,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<SimulateEventResponse> PostPriceCurveSimulationAsync(
             SimulatePriceCurveEventRequest simulatePriceCurveEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -257,8 +252,7 @@ namespace EnergyCoordinationClient.Api
         > PostPriceCurveSimulationWithHttpInfoAsync(
             SimulatePriceCurveEventRequest simulatePriceCurveEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -273,8 +267,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of SimulateEventResponse</returns>
         System.Threading.Tasks.Task<SimulateEventResponse> PostUserEligibilitySimulationAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -291,8 +284,7 @@ namespace EnergyCoordinationClient.Api
             ApiResponse<SimulateEventResponse>
         > PostUserEligibilitySimulationWithHttpInfoAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -552,8 +544,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<SimulateEventResponse> PostLPCLocationSimulationAsync(
             SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> localVarResponse =
@@ -577,8 +568,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse>> PostLPCLocationSimulationWithHttpInfoAsync(
             SimulateLocationLPCEventRequest simulateLocationLPCEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'simulateLocationLPCEventRequest' is set
@@ -768,8 +758,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<SimulateEventResponse> PostLPCResourceSimulationAsync(
             SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> localVarResponse =
@@ -793,8 +782,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse>> PostLPCResourceSimulationWithHttpInfoAsync(
             SimulateResourceLPCEventRequest simulateResourceLPCEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'simulateResourceLPCEventRequest' is set
@@ -984,8 +972,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<SimulateEventResponse> PostPriceCurveSimulationAsync(
             SimulatePriceCurveEventRequest simulatePriceCurveEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> localVarResponse =
@@ -1009,8 +996,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse>> PostPriceCurveSimulationWithHttpInfoAsync(
             SimulatePriceCurveEventRequest simulatePriceCurveEventRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'simulatePriceCurveEventRequest' is set
@@ -1181,8 +1167,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of SimulateEventResponse</returns>
         public async System.Threading.Tasks.Task<SimulateEventResponse> PostUserEligibilitySimulationAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse> localVarResponse =
@@ -1203,8 +1188,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of ApiResponse (SimulateEventResponse)</returns>
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<SimulateEventResponse>> PostUserEligibilitySimulationWithHttpInfoAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =

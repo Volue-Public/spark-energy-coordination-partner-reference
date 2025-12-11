@@ -44,9 +44,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="period">period (required).</param>
         /// <param name="locationCompensations">locationCompensations.</param>
         public GetUserCompensationForCurrentMonthResponse(
-            string userId = default(string),
-            Period period = default(Period),
-            List<LocationCompensation> locationCompensations = default(List<LocationCompensation>)
+            string userId = default,
+            Period period = default,
+            List<LocationCompensation> locationCompensations = default
         )
         {
             // to ensure "period" is required (not null)

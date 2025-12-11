@@ -82,8 +82,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetUsersResponse</returns>
         GetUsersResponse GetUsers(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         );
 
@@ -99,8 +99,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetUsersResponse</returns>
         ApiResponse<GetUsersResponse> GetUsersWithHttpInfo(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         );
 
@@ -174,8 +174,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task DeleteUserByIdAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -192,8 +191,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserByIdWithHttpInfoAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -210,8 +208,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<GetUserResponse> GetUserByIdAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -228,8 +225,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<GetUserResponse>> GetUserByIdWithHttpInfoAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -245,11 +241,10 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUsersResponse</returns>
         System.Threading.Tasks.Task<GetUsersResponse> GetUsersAsync(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -265,11 +260,10 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUsersResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUsersResponse>> GetUsersWithHttpInfoAsync(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -286,8 +280,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task PostUserAsync(
             PostUserRequest postUserRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -304,8 +297,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUserWithHttpInfoAsync(
             PostUserRequest postUserRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -322,8 +314,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task PostUsersAsync(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -340,8 +331,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersWithHttpInfoAsync(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -596,8 +586,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task DeleteUserByIdAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await DeleteUserByIdWithHttpInfoAsync(userId, operationIndex, cancellationToken)
@@ -615,8 +604,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> DeleteUserByIdWithHttpInfoAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'userId' is set
@@ -803,8 +791,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<GetUserResponse> GetUserByIdAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetUserResponse> localVarResponse =
@@ -824,8 +811,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetUserResponse>> GetUserByIdWithHttpInfoAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'userId' is set
@@ -912,8 +898,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetUsersResponse</returns>
         public GetUsersResponse GetUsers(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         )
         {
@@ -931,8 +917,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetUsersResponse</returns>
         public EnergyCoordinationClient.Client.ApiResponse<GetUsersResponse> GetUsersWithHttpInfo(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         )
         {
@@ -1025,11 +1011,10 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUsersResponse</returns>
         public async System.Threading.Tasks.Task<GetUsersResponse> GetUsersAsync(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetUsersResponse> localVarResponse =
@@ -1048,11 +1033,10 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUsersResponse)</returns>
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetUsersResponse>> GetUsersWithHttpInfoAsync(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
@@ -1241,8 +1225,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task PostUserAsync(
             PostUserRequest postUserRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await PostUserWithHttpInfoAsync(postUserRequest, operationIndex, cancellationToken)
@@ -1260,8 +1243,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostUserWithHttpInfoAsync(
             PostUserRequest postUserRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'postUserRequest' is set
@@ -1440,8 +1422,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task PostUsersAsync(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await PostUsersWithHttpInfoAsync(
@@ -1463,8 +1444,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostUsersWithHttpInfoAsync(
             PostUsersBatchRequest postUsersBatchRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'postUsersBatchRequest' is set

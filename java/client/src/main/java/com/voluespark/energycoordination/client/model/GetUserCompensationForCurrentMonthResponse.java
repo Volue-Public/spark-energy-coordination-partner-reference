@@ -27,7 +27,7 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class GetUserCompensationForCurrentMonthResponse {
   public static final String JSON_PROPERTY_USER_ID = "userId";
   @jakarta.annotation.Nullable private String userId;
@@ -55,13 +55,13 @@ public class GetUserCompensationForCurrentMonthResponse {
    * @return userId
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonProperty(value = JSON_PROPERTY_USER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getUserId() {
     return userId;
   }
 
-  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonProperty(value = JSON_PROPERTY_USER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUserId(@jakarta.annotation.Nullable String userId) {
     this.userId = userId;
@@ -80,13 +80,13 @@ public class GetUserCompensationForCurrentMonthResponse {
    * @return period
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_PERIOD, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Period getPeriod() {
     return period;
   }
 
-  @JsonProperty(JSON_PROPERTY_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_PERIOD, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPeriod(@jakarta.annotation.Nonnull Period period) {
     this.period = period;
@@ -114,13 +114,13 @@ public class GetUserCompensationForCurrentMonthResponse {
    * @return locationCompensations
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOCATION_COMPENSATIONS)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_COMPENSATIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<LocationCompensation> getLocationCompensations() {
     return locationCompensations;
   }
 
-  @JsonProperty(JSON_PROPERTY_LOCATION_COMPENSATIONS)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_COMPENSATIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLocationCompensations(
       @jakarta.annotation.Nullable List<LocationCompensation> locationCompensations) {

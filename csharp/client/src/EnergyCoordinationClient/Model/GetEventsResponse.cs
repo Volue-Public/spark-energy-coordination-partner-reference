@@ -43,8 +43,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="pagination">pagination (required).</param>
         /// <param name="events">events.</param>
         public GetEventsResponse(
-            ApiPagination pagination = default(ApiPagination),
-            List<GetEventResponse> events = default(List<GetEventResponse>)
+            ApiPagination pagination = default,
+            List<GetEventResponse> events = default
         )
         {
             // to ensure "pagination" is required (not null)

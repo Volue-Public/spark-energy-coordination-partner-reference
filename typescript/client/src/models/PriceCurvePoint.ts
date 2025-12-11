@@ -67,7 +67,7 @@ export function PriceCurvePointToJSONTyped(value?: PriceCurvePoint | null, ignor
     return {
         
         'price': value['price'],
-        'timestamp': value['timestamp'] == null ? undefined : ((value['timestamp']).toISOString()),
+        'timestamp': value['timestamp'] == null ? value['timestamp'] : value['timestamp'].toISOString(),
     };
 }
 

@@ -140,9 +140,9 @@ export function GetWebhookResponseToJSONTyped(value?: GetWebhookResponse | null,
         'notificationTypes': value['notificationTypes'] == null ? undefined : ((value['notificationTypes'] as Array<any>).map(NotificationTypeToJSON)),
         'enabled': value['enabled'],
         'status': WebhookStatusToJSON(value['status']),
-        'modifiedDate': value['modifiedDate'] == null ? undefined : ((value['modifiedDate']).toISOString()),
-        'createdDate': value['createdDate'] == null ? undefined : ((value['createdDate']).toISOString()),
-        'lastAnalyzedTimestamp': value['lastAnalyzedTimestamp'] == null ? undefined : ((value['lastAnalyzedTimestamp']).toISOString()),
+        'modifiedDate': value['modifiedDate'] == null ? value['modifiedDate'] : value['modifiedDate'].toISOString(),
+        'createdDate': value['createdDate'] == null ? value['createdDate'] : value['createdDate'].toISOString(),
+        'lastAnalyzedTimestamp': value['lastAnalyzedTimestamp'] == null ? value['lastAnalyzedTimestamp'] : value['lastAnalyzedTimestamp'].toISOString(),
     };
 }
 

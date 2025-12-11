@@ -110,9 +110,9 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetWebhookNotificationLogsResponse</returns>
         GetWebhookNotificationLogsResponse GetWebhookNotificationLogs(
-            string? webhookId = default(string?),
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            string? webhookId = default,
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         );
 
@@ -129,9 +129,9 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetWebhookNotificationLogsResponse</returns>
         ApiResponse<GetWebhookNotificationLogsResponse> GetWebhookNotificationLogsWithHttpInfo(
-            string? webhookId = default(string?),
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            string? webhookId = default,
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         );
 
@@ -289,8 +289,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task DeleteWebhookByIdAsync(
             string webhookId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -307,8 +306,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebhookByIdWithHttpInfoAsync(
             string webhookId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -325,8 +323,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<GetWebhookResponse> GetWebhookByIdAsync(
             string webhookId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -345,8 +342,7 @@ namespace EnergyCoordinationClient.Api
         > GetWebhookByIdWithHttpInfoAsync(
             string webhookId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -363,8 +359,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<GetWebhookNotificationLogByIdResponse> GetWebhookNotificationLogByIdAsync(
             string notificationId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -383,8 +378,7 @@ namespace EnergyCoordinationClient.Api
         > GetWebhookNotificationLogByIdWithHttpInfoAsync(
             string notificationId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -401,12 +395,11 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetWebhookNotificationLogsResponse</returns>
         System.Threading.Tasks.Task<GetWebhookNotificationLogsResponse> GetWebhookNotificationLogsAsync(
-            string? webhookId = default(string?),
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            string? webhookId = default,
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -425,12 +418,11 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<
             ApiResponse<GetWebhookNotificationLogsResponse>
         > GetWebhookNotificationLogsWithHttpInfoAsync(
-            string? webhookId = default(string?),
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            string? webhookId = default,
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -445,8 +437,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of GetWebhooksResponse</returns>
         System.Threading.Tasks.Task<GetWebhooksResponse> GetWebhooksAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -461,8 +452,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of ApiResponse (GetWebhooksResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetWebhooksResponse>> GetWebhooksWithHttpInfoAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -481,8 +471,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             PatchWebhookRequest patchWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -503,8 +492,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             PatchWebhookRequest patchWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -521,8 +509,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task PostWebhookAsync(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -539,8 +526,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostWebhookWithHttpInfoAsync(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -559,8 +545,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             PutWebhookRequest putWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -581,8 +566,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             PutWebhookRequest putWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -601,8 +585,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             bool enabled,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -621,8 +604,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             bool enabled,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -877,8 +859,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task DeleteWebhookByIdAsync(
             string webhookId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await DeleteWebhookByIdWithHttpInfoAsync(webhookId, operationIndex, cancellationToken)
@@ -896,8 +877,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> DeleteWebhookByIdWithHttpInfoAsync(
             string webhookId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'webhookId' is set
@@ -1084,8 +1064,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<GetWebhookResponse> GetWebhookByIdAsync(
             string webhookId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetWebhookResponse> localVarResponse =
@@ -1105,8 +1084,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetWebhookResponse>> GetWebhookByIdWithHttpInfoAsync(
             string webhookId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'webhookId' is set
@@ -1299,8 +1277,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<GetWebhookNotificationLogByIdResponse> GetWebhookNotificationLogByIdAsync(
             string notificationId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetWebhookNotificationLogByIdResponse> localVarResponse =
@@ -1324,8 +1301,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetWebhookNotificationLogByIdResponse>> GetWebhookNotificationLogByIdWithHttpInfoAsync(
             string notificationId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'notificationId' is set
@@ -1416,9 +1392,9 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetWebhookNotificationLogsResponse</returns>
         public GetWebhookNotificationLogsResponse GetWebhookNotificationLogs(
-            string? webhookId = default(string?),
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            string? webhookId = default,
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         )
         {
@@ -1437,9 +1413,9 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetWebhookNotificationLogsResponse</returns>
         public EnergyCoordinationClient.Client.ApiResponse<GetWebhookNotificationLogsResponse> GetWebhookNotificationLogsWithHttpInfo(
-            string? webhookId = default(string?),
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            string? webhookId = default,
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         )
         {
@@ -1546,12 +1522,11 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetWebhookNotificationLogsResponse</returns>
         public async System.Threading.Tasks.Task<GetWebhookNotificationLogsResponse> GetWebhookNotificationLogsAsync(
-            string? webhookId = default(string?),
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            string? webhookId = default,
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetWebhookNotificationLogsResponse> localVarResponse =
@@ -1577,12 +1552,11 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetWebhookNotificationLogsResponse)</returns>
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetWebhookNotificationLogsResponse>> GetWebhookNotificationLogsWithHttpInfoAsync(
-            string? webhookId = default(string?),
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            string? webhookId = default,
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
@@ -1770,8 +1744,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of GetWebhooksResponse</returns>
         public async System.Threading.Tasks.Task<GetWebhooksResponse> GetWebhooksAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetWebhooksResponse> localVarResponse =
@@ -1789,8 +1762,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of ApiResponse (GetWebhooksResponse)</returns>
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetWebhooksResponse>> GetWebhooksWithHttpInfoAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
@@ -1982,8 +1954,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             PatchWebhookRequest patchWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetWebhookResponse> localVarResponse =
@@ -2010,8 +1981,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             PatchWebhookRequest patchWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'webhookId' is set
@@ -2203,8 +2173,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task PostWebhookAsync(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await PostWebhookWithHttpInfoAsync(
@@ -2226,8 +2195,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostWebhookWithHttpInfoAsync(
             PostWebhookRequest postWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'postWebhookRequest' is set
@@ -2430,8 +2398,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             PutWebhookRequest putWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetWebhookResponse> localVarResponse =
@@ -2458,8 +2425,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             PutWebhookRequest putWebhookRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'webhookId' is set
@@ -2669,8 +2635,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             bool enabled,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await UpdateWebhookEnabledByIdWithHttpInfoAsync(
@@ -2695,8 +2660,7 @@ namespace EnergyCoordinationClient.Api
             string webhookId,
             bool enabled,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'webhookId' is set

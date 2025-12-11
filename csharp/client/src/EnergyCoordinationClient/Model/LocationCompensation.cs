@@ -47,12 +47,12 @@ namespace EnergyCoordinationClient.Model
         /// <param name="currency">currency.</param>
         /// <param name="problems">problems.</param>
         public LocationCompensation(
-            string locationId = default(string),
-            List<string> meterPointIds = default(List<string>),
-            double activeAmount = default(double),
-            double blockedAmount = default(double),
-            Currency? currency = default(Currency?),
-            List<Problem> problems = default(List<Problem>)
+            string locationId = default,
+            List<string> meterPointIds = default,
+            double activeAmount = default,
+            double blockedAmount = default,
+            Currency? currency = default,
+            List<Problem> problems = default
         )
         {
             this.LocationId = locationId;

@@ -6,7 +6,6 @@ import com.voluespark.energycoordination.client.model.PostVehicleResourceRequest
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -21,7 +20,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class UserResourcesApi {
   private ApiClient apiClient;
 
@@ -29,7 +28,6 @@ public class UserResourcesApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public UserResourcesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -54,7 +52,7 @@ public class UserResourcesApi {
    * @return GetUserResourcesResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getResourcesForUserRequestCreation(String userId)
+  private ResponseSpec getResourcesForUserRequestCreation(@jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
@@ -113,8 +111,8 @@ public class UserResourcesApi {
    * @return GetUserResourcesResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetUserResourcesResponse> getResourcesForUser(String userId)
-      throws WebClientResponseException {
+  public Mono<GetUserResourcesResponse> getResourcesForUser(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserResourcesResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserResourcesResponse>() {};
     return getResourcesForUserRequestCreation(userId).bodyToMono(localVarReturnType);
@@ -133,7 +131,7 @@ public class UserResourcesApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetUserResourcesResponse>> getResourcesForUserWithHttpInfo(
-      String userId) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserResourcesResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserResourcesResponse>() {};
     return getResourcesForUserRequestCreation(userId).toEntity(localVarReturnType);
@@ -151,7 +149,7 @@ public class UserResourcesApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getResourcesForUserWithResponseSpec(String userId)
+  public ResponseSpec getResourcesForUserWithResponseSpec(@jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     return getResourcesForUserRequestCreation(userId);
   }
@@ -170,7 +168,8 @@ public class UserResourcesApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postVehicleRequestCreation(
-      String userId, PostVehicleResourceRequest postVehicleResourceRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull PostVehicleResourceRequest postVehicleResourceRequest)
       throws WebClientResponseException {
     Object postBody = postVehicleResourceRequest;
     // verify the required parameter 'userId' is set
@@ -240,7 +239,8 @@ public class UserResourcesApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<Void> postVehicle(
-      String userId, PostVehicleResourceRequest postVehicleResourceRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull PostVehicleResourceRequest postVehicleResourceRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postVehicleRequestCreation(userId, postVehicleResourceRequest)
@@ -261,7 +261,8 @@ public class UserResourcesApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<Void>> postVehicleWithHttpInfo(
-      String userId, PostVehicleResourceRequest postVehicleResourceRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull PostVehicleResourceRequest postVehicleResourceRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postVehicleRequestCreation(userId, postVehicleResourceRequest)
@@ -283,7 +284,8 @@ public class UserResourcesApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec postVehicleWithResponseSpec(
-      String userId, PostVehicleResourceRequest postVehicleResourceRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull PostVehicleResourceRequest postVehicleResourceRequest)
       throws WebClientResponseException {
     return postVehicleRequestCreation(userId, postVehicleResourceRequest);
   }

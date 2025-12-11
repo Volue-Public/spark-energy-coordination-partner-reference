@@ -21,7 +21,7 @@ import java.util.Objects;
 @JsonPropertyOrder({Coordinate.JSON_PROPERTY_LATITUDE, Coordinate.JSON_PROPERTY_LONGITUDE})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class Coordinate {
   public static final String JSON_PROPERTY_LATITUDE = "latitude";
   @jakarta.annotation.Nullable private Double latitude;
@@ -43,13 +43,13 @@ public class Coordinate {
    * @return latitude
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonProperty(value = JSON_PROPERTY_LATITUDE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Double getLatitude() {
     return latitude;
   }
 
-  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonProperty(value = JSON_PROPERTY_LATITUDE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLatitude(@jakarta.annotation.Nullable Double latitude) {
     this.latitude = latitude;
@@ -67,13 +67,13 @@ public class Coordinate {
    * @return longitude
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonProperty(value = JSON_PROPERTY_LONGITUDE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Double getLongitude() {
     return longitude;
   }
 
-  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonProperty(value = JSON_PROPERTY_LONGITUDE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLongitude(@jakarta.annotation.Nullable Double longitude) {
     this.longitude = longitude;

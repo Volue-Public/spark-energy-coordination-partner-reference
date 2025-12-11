@@ -30,7 +30,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class SimulatePriceCurveEventRequest {
   public static final String JSON_PROPERTY_TARGETS = "targets";
 
@@ -76,7 +76,7 @@ public class SimulatePriceCurveEventRequest {
     return targets.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_TARGETS)
+  @JsonProperty(value = JSON_PROPERTY_TARGETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<List<PriceCurveTarget>> getTargets_JsonNullable() {
     return targets;
@@ -104,13 +104,13 @@ public class SimulatePriceCurveEventRequest {
    * @return priceCurveDelta
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PRICE_CURVE_DELTA)
+  @JsonProperty(value = JSON_PROPERTY_PRICE_CURVE_DELTA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public PriceCurve getPriceCurveDelta() {
     return priceCurveDelta;
   }
 
-  @JsonProperty(JSON_PROPERTY_PRICE_CURVE_DELTA)
+  @JsonProperty(value = JSON_PROPERTY_PRICE_CURVE_DELTA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPriceCurveDelta(@jakarta.annotation.Nullable PriceCurve priceCurveDelta) {
     this.priceCurveDelta = priceCurveDelta;
@@ -129,13 +129,13 @@ public class SimulatePriceCurveEventRequest {
    * @return priceArea
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PRICE_AREA)
+  @JsonProperty(value = JSON_PROPERTY_PRICE_AREA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public PriceArea getPriceArea() {
     return priceArea;
   }
 
-  @JsonProperty(JSON_PROPERTY_PRICE_AREA)
+  @JsonProperty(value = JSON_PROPERTY_PRICE_AREA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPriceArea(@jakarta.annotation.Nullable PriceArea priceArea) {
     this.priceArea = priceArea;

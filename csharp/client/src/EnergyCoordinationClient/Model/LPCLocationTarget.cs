@@ -37,8 +37,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="location">location.</param>
         /// <param name="points">points.</param>
         public LPCLocationTarget(
-            LocationTarget location = default(LocationTarget),
-            List<LPCDataPoint> points = default(List<LPCDataPoint>)
+            LocationTarget location = default,
+            List<LPCDataPoint> points = default
         )
         {
             this.Location = location;

@@ -44,7 +44,7 @@ namespace EnergyCoordinationClient.Model
         /// <param name="targets">targets (required).</param>
         /// <param name="payloadType">payloadType (required) (default to SparkEventPayloadType.ResourceLPC).</param>
         public ResourceLPCPayload(
-            List<ResourceLPCTarget> targets = default(List<ResourceLPCTarget>),
+            List<ResourceLPCTarget> targets = default,
             SparkEventPayloadType payloadType = SparkEventPayloadType.ResourceLPC
         )
             : base(payloadType)

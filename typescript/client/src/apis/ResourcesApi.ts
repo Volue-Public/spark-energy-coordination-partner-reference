@@ -59,8 +59,12 @@ export class ResourcesApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/resources/{resourceId}`;
+        urlPath = urlPath.replace(`{${"resourceId"}}`, encodeURIComponent(String(requestParameters['resourceId'])));
+
         const response = await this.request({
-            path: `/resources/{resourceId}`.replace(`{${"resourceId"}}`, encodeURIComponent(String(requestParameters['resourceId']))),
+            path: urlPath,
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -100,8 +104,12 @@ export class ResourcesApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/resources/{resourceId}`;
+        urlPath = urlPath.replace(`{${"resourceId"}}`, encodeURIComponent(String(requestParameters['resourceId'])));
+
         const response = await this.request({
-            path: `/resources/{resourceId}`.replace(`{${"resourceId"}}`, encodeURIComponent(String(requestParameters['resourceId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,

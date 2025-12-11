@@ -63,6 +63,9 @@ export function PostReportRequestPayloadsInnerFromJSONTyped(json: any, ignoreDis
     if (json == null) {
         return json;
     }
+    if (typeof json !== 'object') {
+        return json;
+    }
     if (instanceOfEnergyUsageReportPayload(json)) {
         return EnergyUsageReportPayloadFromJSONTyped(json, true);
     }
@@ -78,7 +81,6 @@ export function PostReportRequestPayloadsInnerFromJSONTyped(json: any, ignoreDis
     if (instanceOfResourceLPCAcknowledgmentReportPayload(json)) {
         return ResourceLPCAcknowledgmentReportPayloadFromJSONTyped(json, true);
     }
-
     return {} as any;
 }
 
@@ -90,7 +92,9 @@ export function PostReportRequestPayloadsInnerToJSONTyped(value?: PostReportRequ
     if (value == null) {
         return value;
     }
-
+    if (typeof value !== 'object') {
+        return value;
+    }
     if (instanceOfEnergyUsageReportPayload(value)) {
         return EnergyUsageReportPayloadToJSON(value as EnergyUsageReportPayload);
     }
@@ -106,7 +110,6 @@ export function PostReportRequestPayloadsInnerToJSONTyped(value?: PostReportRequ
     if (instanceOfResourceLPCAcknowledgmentReportPayload(value)) {
         return ResourceLPCAcknowledgmentReportPayloadToJSON(value as ResourceLPCAcknowledgmentReportPayload);
     }
-
     return {};
 }
 

@@ -37,7 +37,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class GetWebhookResponse {
   public static final String JSON_PROPERTY_WEBHOOK_ID = "webhookId";
   @jakarta.annotation.Nonnull private String webhookId;
@@ -80,13 +80,13 @@ public class GetWebhookResponse {
    * @return webhookId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_ID)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getWebhookId() {
     return webhookId;
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_ID)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhookId(@jakarta.annotation.Nonnull String webhookId) {
     this.webhookId = webhookId;
@@ -104,13 +104,13 @@ public class GetWebhookResponse {
    * @return webhookUrl
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_URL, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getWebhookUrl() {
     return webhookUrl;
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_URL, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebhookUrl(@jakarta.annotation.Nonnull String webhookUrl) {
     this.webhookUrl = webhookUrl;
@@ -133,7 +133,7 @@ public class GetWebhookResponse {
     return name.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getName_JsonNullable() {
     return name;
@@ -169,13 +169,13 @@ public class GetWebhookResponse {
    * @return notificationTypes
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<NotificationType> getNotificationTypes() {
     return notificationTypes;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNotificationTypes(
       @jakarta.annotation.Nullable List<NotificationType> notificationTypes) {
@@ -194,13 +194,13 @@ public class GetWebhookResponse {
    * @return enabled
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Boolean getEnabled() {
     return enabled;
   }
 
-  @JsonProperty(JSON_PROPERTY_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEnabled(@jakarta.annotation.Nullable Boolean enabled) {
     this.enabled = enabled;
@@ -218,13 +218,13 @@ public class GetWebhookResponse {
    * @return status
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public WebhookStatus getStatus() {
     return status;
   }
 
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatus(@jakarta.annotation.Nullable WebhookStatus status) {
     this.status = status;
@@ -242,13 +242,13 @@ public class GetWebhookResponse {
    * @return modifiedDate
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MODIFIED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_MODIFIED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public OffsetDateTime getModifiedDate() {
     return modifiedDate;
   }
 
-  @JsonProperty(JSON_PROPERTY_MODIFIED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_MODIFIED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setModifiedDate(@jakarta.annotation.Nullable OffsetDateTime modifiedDate) {
     this.modifiedDate = modifiedDate;
@@ -266,13 +266,13 @@ public class GetWebhookResponse {
    * @return createdDate
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCreatedDate(@jakarta.annotation.Nullable OffsetDateTime createdDate) {
     this.createdDate = createdDate;
@@ -291,13 +291,13 @@ public class GetWebhookResponse {
    * @return lastAnalyzedTimestamp
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LAST_ANALYZED_TIMESTAMP)
+  @JsonProperty(value = JSON_PROPERTY_LAST_ANALYZED_TIMESTAMP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public OffsetDateTime getLastAnalyzedTimestamp() {
     return lastAnalyzedTimestamp;
   }
 
-  @JsonProperty(JSON_PROPERTY_LAST_ANALYZED_TIMESTAMP)
+  @JsonProperty(value = JSON_PROPERTY_LAST_ANALYZED_TIMESTAMP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLastAnalyzedTimestamp(
       @jakarta.annotation.Nullable OffsetDateTime lastAnalyzedTimestamp) {

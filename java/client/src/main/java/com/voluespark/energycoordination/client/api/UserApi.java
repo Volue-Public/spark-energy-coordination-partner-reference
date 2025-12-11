@@ -8,7 +8,6 @@ import com.voluespark.energycoordination.client.model.PostUsersBatchRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -23,7 +22,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class UserApi {
   private ApiClient apiClient;
 
@@ -31,7 +30,6 @@ public class UserApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public UserApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -59,7 +57,7 @@ public class UserApi {
    * @param userId The userId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec deleteUserByIdRequestCreation(String userId)
+  private ResponseSpec deleteUserByIdRequestCreation(@jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
@@ -120,7 +118,8 @@ public class UserApi {
    * @param userId The userId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> deleteUserById(String userId) throws WebClientResponseException {
+  public Mono<Void> deleteUserById(@jakarta.annotation.Nonnull String userId)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteUserByIdRequestCreation(userId).bodyToMono(localVarReturnType);
   }
@@ -140,8 +139,8 @@ public class UserApi {
    * @param userId The userId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<Void>> deleteUserByIdWithHttpInfo(String userId)
-      throws WebClientResponseException {
+  public Mono<ResponseEntity<Void>> deleteUserByIdWithHttpInfo(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteUserByIdRequestCreation(userId).toEntity(localVarReturnType);
   }
@@ -162,7 +161,7 @@ public class UserApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec deleteUserByIdWithResponseSpec(String userId)
+  public ResponseSpec deleteUserByIdWithResponseSpec(@jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     return deleteUserByIdRequestCreation(userId);
   }
@@ -180,7 +179,8 @@ public class UserApi {
    * @return GetUserResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getUserByIdRequestCreation(String userId) throws WebClientResponseException {
+  private ResponseSpec getUserByIdRequestCreation(@jakarta.annotation.Nonnull String userId)
+      throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -239,7 +239,8 @@ public class UserApi {
    * @return GetUserResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetUserResponse> getUserById(String userId) throws WebClientResponseException {
+  public Mono<GetUserResponse> getUserById(@jakarta.annotation.Nonnull String userId)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetUserResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserResponse>() {};
     return getUserByIdRequestCreation(userId).bodyToMono(localVarReturnType);
@@ -258,8 +259,8 @@ public class UserApi {
    * @return ResponseEntity&lt;GetUserResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetUserResponse>> getUserByIdWithHttpInfo(String userId)
-      throws WebClientResponseException {
+  public Mono<ResponseEntity<GetUserResponse>> getUserByIdWithHttpInfo(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserResponse>() {};
     return getUserByIdRequestCreation(userId).toEntity(localVarReturnType);
@@ -278,7 +279,8 @@ public class UserApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getUserByIdWithResponseSpec(String userId) throws WebClientResponseException {
+  public ResponseSpec getUserByIdWithResponseSpec(@jakarta.annotation.Nonnull String userId)
+      throws WebClientResponseException {
     return getUserByIdRequestCreation(userId);
   }
 
@@ -294,7 +296,8 @@ public class UserApi {
    * @return GetUsersResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getUsersRequestCreation(Integer page, Integer pageSize)
+  private ResponseSpec getUsersRequestCreation(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     Object postBody = null;
     // create path and map variables
@@ -344,7 +347,8 @@ public class UserApi {
    * @return GetUsersResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetUsersResponse> getUsers(Integer page, Integer pageSize)
+  public Mono<GetUsersResponse> getUsers(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetUsersResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUsersResponse>() {};
@@ -363,7 +367,8 @@ public class UserApi {
    * @return ResponseEntity&lt;GetUsersResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetUsersResponse>> getUsersWithHttpInfo(Integer page, Integer pageSize)
+  public Mono<ResponseEntity<GetUsersResponse>> getUsersWithHttpInfo(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetUsersResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUsersResponse>() {};
@@ -382,7 +387,8 @@ public class UserApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getUsersWithResponseSpec(Integer page, Integer pageSize)
+  public ResponseSpec getUsersWithResponseSpec(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     return getUsersRequestCreation(page, pageSize);
   }
@@ -399,7 +405,8 @@ public class UserApi {
    * @param postUserRequest The postUserRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec postUserRequestCreation(PostUserRequest postUserRequest)
+  private ResponseSpec postUserRequestCreation(
+      @jakarta.annotation.Nonnull PostUserRequest postUserRequest)
       throws WebClientResponseException {
     Object postBody = postUserRequest;
     // verify the required parameter 'postUserRequest' is set
@@ -455,7 +462,8 @@ public class UserApi {
    * @param postUserRequest The postUserRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> postUser(PostUserRequest postUserRequest) throws WebClientResponseException {
+  public Mono<Void> postUser(@jakarta.annotation.Nonnull PostUserRequest postUserRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postUserRequestCreation(postUserRequest).bodyToMono(localVarReturnType);
   }
@@ -472,7 +480,8 @@ public class UserApi {
    * @param postUserRequest The postUserRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<Void>> postUserWithHttpInfo(PostUserRequest postUserRequest)
+  public Mono<ResponseEntity<Void>> postUserWithHttpInfo(
+      @jakarta.annotation.Nonnull PostUserRequest postUserRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postUserRequestCreation(postUserRequest).toEntity(localVarReturnType);
@@ -491,7 +500,8 @@ public class UserApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec postUserWithResponseSpec(PostUserRequest postUserRequest)
+  public ResponseSpec postUserWithResponseSpec(
+      @jakarta.annotation.Nonnull PostUserRequest postUserRequest)
       throws WebClientResponseException {
     return postUserRequestCreation(postUserRequest);
   }
@@ -508,7 +518,8 @@ public class UserApi {
    * @param postUsersBatchRequest The postUsersBatchRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec postUsersRequestCreation(PostUsersBatchRequest postUsersBatchRequest)
+  private ResponseSpec postUsersRequestCreation(
+      @jakarta.annotation.Nonnull PostUsersBatchRequest postUsersBatchRequest)
       throws WebClientResponseException {
     Object postBody = postUsersBatchRequest;
     // verify the required parameter 'postUsersBatchRequest' is set
@@ -564,7 +575,8 @@ public class UserApi {
    * @param postUsersBatchRequest The postUsersBatchRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> postUsers(PostUsersBatchRequest postUsersBatchRequest)
+  public Mono<Void> postUsers(
+      @jakarta.annotation.Nonnull PostUsersBatchRequest postUsersBatchRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postUsersRequestCreation(postUsersBatchRequest).bodyToMono(localVarReturnType);
@@ -583,7 +595,8 @@ public class UserApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<Void>> postUsersWithHttpInfo(
-      PostUsersBatchRequest postUsersBatchRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull PostUsersBatchRequest postUsersBatchRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postUsersRequestCreation(postUsersBatchRequest).toEntity(localVarReturnType);
   }
@@ -601,7 +614,8 @@ public class UserApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec postUsersWithResponseSpec(PostUsersBatchRequest postUsersBatchRequest)
+  public ResponseSpec postUsersWithResponseSpec(
+      @jakarta.annotation.Nonnull PostUsersBatchRequest postUsersBatchRequest)
       throws WebClientResponseException {
     return postUsersRequestCreation(postUsersBatchRequest);
   }

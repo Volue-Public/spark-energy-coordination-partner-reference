@@ -6,7 +6,6 @@ import com.voluespark.energycoordination.client.model.PostLocationBoundResourceR
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -22,7 +21,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class UserResourcesLocationBoundApi {
   private ApiClient apiClient;
 
@@ -30,7 +29,6 @@ public class UserResourcesLocationBoundApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public UserResourcesLocationBoundApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -55,7 +53,8 @@ public class UserResourcesLocationBoundApi {
    * @return List&lt;GetLocationBoundResourceResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getLocationBoundResourcesRequestCreation(String locationId, String userId)
+  private ResponseSpec getLocationBoundResourcesRequestCreation(
+      @jakarta.annotation.Nonnull String locationId, @jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'locationId' is set
@@ -126,7 +125,8 @@ public class UserResourcesLocationBoundApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Flux<GetLocationBoundResourceResponse> getLocationBoundResources(
-      String locationId, String userId) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String locationId, @jakarta.annotation.Nonnull String userId)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationBoundResourceResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationBoundResourceResponse>() {};
     return getLocationBoundResourcesRequestCreation(locationId, userId)
@@ -146,7 +146,8 @@ public class UserResourcesLocationBoundApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<List<GetLocationBoundResourceResponse>>>
-      getLocationBoundResourcesWithHttpInfo(String locationId, String userId)
+      getLocationBoundResourcesWithHttpInfo(
+          @jakarta.annotation.Nonnull String locationId, @jakarta.annotation.Nonnull String userId)
           throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationBoundResourceResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationBoundResourceResponse>() {};
@@ -166,7 +167,8 @@ public class UserResourcesLocationBoundApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getLocationBoundResourcesWithResponseSpec(String locationId, String userId)
+  public ResponseSpec getLocationBoundResourcesWithResponseSpec(
+      @jakarta.annotation.Nonnull String locationId, @jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     return getLocationBoundResourcesRequestCreation(locationId, userId);
   }
@@ -188,9 +190,9 @@ public class UserResourcesLocationBoundApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postLocationBoundResourceRequestCreation(
-      String userId,
-      String locationId,
-      PostLocationBoundResourceRequest postLocationBoundResourceRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PostLocationBoundResourceRequest postLocationBoundResourceRequest)
       throws WebClientResponseException {
     Object postBody = postLocationBoundResourceRequest;
     // verify the required parameter 'userId' is set
@@ -275,9 +277,9 @@ public class UserResourcesLocationBoundApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<Void> postLocationBoundResource(
-      String userId,
-      String locationId,
-      PostLocationBoundResourceRequest postLocationBoundResourceRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PostLocationBoundResourceRequest postLocationBoundResourceRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationBoundResourceRequestCreation(
@@ -302,9 +304,9 @@ public class UserResourcesLocationBoundApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<Void>> postLocationBoundResourceWithHttpInfo(
-      String userId,
-      String locationId,
-      PostLocationBoundResourceRequest postLocationBoundResourceRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PostLocationBoundResourceRequest postLocationBoundResourceRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationBoundResourceRequestCreation(
@@ -330,9 +332,9 @@ public class UserResourcesLocationBoundApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec postLocationBoundResourceWithResponseSpec(
-      String userId,
-      String locationId,
-      PostLocationBoundResourceRequest postLocationBoundResourceRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PostLocationBoundResourceRequest postLocationBoundResourceRequest)
       throws WebClientResponseException {
     return postLocationBoundResourceRequestCreation(
         userId, locationId, postLocationBoundResourceRequest);

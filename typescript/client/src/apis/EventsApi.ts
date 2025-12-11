@@ -67,8 +67,11 @@ export class EventsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/events`;
+
         const response = await this.request({
-            path: `/events`,
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -109,8 +112,12 @@ export class EventsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/events/{eventId}`;
+        urlPath = urlPath.replace(`{${"eventId"}}`, encodeURIComponent(String(requestParameters['eventId'])));
+
         const response = await this.request({
-            path: `/events/{eventId}`.replace(`{${"eventId"}}`, encodeURIComponent(String(requestParameters['eventId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,

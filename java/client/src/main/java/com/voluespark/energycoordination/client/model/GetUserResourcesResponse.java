@@ -23,7 +23,7 @@ import java.util.Objects;
 @JsonPropertyOrder({GetUserResourcesResponse.JSON_PROPERTY_RESOURCES})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class GetUserResourcesResponse {
   public static final String JSON_PROPERTY_RESOURCES = "resources";
   @jakarta.annotation.Nonnull private List<GetResourceResponse> resources = new ArrayList<>();
@@ -51,13 +51,13 @@ public class GetUserResourcesResponse {
    * @return resources
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_RESOURCES)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCES, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<GetResourceResponse> getResources() {
     return resources;
   }
 
-  @JsonProperty(JSON_PROPERTY_RESOURCES)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCES, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setResources(@jakarta.annotation.Nonnull List<GetResourceResponse> resources) {
     this.resources = resources;

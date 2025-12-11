@@ -35,9 +35,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="SimulateLocationLPCEventRequest" /> class.
         /// </summary>
         /// <param name="locations">locations.</param>
-        public SimulateLocationLPCEventRequest(
-            List<LPCLocationTarget> locations = default(List<LPCLocationTarget>)
-        )
+        public SimulateLocationLPCEventRequest(List<LPCLocationTarget> locations = default)
         {
             this.Locations = locations;
         }

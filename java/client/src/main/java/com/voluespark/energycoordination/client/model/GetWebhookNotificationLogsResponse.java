@@ -26,7 +26,7 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class GetWebhookNotificationLogsResponse {
   public static final String JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOGS = "webhookNotificationLogs";
 
@@ -60,13 +60,13 @@ public class GetWebhookNotificationLogsResponse {
    * @return webhookNotificationLogs
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOGS)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<WebhookNotificationLog> getWebhookNotificationLogs() {
     return webhookNotificationLogs;
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOGS)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWebhookNotificationLogs(
       @jakarta.annotation.Nullable List<WebhookNotificationLog> webhookNotificationLogs) {
@@ -86,13 +86,13 @@ public class GetWebhookNotificationLogsResponse {
    * @return pagination
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGINATION)
+  @JsonProperty(value = JSON_PROPERTY_PAGINATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public ApiPagination getPagination() {
     return pagination;
   }
 
-  @JsonProperty(JSON_PROPERTY_PAGINATION)
+  @JsonProperty(value = JSON_PROPERTY_PAGINATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPagination(@jakarta.annotation.Nullable ApiPagination pagination) {
     this.pagination = pagination;

@@ -42,10 +42,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="resourceId">resourceId (required).</param>
         /// <param name="locationId">locationId (required).</param>
-        public PriceCurveTarget(
-            string resourceId = default(string),
-            string locationId = default(string)
-        )
+        public PriceCurveTarget(string resourceId = default, string locationId = default)
         {
             // to ensure "resourceId" is required (not null)
             if (resourceId == null)

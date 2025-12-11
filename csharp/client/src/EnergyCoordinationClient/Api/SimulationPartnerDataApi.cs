@@ -88,8 +88,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteTenantDataSimulationAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -106,8 +105,7 @@ namespace EnergyCoordinationClient.Api
             ApiResponse<Object>
         > DeleteTenantDataSimulationWithHttpInfoAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -122,8 +120,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostTenantDataSimulationAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -138,8 +135,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostTenantDataSimulationWithHttpInfoAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -381,8 +377,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteTenantDataSimulationAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await DeleteTenantDataSimulationWithHttpInfoAsync(operationIndex, cancellationToken)
@@ -398,8 +393,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> DeleteTenantDataSimulationWithHttpInfoAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
@@ -558,8 +552,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostTenantDataSimulationAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await PostTenantDataSimulationWithHttpInfoAsync(operationIndex, cancellationToken)
@@ -575,8 +568,7 @@ namespace EnergyCoordinationClient.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<Object>> PostTenantDataSimulationWithHttpInfoAsync(
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =

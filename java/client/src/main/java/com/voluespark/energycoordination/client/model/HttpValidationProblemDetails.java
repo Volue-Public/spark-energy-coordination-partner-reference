@@ -36,7 +36,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class HttpValidationProblemDetails {
   public static final String JSON_PROPERTY_TYPE = "type";
   @jakarta.annotation.Nullable private JsonNullable<String> type = JsonNullable.<String>undefined();
@@ -83,7 +83,7 @@ public class HttpValidationProblemDetails {
     return type.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getType_JsonNullable() {
     return type;
@@ -115,7 +115,7 @@ public class HttpValidationProblemDetails {
     return title.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getTitle_JsonNullable() {
     return title;
@@ -147,7 +147,7 @@ public class HttpValidationProblemDetails {
     return status.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<Integer> getStatus_JsonNullable() {
     return status;
@@ -179,7 +179,7 @@ public class HttpValidationProblemDetails {
     return detail.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_DETAIL)
+  @JsonProperty(value = JSON_PROPERTY_DETAIL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getDetail_JsonNullable() {
     return detail;
@@ -211,7 +211,7 @@ public class HttpValidationProblemDetails {
     return instance.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_INSTANCE)
+  @JsonProperty(value = JSON_PROPERTY_INSTANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getInstance_JsonNullable() {
     return instance;
@@ -247,13 +247,13 @@ public class HttpValidationProblemDetails {
    * @return errors
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Map<String, List<String>> getErrors() {
     return errors;
   }
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrors(@jakarta.annotation.Nullable Map<String, List<String>> errors) {
     this.errors = errors;

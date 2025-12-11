@@ -122,26 +122,30 @@
         "type" : "string"
       },
       "PriceCurvePayload" : {
-        "additionalProperties" : false,
         "allOf" : [ {
           "$ref" : "#/components/schemas/SparkEventPayload"
-        } ],
-        "properties" : {
-          "targets" : {
-            "items" : {
-              "$ref" : "#/components/schemas/PriceCurveTarget"
+        }, {
+          "additionalProperties" : false,
+          "properties" : {
+            "targets" : {
+              "items" : {
+                "$ref" : "#/components/schemas/PriceCurveTarget"
+              },
+              "type" : "array"
             },
-            "type" : "array"
+            "priceCurveDelta" : {
+              "$ref" : "#/components/schemas/PriceCurve"
+            },
+            "priceArea" : {
+              "$ref" : "#/components/schemas/PriceArea"
+            }
           },
-          "priceCurveDelta" : {
-            "$ref" : "#/components/schemas/PriceCurve"
-          },
-          "priceArea" : {
-            "$ref" : "#/components/schemas/PriceArea"
-          }
-        },
-        "required" : [ "payloadType", "priceArea", "priceCurveDelta", "targets" ],
-        "type" : "object"
+          "required" : [ "priceArea", "priceCurveDelta", "targets" ],
+          "type" : "object",
+          "example" : null
+        } ],
+        "type" : "object",
+        "example" : null
       },
       "PriceCurveTarget" : {
         "additionalProperties" : false,
@@ -212,46 +216,54 @@
         "type" : "string"
       },
       "UserEligibilityPayload" : {
-        "additionalProperties" : false,
         "allOf" : [ {
           "$ref" : "#/components/schemas/SparkEventPayload"
+        }, {
+          "additionalProperties" : false,
+          "properties" : {
+            "lastUpdated" : {
+              "format" : "date-time",
+              "type" : "string"
+            },
+            "addedUsers" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "removedUsers" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            }
+          },
+          "required" : [ "addedUsers", "lastUpdated", "removedUsers" ],
+          "type" : "object",
+          "example" : null
         } ],
-        "properties" : {
-          "lastUpdated" : {
-            "format" : "date-time",
-            "type" : "string"
-          },
-          "addedUsers" : {
-            "items" : {
-              "type" : "string"
-            },
-            "type" : "array"
-          },
-          "removedUsers" : {
-            "items" : {
-              "type" : "string"
-            },
-            "type" : "array"
-          }
-        },
-        "required" : [ "addedUsers", "lastUpdated", "payloadType", "removedUsers" ],
-        "type" : "object"
+        "type" : "object",
+        "example" : null
       },
       "LocationLPCPayload" : {
-        "additionalProperties" : false,
         "allOf" : [ {
           "$ref" : "#/components/schemas/SparkEventPayload"
+        }, {
+          "additionalProperties" : false,
+          "properties" : {
+            "targets" : {
+              "items" : {
+                "$ref" : "#/components/schemas/LocationLPCTarget"
+              },
+              "type" : "array"
+            }
+          },
+          "required" : [ "targets" ],
+          "type" : "object",
+          "example" : null
         } ],
-        "properties" : {
-          "targets" : {
-            "items" : {
-              "$ref" : "#/components/schemas/LocationLPCTarget"
-            },
-            "type" : "array"
-          }
-        },
-        "required" : [ "payloadType", "targets" ],
-        "type" : "object"
+        "type" : "object",
+        "example" : null
       },
       "LocationLPCTarget" : {
         "additionalProperties" : false,
@@ -295,20 +307,24 @@
         "type" : "object"
       },
       "ResourceLPCPayload" : {
-        "additionalProperties" : false,
         "allOf" : [ {
           "$ref" : "#/components/schemas/SparkEventPayload"
+        }, {
+          "additionalProperties" : false,
+          "properties" : {
+            "targets" : {
+              "items" : {
+                "$ref" : "#/components/schemas/ResourceLPCTarget"
+              },
+              "type" : "array"
+            }
+          },
+          "required" : [ "targets" ],
+          "type" : "object",
+          "example" : null
         } ],
-        "properties" : {
-          "targets" : {
-            "items" : {
-              "$ref" : "#/components/schemas/ResourceLPCTarget"
-            },
-            "type" : "array"
-          }
-        },
-        "required" : [ "payloadType", "targets" ],
-        "type" : "object"
+        "type" : "object",
+        "example" : null
       },
       "ResourceLPCTarget" : {
         "additionalProperties" : false,
@@ -338,20 +354,24 @@
         "type" : "object"
       },
       "LPCReservationPayload" : {
-        "additionalProperties" : false,
         "allOf" : [ {
           "$ref" : "#/components/schemas/SparkEventPayload"
+        }, {
+          "additionalProperties" : false,
+          "properties" : {
+            "targets" : {
+              "items" : {
+                "$ref" : "#/components/schemas/LocationLPCTarget"
+              },
+              "type" : "array"
+            }
+          },
+          "required" : [ "targets" ],
+          "type" : "object",
+          "example" : null
         } ],
-        "properties" : {
-          "targets" : {
-            "items" : {
-              "$ref" : "#/components/schemas/LocationLPCTarget"
-            },
-            "type" : "array"
-          }
-        },
-        "required" : [ "payloadType", "targets" ],
-        "type" : "object"
+        "type" : "object",
+        "example" : null
       }
     }
   }

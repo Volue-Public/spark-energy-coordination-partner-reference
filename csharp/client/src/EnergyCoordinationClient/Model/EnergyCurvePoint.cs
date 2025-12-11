@@ -42,10 +42,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="timestamp">timestamp (required).</param>
         /// <param name="kiloWattHours">kiloWattHours (required).</param>
-        public EnergyCurvePoint(
-            DateTimeOffset timestamp = default(DateTimeOffset),
-            double kiloWattHours = default(double)
-        )
+        public EnergyCurvePoint(DateTimeOffset timestamp = default, double kiloWattHours = default)
         {
             this.Timestamp = timestamp;
             this.KiloWattHours = kiloWattHours;

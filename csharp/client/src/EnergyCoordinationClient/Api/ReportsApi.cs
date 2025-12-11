@@ -71,8 +71,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<GetReportResponse> PostReportAsync(
             PostReportRequest postReportRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -89,8 +88,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<GetReportResponse>> PostReportWithHttpInfoAsync(
             PostReportRequest postReportRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -347,8 +345,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<GetReportResponse> PostReportAsync(
             PostReportRequest postReportRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetReportResponse> localVarResponse =
@@ -372,8 +369,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetReportResponse>> PostReportWithHttpInfoAsync(
             PostReportRequest postReportRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'postReportRequest' is set

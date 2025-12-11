@@ -9,7 +9,6 @@ import com.voluespark.energycoordination.client.model.GetUserEnrollmentResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -24,7 +23,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class UserSparkProgramApi {
   private ApiClient apiClient;
 
@@ -32,7 +31,6 @@ public class UserSparkProgramApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public UserSparkProgramApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -59,8 +57,8 @@ public class UserSparkProgramApi {
    * @param userId The userId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec deleteUserEnrollmentRequestCreation(String userId)
-      throws WebClientResponseException {
+  private ResponseSpec deleteUserEnrollmentRequestCreation(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -119,7 +117,8 @@ public class UserSparkProgramApi {
    * @param userId The userId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> deleteUserEnrollment(String userId) throws WebClientResponseException {
+  public Mono<Void> deleteUserEnrollment(@jakarta.annotation.Nonnull String userId)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteUserEnrollmentRequestCreation(userId).bodyToMono(localVarReturnType);
   }
@@ -138,8 +137,8 @@ public class UserSparkProgramApi {
    * @param userId The userId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<Void>> deleteUserEnrollmentWithHttpInfo(String userId)
-      throws WebClientResponseException {
+  public Mono<ResponseEntity<Void>> deleteUserEnrollmentWithHttpInfo(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteUserEnrollmentRequestCreation(userId).toEntity(localVarReturnType);
   }
@@ -159,8 +158,8 @@ public class UserSparkProgramApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec deleteUserEnrollmentWithResponseSpec(String userId)
-      throws WebClientResponseException {
+  public ResponseSpec deleteUserEnrollmentWithResponseSpec(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     return deleteUserEnrollmentRequestCreation(userId);
   }
 
@@ -177,8 +176,8 @@ public class UserSparkProgramApi {
    * @return GetUserCompensationForCurrentMonthResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec fetchUserCompensationRequestCreation(String userId)
-      throws WebClientResponseException {
+  private ResponseSpec fetchUserCompensationRequestCreation(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -237,8 +236,8 @@ public class UserSparkProgramApi {
    * @return GetUserCompensationForCurrentMonthResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetUserCompensationForCurrentMonthResponse> fetchUserCompensation(String userId)
-      throws WebClientResponseException {
+  public Mono<GetUserCompensationForCurrentMonthResponse> fetchUserCompensation(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserCompensationForCurrentMonthResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserCompensationForCurrentMonthResponse>() {};
     return fetchUserCompensationRequestCreation(userId).bodyToMono(localVarReturnType);
@@ -258,7 +257,8 @@ public class UserSparkProgramApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetUserCompensationForCurrentMonthResponse>>
-      fetchUserCompensationWithHttpInfo(String userId) throws WebClientResponseException {
+      fetchUserCompensationWithHttpInfo(@jakarta.annotation.Nonnull String userId)
+          throws WebClientResponseException {
     ParameterizedTypeReference<GetUserCompensationForCurrentMonthResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserCompensationForCurrentMonthResponse>() {};
     return fetchUserCompensationRequestCreation(userId).toEntity(localVarReturnType);
@@ -277,8 +277,8 @@ public class UserSparkProgramApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec fetchUserCompensationWithResponseSpec(String userId)
-      throws WebClientResponseException {
+  public ResponseSpec fetchUserCompensationWithResponseSpec(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     return fetchUserCompensationRequestCreation(userId);
   }
 
@@ -295,7 +295,8 @@ public class UserSparkProgramApi {
    * @return GetEligibleUsersResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getEligibleUsersRequestCreation(Integer page, Integer pageSize)
+  private ResponseSpec getEligibleUsersRequestCreation(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     Object postBody = null;
     // create path and map variables
@@ -346,7 +347,8 @@ public class UserSparkProgramApi {
    * @return GetEligibleUsersResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetEligibleUsersResponse> getEligibleUsers(Integer page, Integer pageSize)
+  public Mono<GetEligibleUsersResponse> getEligibleUsers(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetEligibleUsersResponse> localVarReturnType =
         new ParameterizedTypeReference<GetEligibleUsersResponse>() {};
@@ -367,7 +369,8 @@ public class UserSparkProgramApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetEligibleUsersResponse>> getEligibleUsersWithHttpInfo(
-      Integer page, Integer pageSize) throws WebClientResponseException {
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetEligibleUsersResponse> localVarReturnType =
         new ParameterizedTypeReference<GetEligibleUsersResponse>() {};
     return getEligibleUsersRequestCreation(page, pageSize).toEntity(localVarReturnType);
@@ -386,7 +389,8 @@ public class UserSparkProgramApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getEligibleUsersWithResponseSpec(Integer page, Integer pageSize)
+  public ResponseSpec getEligibleUsersWithResponseSpec(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     return getEligibleUsersRequestCreation(page, pageSize);
   }
@@ -401,7 +405,7 @@ public class UserSparkProgramApi {
    * @return GetMpidEligibilityResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getMpidEligibilityRequestCreation(String mpid)
+  private ResponseSpec getMpidEligibilityRequestCreation(@jakarta.annotation.Nonnull String mpid)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'mpid' is set
@@ -458,8 +462,8 @@ public class UserSparkProgramApi {
    * @return GetMpidEligibilityResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetMpidEligibilityResponse> getMpidEligibility(String mpid)
-      throws WebClientResponseException {
+  public Mono<GetMpidEligibilityResponse> getMpidEligibility(
+      @jakarta.annotation.Nonnull String mpid) throws WebClientResponseException {
     ParameterizedTypeReference<GetMpidEligibilityResponse> localVarReturnType =
         new ParameterizedTypeReference<GetMpidEligibilityResponse>() {};
     return getMpidEligibilityRequestCreation(mpid).bodyToMono(localVarReturnType);
@@ -476,7 +480,7 @@ public class UserSparkProgramApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetMpidEligibilityResponse>> getMpidEligibilityWithHttpInfo(
-      String mpid) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String mpid) throws WebClientResponseException {
     ParameterizedTypeReference<GetMpidEligibilityResponse> localVarReturnType =
         new ParameterizedTypeReference<GetMpidEligibilityResponse>() {};
     return getMpidEligibilityRequestCreation(mpid).toEntity(localVarReturnType);
@@ -492,7 +496,7 @@ public class UserSparkProgramApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getMpidEligibilityWithResponseSpec(String mpid)
+  public ResponseSpec getMpidEligibilityWithResponseSpec(@jakarta.annotation.Nonnull String mpid)
       throws WebClientResponseException {
     return getMpidEligibilityRequestCreation(mpid);
   }
@@ -510,8 +514,8 @@ public class UserSparkProgramApi {
    * @return GetUserEligibilityResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getUserEligibilityByUserIdRequestCreation(String userId)
-      throws WebClientResponseException {
+  private ResponseSpec getUserEligibilityByUserIdRequestCreation(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -570,8 +574,8 @@ public class UserSparkProgramApi {
    * @return GetUserEligibilityResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetUserEligibilityResponse> getUserEligibilityByUserId(String userId)
-      throws WebClientResponseException {
+  public Mono<GetUserEligibilityResponse> getUserEligibilityByUserId(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserEligibilityResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserEligibilityResponse>() {};
     return getUserEligibilityByUserIdRequestCreation(userId).bodyToMono(localVarReturnType);
@@ -591,7 +595,7 @@ public class UserSparkProgramApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetUserEligibilityResponse>> getUserEligibilityByUserIdWithHttpInfo(
-      String userId) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserEligibilityResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserEligibilityResponse>() {};
     return getUserEligibilityByUserIdRequestCreation(userId).toEntity(localVarReturnType);
@@ -610,8 +614,8 @@ public class UserSparkProgramApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getUserEligibilityByUserIdWithResponseSpec(String userId)
-      throws WebClientResponseException {
+  public ResponseSpec getUserEligibilityByUserIdWithResponseSpec(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     return getUserEligibilityByUserIdRequestCreation(userId);
   }
 
@@ -629,8 +633,8 @@ public class UserSparkProgramApi {
    * @return GetUserEnrollmentResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getUserEnrollmentByUserIdRequestCreation(String userId)
-      throws WebClientResponseException {
+  private ResponseSpec getUserEnrollmentByUserIdRequestCreation(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -690,8 +694,8 @@ public class UserSparkProgramApi {
    * @return GetUserEnrollmentResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetUserEnrollmentResponse> getUserEnrollmentByUserId(String userId)
-      throws WebClientResponseException {
+  public Mono<GetUserEnrollmentResponse> getUserEnrollmentByUserId(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserEnrollmentResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserEnrollmentResponse>() {};
     return getUserEnrollmentByUserIdRequestCreation(userId).bodyToMono(localVarReturnType);
@@ -712,7 +716,7 @@ public class UserSparkProgramApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetUserEnrollmentResponse>> getUserEnrollmentByUserIdWithHttpInfo(
-      String userId) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserEnrollmentResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserEnrollmentResponse>() {};
     return getUserEnrollmentByUserIdRequestCreation(userId).toEntity(localVarReturnType);
@@ -732,8 +736,8 @@ public class UserSparkProgramApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getUserEnrollmentByUserIdWithResponseSpec(String userId)
-      throws WebClientResponseException {
+  public ResponseSpec getUserEnrollmentByUserIdWithResponseSpec(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     return getUserEnrollmentByUserIdRequestCreation(userId);
   }
 
@@ -750,7 +754,7 @@ public class UserSparkProgramApi {
    * @return GetUserEnrollmentResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec postUserEnrollmentRequestCreation(String userId)
+  private ResponseSpec postUserEnrollmentRequestCreation(@jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
@@ -810,8 +814,8 @@ public class UserSparkProgramApi {
    * @return GetUserEnrollmentResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetUserEnrollmentResponse> postUserEnrollment(String userId)
-      throws WebClientResponseException {
+  public Mono<GetUserEnrollmentResponse> postUserEnrollment(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserEnrollmentResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserEnrollmentResponse>() {};
     return postUserEnrollmentRequestCreation(userId).bodyToMono(localVarReturnType);
@@ -831,7 +835,7 @@ public class UserSparkProgramApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetUserEnrollmentResponse>> postUserEnrollmentWithHttpInfo(
-      String userId) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetUserEnrollmentResponse> localVarReturnType =
         new ParameterizedTypeReference<GetUserEnrollmentResponse>() {};
     return postUserEnrollmentRequestCreation(userId).toEntity(localVarReturnType);
@@ -850,7 +854,7 @@ public class UserSparkProgramApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec postUserEnrollmentWithResponseSpec(String userId)
+  public ResponseSpec postUserEnrollmentWithResponseSpec(@jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     return postUserEnrollmentRequestCreation(userId);
   }

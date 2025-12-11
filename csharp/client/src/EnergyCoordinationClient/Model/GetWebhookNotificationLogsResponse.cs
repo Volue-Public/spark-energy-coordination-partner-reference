@@ -37,9 +37,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="webhookNotificationLogs">webhookNotificationLogs.</param>
         /// <param name="pagination">pagination.</param>
         public GetWebhookNotificationLogsResponse(
-            List<WebhookNotificationLog> webhookNotificationLogs =
-                default(List<WebhookNotificationLog>),
-            ApiPagination pagination = default(ApiPagination)
+            List<WebhookNotificationLog> webhookNotificationLogs = default,
+            ApiPagination pagination = default
         )
         {
             this.WebhookNotificationLogs = webhookNotificationLogs;

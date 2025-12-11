@@ -45,10 +45,10 @@ namespace EnergyCoordinationClient.Model
         /// <param name="resolution">resolution (required).</param>
         /// <param name="points">points (required).</param>
         public LocationLPCTarget(
-            string locationId = default(string),
-            string meterPointId = default(string),
-            string resolution = default(string),
-            List<LPCDataPoint> points = default(List<LPCDataPoint>)
+            string locationId = default,
+            string meterPointId = default,
+            string resolution = default,
+            List<LPCDataPoint> points = default
         )
         {
             // to ensure "locationId" is required (not null)

@@ -25,7 +25,7 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class EnergyCurvePoint {
   public static final String JSON_PROPERTY_TIMESTAMP = "timestamp";
   @jakarta.annotation.Nonnull private OffsetDateTime timestamp;
@@ -47,13 +47,13 @@ public class EnergyCurvePoint {
    * @return timestamp
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonProperty(value = JSON_PROPERTY_TIMESTAMP, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
-  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonProperty(value = JSON_PROPERTY_TIMESTAMP, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTimestamp(@jakarta.annotation.Nonnull OffsetDateTime timestamp) {
     this.timestamp = timestamp;
@@ -71,13 +71,13 @@ public class EnergyCurvePoint {
    * @return kiloWattHours
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_KILO_WATT_HOURS)
+  @JsonProperty(value = JSON_PROPERTY_KILO_WATT_HOURS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Double getKiloWattHours() {
     return kiloWattHours;
   }
 
-  @JsonProperty(JSON_PROPERTY_KILO_WATT_HOURS)
+  @JsonProperty(value = JSON_PROPERTY_KILO_WATT_HOURS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setKiloWattHours(@jakarta.annotation.Nonnull Double kiloWattHours) {
     this.kiloWattHours = kiloWattHours;

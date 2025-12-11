@@ -63,6 +63,9 @@ export function GetEventResponsePayloadFromJSONTyped(json: any, ignoreDiscrimina
     if (json == null) {
         return json;
     }
+    if (typeof json !== 'object') {
+        return json;
+    }
     if (instanceOfLPCReservationPayload(json)) {
         return LPCReservationPayloadFromJSONTyped(json, true);
     }
@@ -78,7 +81,6 @@ export function GetEventResponsePayloadFromJSONTyped(json: any, ignoreDiscrimina
     if (instanceOfUserEligibilityPayload(json)) {
         return UserEligibilityPayloadFromJSONTyped(json, true);
     }
-
     return {} as any;
 }
 
@@ -90,7 +92,9 @@ export function GetEventResponsePayloadToJSONTyped(value?: GetEventResponsePaylo
     if (value == null) {
         return value;
     }
-
+    if (typeof value !== 'object') {
+        return value;
+    }
     if (instanceOfLPCReservationPayload(value)) {
         return LPCReservationPayloadToJSON(value as LPCReservationPayload);
     }
@@ -106,7 +110,6 @@ export function GetEventResponsePayloadToJSONTyped(value?: GetEventResponsePaylo
     if (instanceOfUserEligibilityPayload(value)) {
         return UserEligibilityPayloadToJSON(value as UserEligibilityPayload);
     }
-
     return {};
 }
 

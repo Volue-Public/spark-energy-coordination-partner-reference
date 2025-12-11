@@ -67,7 +67,7 @@ export function LPCDataPointToJSONTyped(value?: LPCDataPoint | null, ignoreDiscr
     return {
         
         'maxPowerInKiloWatts': value['maxPowerInKiloWatts'],
-        'timestamp': value['timestamp'] == null ? undefined : ((value['timestamp']).toISOString()),
+        'timestamp': value['timestamp'] == null ? value['timestamp'] : value['timestamp'].toISOString(),
     };
 }
 

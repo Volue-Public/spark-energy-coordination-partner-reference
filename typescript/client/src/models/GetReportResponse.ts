@@ -76,7 +76,7 @@ export function GetReportResponseToJSONTyped(value?: GetReportResponse | null, i
         
         'id': value['id'],
         'eventId': value['eventId'],
-        'createdAt': value['createdAt'] == null ? undefined : ((value['createdAt']).toISOString()),
+        'createdAt': value['createdAt'] == null ? value['createdAt'] : value['createdAt'].toISOString(),
     };
 }
 

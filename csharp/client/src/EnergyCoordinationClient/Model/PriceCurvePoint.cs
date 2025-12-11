@@ -36,10 +36,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="price">price.</param>
         /// <param name="timestamp">timestamp.</param>
-        public PriceCurvePoint(
-            double price = default(double),
-            DateTimeOffset timestamp = default(DateTimeOffset)
-        )
+        public PriceCurvePoint(double price = default, DateTimeOffset timestamp = default)
         {
             this.Price = price;
             this.Timestamp = timestamp;

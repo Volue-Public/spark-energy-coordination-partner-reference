@@ -68,7 +68,7 @@ export function EnergyCurvePointToJSONTyped(value?: EnergyCurvePoint | null, ign
 
     return {
         
-        'timestamp': ((value['timestamp']).toISOString()),
+        'timestamp': value['timestamp'].toISOString(),
         'kiloWattHours': value['kiloWattHours'],
     };
 }

@@ -46,9 +46,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="removedUsers">removedUsers (required).</param>
         /// <param name="payloadType">payloadType (required) (default to SparkEventPayloadType.UserEligibility).</param>
         public UserEligibilityPayload(
-            DateTimeOffset lastUpdated = default(DateTimeOffset),
-            List<string> addedUsers = default(List<string>),
-            List<string> removedUsers = default(List<string>),
+            DateTimeOffset lastUpdated = default,
+            List<string> addedUsers = default,
+            List<string> removedUsers = default,
             SparkEventPayloadType payloadType = SparkEventPayloadType.UserEligibility
         )
             : base(payloadType)

@@ -50,9 +50,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="resourceType">resourceType (required).</param>
         /// <param name="meterPointId">meterPointId.</param>
         public PostLocationBoundResourceRequest(
-            string resourceId = default(string),
-            ResourceType resourceType = default(ResourceType),
-            string meterPointId = default(string)
+            string resourceId = default,
+            ResourceType resourceType = default,
+            string meterPointId = default
         )
         {
             // to ensure "resourceId" is required (not null)

@@ -526,7 +526,7 @@ namespace EnergyCoordinationClient.Client
             {
                 InterceptRequest(request);
 
-                RestResponse<T> response = await getResponse(client);
+                RestResponse<T> response = await getResponse(client).ConfigureAwait(false);
 
                 // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
                 if (typeof(AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
@@ -604,7 +604,9 @@ namespace EnergyCoordinationClient.Client
         {
             if (policyResult.Outcome == OutcomeType.Successful)
             {
-                return await client.Deserialize<T>(policyResult.Result, cancellationToken);
+                return await client
+                    .Deserialize<T>(policyResult.Result, cancellationToken)
+                    .ConfigureAwait(false);
             }
             else
             {
@@ -658,7 +660,7 @@ namespace EnergyCoordinationClient.Client
             RestRequest request,
             RequestOptions options,
             IReadableConfiguration configuration,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             Action<RestClientOptions> setOptions = (clientOptions) => {
@@ -677,11 +679,12 @@ namespace EnergyCoordinationClient.Client
                         )
                         .ConfigureAwait(false);
                     return await DeserializeRestResponseFromPolicyAsync<T>(
-                        client,
-                        request,
-                        policyResult,
-                        cancellationToken
-                    );
+                            client,
+                            request,
+                            policyResult,
+                            cancellationToken
+                        )
+                        .ConfigureAwait(false);
                 }
                 else
                 {

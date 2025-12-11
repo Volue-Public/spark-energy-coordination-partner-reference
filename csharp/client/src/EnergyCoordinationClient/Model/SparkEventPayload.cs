@@ -54,7 +54,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="SparkEventPayload" /> class.
         /// </summary>
         /// <param name="payloadType">payloadType (required).</param>
-        public SparkEventPayload(SparkEventPayloadType payloadType = default(SparkEventPayloadType))
+        public SparkEventPayload(SparkEventPayloadType payloadType = default)
         {
             this.PayloadType = payloadType;
         }

@@ -36,10 +36,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="locationId">locationId.</param>
         /// <param name="meterPointId">meterPointId.</param>
-        public LocationTarget(
-            string locationId = default(string),
-            string meterPointId = default(string)
-        )
+        public LocationTarget(string locationId = default, string meterPointId = default)
         {
             this.LocationId = locationId;
             this.MeterPointId = meterPointId;

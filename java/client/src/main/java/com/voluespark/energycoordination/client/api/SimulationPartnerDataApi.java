@@ -4,7 +4,6 @@ package com.voluespark.energycoordination.client.api;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -18,7 +17,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class SimulationPartnerDataApi {
   private ApiClient apiClient;
 
@@ -26,7 +25,6 @@ public class SimulationPartnerDataApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public SimulationPartnerDataApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }

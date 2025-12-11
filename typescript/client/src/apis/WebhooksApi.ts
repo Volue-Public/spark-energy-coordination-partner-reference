@@ -109,8 +109,12 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks/{webhookId}`;
+        urlPath = urlPath.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId'])));
+
         const response = await this.request({
-            path: `/webhooks/{webhookId}`.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId']))),
+            path: urlPath,
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -150,8 +154,12 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks/{webhookId}`;
+        urlPath = urlPath.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId'])));
+
         const response = await this.request({
-            path: `/webhooks/{webhookId}`.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -191,8 +199,12 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks/logs/{notificationId}`;
+        urlPath = urlPath.replace(`{${"notificationId"}}`, encodeURIComponent(String(requestParameters['notificationId'])));
+
         const response = await this.request({
-            path: `/webhooks/logs/{notificationId}`.replace(`{${"notificationId"}}`, encodeURIComponent(String(requestParameters['notificationId']))),
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -237,8 +249,11 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks/logs`;
+
         const response = await this.request({
-            path: `/webhooks/logs`,
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -271,8 +286,11 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks`;
+
         const response = await this.request({
-            path: `/webhooks`,
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -321,8 +339,12 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks/{webhookId}`;
+        urlPath = urlPath.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId'])));
+
         const response = await this.request({
-            path: `/webhooks/{webhookId}`.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId']))),
+            path: urlPath,
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
@@ -365,8 +387,11 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks`;
+
         const response = await this.request({
-            path: `/webhooks`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -415,8 +440,12 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks/{webhookId}`;
+        urlPath = urlPath.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId'])));
+
         const response = await this.request({
-            path: `/webhooks/{webhookId}`.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId']))),
+            path: urlPath,
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -468,8 +497,12 @@ export class WebhooksApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/webhooks/{webhookId}/enabled`;
+        urlPath = urlPath.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId'])));
+
         const response = await this.request({
-            path: `/webhooks/{webhookId}/enabled`.replace(`{${"webhookId"}}`, encodeURIComponent(String(requestParameters['webhookId']))),
+            path: urlPath,
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,

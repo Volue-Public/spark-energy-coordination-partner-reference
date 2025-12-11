@@ -37,8 +37,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="webhookNotificationLog">webhookNotificationLog.</param>
         /// <param name="notificationContent">notificationContent.</param>
         public GetWebhookNotificationLogByIdResponse(
-            WebhookNotificationLog webhookNotificationLog = default(WebhookNotificationLog),
-            string notificationContent = default(string)
+            WebhookNotificationLog webhookNotificationLog = default,
+            string notificationContent = default
         )
         {
             this.WebhookNotificationLog = webhookNotificationLog;

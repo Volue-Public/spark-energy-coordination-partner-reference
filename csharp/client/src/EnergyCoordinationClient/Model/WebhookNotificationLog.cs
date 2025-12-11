@@ -58,17 +58,17 @@ namespace EnergyCoordinationClient.Model
         /// <param name="responseStatusCode">responseStatusCode.</param>
         /// <param name="requestDurationMs">requestDurationMs.</param>
         public WebhookNotificationLog(
-            string webhookId = default(string),
-            string tenantId = default(string),
-            string partnerEventId = default(string),
-            string notificationId = default(string),
-            NotificationType? notificationType = default(NotificationType?),
-            DateTimeOffset notificationSent = default(DateTimeOffset),
-            string sparkSignature = default(string),
-            string webhookUrl = default(string),
-            bool requestTimeout = default(bool),
-            int? responseStatusCode = default(int?),
-            long? requestDurationMs = default(long?)
+            string webhookId = default,
+            string tenantId = default,
+            string partnerEventId = default,
+            string notificationId = default,
+            NotificationType? notificationType = default,
+            DateTimeOffset notificationSent = default,
+            string sparkSignature = default,
+            string webhookUrl = default,
+            bool requestTimeout = default,
+            int? responseStatusCode = default,
+            long? requestDurationMs = default
         )
         {
             // to ensure "webhookId" is required (not null)

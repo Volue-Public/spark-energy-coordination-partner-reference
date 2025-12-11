@@ -532,7 +532,8 @@ namespace EnergyCoordinationClient.Client
                     if (inputVariables.ContainsKey(variable.Key))
                     {
                         if (
-                            ((List<string>)serverVariables["enum_values"]).Contains(
+                            !serverVariables.ContainsKey("enum_values")
+                            || ((List<string>)serverVariables["enum_values"]).Contains(
                                 inputVariables[variable.Key]
                             )
                         )

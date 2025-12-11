@@ -84,7 +84,7 @@ export function GetEventResponseToJSONTyped(value?: GetEventResponse | null, ign
         
         'payload': GetEventResponsePayloadToJSON(value['payload']),
         'id': value['id'],
-        'createdAt': value['createdAt'] == null ? undefined : ((value['createdAt']).toISOString()),
+        'createdAt': value['createdAt'] == null ? value['createdAt'] : value['createdAt'].toISOString(),
     };
 }
 

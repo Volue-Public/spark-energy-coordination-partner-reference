@@ -66,8 +66,8 @@ export function PeriodToJSONTyped(value?: Period | null, ignoreDiscriminator: bo
 
     return {
         
-        'from': value['from'] == null ? undefined : ((value['from']).toISOString().substring(0,10)),
-        'to': value['to'] == null ? undefined : ((value['to']).toISOString().substring(0,10)),
+        'from': value['from'] == null ? value['from'] : value['from'].toISOString().substring(0,10),
+        'to': value['to'] == null ? value['to'] : value['to'].toISOString().substring(0,10),
     };
 }
 

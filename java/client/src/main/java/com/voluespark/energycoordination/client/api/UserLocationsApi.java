@@ -9,7 +9,6 @@ import com.voluespark.energycoordination.client.model.PutLocationRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -25,7 +24,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class UserLocationsApi {
   private ApiClient apiClient;
 
@@ -33,7 +32,6 @@ public class UserLocationsApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public UserLocationsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -62,7 +60,8 @@ public class UserLocationsApi {
    * @param locationId The locationId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec deleteLocationRequestCreation(String userId, String locationId)
+  private ResponseSpec deleteLocationRequestCreation(
+      @jakarta.annotation.Nonnull String userId, @jakarta.annotation.Nonnull String locationId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
@@ -135,7 +134,8 @@ public class UserLocationsApi {
    * @param locationId The locationId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> deleteLocation(String userId, String locationId)
+  public Mono<Void> deleteLocation(
+      @jakarta.annotation.Nonnull String userId, @jakarta.annotation.Nonnull String locationId)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteLocationRequestCreation(userId, locationId).bodyToMono(localVarReturnType);
@@ -157,7 +157,8 @@ public class UserLocationsApi {
    * @param locationId The locationId parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<Void>> deleteLocationWithHttpInfo(String userId, String locationId)
+  public Mono<ResponseEntity<Void>> deleteLocationWithHttpInfo(
+      @jakarta.annotation.Nonnull String userId, @jakarta.annotation.Nonnull String locationId)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return deleteLocationRequestCreation(userId, locationId).toEntity(localVarReturnType);
@@ -180,7 +181,8 @@ public class UserLocationsApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec deleteLocationWithResponseSpec(String userId, String locationId)
+  public ResponseSpec deleteLocationWithResponseSpec(
+      @jakarta.annotation.Nonnull String userId, @jakarta.annotation.Nonnull String locationId)
       throws WebClientResponseException {
     return deleteLocationRequestCreation(userId, locationId);
   }
@@ -199,7 +201,8 @@ public class UserLocationsApi {
    * @return GetLocationResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getLocationByLocationIdRequestCreation(String userId, String locationId)
+  private ResponseSpec getLocationByLocationIdRequestCreation(
+      @jakarta.annotation.Nonnull String userId, @jakarta.annotation.Nonnull String locationId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
@@ -271,7 +274,8 @@ public class UserLocationsApi {
    * @return GetLocationResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetLocationResponse> getLocationByLocationId(String userId, String locationId)
+  public Mono<GetLocationResponse> getLocationByLocationId(
+      @jakarta.annotation.Nonnull String userId, @jakarta.annotation.Nonnull String locationId)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationResponse>() {};
@@ -294,7 +298,8 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetLocationResponse>> getLocationByLocationIdWithHttpInfo(
-      String userId, String locationId) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId, @jakarta.annotation.Nonnull String locationId)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationResponse>() {};
     return getLocationByLocationIdRequestCreation(userId, locationId).toEntity(localVarReturnType);
@@ -314,7 +319,8 @@ public class UserLocationsApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getLocationByLocationIdWithResponseSpec(String userId, String locationId)
+  public ResponseSpec getLocationByLocationIdWithResponseSpec(
+      @jakarta.annotation.Nonnull String userId, @jakarta.annotation.Nonnull String locationId)
       throws WebClientResponseException {
     return getLocationByLocationIdRequestCreation(userId, locationId);
   }
@@ -330,8 +336,8 @@ public class UserLocationsApi {
    * @return List&lt;GetLocationResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getLocationsByUserIdRequestCreation(String userId)
-      throws WebClientResponseException {
+  private ResponseSpec getLocationsByUserIdRequestCreation(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -388,7 +394,7 @@ public class UserLocationsApi {
    * @return List&lt;GetLocationResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Flux<GetLocationResponse> getLocationsByUserId(String userId)
+  public Flux<GetLocationResponse> getLocationsByUserId(@jakarta.annotation.Nonnull String userId)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationResponse>() {};
@@ -407,7 +413,7 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<List<GetLocationResponse>>> getLocationsByUserIdWithHttpInfo(
-      String userId) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationResponse>() {};
     return getLocationsByUserIdRequestCreation(userId).toEntityList(localVarReturnType);
@@ -424,8 +430,8 @@ public class UserLocationsApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getLocationsByUserIdWithResponseSpec(String userId)
-      throws WebClientResponseException {
+  public ResponseSpec getLocationsByUserIdWithResponseSpec(
+      @jakarta.annotation.Nonnull String userId) throws WebClientResponseException {
     return getLocationsByUserIdRequestCreation(userId);
   }
 
@@ -447,7 +453,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec patchLocationRequestCreation(
-      String userId, String locationId, PatchLocationRequest patchLocationRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PatchLocationRequest patchLocationRequest)
       throws WebClientResponseException {
     Object postBody = patchLocationRequest;
     // verify the required parameter 'userId' is set
@@ -533,7 +541,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<GetLocationResponse> patchLocation(
-      String userId, String locationId, PatchLocationRequest patchLocationRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PatchLocationRequest patchLocationRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationResponse>() {};
@@ -559,7 +569,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetLocationResponse>> patchLocationWithHttpInfo(
-      String userId, String locationId, PatchLocationRequest patchLocationRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PatchLocationRequest patchLocationRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationResponse>() {};
@@ -585,7 +597,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec patchLocationWithResponseSpec(
-      String userId, String locationId, PatchLocationRequest patchLocationRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PatchLocationRequest patchLocationRequest)
       throws WebClientResponseException {
     return patchLocationRequestCreation(userId, locationId, patchLocationRequest);
   }
@@ -608,7 +622,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postLocationRequestCreation(
-      String userId, PostLocationRequest postLocationRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull PostLocationRequest postLocationRequest)
+      throws WebClientResponseException {
     Object postBody = postLocationRequest;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -680,7 +696,9 @@ public class UserLocationsApi {
    * @param postLocationRequest The postLocationRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> postLocation(String userId, PostLocationRequest postLocationRequest)
+  public Mono<Void> postLocation(
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull PostLocationRequest postLocationRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationRequestCreation(userId, postLocationRequest).bodyToMono(localVarReturnType);
@@ -704,7 +722,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<Void>> postLocationWithHttpInfo(
-      String userId, PostLocationRequest postLocationRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull PostLocationRequest postLocationRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationRequestCreation(userId, postLocationRequest).toEntity(localVarReturnType);
   }
@@ -728,7 +748,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec postLocationWithResponseSpec(
-      String userId, PostLocationRequest postLocationRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull PostLocationRequest postLocationRequest)
+      throws WebClientResponseException {
     return postLocationRequestCreation(userId, postLocationRequest);
   }
 
@@ -747,7 +769,8 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec postLocationsRequestCreation(
-      PostLocationsBatchRequest postLocationsBatchRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull PostLocationsBatchRequest postLocationsBatchRequest)
+      throws WebClientResponseException {
     Object postBody = postLocationsBatchRequest;
     // verify the required parameter 'postLocationsBatchRequest' is set
     if (postLocationsBatchRequest == null) {
@@ -804,7 +827,8 @@ public class UserLocationsApi {
    * @param postLocationsBatchRequest The postLocationsBatchRequest parameter
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<Void> postLocations(PostLocationsBatchRequest postLocationsBatchRequest)
+  public Mono<Void> postLocations(
+      @jakarta.annotation.Nonnull PostLocationsBatchRequest postLocationsBatchRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationsRequestCreation(postLocationsBatchRequest).bodyToMono(localVarReturnType);
@@ -825,7 +849,8 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<Void>> postLocationsWithHttpInfo(
-      PostLocationsBatchRequest postLocationsBatchRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull PostLocationsBatchRequest postLocationsBatchRequest)
+      throws WebClientResponseException {
     ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
     return postLocationsRequestCreation(postLocationsBatchRequest).toEntity(localVarReturnType);
   }
@@ -846,7 +871,8 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec postLocationsWithResponseSpec(
-      PostLocationsBatchRequest postLocationsBatchRequest) throws WebClientResponseException {
+      @jakarta.annotation.Nonnull PostLocationsBatchRequest postLocationsBatchRequest)
+      throws WebClientResponseException {
     return postLocationsRequestCreation(postLocationsBatchRequest);
   }
 
@@ -866,7 +892,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   private ResponseSpec updateLocationRequestCreation(
-      String userId, String locationId, PutLocationRequest putLocationRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PutLocationRequest putLocationRequest)
       throws WebClientResponseException {
     Object postBody = putLocationRequest;
     // verify the required parameter 'userId' is set
@@ -950,7 +978,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<GetLocationResponse> updateLocation(
-      String userId, String locationId, PutLocationRequest putLocationRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PutLocationRequest putLocationRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationResponse>() {};
@@ -974,7 +1004,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetLocationResponse>> updateLocationWithHttpInfo(
-      String userId, String locationId, PutLocationRequest putLocationRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PutLocationRequest putLocationRequest)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetLocationResponse> localVarReturnType =
         new ParameterizedTypeReference<GetLocationResponse>() {};
@@ -998,7 +1030,9 @@ public class UserLocationsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public ResponseSpec updateLocationWithResponseSpec(
-      String userId, String locationId, PutLocationRequest putLocationRequest)
+      @jakarta.annotation.Nonnull String userId,
+      @jakarta.annotation.Nonnull String locationId,
+      @jakarta.annotation.Nonnull PutLocationRequest putLocationRequest)
       throws WebClientResponseException {
     return updateLocationRequestCreation(userId, locationId, putLocationRequest);
   }

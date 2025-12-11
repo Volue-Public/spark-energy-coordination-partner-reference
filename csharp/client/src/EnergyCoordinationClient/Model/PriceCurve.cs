@@ -51,10 +51,10 @@ namespace EnergyCoordinationClient.Model
         /// <param name="currency">currency.</param>
         /// <param name="resolution">resolution.</param>
         public PriceCurve(
-            List<PriceCurvePoint> points = default(List<PriceCurvePoint>),
-            EnergyUnit? energyUnit = default(EnergyUnit?),
-            Currency? currency = default(Currency?),
-            string resolution = default(string)
+            List<PriceCurvePoint> points = default,
+            EnergyUnit? energyUnit = default,
+            Currency? currency = default,
+            string resolution = default
         )
         {
             this.Points = points;

@@ -6,7 +6,6 @@ import com.voluespark.energycoordination.client.model.GetEventsResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -21,7 +20,7 @@ import reactor.core.publisher.Mono;
 
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class EventsApi {
   private ApiClient apiClient;
 
@@ -29,7 +28,6 @@ public class EventsApi {
     this(new ApiClient());
   }
 
-  @Autowired
   public EventsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -55,7 +53,8 @@ public class EventsApi {
    * @return GetEventsResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getAllEventsRequestCreation(Integer page, Integer pageSize)
+  private ResponseSpec getAllEventsRequestCreation(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     Object postBody = null;
     // create path and map variables
@@ -106,7 +105,8 @@ public class EventsApi {
    * @return GetEventsResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetEventsResponse> getAllEvents(Integer page, Integer pageSize)
+  public Mono<GetEventsResponse> getAllEvents(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     ParameterizedTypeReference<GetEventsResponse> localVarReturnType =
         new ParameterizedTypeReference<GetEventsResponse>() {};
@@ -127,7 +127,8 @@ public class EventsApi {
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
   public Mono<ResponseEntity<GetEventsResponse>> getAllEventsWithHttpInfo(
-      Integer page, Integer pageSize) throws WebClientResponseException {
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetEventsResponse> localVarReturnType =
         new ParameterizedTypeReference<GetEventsResponse>() {};
     return getAllEventsRequestCreation(page, pageSize).toEntity(localVarReturnType);
@@ -146,7 +147,8 @@ public class EventsApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getAllEventsWithResponseSpec(Integer page, Integer pageSize)
+  public ResponseSpec getAllEventsWithResponseSpec(
+      @jakarta.annotation.Nullable Integer page, @jakarta.annotation.Nullable Integer pageSize)
       throws WebClientResponseException {
     return getAllEventsRequestCreation(page, pageSize);
   }
@@ -164,7 +166,7 @@ public class EventsApi {
    * @return GetEventResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  private ResponseSpec getEventByIdRequestCreation(String eventId)
+  private ResponseSpec getEventByIdRequestCreation(@jakarta.annotation.Nonnull String eventId)
       throws WebClientResponseException {
     Object postBody = null;
     // verify the required parameter 'eventId' is set
@@ -224,7 +226,8 @@ public class EventsApi {
    * @return GetEventResponse
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<GetEventResponse> getEventById(String eventId) throws WebClientResponseException {
+  public Mono<GetEventResponse> getEventById(@jakarta.annotation.Nonnull String eventId)
+      throws WebClientResponseException {
     ParameterizedTypeReference<GetEventResponse> localVarReturnType =
         new ParameterizedTypeReference<GetEventResponse>() {};
     return getEventByIdRequestCreation(eventId).bodyToMono(localVarReturnType);
@@ -243,8 +246,8 @@ public class EventsApi {
    * @return ResponseEntity&lt;GetEventResponse&gt;
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public Mono<ResponseEntity<GetEventResponse>> getEventByIdWithHttpInfo(String eventId)
-      throws WebClientResponseException {
+  public Mono<ResponseEntity<GetEventResponse>> getEventByIdWithHttpInfo(
+      @jakarta.annotation.Nonnull String eventId) throws WebClientResponseException {
     ParameterizedTypeReference<GetEventResponse> localVarReturnType =
         new ParameterizedTypeReference<GetEventResponse>() {};
     return getEventByIdRequestCreation(eventId).toEntity(localVarReturnType);
@@ -263,7 +266,7 @@ public class EventsApi {
    * @return ResponseSpec
    * @throws WebClientResponseException if an error occurs while attempting to invoke the API
    */
-  public ResponseSpec getEventByIdWithResponseSpec(String eventId)
+  public ResponseSpec getEventByIdWithResponseSpec(@jakarta.annotation.Nonnull String eventId)
       throws WebClientResponseException {
     return getEventByIdRequestCreation(eventId);
   }

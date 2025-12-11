@@ -32,7 +32,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class GetUserEnrollmentResponse {
   public static final String JSON_PROPERTY_IS_ENROLLED = "isEnrolled";
   @jakarta.annotation.Nullable private Boolean isEnrolled;
@@ -65,7 +65,7 @@ public class GetUserEnrollmentResponse {
    * @return isEnrolled
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_ENROLLED)
+  @JsonProperty(value = JSON_PROPERTY_IS_ENROLLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Boolean getIsEnrolled() {
     return isEnrolled;
@@ -83,13 +83,13 @@ public class GetUserEnrollmentResponse {
    * @return userId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonProperty(value = JSON_PROPERTY_USER_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getUserId() {
     return userId;
   }
 
-  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonProperty(value = JSON_PROPERTY_USER_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUserId(@jakarta.annotation.Nonnull String userId) {
     this.userId = userId;
@@ -112,7 +112,7 @@ public class GetUserEnrollmentResponse {
     return enrollmentId.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_ENROLLMENT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ENROLLMENT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<UUID> getEnrollmentId_JsonNullable() {
     return enrollmentId;
@@ -145,7 +145,7 @@ public class GetUserEnrollmentResponse {
     return enrollmentDate.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_ENROLLMENT_DATE)
+  @JsonProperty(value = JSON_PROPERTY_ENROLLMENT_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<OffsetDateTime> getEnrollmentDate_JsonNullable() {
     return enrollmentDate;

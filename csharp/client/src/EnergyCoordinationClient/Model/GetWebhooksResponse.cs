@@ -41,9 +41,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="GetWebhooksResponse" /> class.
         /// </summary>
         /// <param name="webhooks">webhooks (required).</param>
-        public GetWebhooksResponse(
-            List<GetWebhookResponse> webhooks = default(List<GetWebhookResponse>)
-        )
+        public GetWebhooksResponse(List<GetWebhookResponse> webhooks = default)
         {
             // to ensure "webhooks" is required (not null)
             if (webhooks == null)

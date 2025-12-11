@@ -32,7 +32,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PatchWebhookRequest {
   public static final String JSON_PROPERTY_WEBHOOK_SECRET = "webhookSecret";
 
@@ -77,7 +77,7 @@ public class PatchWebhookRequest {
     return webhookSecret.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_SECRET)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_SECRET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getWebhookSecret_JsonNullable() {
     return webhookSecret;
@@ -109,7 +109,7 @@ public class PatchWebhookRequest {
     return webhookUrl.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_URL)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getWebhookUrl_JsonNullable() {
     return webhookUrl;
@@ -154,7 +154,7 @@ public class PatchWebhookRequest {
     return notificationTypes.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<List<NotificationType>> getNotificationTypes_JsonNullable() {
     return notificationTypes;
@@ -188,7 +188,7 @@ public class PatchWebhookRequest {
     return enabled.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<Boolean> getEnabled_JsonNullable() {
     return enabled;
@@ -220,7 +220,7 @@ public class PatchWebhookRequest {
     return name.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getName_JsonNullable() {
     return name;

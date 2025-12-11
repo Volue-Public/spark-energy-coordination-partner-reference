@@ -41,12 +41,12 @@ namespace EnergyCoordinationClient.Model
         /// <param name="instance">instance.</param>
         /// <param name="errors">errors.</param>
         public HttpValidationProblemDetails(
-            string type = default(string),
-            string title = default(string),
-            int? status = default(int?),
-            string detail = default(string),
-            string instance = default(string),
-            Dictionary<string, List<string>> errors = default(Dictionary<string, List<string>>)
+            string type = default,
+            string title = default,
+            int? status = default,
+            string detail = default,
+            string instance = default,
+            Dictionary<string, List<string>> errors = default
         )
         {
             this.Type = type;

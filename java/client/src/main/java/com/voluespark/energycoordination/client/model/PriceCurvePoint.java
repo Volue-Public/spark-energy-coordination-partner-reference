@@ -22,7 +22,7 @@ import java.util.Objects;
 @JsonPropertyOrder({PriceCurvePoint.JSON_PROPERTY_PRICE, PriceCurvePoint.JSON_PROPERTY_TIMESTAMP})
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PriceCurvePoint {
   public static final String JSON_PROPERTY_PRICE = "price";
   @jakarta.annotation.Nullable private Double price;
@@ -44,13 +44,13 @@ public class PriceCurvePoint {
    * @return price
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PRICE)
+  @JsonProperty(value = JSON_PROPERTY_PRICE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Double getPrice() {
     return price;
   }
 
-  @JsonProperty(JSON_PROPERTY_PRICE)
+  @JsonProperty(value = JSON_PROPERTY_PRICE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPrice(@jakarta.annotation.Nullable Double price) {
     this.price = price;
@@ -68,13 +68,13 @@ public class PriceCurvePoint {
    * @return timestamp
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonProperty(value = JSON_PROPERTY_TIMESTAMP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
-  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonProperty(value = JSON_PROPERTY_TIMESTAMP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimestamp(@jakarta.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;

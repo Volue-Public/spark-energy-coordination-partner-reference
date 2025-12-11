@@ -17,6 +17,8 @@ src/main/java/com/voluespark/energycoordination/client/api/ApiClient.java
 src/main/java/com/voluespark/energycoordination/client/api/EventsApi.java
 src/main/java/com/voluespark/energycoordination/client/api/JavaTimeFormatter.java
 src/main/java/com/voluespark/energycoordination/client/api/RFC3339DateFormat.java
+src/main/java/com/voluespark/energycoordination/client/api/RFC3339InstantDeserializer.java
+src/main/java/com/voluespark/energycoordination/client/api/RFC3339JavaTimeModule.java
 src/main/java/com/voluespark/energycoordination/client/api/ReportsApi.java
 src/main/java/com/voluespark/energycoordination/client/api/ResourcesApi.java
 src/main/java/com/voluespark/energycoordination/client/api/ServerConfiguration.java

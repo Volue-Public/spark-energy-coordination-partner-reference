@@ -35,7 +35,7 @@ namespace EnergyCoordinationClient.Model
         /// Initializes a new instance of the <see cref="SimulateEventResponse" /> class.
         /// </summary>
         /// <param name="simulatedEvent">simulatedEvent.</param>
-        public SimulateEventResponse(GetEventResponse simulatedEvent = default(GetEventResponse))
+        public SimulateEventResponse(GetEventResponse simulatedEvent = default)
         {
             this.SimulatedEvent = simulatedEvent;
         }

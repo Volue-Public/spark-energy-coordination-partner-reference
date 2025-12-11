@@ -105,8 +105,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<GetUserResourcesResponse> GetResourcesForUserAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -125,8 +124,7 @@ namespace EnergyCoordinationClient.Api
         > GetResourcesForUserWithHttpInfoAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -145,8 +143,7 @@ namespace EnergyCoordinationClient.Api
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -165,8 +162,7 @@ namespace EnergyCoordinationClient.Api
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -426,8 +422,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<GetUserResourcesResponse> GetResourcesForUserAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetUserResourcesResponse> localVarResponse =
@@ -451,8 +446,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetUserResourcesResponse>> GetResourcesForUserWithHttpInfoAsync(
             string userId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'userId' is set
@@ -659,8 +653,7 @@ namespace EnergyCoordinationClient.Api
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             await PostVehicleWithHttpInfoAsync(
@@ -685,8 +678,7 @@ namespace EnergyCoordinationClient.Api
             string userId,
             PostVehicleResourceRequest postVehicleResourceRequest,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'userId' is set

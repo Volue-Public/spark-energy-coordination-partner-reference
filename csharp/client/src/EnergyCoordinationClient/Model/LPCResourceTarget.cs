@@ -37,8 +37,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="resource">resource.</param>
         /// <param name="points">points.</param>
         public LPCResourceTarget(
-            ResourceTarget resource = default(ResourceTarget),
-            List<LPCDataPoint> points = default(List<LPCDataPoint>)
+            ResourceTarget resource = default,
+            List<LPCDataPoint> points = default
         )
         {
             this.Resource = resource;

@@ -30,36 +30,36 @@ namespace Partner.Api.Models
         /// Enum Unknown for Unknown
         /// </summary>
         [EnumMember(Value = "Unknown")]
-        Unknown = 1,
+        Unknown,
 
         /// <summary>
         /// Enum UserEligibility for UserEligibility
         /// </summary>
         [EnumMember(Value = "UserEligibility")]
-        UserEligibility = 2,
+        UserEligibility,
 
         /// <summary>
         /// Enum PriceCurve for PriceCurve
         /// </summary>
         [EnumMember(Value = "PriceCurve")]
-        PriceCurve = 3,
+        PriceCurve,
 
         /// <summary>
         /// Enum LocationLPC for LocationLPC
         /// </summary>
         [EnumMember(Value = "LocationLPC")]
-        LocationLPC = 4,
+        LocationLPC,
 
         /// <summary>
         /// Enum ResourceLPC for ResourceLPC
         /// </summary>
         [EnumMember(Value = "ResourceLPC")]
-        ResourceLPC = 5,
+        ResourceLPC,
 
         /// <summary>
         /// Enum LPCReservation for LPCReservation
         /// </summary>
         [EnumMember(Value = "LPCReservation")]
-        LPCReservation = 6,
+        LPCReservation,
     }
 }

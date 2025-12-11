@@ -32,7 +32,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class ApiPagination {
   public static final String JSON_PROPERTY_TOTAL_RECORDS = "totalRecords";
   @jakarta.annotation.Nonnull private Integer totalRecords;
@@ -84,13 +84,13 @@ public class ApiPagination {
    * @return totalRecords
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_TOTAL_RECORDS)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_RECORDS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getTotalRecords() {
     return totalRecords;
   }
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_RECORDS)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_RECORDS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTotalRecords(@jakarta.annotation.Nonnull Integer totalRecords) {
     this.totalRecords = totalRecords;
@@ -108,13 +108,13 @@ public class ApiPagination {
    * @return pageSize
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_PAGE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_SIZE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getPageSize() {
     return pageSize;
   }
 
-  @JsonProperty(JSON_PROPERTY_PAGE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_SIZE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPageSize(@jakarta.annotation.Nonnull Integer pageSize) {
     this.pageSize = pageSize;
@@ -132,13 +132,13 @@ public class ApiPagination {
    * @return currentPage
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_CURRENT_PAGE)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_PAGE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getCurrentPage() {
     return currentPage;
   }
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_PAGE)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_PAGE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setCurrentPage(@jakarta.annotation.Nonnull Integer currentPage) {
     this.currentPage = currentPage;
@@ -150,7 +150,7 @@ public class ApiPagination {
    * @return totalPages
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_PAGES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_PAGES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getTotalPages() {
     return totalPages;
@@ -171,7 +171,7 @@ public class ApiPagination {
     return nextPage.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_NEXT_PAGE)
+  @JsonProperty(value = JSON_PROPERTY_NEXT_PAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<Integer> getNextPage_JsonNullable() {
     return nextPage;
@@ -197,7 +197,7 @@ public class ApiPagination {
     return previousPage.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_PREVIOUS_PAGE)
+  @JsonProperty(value = JSON_PROPERTY_PREVIOUS_PAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<Integer> getPreviousPage_JsonNullable() {
     return previousPage;

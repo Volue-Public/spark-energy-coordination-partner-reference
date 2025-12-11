@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PostLocationBoundResourceRequest {
   public static final String JSON_PROPERTY_RESOURCE_ID = "resourceId";
   @jakarta.annotation.Nonnull private String resourceId;
@@ -56,13 +56,13 @@ public class PostLocationBoundResourceRequest {
    * @return resourceId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCE_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getResourceId() {
     return resourceId;
   }
 
-  @JsonProperty(JSON_PROPERTY_RESOURCE_ID)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCE_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setResourceId(@jakarta.annotation.Nonnull String resourceId) {
     this.resourceId = resourceId;
@@ -81,13 +81,13 @@ public class PostLocationBoundResourceRequest {
    * @return resourceType
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_RESOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCE_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public ResourceType getResourceType() {
     return resourceType;
   }
 
-  @JsonProperty(JSON_PROPERTY_RESOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RESOURCE_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setResourceType(@jakarta.annotation.Nonnull ResourceType resourceType) {
     this.resourceType = resourceType;
@@ -111,7 +111,7 @@ public class PostLocationBoundResourceRequest {
     return meterPointId.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
+  @JsonProperty(value = JSON_PROPERTY_METER_POINT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getMeterPointId_JsonNullable() {
     return meterPointId;

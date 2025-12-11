@@ -37,8 +37,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetEventsResponse</returns>
         GetEventsResponse GetAllEvents(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         );
 
@@ -54,8 +54,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetEventsResponse</returns>
         ApiResponse<GetEventsResponse> GetAllEventsWithHttpInfo(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         );
 
@@ -104,11 +104,10 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEventsResponse</returns>
         System.Threading.Tasks.Task<GetEventsResponse> GetAllEventsAsync(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -124,11 +123,10 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEventsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetEventsResponse>> GetAllEventsWithHttpInfoAsync(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -145,8 +143,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<GetEventResponse> GetEventByIdAsync(
             string eventId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -163,8 +160,7 @@ namespace EnergyCoordinationClient.Api
         System.Threading.Tasks.Task<ApiResponse<GetEventResponse>> GetEventByIdWithHttpInfoAsync(
             string eventId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         );
         #endregion Asynchronous Operations
     }
@@ -321,8 +317,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetEventsResponse</returns>
         public GetEventsResponse GetAllEvents(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         )
         {
@@ -340,8 +336,8 @@ namespace EnergyCoordinationClient.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetEventsResponse</returns>
         public EnergyCoordinationClient.Client.ApiResponse<GetEventsResponse> GetAllEventsWithHttpInfo(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0
         )
         {
@@ -434,11 +430,10 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEventsResponse</returns>
         public async System.Threading.Tasks.Task<GetEventsResponse> GetAllEventsAsync(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetEventsResponse> localVarResponse =
@@ -462,11 +457,10 @@ namespace EnergyCoordinationClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEventsResponse)</returns>
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetEventsResponse>> GetAllEventsWithHttpInfoAsync(
-            int? page = default(int?),
-            int? pageSize = default(int?),
+            int? page = default,
+            int? pageSize = default,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.RequestOptions localVarRequestOptions =
@@ -660,8 +654,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<GetEventResponse> GetEventByIdAsync(
             string eventId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             EnergyCoordinationClient.Client.ApiResponse<GetEventResponse> localVarResponse =
@@ -681,8 +674,7 @@ namespace EnergyCoordinationClient.Api
         public async System.Threading.Tasks.Task<EnergyCoordinationClient.Client.ApiResponse<GetEventResponse>> GetEventByIdWithHttpInfoAsync(
             string eventId,
             int operationIndex = 0,
-            System.Threading.CancellationToken cancellationToken =
-                default(global::System.Threading.CancellationToken)
+            System.Threading.CancellationToken cancellationToken = default
         )
         {
             // verify the required parameter 'eventId' is set

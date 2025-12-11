@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PostLocationWithUserRequest {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
   @jakarta.annotation.Nonnull private String locationId;
@@ -71,13 +71,13 @@ public class PostLocationWithUserRequest {
    * @return locationId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getLocationId() {
     return locationId;
   }
 
-  @JsonProperty(JSON_PROPERTY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLocationId(@jakarta.annotation.Nonnull String locationId) {
     this.locationId = locationId;
@@ -96,13 +96,13 @@ public class PostLocationWithUserRequest {
    * @return locationType
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOCATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public LocationType getLocationType() {
     return locationType;
   }
 
-  @JsonProperty(JSON_PROPERTY_LOCATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLocationType(@jakarta.annotation.Nullable LocationType locationType) {
     this.locationType = locationType;
@@ -121,13 +121,13 @@ public class PostLocationWithUserRequest {
    * @return coordinates
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COORDINATES)
+  @JsonProperty(value = JSON_PROPERTY_COORDINATES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Coordinate getCoordinates() {
     return coordinates;
   }
 
-  @JsonProperty(JSON_PROPERTY_COORDINATES)
+  @JsonProperty(value = JSON_PROPERTY_COORDINATES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCoordinates(@jakarta.annotation.Nullable Coordinate coordinates) {
     this.coordinates = coordinates;
@@ -153,7 +153,7 @@ public class PostLocationWithUserRequest {
     return meterPointId.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_METER_POINT_ID)
+  @JsonProperty(value = JSON_PROPERTY_METER_POINT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getMeterPointId_JsonNullable() {
     return meterPointId;
@@ -198,7 +198,7 @@ public class PostLocationWithUserRequest {
     return meterPointIds.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_METER_POINT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_METER_POINT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<List<String>> getMeterPointIds_JsonNullable() {
     return meterPointIds;
@@ -225,13 +225,13 @@ public class PostLocationWithUserRequest {
    * @return userId
    */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonProperty(value = JSON_PROPERTY_USER_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getUserId() {
     return userId;
   }
 
-  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonProperty(value = JSON_PROPERTY_USER_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUserId(@jakarta.annotation.Nonnull String userId) {
     this.userId = userId;

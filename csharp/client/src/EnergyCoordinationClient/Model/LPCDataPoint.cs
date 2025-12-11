@@ -37,8 +37,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="maxPowerInKiloWatts">maxPowerInKiloWatts.</param>
         /// <param name="timestamp">timestamp.</param>
         public LPCDataPoint(
-            double maxPowerInKiloWatts = default(double),
-            DateTimeOffset timestamp = default(DateTimeOffset)
+            double maxPowerInKiloWatts = default,
+            DateTimeOffset timestamp = default
         )
         {
             this.MaxPowerInKiloWatts = maxPowerInKiloWatts;

@@ -14,7 +14,7 @@ import org.springframework.lang.Nullable;
 /** LPCDataPoint */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class LPCDataPoint {
 
   private @Nullable Double maxPowerInKiloWatts;
@@ -22,7 +22,7 @@ public class LPCDataPoint {
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private @Nullable OffsetDateTime timestamp;
 
-  public LPCDataPoint maxPowerInKiloWatts(Double maxPowerInKiloWatts) {
+  public LPCDataPoint maxPowerInKiloWatts(@Nullable Double maxPowerInKiloWatts) {
     this.maxPowerInKiloWatts = maxPowerInKiloWatts;
     return this;
   }
@@ -34,15 +34,15 @@ public class LPCDataPoint {
    */
   @Schema(name = "maxPowerInKiloWatts", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("maxPowerInKiloWatts")
-  public Double getMaxPowerInKiloWatts() {
+  public @Nullable Double getMaxPowerInKiloWatts() {
     return maxPowerInKiloWatts;
   }
 
-  public void setMaxPowerInKiloWatts(Double maxPowerInKiloWatts) {
+  public void setMaxPowerInKiloWatts(@Nullable Double maxPowerInKiloWatts) {
     this.maxPowerInKiloWatts = maxPowerInKiloWatts;
   }
 
-  public LPCDataPoint timestamp(OffsetDateTime timestamp) {
+  public LPCDataPoint timestamp(@Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
     return this;
   }
@@ -55,11 +55,11 @@ public class LPCDataPoint {
   @Valid
   @Schema(name = "timestamp", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("timestamp")
-  public OffsetDateTime getTimestamp() {
+  public @Nullable OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(OffsetDateTime timestamp) {
+  public void setTimestamp(@Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 

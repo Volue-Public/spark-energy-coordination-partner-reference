@@ -52,11 +52,11 @@ namespace EnergyCoordinationClient.Model
         /// <param name="locationId">locationId.</param>
         /// <param name="meterPointId">meterPointId.</param>
         public GetResourceResponse(
-            string resourceId = default(string),
-            ResourceType resourceType = default(ResourceType),
-            string userId = default(string),
-            string locationId = default(string),
-            string meterPointId = default(string)
+            string resourceId = default,
+            ResourceType resourceType = default,
+            string userId = default,
+            string locationId = default,
+            string meterPointId = default
         )
         {
             // to ensure "resourceId" is required (not null)

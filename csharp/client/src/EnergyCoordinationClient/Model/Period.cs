@@ -36,7 +36,7 @@ namespace EnergyCoordinationClient.Model
         /// </summary>
         /// <param name="from">from.</param>
         /// <param name="to">to.</param>
-        public Period(DateOnly from = default(DateOnly), DateOnly to = default(DateOnly))
+        public Period(DateOnly from = default, DateOnly to = default)
         {
             this.From = from;
             this.To = to;

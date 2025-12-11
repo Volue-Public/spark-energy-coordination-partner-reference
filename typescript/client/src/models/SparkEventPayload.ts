@@ -21,11 +21,11 @@ import {
     SparkEventPayloadTypeToJSONTyped,
 } from './SparkEventPayloadType';
 
-import { LPCReservationPayload, LPCReservationPayloadFromJSONTyped, LPCReservationPayloadToJSON, LPCReservationPayloadToJSONTyped } from './LPCReservationPayload';
-import { LocationLPCPayload, LocationLPCPayloadFromJSONTyped, LocationLPCPayloadToJSON, LocationLPCPayloadToJSONTyped } from './LocationLPCPayload';
-import { PriceCurvePayload, PriceCurvePayloadFromJSONTyped, PriceCurvePayloadToJSON, PriceCurvePayloadToJSONTyped } from './PriceCurvePayload';
-import { ResourceLPCPayload, ResourceLPCPayloadFromJSONTyped, ResourceLPCPayloadToJSON, ResourceLPCPayloadToJSONTyped } from './ResourceLPCPayload';
-import { UserEligibilityPayload, UserEligibilityPayloadFromJSONTyped, UserEligibilityPayloadToJSON, UserEligibilityPayloadToJSONTyped } from './UserEligibilityPayload';
+import { type LPCReservationPayload, LPCReservationPayloadFromJSONTyped, LPCReservationPayloadToJSON, LPCReservationPayloadToJSONTyped } from './LPCReservationPayload';
+import { type LocationLPCPayload, LocationLPCPayloadFromJSONTyped, LocationLPCPayloadToJSON, LocationLPCPayloadToJSONTyped } from './LocationLPCPayload';
+import { type PriceCurvePayload, PriceCurvePayloadFromJSONTyped, PriceCurvePayloadToJSON, PriceCurvePayloadToJSONTyped } from './PriceCurvePayload';
+import { type ResourceLPCPayload, ResourceLPCPayloadFromJSONTyped, ResourceLPCPayloadToJSON, ResourceLPCPayloadToJSONTyped } from './ResourceLPCPayload';
+import { type UserEligibilityPayload, UserEligibilityPayloadFromJSONTyped, UserEligibilityPayloadToJSON, UserEligibilityPayloadToJSONTyped } from './UserEligibilityPayload';
 /**
  * 
  * @export
@@ -74,6 +74,7 @@ export function SparkEventPayloadFromJSONTyped(json: any, ignoreDiscriminator: b
         if (json['payloadType'] === 'UserEligibility') {
             return UserEligibilityPayloadFromJSONTyped(json, ignoreDiscriminator);
         }
+
     }
     return {
         
@@ -103,7 +104,7 @@ export function SparkEventPayloadToJSONTyped(value?: SparkEventPayload | null, i
             case 'UserEligibility':
                 return UserEligibilityPayloadToJSONTyped(value as UserEligibilityPayload, ignoreDiscriminator);
             default:
-                throw new Error(`No variant of SparkEventPayload exists with 'payloadType=${value['payloadType']}'`);
+                return value;
         }
     }
 

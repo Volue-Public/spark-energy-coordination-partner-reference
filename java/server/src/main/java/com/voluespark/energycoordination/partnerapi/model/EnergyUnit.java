@@ -9,13 +9,13 @@ import java.util.*;
 /** Gets or Sets EnergyUnit */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public enum EnergyUnit {
   K_WH("kWh"),
 
   MWH("MWh");
 
-  private String value;
+  private final String value;
 
   EnergyUnit(String value) {
     this.value = value;

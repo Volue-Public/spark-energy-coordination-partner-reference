@@ -59,8 +59,11 @@ export class ReportsApi extends runtime.BaseAPI {
                 headerParameters["Authorization"] = `Bearer ${tokenString}`;
             }
         }
+
+        let urlPath = `/reports`;
+
         const response = await this.request({
-            path: `/reports`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,

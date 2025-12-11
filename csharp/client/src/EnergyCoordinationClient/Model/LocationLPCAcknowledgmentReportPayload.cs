@@ -41,8 +41,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="declinedTargets">declinedTargets.</param>
         /// <param name="payloadType">payloadType (default to SparkReportPayloadType.LocationLPCAcknowledgement).</param>
         public LocationLPCAcknowledgmentReportPayload(
-            List<LPCLocation> acknowledgedTargets = default(List<LPCLocation>),
-            List<LPCLocation> declinedTargets = default(List<LPCLocation>),
+            List<LPCLocation> acknowledgedTargets = default,
+            List<LPCLocation> declinedTargets = default,
             SparkReportPayloadType? payloadType = SparkReportPayloadType.LocationLPCAcknowledgement
         )
             : base(payloadType)

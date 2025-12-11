@@ -9,7 +9,7 @@ import java.util.*;
 /** Gets or Sets Currency */
 @Generated(
     value = "org.openapitools.codegen.languages.SpringCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public enum Currency {
   NOK("NOK"),
 
@@ -19,7 +19,7 @@ public enum Currency {
 
   DKK("DKK");
 
-  private String value;
+  private final String value;
 
   Currency(String value) {
     this.value = value;

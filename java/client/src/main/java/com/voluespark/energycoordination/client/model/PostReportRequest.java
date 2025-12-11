@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class PostReportRequest {
   public static final String JSON_PROPERTY_EVENT_ID = "eventId";
 
@@ -60,7 +60,7 @@ public class PostReportRequest {
     return eventId.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_EVENT_ID)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public JsonNullable<String> getEventId_JsonNullable() {
     return eventId;
@@ -96,13 +96,13 @@ public class PostReportRequest {
    * @return payloads
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAYLOADS)
+  @JsonProperty(value = JSON_PROPERTY_PAYLOADS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<PostReportRequestPayloadsInner> getPayloads() {
     return payloads;
   }
 
-  @JsonProperty(JSON_PROPERTY_PAYLOADS)
+  @JsonProperty(value = JSON_PROPERTY_PAYLOADS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPayloads(
       @jakarta.annotation.Nullable List<PostReportRequestPayloadsInner> payloads) {

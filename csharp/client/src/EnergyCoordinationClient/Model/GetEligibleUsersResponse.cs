@@ -43,8 +43,8 @@ namespace EnergyCoordinationClient.Model
         /// <param name="pagination">pagination (required).</param>
         /// <param name="users">users.</param>
         public GetEligibleUsersResponse(
-            ApiPagination pagination = default(ApiPagination),
-            List<GetUserResponse> users = default(List<GetUserResponse>)
+            ApiPagination pagination = default,
+            List<GetUserResponse> users = default
         )
         {
             // to ensure "pagination" is required (not null)

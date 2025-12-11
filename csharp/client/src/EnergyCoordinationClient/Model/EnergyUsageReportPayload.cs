@@ -49,12 +49,12 @@ namespace EnergyCoordinationClient.Model
         /// <param name="curvePoints">curvePoints.</param>
         /// <param name="payloadType">payloadType (default to SparkReportPayloadType.EnergyUsage).</param>
         public EnergyUsageReportPayload(
-            string resourceId = default(string),
-            string locationId = default(string),
-            string meterPointId = default(string),
-            List<EnergyCurvePoint> points = default(List<EnergyCurvePoint>),
-            string resolution = default(string),
-            List<EnergyCurvePoint> curvePoints = default(List<EnergyCurvePoint>),
+            string resourceId = default,
+            string locationId = default,
+            string meterPointId = default,
+            List<EnergyCurvePoint> points = default,
+            string resolution = default,
+            List<EnergyCurvePoint> curvePoints = default,
             SparkReportPayloadType? payloadType = SparkReportPayloadType.EnergyUsage
         )
             : base(payloadType)

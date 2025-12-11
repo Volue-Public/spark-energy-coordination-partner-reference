@@ -44,9 +44,9 @@ namespace EnergyCoordinationClient.Model
         /// <param name="pageSize">pageSize (required).</param>
         /// <param name="currentPage">currentPage (required).</param>
         public ApiPagination(
-            int totalRecords = default(int),
-            int pageSize = default(int),
-            int currentPage = default(int)
+            int totalRecords = default,
+            int pageSize = default,
+            int currentPage = default
         )
         {
             this.TotalRecords = totalRecords;

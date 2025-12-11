@@ -24,7 +24,7 @@ import java.util.Objects;
 })
 @jakarta.annotation.Generated(
     value = "org.openapitools.codegen.languages.JavaClientCodegen",
-    comments = "Generator version: 7.12.0")
+    comments = "Generator version: 7.17.0")
 public class GetWebhookNotificationLogByIdResponse {
   public static final String JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOG = "webhookNotificationLog";
   @jakarta.annotation.Nullable private WebhookNotificationLog webhookNotificationLog;
@@ -47,13 +47,13 @@ public class GetWebhookNotificationLogByIdResponse {
    * @return webhookNotificationLog
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOG)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public WebhookNotificationLog getWebhookNotificationLog() {
     return webhookNotificationLog;
   }
 
-  @JsonProperty(JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOG)
+  @JsonProperty(value = JSON_PROPERTY_WEBHOOK_NOTIFICATION_LOG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWebhookNotificationLog(
       @jakarta.annotation.Nullable WebhookNotificationLog webhookNotificationLog) {
@@ -73,13 +73,13 @@ public class GetWebhookNotificationLogByIdResponse {
    * @return notificationContent
    */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_CONTENT)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_CONTENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getNotificationContent() {
     return notificationContent;
   }
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_CONTENT)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_CONTENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNotificationContent(@jakarta.annotation.Nullable String notificationContent) {
     this.notificationContent = notificationContent;

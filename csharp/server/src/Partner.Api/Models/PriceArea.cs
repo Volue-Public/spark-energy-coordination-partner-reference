@@ -30,78 +30,78 @@ namespace Partner.Api.Models
         /// Enum Unknown for Unknown
         /// </summary>
         [EnumMember(Value = "Unknown")]
-        Unknown = 1,
+        Unknown,
 
         /// <summary>
         /// Enum NO1 for NO1
         /// </summary>
         [EnumMember(Value = "NO1")]
-        NO1 = 2,
+        NO1,
 
         /// <summary>
         /// Enum NO2 for NO2
         /// </summary>
         [EnumMember(Value = "NO2")]
-        NO2 = 3,
+        NO2,
 
         /// <summary>
         /// Enum NO3 for NO3
         /// </summary>
         [EnumMember(Value = "NO3")]
-        NO3 = 4,
+        NO3,
 
         /// <summary>
         /// Enum NO4 for NO4
         /// </summary>
         [EnumMember(Value = "NO4")]
-        NO4 = 5,
+        NO4,
 
         /// <summary>
         /// Enum NO5 for NO5
         /// </summary>
         [EnumMember(Value = "NO5")]
-        NO5 = 6,
+        NO5,
 
         /// <summary>
         /// Enum FI for FI
         /// </summary>
         [EnumMember(Value = "FI")]
-        FI = 7,
+        FI,
 
         /// <summary>
         /// Enum DK1 for DK1
         /// </summary>
         [EnumMember(Value = "DK1")]
-        DK1 = 8,
+        DK1,
 
         /// <summary>
         /// Enum DK2 for DK2
         /// </summary>
         [EnumMember(Value = "DK2")]
-        DK2 = 9,
+        DK2,
 
         /// <summary>
         /// Enum SE1 for SE1
         /// </summary>
         [EnumMember(Value = "SE1")]
-        SE1 = 10,
+        SE1,
 
         /// <summary>
         /// Enum SE2 for SE2
         /// </summary>
         [EnumMember(Value = "SE2")]
-        SE2 = 11,
+        SE2,
 
         /// <summary>
         /// Enum SE3 for SE3
         /// </summary>
         [EnumMember(Value = "SE3")]
-        SE3 = 12,
+        SE3,
 
         /// <summary>
         /// Enum SE4 for SE4
         /// </summary>
         [EnumMember(Value = "SE4")]
-        SE4 = 13,
+        SE4,
     }
 }

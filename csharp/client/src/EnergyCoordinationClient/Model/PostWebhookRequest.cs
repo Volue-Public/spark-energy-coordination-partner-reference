@@ -45,10 +45,10 @@ namespace EnergyCoordinationClient.Model
         /// <param name="webhookUrl">webhookUrl (required).</param>
         /// <param name="notificationTypes">notificationTypes.</param>
         public PostWebhookRequest(
-            string name = default(string),
-            string webhookSecret = default(string),
-            string webhookUrl = default(string),
-            List<NotificationType> notificationTypes = default(List<NotificationType>)
+            string name = default,
+            string webhookSecret = default,
+            string webhookUrl = default,
+            List<NotificationType> notificationTypes = default
         )
         {
             // to ensure "webhookUrl" is required (not null)
