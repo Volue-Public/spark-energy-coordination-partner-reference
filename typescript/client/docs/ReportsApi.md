@@ -33,7 +33,7 @@ async function example() {
 
   const body = {
     // PostReportRequest
-    postReportRequest: {"eventId":"b8c9d0e1-f2a3-4567-1234-678901234567","payloads":[{"resourceId":"e5f6a7b8-c9d0-1234-ef12-345678901234","locationId":null,"meterPointId":null,"points":[{"timestamp":"2025-03-03T12:00:00+00:00","kiloWattHours":3.14}],"resolution":"01:00:00","curvePoints":null,"payloadType":"EnergyUsage"}]},
+    postReportRequest: {"eventId":"b8c9d0e1-f2a3-4567-1234-678901234567","payloads":[{"resourceId":"e5f6a7b8-c9d0-1234-ef12-345678901234","locationId":null,"meterPointId":null,"points":[{"timestamp":"2026-03-03T12:00:00+00:00","kiloWattHours":3.14}],"resolution":"01:00:00","curvePoints":null,"payloadType":"EnergyUsage"}]},
   } satisfies PostReportOperationRequest;
 
   try {
