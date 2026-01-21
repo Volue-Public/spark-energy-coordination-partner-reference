@@ -31,14 +31,16 @@ public class NotificationApiTests
             .CreateClient();
     }
 
-    public static IEnumerable<object[]> GetTestDataSignatureAndPayloads()
+    public static TheoryData<string, string> GetTestDataSignatureAndPayloads()
     {
+        var data = new TheoryData<string, string>();
         foreach (var file in Directory.GetFiles(_testFilesDirectory, "*.json"))
         {
             string jsonPayload = File.ReadAllText(file);
             string signature = File.ReadAllText(file + ".hmacsha256b64").TrimEnd();
-            yield return new object[] { jsonPayload, signature };
+            data.Add(jsonPayload, signature);
         }
+        return data;
     }
 
     [Theory]
@@ -48,7 +50,11 @@ public class NotificationApiTests
         _client.DefaultRequestHeaders.Add("x-payload-signature", signature);
         var jsonContent = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
 
-        var response = await _client.PostAsync("/notify", jsonContent);
+        var response = await _client.PostAsync(
+            "/notify",
+            jsonContent,
+            TestContext.Current.CancellationToken
+        );
 
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
@@ -62,7 +68,11 @@ public class NotificationApiTests
         _client.DefaultRequestHeaders.Add("x-payload-signature", badSignature);
         var jsonContent = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
 
-        var response = await _client.PostAsync("/notify", jsonContent);
+        var response = await _client.PostAsync(
+            "/notify",
+            jsonContent,
+            TestContext.Current.CancellationToken
+        );
 
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
     }
